@@ -1,0 +1,2690 @@
+{
+  "shape": {
+    "rows": 288,
+    "cols": 18
+  },
+  "dtypes": {
+    "record_id": "object",
+    "community_code": "object",
+    "region": "object",
+    "survey_round": "object",
+    "sampling_visit": "int64",
+    "households_interviewed": "float64",
+    "altitude_band": "object",
+    "altitude_m": "float64",
+    "market_distance_km": "float64",
+    "morphotype_id": "object",
+    "local_variety_name": "object",
+    "skin_primary_color": "object",
+    "main_use": "object",
+    "seed_exchange_events_year": "float64",
+    "number_of_reported_uses": "int64",
+    "years_reported_in_community": "float64",
+    "observed_next_season": "int64",
+    "interviewer_badge_number": "int64"
+  },
+  "missing": [
+    {
+      "column": "households_interviewed",
+      "missing_n": 11,
+      "missing_pct": 3.82
+    },
+    {
+      "column": "local_variety_name",
+      "missing_n": 10,
+      "missing_pct": 3.47
+    },
+    {
+      "column": "skin_primary_color",
+      "missing_n": 10,
+      "missing_pct": 3.47
+    },
+    {
+      "column": "years_reported_in_community",
+      "missing_n": 10,
+      "missing_pct": 3.47
+    },
+    {
+      "column": "market_distance_km",
+      "missing_n": 1,
+      "missing_pct": 0.35
+    },
+    {
+      "column": "seed_exchange_events_year",
+      "missing_n": 1,
+      "missing_pct": 0.35
+    },
+    {
+      "column": "record_id",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "community_code",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "region",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "survey_round",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "sampling_visit",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "altitude_band",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "altitude_m",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "morphotype_id",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "main_use",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "number_of_reported_uses",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "observed_next_season",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "interviewer_badge_number",
+      "missing_n": 0,
+      "missing_pct": 0.0
+    }
+  ],
+  "numeric_cols": [
+    "sampling_visit",
+    "households_interviewed",
+    "altitude_m",
+    "market_distance_km",
+    "seed_exchange_events_year",
+    "number_of_reported_uses",
+    "years_reported_in_community",
+    "observed_next_season",
+    "interviewer_badge_number"
+  ],
+  "categorical_cols": [
+    "record_id",
+    "community_code",
+    "region",
+    "survey_round",
+    "altitude_band",
+    "morphotype_id",
+    "local_variety_name",
+    "skin_primary_color",
+    "main_use"
+  ],
+  "numeric_summary": [
+    {
+      "column": "sampling_visit",
+      "count": 288.0,
+      "mean": 2.49,
+      "std": 1.13,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 4.0,
+      "max": 4.0
+    },
+    {
+      "column": "households_interviewed",
+      "count": 277.0,
+      "mean": 24.37,
+      "std": 7.86,
+      "min": 12.0,
+      "25%": 18.0,
+      "50%": 23.0,
+      "75%": 32.0,
+      "max": 38.0
+    },
+    {
+      "column": "altitude_m",
+      "count": 288.0,
+      "mean": 3140.58,
+      "std": 622.4,
+      "min": 2130.7,
+      "25%": 2451.43,
+      "50%": 3183.65,
+      "75%": 3778.28,
+      "max": 4060.7
+    },
+    {
+      "column": "market_distance_km",
+      "count": 287.0,
+      "mean": 47.35,
+      "std": 24.48,
+      "min": 2.7,
+      "25%": 25.3,
+      "50%": 51.0,
+      "75%": 70.8,
+      "max": 86.4
+    },
+    {
+      "column": "seed_exchange_events_year",
+      "count": 287.0,
+      "mean": 3.91,
+      "std": 2.51,
+      "min": 0.0,
+      "25%": 2.0,
+      "50%": 4.0,
+      "75%": 6.0,
+      "max": 8.0
+    },
+    {
+      "column": "number_of_reported_uses",
+      "count": 288.0,
+      "mean": 3.08,
+      "std": 1.42,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 4.0,
+      "max": 5.0
+    },
+    {
+      "column": "years_reported_in_community",
+      "count": 278.0,
+      "mean": 35.88,
+      "std": 20.38,
+      "min": 3.0,
+      "25%": 18.0,
+      "50%": 38.0,
+      "75%": 53.0,
+      "max": 70.0
+    },
+    {
+      "column": "observed_next_season",
+      "count": 288.0,
+      "mean": 0.68,
+      "std": 0.47,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    {
+      "column": "interviewer_badge_number",
+      "count": 288.0,
+      "mean": 5663.31,
+      "std": 2604.24,
+      "min": 1019.0,
+      "25%": 3409.75,
+      "50%": 5776.5,
+      "75%": 7942.5,
+      "max": 9991.0
+    }
+  ],
+  "categorical_frequencies": {
+    "record_id": [
+      {
+        "value": "NPB-0209",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0187",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0160",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0235",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0081",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0116",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0060",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0013",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0217",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0259",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0222",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0040",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0133",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0276",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0254",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0172",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0252",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0044",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0064",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0090",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0230",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0237",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0129",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0266",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0118",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0091",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0212",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0211",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0223",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0131",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0141",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0078",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0210",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0157",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0052",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0285",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0100",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0087",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0102",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0174",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0111",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0264",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0148",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0248",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0288",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0128",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0132",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0202",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0093",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0074",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0037",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0140",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0067",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0105",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0130",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0069",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0080",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0225",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0124",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0085",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0268",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0076",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0109",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0058",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0047",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0168",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0094",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0195",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0214",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0151",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0059",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0215",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0134",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0250",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0273",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0055",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0108",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0190",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0263",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0232",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0020",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0255",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0142",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0170",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0188",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0236",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0208",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0097",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0107",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0244",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0005",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0114",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0178",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0070",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0113",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0173",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0284",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0220",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0161",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0028",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0283",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0125",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0014",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0045",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0261",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0123",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0286",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0153",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0242",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0122",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0038",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0048",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0012",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0171",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0056",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0200",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0010",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0241",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0029",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0216",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0277",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0101",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0079",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0163",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0120",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0243",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0086",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0077",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0032",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0138",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0083",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0027",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0004",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0001",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0011",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0275",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0036",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0088",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0007",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0182",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0184",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0198",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0066",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0227",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0166",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0251",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0272",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0015",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0073",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0249",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0096",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0167",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0035",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0050",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0159",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0006",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0177",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0068",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0265",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0183",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0269",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0204",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0155",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0219",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0218",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0121",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0139",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0191",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0256",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0205",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0257",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0063",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0025",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0158",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0039",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0098",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0186",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0221",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0280",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0115",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0194",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0271",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0095",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0046",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0033",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0112",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0231",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0207",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0082",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0065",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0165",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0017",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0009",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0019",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0147",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0137",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0144",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0084",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0164",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0062",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0282",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0258",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0053",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0279",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0238",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0034",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0136",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0175",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0240",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0179",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0103",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0270",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0031",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0246",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0278",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0228",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0051",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0003",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0260",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0189",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0196",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0023",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0071",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0156",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0054",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0024",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0061",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0008",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0002",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0287",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0262",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0026",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0180",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0016",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0110",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0229",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0281",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0181",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0150",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0021",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0041",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0197",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0072",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0239",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0154",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0226",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0233",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0049",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0206",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0075",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0247",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0192",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0119",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0099",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0185",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0149",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0127",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0117",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0234",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0193",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0057",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0089",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0106",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0176",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0199",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0043",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0042",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0022",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0253",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0145",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0245",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0135",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0169",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0126",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0152",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0162",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0092",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0203",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0267",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0018",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0143",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0213",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0030",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0224",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0201",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0104",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0146",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "NPB-0274",
+        "count": 1,
+        "pct": 0.35
+      }
+    ],
+    "community_code": [
+      {
+        "value": "COM-12",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-07",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-05",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-09",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-10",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-02",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-06",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-01",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-04",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-08",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-03",
+        "count": 24,
+        "pct": 8.33
+      },
+      {
+        "value": "COM-11",
+        "count": 24,
+        "pct": 8.33
+      }
+    ],
+    "region": [
+      {
+        "value": "Ayacucho",
+        "count": 96,
+        "pct": 33.33
+      },
+      {
+        "value": "Cusco",
+        "count": 96,
+        "pct": 33.33
+      },
+      {
+        "value": "Puno",
+        "count": 96,
+        "pct": 33.33
+      }
+    ],
+    "survey_round": [
+      {
+        "value": "2025-baseline",
+        "count": 288,
+        "pct": 100.0
+      }
+    ],
+    "altitude_band": [
+      {
+        "value": "high",
+        "count": 96,
+        "pct": 33.33
+      },
+      {
+        "value": "low",
+        "count": 96,
+        "pct": 33.33
+      },
+      {
+        "value": "mid",
+        "count": 96,
+        "pct": 33.33
+      }
+    ],
+    "morphotype_id": [
+      {
+        "value": "MOR-SYN-053",
+        "count": 9,
+        "pct": 3.12
+      },
+      {
+        "value": "MOR-SYN-016",
+        "count": 8,
+        "pct": 2.78
+      },
+      {
+        "value": "MOR-SYN-013",
+        "count": 8,
+        "pct": 2.78
+      },
+      {
+        "value": "MOR-SYN-022",
+        "count": 8,
+        "pct": 2.78
+      },
+      {
+        "value": "MOR-SYN-059",
+        "count": 7,
+        "pct": 2.43
+      },
+      {
+        "value": "MOR-SYN-017",
+        "count": 7,
+        "pct": 2.43
+      },
+      {
+        "value": "MOR-SYN-005",
+        "count": 7,
+        "pct": 2.43
+      },
+      {
+        "value": "MOR-SYN-002",
+        "count": 7,
+        "pct": 2.43
+      },
+      {
+        "value": "MOR-SYN-023",
+        "count": 7,
+        "pct": 2.43
+      },
+      {
+        "value": "MOR-SYN-039",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-056",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-057",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-007",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-044",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-029",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-008",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-004",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-026",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-032",
+        "count": 6,
+        "pct": 2.08
+      },
+      {
+        "value": "MOR-SYN-043",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-030",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-027",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-025",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-014",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-003",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-040",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-049",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-042",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-037",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-010",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-015",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-045",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-033",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-009",
+        "count": 5,
+        "pct": 1.74
+      },
+      {
+        "value": "MOR-SYN-011",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-024",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-060",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-018",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-035",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-041",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-028",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-021",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-038",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-019",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-047",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-031",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-054",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-052",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-036",
+        "count": 4,
+        "pct": 1.39
+      },
+      {
+        "value": "MOR-SYN-055",
+        "count": 3,
+        "pct": 1.04
+      },
+      {
+        "value": "MOR-SYN-048",
+        "count": 3,
+        "pct": 1.04
+      },
+      {
+        "value": "MOR-SYN-050",
+        "count": 3,
+        "pct": 1.04
+      },
+      {
+        "value": "MOR-SYN-012",
+        "count": 3,
+        "pct": 1.04
+      },
+      {
+        "value": "MOR-SYN-034",
+        "count": 3,
+        "pct": 1.04
+      },
+      {
+        "value": "MOR-SYN-006",
+        "count": 2,
+        "pct": 0.69
+      },
+      {
+        "value": "MOR-SYN-051",
+        "count": 2,
+        "pct": 0.69
+      },
+      {
+        "value": "MOR-SYN-020",
+        "count": 2,
+        "pct": 0.69
+      },
+      {
+        "value": "MOR-SYN-046",
+        "count": 2,
+        "pct": 0.69
+      },
+      {
+        "value": "MOR-SYN-001",
+        "count": 1,
+        "pct": 0.35
+      },
+      {
+        "value": "MOR-SYN-058",
+        "count": 1,
+        "pct": 0.35
+      }
+    ],
+    "local_variety_name": [
+      {
+        "value": "Amarilla",
+        "count": 34,
+        "pct": 11.81
+      },
+      {
+        "value": "Azul",
+        "count": 32,
+        "pct": 11.11
+      },
+      {
+        "value": "Peruanita",
+        "count": 32,
+        "pct": 11.11
+      },
+      {
+        "value": "Wenccos",
+        "count": 30,
+        "pct": 10.42
+      },
+      {
+        "value": "Puka",
+        "count": 28,
+        "pct": 9.72
+      },
+      {
+        "value": "Qeqorani",
+        "count": 25,
+        "pct": 8.68
+      },
+      {
+        "value": "Muru",
+        "count": 25,
+        "pct": 8.68
+      },
+      {
+        "value": "Sani",
+        "count": 25,
+        "pct": 8.68
+      },
+      {
+        "value": "Ccompis",
+        "count": 25,
+        "pct": 8.68
+      },
+      {
+        "value": "Yana",
+        "count": 22,
+        "pct": 7.64
+      },
+      {
+        "value": "<<MISSING>>",
+        "count": 10,
+        "pct": 3.47
+      }
+    ],
+    "skin_primary_color": [
+      {
+        "value": "yellow",
+        "count": 61,
+        "pct": 21.18
+      },
+      {
+        "value": "multicolour",
+        "count": 60,
+        "pct": 20.83
+      },
+      {
+        "value": "cream",
+        "count": 59,
+        "pct": 20.49
+      },
+      {
+        "value": "red",
+        "count": 51,
+        "pct": 17.71
+      },
+      {
+        "value": "purple",
+        "count": 47,
+        "pct": 16.32
+      },
+      {
+        "value": "<<MISSING>>",
+        "count": 10,
+        "pct": 3.47
+      }
+    ],
+    "main_use": [
+      {
+        "value": "soup",
+        "count": 66,
+        "pct": 22.92
+      },
+      {
+        "value": "market",
+        "count": 61,
+        "pct": 21.18
+      },
+      {
+        "value": "ceremonial",
+        "count": 61,
+        "pct": 21.18
+      },
+      {
+        "value": "boiling",
+        "count": 53,
+        "pct": 18.4
+      },
+      {
+        "value": "chuño",
+        "count": 47,
+        "pct": 16.32
+      }
+    ]
+  },
+  "patterns_by_region": [
+    {
+      "region": "Ayacucho",
+      "n": 96,
+      "observed_rate": 0.802,
+      "seed_exchange_mean": 3.604,
+      "uses_mean": 3.062,
+      "years_mean": 36.293,
+      "altitude_mean": 3864.503,
+      "market_distance_mean": 74.765
+    },
+    {
+      "region": "Cusco",
+      "n": 96,
+      "observed_rate": 0.542,
+      "seed_exchange_mean": 4.105,
+      "uses_mean": 3.104,
+      "years_mean": 34.284,
+      "altitude_mean": 2362.179,
+      "market_distance_mean": 18.722
+    },
+    {
+      "region": "Puno",
+      "n": 96,
+      "observed_rate": 0.688,
+      "seed_exchange_mean": 4.01,
+      "uses_mean": 3.083,
+      "years_mean": 37.143,
+      "altitude_mean": 3195.06,
+      "market_distance_mean": 48.266
+    }
+  ],
+  "patterns_by_altitude_band": [
+    {
+      "altitude_band": "high",
+      "n": 96,
+      "observed_rate": 0.802,
+      "seed_exchange_mean": 3.604,
+      "uses_mean": 3.062,
+      "years_mean": 36.293,
+      "altitude_mean": 3864.503,
+      "market_distance_mean": 74.765
+    },
+    {
+      "altitude_band": "low",
+      "n": 96,
+      "observed_rate": 0.542,
+      "seed_exchange_mean": 4.105,
+      "uses_mean": 3.104,
+      "years_mean": 34.284,
+      "altitude_mean": 2362.179,
+      "market_distance_mean": 18.722
+    },
+    {
+      "altitude_band": "mid",
+      "n": 96,
+      "observed_rate": 0.688,
+      "seed_exchange_mean": 4.01,
+      "uses_mean": 3.083,
+      "years_mean": 37.143,
+      "altitude_mean": 3195.06,
+      "market_distance_mean": 48.266
+    }
+  ],
+  "patterns_by_main_use": [
+    {
+      "main_use": "boiling",
+      "n": 53,
+      "observed_rate": 0.642,
+      "seed_exchange_mean": 3.887,
+      "uses_mean": 3.17,
+      "years_mean": 37.212,
+      "altitude_mean": 3194.585,
+      "market_distance_mean": 50.411
+    },
+    {
+      "main_use": "ceremonial",
+      "n": 61,
+      "observed_rate": 0.639,
+      "seed_exchange_mean": 4.361,
+      "uses_mean": 3.0,
+      "years_mean": 33.898,
+      "altitude_mean": 3156.282,
+      "market_distance_mean": 48.302
+    },
+    {
+      "main_use": "chuño",
+      "n": 47,
+      "observed_rate": 0.787,
+      "seed_exchange_mean": 4.298,
+      "uses_mean": 3.255,
+      "years_mean": 36.841,
+      "altitude_mean": 3107.864,
+      "market_distance_mean": 44.894
+    },
+    {
+      "main_use": "market",
+      "n": 61,
+      "observed_rate": 0.656,
+      "seed_exchange_mean": 3.783,
+      "uses_mean": 2.967,
+      "years_mean": 34.233,
+      "altitude_mean": 3034.854,
+      "market_distance_mean": 44.75
+    },
+    {
+      "main_use": "soup",
+      "n": 66,
+      "observed_rate": 0.682,
+      "seed_exchange_mean": 3.333,
+      "uses_mean": 3.076,
+      "years_mean": 37.556,
+      "altitude_mean": 3203.718,
+      "market_distance_mean": 48.126
+    }
+  ],
+  "observed_by_region_altitude": [
+    {
+      "region": "Ayacucho",
+      "altitude_band": "high",
+      "0": 19.8,
+      "1": 80.2
+    },
+    {
+      "region": "Cusco",
+      "altitude_band": "low",
+      "0": 45.8,
+      "1": 54.2
+    },
+    {
+      "region": "Puno",
+      "altitude_band": "mid",
+      "0": 31.2,
+      "1": 68.8
+    }
+  ],
+  "observed_by_main_use": [
+    {
+      "main_use": "boiling",
+      "0": 35.8,
+      "1": 64.2
+    },
+    {
+      "main_use": "ceremonial",
+      "0": 36.1,
+      "1": 63.9
+    },
+    {
+      "main_use": "chuño",
+      "0": 21.3,
+      "1": 78.7
+    },
+    {
+      "main_use": "market",
+      "0": 34.4,
+      "1": 65.6
+    },
+    {
+      "main_use": "soup",
+      "0": 31.8,
+      "1": 68.2
+    }
+  ],
+  "outcome_relationship_numeric": {
+    "sampling_visit": [
+      {
+        "observed_next_season": 0,
+        "mean": 2.495,
+        "median": 2.0,
+        "count": 93
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 2.492,
+        "median": 3.0,
+        "count": 195
+      }
+    ],
+    "households_interviewed": [
+      {
+        "observed_next_season": 0,
+        "mean": 25.402,
+        "median": 26.0,
+        "count": 87
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 23.9,
+        "median": 23.0,
+        "count": 190
+      }
+    ],
+    "altitude_m": [
+      {
+        "observed_next_season": 0,
+        "mean": 2937.423,
+        "median": 3130.3,
+        "count": 93
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 3237.472,
+        "median": 3210.9,
+        "count": 195
+      }
+    ],
+    "market_distance_km": [
+      {
+        "observed_next_season": 0,
+        "mean": 39.604,
+        "median": 33.75,
+        "count": 92
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 51.005,
+        "median": 57.8,
+        "count": 195
+      }
+    ],
+    "seed_exchange_events_year": [
+      {
+        "observed_next_season": 0,
+        "mean": 3.011,
+        "median": 3.0,
+        "count": 93
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 4.335,
+        "median": 4.0,
+        "count": 194
+      }
+    ],
+    "number_of_reported_uses": [
+      {
+        "observed_next_season": 0,
+        "mean": 2.462,
+        "median": 2.0,
+        "count": 93
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 3.379,
+        "median": 4.0,
+        "count": 195
+      }
+    ],
+    "years_reported_in_community": [
+      {
+        "observed_next_season": 0,
+        "mean": 34.132,
+        "median": 33.0,
+        "count": 91
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 36.738,
+        "median": 40.0,
+        "count": 187
+      }
+    ],
+    "interviewer_badge_number": [
+      {
+        "observed_next_season": 0,
+        "mean": 5633.215,
+        "median": 5568.0,
+        "count": 93
+      },
+      {
+        "observed_next_season": 1,
+        "mean": 5677.656,
+        "median": 5807.0,
+        "count": 195
+      }
+    ]
+  },
+  "outcome_relationship_categorical": {
+    "region": [
+      {
+        "region": "Ayacucho",
+        "0": 19.8,
+        "1": 80.2
+      },
+      {
+        "region": "Cusco",
+        "0": 45.8,
+        "1": 54.2
+      },
+      {
+        "region": "Puno",
+        "0": 31.2,
+        "1": 68.8
+      }
+    ],
+    "altitude_band": [
+      {
+        "altitude_band": "high",
+        "0": 19.8,
+        "1": 80.2
+      },
+      {
+        "altitude_band": "low",
+        "0": 45.8,
+        "1": 54.2
+      },
+      {
+        "altitude_band": "mid",
+        "0": 31.2,
+        "1": 68.8
+      }
+    ],
+    "main_use": [
+      {
+        "main_use": "boiling",
+        "0": 35.8,
+        "1": 64.2
+      },
+      {
+        "main_use": "ceremonial",
+        "0": 36.1,
+        "1": 63.9
+      },
+      {
+        "main_use": "chuño",
+        "0": 21.3,
+        "1": 78.7
+      },
+      {
+        "main_use": "market",
+        "0": 34.4,
+        "1": 65.6
+      },
+      {
+        "main_use": "soup",
+        "0": 31.8,
+        "1": 68.2
+      }
+    ],
+    "skin_primary_color": [
+      {
+        "skin_primary_color": "cream",
+        "0": 35.6,
+        "1": 64.4
+      },
+      {
+        "skin_primary_color": "multicolour",
+        "0": 36.7,
+        "1": 63.3
+      },
+      {
+        "skin_primary_color": "purple",
+        "0": 21.3,
+        "1": 78.7
+      },
+      {
+        "skin_primary_color": "red",
+        "0": 37.3,
+        "1": 62.7
+      },
+      {
+        "skin_primary_color": "yellow",
+        "0": 32.8,
+        "1": 67.2
+      }
+    ],
+    "sampling_visit": [
+      {
+        "sampling_visit": 1,
+        "0": 26.0,
+        "1": 74.0
+      },
+      {
+        "sampling_visit": 2,
+        "0": 43.8,
+        "1": 56.2
+      },
+      {
+        "sampling_visit": 3,
+        "0": 27.5,
+        "1": 72.5
+      },
+      {
+        "sampling_visit": 4,
+        "0": 31.5,
+        "1": 68.5
+      }
+    ]
+  },
+  "outliers_iqr": [
+    {
+      "column": "sampling_visit",
+      "lower_bound": -3.5,
+      "upper_bound": 8.5,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 1.0,
+      "max": 4.0
+    },
+    {
+      "column": "households_interviewed",
+      "lower_bound": -3.0,
+      "upper_bound": 53.0,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 12.0,
+      "max": 38.0
+    },
+    {
+      "column": "altitude_m",
+      "lower_bound": 461.15,
+      "upper_bound": 5768.55,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 2130.7,
+      "max": 4060.7
+    },
+    {
+      "column": "market_distance_km",
+      "lower_bound": -42.95,
+      "upper_bound": 139.05,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 2.7,
+      "max": 86.4
+    },
+    {
+      "column": "seed_exchange_events_year",
+      "lower_bound": -4.0,
+      "upper_bound": 12.0,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 0.0,
+      "max": 8.0
+    },
+    {
+      "column": "number_of_reported_uses",
+      "lower_bound": -1.0,
+      "upper_bound": 7.0,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 1.0,
+      "max": 5.0
+    },
+    {
+      "column": "years_reported_in_community",
+      "lower_bound": -34.5,
+      "upper_bound": 105.5,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 3.0,
+      "max": 70.0
+    },
+    {
+      "column": "observed_next_season",
+      "lower_bound": -1.5,
+      "upper_bound": 2.5,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "column": "interviewer_badge_number",
+      "lower_bound": -3389.375,
+      "upper_bound": 14741.625,
+      "outlier_n": 0,
+      "outlier_pct": 0.0,
+      "min": 1019.0,
+      "max": 9991.0
+    }
+  ],
+  "duplicate_record_id_n": 0,
+  "duplicate_full_rows_n": 0,
+  "correlations_with_outcome": {
+    "number_of_reported_uses": 0.302,
+    "seed_exchange_events_year": 0.247,
+    "altitude_m": 0.226,
+    "market_distance_km": 0.218,
+    "years_reported_in_community": 0.06,
+    "interviewer_badge_number": 0.008,
+    "sampling_visit": -0.001,
+    "households_interviewed": -0.089
+  }
+}
