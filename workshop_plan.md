@@ -74,8 +74,8 @@ datasets/<tematica>/
   FACILITATOR.md              <- clave de defectos: familia de corrupción y filas afectadas
 ```
 
-Esta es exactamente la estructura que ya existe en `datasets/` para los siete paquetes sintéticos, así que
-el scorer y los materiales se reutilizan sin cambios.
+Esta es la estructura canónica que produce el pipeline (§2.2 y §2.3), y sobre la que ya funcionan el
+scorer y los materiales del manual.
 
 ### 2.2 Normalización — Vilma entrega en su estructura, nosotros adaptamos
 
@@ -134,9 +134,9 @@ Familias de corrupción a sembrar (8–10 por dataset), reutilizando `corrupt_ro
 **Trabajo de ingeniería requerido (nuevo):** `scripts/corrupt_dataset.py` — toma el CSV canónico que sale
 del adaptador (§2.2) y produce `dirty.csv` + `FACILITATOR.md` con la clave de defectos. Hoy la lógica de
 corrupción vive acoplada al generador sintético (`generate_datasets.py:938`); hay que extraerla a un script
-que acepte datos externos. **Se puede escribir y probar hoy** contra los siete datasets sintéticos que ya
-están en `datasets/`, sin esperar a Vilma: si al corromper un `clean.csv` conocido el score cae y al
-limpiarlo vuelve a subir, el pipeline funciona. Ver milestone **M3**.
+que acepte datos externos. **Ya está escrito y probado** (M3 cumplido): se construyó y validó contra los
+paquetes sintéticos de `scripts/generate_datasets.py`, sin esperar a los datos reales. Falta únicamente
+aplicarlo cuando lleguen.
 
 **Nada se rompe al azar.** `corrupt_dataset.py` usa un RNG con semilla fija (`--seed`, por defecto
 `20261022`): la misma semilla reproduce el archivo sucio byte por byte. Y cada celda modificada queda
@@ -191,10 +191,11 @@ Por eso, antes de que cualquier archivo entre al workshop:
    en el paquete distribuido.
 2. **Revisión y visto bueno** del responsable del dato (Vilma) y, si aplica, del punto focal de datos de CIP,
    por escrito, para las cuatro temáticas.
-3. Si una temática no obtiene visto bueno a tiempo, se sustituye por su equivalente sintético de
-   `datasets/` (`value_chain_adoption` para encuestas, `potato_breeding_trials` para breeding,
-   `native_potato_biodiversity` para morfología, `seed_system_quality` o `climate_smart_agronomy` para
-   disease). **El workshop no se detiene por un dataset.**
+3. Si una temática no obtiene visto bueno a tiempo, se sustituye por su equivalente sintético, que se
+   regenera en un comando (`python scripts/generate_datasets.py --output-dir .`): `value_chain_adoption`
+   para encuestas, `potato_breeding_trials` para breeding, `native_potato_biodiversity` para morfología,
+   `seed_system_quality` o `climate_smart_agronomy` para disease. **El workshop no se detiene por un
+   dataset.**
 4. Investigación no publicada / propiedad intelectual de terceros: no se incluye nada inédito que no esté
    autorizado a salir.
 
@@ -525,7 +526,7 @@ Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
 
 | Gate | Fecha | Criterio | Si no se cumple |
 |---|---|---|---|
-| **G1** | 30 sep | Datos reales listos y aprobados para las 4 temáticas | Sustituir la(s) temática(s) faltante(s) por su equivalente sintético de `datasets/` |
+| **G1** | 30 sep | Datos reales listos y aprobados para las 4 temáticas | Regenerar el equivalente sintético con `generate_datasets.py` y sustituir solo la(s) temática(s) faltante(s) |
 | **G2** | 7 oct | Build congelado con preflight verde + créditos confirmados | Bloque 2 pasa a modo demostración proyectada con runs pre-cocinados |
 | **G3** | 16 oct | ≥ 90% de laptops instaladas | 70–90%: trabajo en parejas obligatorio. < 70%: **posponer al 29 de octubre** o mover a laboratorio con máquinas preparadas |
 | **G4** | 21 oct | Ensayo general completo, respaldos offline en disco | Recortar a la versión de 4 h y eliminar AutoDiscovery en vivo |

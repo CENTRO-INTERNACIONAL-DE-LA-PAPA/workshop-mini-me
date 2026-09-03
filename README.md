@@ -1,91 +1,129 @@
-# Mini-Me CIP Research Workshop — synthetic data library
+# Workshop Mini-Me — CIP
 
-This package contains seven deterministic, entirely synthetic research datasets for a
-three-day Mini-Me workshop. It spans potato and sweetpotato breeding, nutrition,
-in-situ biodiversity, ex-situ genebank operations, seed systems, climate-smart
-agronomy, and social/value-chain research.
+Materiales del workshop de un día **De datos crudos a un Data-Driven Document**, el
+**jueves 22 de octubre de 2026**.
 
-Nothing in these files represents a real participant, community, accession, genotype,
-site, partner or CIP result. The domains reflect CIP's public research portfolio:
+El plan completo, con agenda, milestones y riesgos, está en
+[`workshop_plan.md`](workshop_plan.md).
 
-- https://cipotato.org/research/
-- https://cipotato.org/research/potato-agri-food-systems-program/
-- https://cipotato.org/research/sweetpotato-agri-food-systems-program/
-- https://cipotato.org/genebankcip/
+## Qué hay aquí
 
-## Dataset packages
+| Carpeta | Qué es |
+|---|---|
+| `scripts/` | El pipeline de preparación de datos |
+| `manual/` | El manual del participante, en Quarto + Typst |
+| `datasets/` | Los paquetes por temática. **Vacío hasta que lleguen los datos** |
 
-| Folder | Research area | Clean rows |
-|---|---|---:|
-| `potato_breeding_trials` | Multi-environment potato breeding | 288 |
-| `sweetpotato_nutrition` | Nutrition and biofortification | 180 |
-| `native_potato_biodiversity` | Native-potato diversity and in-situ persistence | 288 |
-| `genebank_regeneration` | Ex-situ conservation and regeneration | 240 |
-| `seed_system_quality` | Planting-material quality and multiplication | 320 |
-| `climate_smart_agronomy` | Water, management and climate resilience | 320 |
-| `value_chain_adoption` | Adoption, markets, gender and inclusion | 450 |
+## El pipeline
 
-Every folder contains:
+Tres pasos. El primero normaliza, el segundo rompe con registro, el tercero mide.
 
-- `*_dirty.csv` — participant starting point.
-- `*_clean.csv` — facilitator benchmark; 100/100 in the scoring script.
-- `*_dictionary.csv` — type, unit, analytical role, valid range and description.
-- `README.md` — participant brief, tasks, limitations and ethics note.
-- `FACILITATOR.md` — planted relationships and exact corruption families; withhold it
-  until the exercise ends.
-
-## Common scientific structure
-
-Every dataset contains:
-
-- Two real relationships created by the simulation.
-- One association caused by a named confounder.
-- One deliberately null variable.
-- One leakage variable that must be excluded from the relevant prediction.
-- Duplicates, missing values, inconsistent categories and mixed units in `dirty.csv`.
-- Design metadata such as site, block, replicate, season, batch, cluster or time.
-- A documented limitation that prevents causal interpretation.
-
-`clean.csv` retains the confounder, null and leakage columns. They are valid recorded
-data, even though some are invalid predictors. Data cleanliness and analytical validity
-are intentionally taught as separate questions.
-
-## Score a cleaned file
-
-The scorer uses only the Python standard library and ignores row order:
-
-```powershell
-python scripts/score_cleanliness.py datasets/potato_breeding_trials/potato_breeding_trials_dirty.csv
-python scripts/score_cleanliness.py datasets/potato_breeding_trials/potato_breeding_trials_clean.csv
+```
+archivo real  ──adapt──▶  clean.csv     ──corrupt──▶  dirty.csv    ──score──▶  % reparado
+   (de quien                dictionary.csv             changelog.csv
+    lo produjo)             ADAPTATION.md              defect_key.md
 ```
 
-Score every supplied file:
+### 1 · `adapt_dataset.py` — normalizar
 
-```powershell
-python scripts/score_cleanliness.py --all datasets
+Toma el archivo tal como lo entrega quien produjo los datos y devuelve el paquete canónico.
+Lee CSV (probando codificaciones y detectando el delimitador) o Excel; convierte cabeceras
+en español a nombres de columna manejables sin perder el original; normaliza comas decimales
+y fechas; y **sintetiza un `record_id`** cuando ninguna columna sirve de identificador único.
+
+```bash
+python scripts/adapt_dataset.py "Ensayo 2025.xlsx" --slug breeding
 ```
 
-The score is weighted as follows:
+Deduce estructura, nunca significado. Cuál es la variable de resultado, qué columnas se
+calculan *después* de ella y qué relaciones ya se conocen no salen de un CSV: quedan como
+preguntas abiertas en `<slug>_ADAPTATION.md`, para responder con quien conoce los datos.
 
-- Schema agreement: 15%.
-- Record integrity, including missing/extra IDs and duplicates: 20%.
-- Cell agreement with the clean benchmark: 65%.
+**Ese paso intermedio es manual a propósito.** Sin saber cuál es el outcome no se puede
+sembrar un *leakage* con sentido.
 
-A score of 100 means exact benchmark cleanliness after numeric parsing. It does not
-mean an analysis is unbiased, causal or scientifically correct.
+### 2 · `corrupt_dataset.py` — ensuciar con registro
 
-## Reproduce the library
+Rompe el archivo limpio de forma **determinística** (semilla fija: la misma semilla
+reproduce el mismo archivo byte por byte) y anota cada celda que toca.
 
-```powershell
+```bash
+python scripts/corrupt_dataset.py datasets/breeding/breeding_clean.csv
+```
+
+Siete familias de defectos —duplicados, variantes de categoría, unidades mezcladas, valores
+imposibles, faltantes, espacios y mayúsculas, formatos de fecha— elegidas según lo que diga
+el diccionario de cada columna, no según un plan escrito a mano.
+
+El `changelog.csv` es la pieza clave: `record_id`, columna, valor original, valor sucio y
+qué se le hizo.
+
+### 3 · `score_recovery.py` — medir
+
+```bash
+python scripts/score_recovery.py mi_archivo_limpio.csv
+```
+
+```
+Reparacion: 21.5%  (59/274 defectos sembrados)
+
+Familia               Reparados       %   Filas borradas
+category_variant          26/26  100.0%                0
+duplicate_row               7/7  100.0%                0
+impossible_value          26/26  100.0%                0
+missing_cell              0/160    0.0%                0
+mixed_unit                 0/55    0.0%                0
+
+Dano colateral: 1 celdas que no eran defecto y ahora difieren del original.
+```
+
+Tres números, no uno: cuánto del daño sembrado se reparó, cuántas filas se **borraron** en
+lugar de arreglarlas, y cuántas celdas sanas se estropearon de paso.
+
+### Y `score_cleanliness.py` — control de esquema
+
+El score compuesto original (esquema 15%, integridad de registros 20%, concordancia celda a
+celda 65%). Se conserva como control, pero **no como métrica del taller**: un archivo
+corrupto ya puntúa 98/100, así que limpiarlo entero parece una mejora de dos puntos.
+
+```bash
+python scripts/score_cleanliness.py datasets/breeding/breeding_dirty.csv
+```
+
+## Sobre los datos
+
+Los cuatro paquetes del workshop salen de datos reales de investigación de CIP —morfología
+de papa del banco de germoplasma, breeding, enfermedad y encuestas a agricultores—
+anonimizados antes de entrar aquí.
+
+> **Las encuestas a agricultores contienen datos personales.** No entran a ninguna
+> herramienta de IA sin anonimización y visto bueno escrito del responsable del dato. Ver
+> §2.4 del plan.
+
+### Datos sintéticos
+
+`scripts/generate_datasets.py` genera siete paquetes sintéticos completos (breeding,
+nutrición, biodiversidad, banco de germoplasma, sistemas de semilla, agronomía y adopción).
+Se usaron para construir y probar el pipeline y ya no se versionan, porque el workshop corre
+sobre datos reales. Si hacen falta:
+
+```bash
 python scripts/generate_datasets.py --output-dir .
 ```
 
-The default seed is fixed. Re-running the command reproduces the same scientific
-relationships and dirty-file defects.
+La semilla es fija: reproduce los mismos archivos byte por byte.
 
-## Bring Your Own Data alternative
+## El manual
 
-Participants may replace the supplied data on Day 3 only after completing a Data
-Passport covering ownership, confidentiality, observation unit, design, outcome,
-missing-value codes, allowed tools and causal limitations. Synthetic data remain the
-fallback so no team is blocked or pressured to upload sensitive research data.
+```bash
+cd manual && quarto render manual.qmd
+```
+
+Sale en `manual/_output/manual.pdf`. Detalles y advertencias en
+[`manual/README.md`](manual/README.md).
+
+## Requisitos
+
+- Python 3.11+. El pipeline usa solo la biblioteca estándar, salvo `openpyxl` para leer
+  Excel en `adapt_dataset.py`.
+- Quarto 1.8+ para el manual. Typst viene incluido.
