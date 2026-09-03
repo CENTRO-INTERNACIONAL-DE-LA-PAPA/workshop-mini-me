@@ -138,14 +138,42 @@ que acepte datos externos. **Se puede escribir y probar hoy** contra los siete d
 están en `datasets/`, sin esperar a Vilma: si al corromper un `clean.csv` conocido el score cae y al
 limpiarlo vuelve a subir, el pipeline funciona. Ver milestone **M3**.
 
-**Métrica que verá el participante** (`scripts/score_cleanliness.py`, ya funciona):
+**Nada se rompe al azar.** `corrupt_dataset.py` usa un RNG con semilla fija (`--seed`, por defecto
+`20261022`): la misma semilla reproduce el archivo sucio byte por byte. Y cada celda modificada queda
+registrada en un **changelog**:
+
+| change_id | family | record_id | column | original_value | new_value | detail |
+|---|---|---|---|---|---|---|
+| C00042 | `mixed_unit` | PBT-0024 | altitude_m | 236.1 | 774.606 | m -> ft |
+| C00118 | `category_variant` | PBT-0003 | site | La Molina | La  Molina | double inner space |
+
+**La métrica que verá el participante** sale de ese log (`scripts/score_recovery.py`):
 
 ```bash
-python scripts/score_cleanliness.py datasets/breeding/breeding_dirty.csv
+python scripts/score_recovery.py mi_archivo_limpio.csv
 ```
 
-Ponderación: esquema 15% · integridad de registros 20% · concordancia celda a celda 65%.
-Cada equipo reporta su score **antes** y **después** de limpiar. Es la métrica cuantitativa del Bloque 1.
+```
+Reparacion: 21.5%  (59/274 defectos sembrados)
+
+Familia               Reparados       %   Filas borradas
+category_variant          26/26  100.0%                0
+duplicate_row               7/7  100.0%                0
+impossible_value          26/26  100.0%                0
+missing_cell              0/160    0.0%                0
+mixed_unit                 0/55    0.0%                0
+
+Dano colateral: 1 celdas que no eran defecto y ahora difieren del original.
+```
+
+**Por qué esta métrica y no el score global.** Medimos `score_cleanliness.py` sobre los siete datasets del
+repo: un archivo sucio ya puntúa **98.2–98.5 sobre 100**, así que limpiarlo entero se ve como una mejora de
+dos puntos y no motiva a nadie. El porcentaje de reparación va de 0% a 100%, se desglosa por familia de
+defecto y delata dos comportamientos que el score global esconde: **borrar filas** en lugar de arreglarlas, y
+el **daño colateral** de modificar celdas que estaban bien.
+
+`score_cleanliness.py` se sigue usando como control de esquema e integridad, con su ponderación de
+esquema 15% · registros 20% · celdas 65%.
 
 > Advertencia que debe decirse en voz alta: **100/100 no significa que el análisis sea correcto, insesgado o
 > causal.** Limpieza y validez analítica se enseñan como preguntas separadas.
@@ -357,7 +385,9 @@ Preguntas 1–5 **idénticas** (ese es el delta medible), más:
 
 | Métrica | Fuente | Meta |
 |---|---|---|
-| Δ score de limpieza por equipo | `score_cleanliness.py` | mediana ≥ +40 puntos |
+| **% de defectos reparados** por equipo | `score_recovery.py` + changelog | mediana ≥ 70% |
+| Daño colateral (celdas sanas modificadas) | `score_recovery.py` | ≤ 5 celdas por equipo |
+| Filas borradas en vez de reparadas | `score_recovery.py` | 0 |
 | Equipos que entregan Data-Driven Document completo | Carpeta de entregas (no la galería) | ≥ 80% |
 | Equipos que identifican el leakage sembrado | Clave del facilitador | ≥ 60% |
 | Equipos que identifican el confusor sembrado | Clave del facilitador | ≥ 50% |
@@ -428,9 +458,19 @@ reales del coordinador; muestra project spine, outputs, provisión de sandbox, t
 paleta de comandos (`ctrl-p`). **Riesgo abierto:** el markdown aún no se renderiza — las respuestas muestran
 sus `**asteriscos**`, y los informes y citas son el entregable. Ver riesgo R6.
 
-### 5.5 Manual PDF del workshop
+### 5.5 Manual del workshop — Quarto + Typst
 
-Un PDF, entregado impreso y digital, con:
+**Se escribe en Quarto con motor Typst**, no en Word ni en LaTeX. Tres razones: el formato Typst permite
+definir la paleta institucional de CIP y una maqueta propia sin pelear con plantillas; el contenido vive en
+Markdown y por tanto en git, junto a los scripts que documenta; y los bloques de código y las tablas se
+generan desde el propio repositorio, así que el manual no se desactualiza respecto a lo que hacen los
+scripts.
+
+El objetivo declarado es que **no quede como un PDF más**: colores de CIP, tipografía legible, cajas de
+"prueba esto" y "ojo con esto", diagramas, y una página por subagente que se pueda leer de pie mientras la
+laptop hace lo suyo. Denso en información, ligero de leer.
+
+Contenido:
 
 - El diagrama del ciclo de vida y del flujo de agentes (el de la pizarra, redibujado).
 - Una página por subagente: qué hace, qué le tienes que dar, qué te devuelve, cómo verificarlo.
@@ -539,8 +579,9 @@ Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
 
 - [ ] 4 paquetes de datos (`dirty` / `clean` / `dictionary` / `README` / `FACILITATOR`) — M3
 - [ ] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — M3
-- [ ] `scripts/corrupt_dataset.py` — M3
-- [ ] Manual PDF del workshop — M4
+- [x] `scripts/corrupt_dataset.py` (corrupción determinística + changelog celda a celda) — **hecho**
+- [x] `scripts/score_recovery.py` (% de defectos reparados, daño colateral, filas borradas) — **hecho**
+- [ ] Manual del workshop en Quarto + Typst con paleta CIP — M4
 - [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
 - [ ] Prompts exactos por actividad — M4
 - [ ] Mentimeter PRE y POST configurados — M4
