@@ -77,7 +77,42 @@ datasets/<tematica>/
 Esta es exactamente la estructura que ya existe en `datasets/` para los siete paquetes sintéticos, así que
 el scorer y los materiales se reutilizan sin cambios.
 
-### 2.2 "Ensuciar la data" — cómo y por qué
+### 2.2 Normalización — Vilma entrega en su estructura, nosotros adaptamos
+
+**Vilma manda sus datos y sus diccionarios con la estructura que ya usa.** No le pedimos que se adapte a un
+formato nuestro: sus archivos son su trabajo y reformatearlos es nuestro problema, no el suyo. Lo que
+recibiremos son CSV o Excel con nombres de columna en español, diccionarios con campos distintos a los
+nuestros, y probablemente sin una columna identificadora única.
+
+El puente lo pone **`scripts/adapt_dataset.py`** (nuevo, ver M3), que toma lo que ella mande y produce el
+paquete canónico de §2.1:
+
+| Lo que llega | Lo que hace el adaptador |
+|---|---|
+| Excel o CSV, cualquier codificación | Normaliza a CSV UTF-8 |
+| Nombres de columna en español, con espacios o tildes | Conserva el nombre original en el diccionario y genera un slug estable |
+| Sin identificador único de fila | **Sintetiza `record_id` correlativo** — así desaparece la dependencia dura |
+| Diccionario de Vilma en su propio formato | Mapea sus campos a `column, data_type, unit, role, valid_values_or_range, description` |
+| Sin roles analíticos declarados | **Propone** roles (`primary_key`, `design`, `predictor`, `outcome`) para que nosotros los confirmemos |
+
+Esto importa por una razón concreta: `score_cleanliness.py:50` exige exactamente una columna con
+`role=primary_key` y falla si no la encuentra. Sintetizar el identificador en el adaptador resuelve ese
+requisito sin pedirle nada a nadie.
+
+**Lo único que sí necesitamos preguntarle a Vilma** — y son preguntas de significado, no de formato, que se
+responden en un correo o en 20 minutos de llamada por temática:
+
+1. ¿Cuál es la unidad de observación? (¿una fila es una parcela, una planta, una accesión, un hogar?)
+2. ¿Cuál es la variable de resultado que interesa? (rendimiento, incidencia, adopción...)
+3. ¿Qué columnas se calculan **después** de conocer ese resultado? (son el *leakage* del ejercicio)
+4. ¿Qué columnas describen el **diseño**? (sitio, bloque, campaña, lote)
+5. ¿Qué unidad tiene cada variable numérica y qué rango es imposible? (para sembrar valores fuera de rango)
+6. ¿Hay alguna relación que ella ya sepa que existe, y alguna que sepa que **no** existe?
+
+Las respuestas 3 y 6 son las que permiten sembrar leakage y confusores con sentido agronómico en lugar de
+inventados. Si no llegan, el ejercicio funciona igual pero pierde el valor de usar datos reales.
+
+### 2.3 "Ensuciar la data" — cómo y por qué
 
 Partimos del dato **real y ya limpio** de Vilma, y generamos la versión sucia de forma **determinística y
 registrada**. Como conocemos el original, el score de limpieza es una métrica objetiva, no una opinión.
@@ -96,10 +131,12 @@ Familias de corrupción a sembrar (8–10 por dataset), reutilizando `corrupt_ro
 | Espacios y tipografía | ` GEN-014`, `gen-014` |
 | Leakage | una variable derivada del outcome que debe excluirse del modelo |
 
-**Trabajo de ingeniería requerido (nuevo):** `scripts/corrupt_dataset.py` — toma un CSV real limpio + su
-diccionario y produce `dirty.csv` + `FACILITATOR.md` con la clave de defectos. Hoy la lógica de corrupción
-vive acoplada al generador sintético (`generate_datasets.py:938`); hay que extraerla a un script que acepte
-datos externos. Ver milestone **M3**.
+**Trabajo de ingeniería requerido (nuevo):** `scripts/corrupt_dataset.py` — toma el CSV canónico que sale
+del adaptador (§2.2) y produce `dirty.csv` + `FACILITATOR.md` con la clave de defectos. Hoy la lógica de
+corrupción vive acoplada al generador sintético (`generate_datasets.py:938`); hay que extraerla a un script
+que acepte datos externos. **Se puede escribir y probar hoy** contra los siete datasets sintéticos que ya
+están en `datasets/`, sin esperar a Vilma: si al corromper un `clean.csv` conocido el score cae y al
+limpiarlo vuelve a subir, el pipeline funciona. Ver milestone **M3**.
 
 **Métrica que verá el participante** (`scripts/score_cleanliness.py`, ya funciona):
 
@@ -113,7 +150,7 @@ Cada equipo reporta su score **antes** y **después** de limpiar. Es la métrica
 > Advertencia que debe decirse en voz alta: **100/100 no significa que el análisis sea correcto, insesgado o
 > causal.** Limpieza y validez analítica se enseñan como preguntas separadas.
 
-### 2.3 Protección de datos — bloqueante, resolver antes de M2
+### 2.4 Protección de datos — bloqueante, resolver antes de M2
 
 Los datos de Vilma son datos reales de CIP y las **encuestas a agricultores contienen datos personales**.
 La política institucional prohíbe introducir datos confidenciales o personales en herramientas de IA, y el
@@ -420,8 +457,8 @@ Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
 | ID | Milestone | Fecha límite | Responsable | Definición de "hecho" |
 |---|---|---|---|---|
 | **M1** | Alcance y fecha confirmados | **vie 11 sep** | Piero | Fecha, sede, duración (4/5/6 h) y lista de invitados cerradas; agenda aprobada |
-| **M2** | Datos crudos de las 4 temáticas entregados | **vie 18 sep** | Vilma | 4 CSV limpios + significado de cada columna; **anonimización de encuestas hecha y aprobada** (§2.3) |
-| **M3** | `corrupt_dataset.py` + diccionarios + scoring | **vie 25 sep** | Piero | `dirty.csv`, `dictionary.csv`, `FACILITATOR.md` generados y reproducibles para las 4 temáticas; `score_cleanliness.py --all` corre limpio |
+| **M2** | Datos crudos de las 4 temáticas entregados | **vie 18 sep** | Vilma | Los 4 datasets **en la estructura que ella use**, más las 6 respuestas de significado (§2.2); **anonimización de encuestas hecha y aprobada** (§2.4) |
+| **M3** | Pipeline `adapt` → `corrupt` → `score` | **vie 25 sep** | Piero | `adapt_dataset.py` y `corrupt_dataset.py` escritos y probados **contra los datasets sintéticos actuales**; `dirty.csv`, `dictionary.csv` y `FACILITATOR.md` reproducibles para las 4 temáticas; `score_cleanliness.py --all` corre limpio |
 | **M4** | Paquete didáctico v1 | **vie 2 oct** | Piero + facilitadores | Manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla del Data-Driven Document, Mentimeter PRE/POST creados |
 | **M5** | Build congelado + bundle + preflight verde | **mié 7 oct** | Piero | Commit congelado, `bundle-backend.sh` ejecutado, `--preflight` verde en 2 laptops de prueba, créditos Asta confirmados |
 | **M6** | Instalación en laptops de participantes | **vie 16 oct** | IT + Piero | ≥ 90% de laptops confirmadas con WSL2 + app + preflight verde |
@@ -465,7 +502,8 @@ Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
 
 | ID | Riesgo | Prob. | Impacto | Mitigación |
 |---|---|---|---|---|
-| R1 | Los datos de Vilma llegan tarde o sin autorización de uso | Media | Alto | G1 con sustitución sintética ya lista; el pedido sale en T-7, no en T-5 |
+| R1 | Los datos de Vilma llegan tarde o sin autorización de uso | Media | Alto | G1 con sustitución sintética ya lista; el pedido sale en T-7, no en T-5; el pipeline se construye y prueba sin sus datos |
+| R1b | La estructura de Vilma resulta más irregular de lo previsto (jerárquica, una hoja por sitio, celdas combinadas) | Media | Medio | El adaptador se escribe tolerante; presupuestar 1 día por temática para el mapeo manual en T-5 |
 | R2 | Datos personales en las encuestas | **Alta** | **Muy alto** | Anonimización obligatoria en M2 + visto bueno escrito; si no, se usa el sintético |
 | R3 | Laptops sin WSL la mañana del workshop | Alta | Alto | B0 de 30 min + dos ventanas de instalación + trabajo en parejas como plan B |
 | R4 | AutoDiscovery/Theorizer no terminan a tiempo | **Alta** | Medio | Lanzarlos en la pausa previa + runs pre-cocinados obligatorios |
@@ -500,6 +538,7 @@ Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
 ## 9. Entregables del paquete de workshop
 
 - [ ] 4 paquetes de datos (`dirty` / `clean` / `dictionary` / `README` / `FACILITATOR`) — M3
+- [ ] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — M3
 - [ ] `scripts/corrupt_dataset.py` — M3
 - [ ] Manual PDF del workshop — M4
 - [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
