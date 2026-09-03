@@ -1,6 +1,6 @@
 # Workshop Mini-Me — Plan de ejecución (v2, un día)
 
-**De datos crudos a un Data-Driven Concept Note en un solo día.**
+**De datos crudos a un Data-Driven Document en un solo día.**
 
 | Campo | Valor |
 |---|---|
@@ -9,7 +9,7 @@
 | Participantes | 20–30 personas, en equipos de 2–3 |
 | Modalidad | Presencial, laptops propias con WSL2 preinstalado |
 | Herramienta | **Mini-Me Desktop** (`mini-me-desktop`) + backend Mini-Me en WSL |
-| Entregable del participante | **Data-Driven Concept Note** (1–2 páginas, con evidencia trazable) |
+| Entregable del participante | **Data-Driven Document** (1–2 páginas, con evidencia trazable) |
 | Medición | Mentimeter **pre** y **post** + score de limpieza automatizado |
 | Fecha de este plan | 3 de septiembre de 2026 (T-7 semanas) |
 
@@ -30,7 +30,7 @@ Bloque 2  Asta / Allen AI     ->  el científico busca, teoriza y explora eviden
 Bloque 3  Hands-on            ->  el científico produce un documento defendible
                                    |
                                    v
-                        Data-Driven Concept Note
+                          Data-Driven Document
 ```
 
 El mensaje central del día, que debe repetirse en cada bloque:
@@ -48,7 +48,7 @@ Al terminar, cada participante debe poder:
 4. Usar al menos tres herramientas Asta (búsqueda académica, PDF librarian, Theorizer, DataVoyager, AutoDiscovery).
 5. Verificar un resultado de IA: fuentes, código, archivos, estado de ejecución.
 6. Identificar al menos **un error o límite** de la IA durante el día.
-7. Entregar un Data-Driven Concept Note con una afirmación respaldada y una afirmación que **no** puede hacerse.
+7. Entregar un Data-Driven Document con una afirmación respaldada y una afirmación que **no** puede hacerse.
 
 ---
 
@@ -148,7 +148,7 @@ Por eso, antes de que cualquier archivo entre al workshop:
 | 10:35–11:40 | 65 | **B2 Asta / Allen AI** | Academic research → PDF librarian → Theorizer → DataVoyager → AutoDiscovery |
 | 11:40–11:50 | 10 | Pausa | |
 | 11:50–13:20 | 90 | **B3 Hands-on** | Dos rutas (Research / Data) sobre el dataset de su temática |
-| 13:20–13:45 | 25 | **Galería** | Mural con todos los Concept Notes + **2 presentaciones voluntarias** + síntesis |
+| 13:20–13:45 | 25 | **Galería** | Mural con todos los Data-Driven Documents + **2 presentaciones voluntarias** + síntesis |
 | 13:45–14:00 | 15 | **Cierre** | **Mentimeter POST** + próximos pasos + entrega de materiales |
 
 **B0 no es opcional.** Es el bloque que salva el día: 30 minutos de colchón para el 10–20% de laptops que
@@ -213,7 +213,7 @@ herramientas, gana quien construye el argumento más verificable.
 **Ruta 1 — Research** (para quien viene con una pregunta, no con datos):
 
 ```
-AutoDiscovery -> Report -> Academic search -> (PDF librarian) -> Concept Note
+AutoDiscovery -> Report -> Academic search -> (PDF librarian) -> Data-Driven Document
 ```
 
 **Ruta 2 — Data** (para quien viene con un dataset):
@@ -230,9 +230,12 @@ Ambas rutas convergen en el mismo entregable. Los equipos eligen ruta en los pri
 |---:|---|
 | 0–10 | Elegir ruta, pregunta, roles y subagentes |
 | 10–70 | Trabajo con Mini-Me Desktop |
-| 70–90 | Redacción del Data-Driven Concept Note |
+| 70–90 | Redacción del Data-Driven Document |
 
-**Plantilla del Data-Driven Concept Note** (1–2 páginas, es la tarjeta que se entrega impresa):
+**Plantilla del Data-Driven Document** (1–2 páginas, es la tarjeta que se entrega impresa):
+
+> Es un **ejercicio del workshop**: el registro de lo que el equipo hizo, encontró y no puede afirmar
+> con sus datos en 90 minutos. No es una nota conceptual, una propuesta ni un insumo para financiamiento.
 
 1. Pregunta científica.
 2. Dataset y unidad de observación.
@@ -252,16 +255,16 @@ turnos apurados. Formato:
 
 | Min | Actividad |
 |---:|---|
-| 0–5 | **Mural**: los 10 Concept Notes quedan pegados en la pared / subidos a la carpeta compartida |
-| 5–13 | **Auditoría cruzada**: cada equipo lee el Concept Note de otro y le deja una pregunta escrita |
+| 0–5 | **Mural**: los 10 Data-Driven Documents quedan pegados en la pared / subidos a la carpeta compartida |
+| 5–13 | **Auditoría cruzada**: cada equipo lee el Data-Driven Document de otro y le deja una pregunta escrita |
 | 13–23 | **Máximo 2 presentaciones voluntarias**, 5 min cada una |
 | 23–25 | Síntesis del facilitador: los 3 patrones que aparecieron en el mural |
 
 Los 2 grupos se ofrecen durante el hands-on, no en el momento; si nadie se ofrece, el facilitador presenta
-uno del mural. **Todos los equipos entregan** su Concept Note aunque no presenten — la entrega es el
+uno del mural. **Todos los equipos entregan** su Data-Driven Document aunque no presenten — la entrega es el
 requisito, la presentación es opcional.
 
-Rúbrica (se aplica a **todos** los Concept Notes entregados, no solo a los presentados): pregunta clara 15% · calidad y trazabilidad del dato 20% · método apropiado 20% ·
+Rúbrica (se aplica a **todos** los Data-Driven Documents entregados, no solo a los presentados): pregunta clara 15% · calidad y trazabilidad del dato 20% · método apropiado 20% ·
 evidencia y reproducibilidad 20% · interpretación y límites 15% · comunicación 10%.
 
 ### 3.3 Cómo se recorta a 4 h y cómo se estira a 6 h
@@ -318,10 +321,10 @@ Preguntas 1–5 **idénticas** (ese es el delta medible), más:
 | Métrica | Fuente | Meta |
 |---|---|---|
 | Δ score de limpieza por equipo | `score_cleanliness.py` | mediana ≥ +40 puntos |
-| Equipos que entregan Concept Note completo | Carpeta de entregas (no la galería) | ≥ 80% |
+| Equipos que entregan Data-Driven Document completo | Carpeta de entregas (no la galería) | ≥ 80% |
 | Equipos que identifican el leakage sembrado | Clave del facilitador | ≥ 60% |
 | Equipos que identifican el confusor sembrado | Clave del facilitador | ≥ 50% |
-| Equipos que documentan un error de la IA | Concept Note, punto 9 | 100% |
+| Equipos que documentan un error de la IA | Data-Driven Document, punto 9 | 100% |
 | Laptops operativas al inicio de B1 | Checklist B0 | ≥ 95% |
 
 ---
@@ -395,7 +398,7 @@ Un PDF, entregado impreso y digital, con:
 - El diagrama del ciclo de vida y del flujo de agentes (el de la pizarra, redibujado).
 - Una página por subagente: qué hace, qué le tienes que dar, qué te devuelve, cómo verificarlo.
 - **Los prompts exactos** de cada actividad, copiables.
-- La plantilla del Data-Driven Concept Note.
+- La plantilla del Data-Driven Document.
 - El Data Passport (para BYOD).
 - Troubleshooting: 8–10 fallas conocidas y su solución en una línea.
 - Enlaces y cómo pedir ayuda después del workshop.
@@ -419,12 +422,12 @@ Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
 | **M1** | Alcance y fecha confirmados | **vie 11 sep** | Piero | Fecha, sede, duración (4/5/6 h) y lista de invitados cerradas; agenda aprobada |
 | **M2** | Datos crudos de las 4 temáticas entregados | **vie 18 sep** | Vilma | 4 CSV limpios + significado de cada columna; **anonimización de encuestas hecha y aprobada** (§2.3) |
 | **M3** | `corrupt_dataset.py` + diccionarios + scoring | **vie 25 sep** | Piero | `dirty.csv`, `dictionary.csv`, `FACILITATOR.md` generados y reproducibles para las 4 temáticas; `score_cleanliness.py --all` corre limpio |
-| **M4** | Paquete didáctico v1 | **vie 2 oct** | Piero + facilitadores | Manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla Concept Note, Mentimeter PRE/POST creados |
+| **M4** | Paquete didáctico v1 | **vie 2 oct** | Piero + facilitadores | Manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla del Data-Driven Document, Mentimeter PRE/POST creados |
 | **M5** | Build congelado + bundle + preflight verde | **mié 7 oct** | Piero | Commit congelado, `bundle-backend.sh` ejecutado, `--preflight` verde en 2 laptops de prueba, créditos Asta confirmados |
 | **M6** | Instalación en laptops de participantes | **vie 16 oct** | IT + Piero | ≥ 90% de laptops confirmadas con WSL2 + app + preflight verde |
 | **M7** | Ensayo general completo | **mar 20 oct** | Equipo completo | Los 3 bloques corridos de punta a punta con los datos reales, cronometrados; runs pre-cocinados guardados; respaldos offline listos |
 | **M8** | **Workshop** | **jue 22 oct** | Todos | Ejecutado |
-| **M9** | Cierre y reporte | **vie 30 oct** | Piero | Deltas de Mentimeter, métricas objetivas, Concept Notes recopilados, lecciones y decisión de repetición |
+| **M9** | Cierre y reporte | **vie 30 oct** | Piero | Deltas de Mentimeter, métricas objetivas, Data-Driven Documents recopilados, lecciones y decisión de repetición |
 
 ### 6.2 Semana a semana
 
@@ -482,7 +485,7 @@ de guardia. Con 30 participantes, 3 facilitadores es el piso, no el ideal.
 Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
 
 1. **Duración final:** ¿4, 5 o 6 horas? Recomiendo 5 h; con 4 h el hands-on queda apretado para producir un
-   Concept Note decente.
+   Data-Driven Document decente.
 2. **API keys:** ¿una por participante o una compartida del taller? Afecta presupuesto y trazabilidad.
 3. **Presupuesto de créditos Asta** disponible y confirmado.
 4. **Encuestas a agricultores:** ¿existe ya una versión anonimizada o hay que producirla? ¿Quién firma el
@@ -499,7 +502,7 @@ Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
 - [ ] 4 paquetes de datos (`dirty` / `clean` / `dictionary` / `README` / `FACILITATOR`) — M3
 - [ ] `scripts/corrupt_dataset.py` — M3
 - [ ] Manual PDF del workshop — M4
-- [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla Concept Note, Data Passport — M4
+- [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
 - [ ] Prompts exactos por actividad — M4
 - [ ] Mentimeter PRE y POST configurados — M4
 - [ ] Runs pre-cocinados de Theorizer, DataVoyager y AutoDiscovery (4 temáticas) — M7
