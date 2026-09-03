@@ -1,0 +1,66 @@
+# Cómo usar este manual
+
+El workshop dura un día y tiene tres bloques. Este manual no se lee de corrido: se abre
+en la página del bloque en el que estás.
+
+| Bloque | Qué haces | Página |
+|---|---|---|
+| 1 · Data Lifecycle | Arreglas un dataset y lo llevas hasta un informe | @sec-ciclo |
+| 2 · Asta | Buscas evidencia, generas hipótesis, exploras | @sec-asta |
+| 3 · Hands-on | Produces tu Data-Driven Document | @sec-hands-on |
+
+## Las tres cajas que vas a ver
+
+```{=typst}
+#prueba[
+  Algo que puedes hacer ahora mismo en tu laptop. Si la caja es verde, es una acción.
+]
+
+#ojo[
+  Algo que se rompe seguido, o un resultado que parece correcto y no lo es. Si la caja
+  es naranja, léela antes de seguir.
+]
+
+#nota[
+  El porqué de algo. No hace falta para avanzar, pero es lo que te vas a llevar del día.
+]
+```
+
+## Y las tarjetas de prompt
+
+Lo que está dentro de una tarjeta se copia y se pega tal cual. El nombre del subagente
+está arriba.
+
+```{=typst}
+#prompt("exploratory_data_analysis")[
+  Perfila este dataset: distribuciones, valores faltantes, relaciones entre variables y
+  anomalías. Dime qué te llama la atención y qué todavía no se puede concluir.
+]
+```
+
+## La regla del día
+
+```{=typst}
+#nota[
+  *La IA acelera tareas; el científico mantiene la responsabilidad sobre la pregunta,
+  los datos, la evidencia y la interpretación.*
+
+  Al final del día tu Data-Driven Document tiene que incluir un error, una omisión o
+  una exageración que la IA cometió durante la sesión. No es un castigo al modelo: es
+  la prueba de que lo estuviste revisando.
+]
+```
+
+## Qué necesitas tener listo
+
+- WSL2 con Ubuntu instalado (se hizo dos semanas antes, con IT).
+- Mini-Me Desktop abierto y con el panel **Setup** en verde.
+- Tu clave de modelo pegada en **Settings**.
+- La carpeta de tu temática descargada.
+
+```{=typst}
+#ojo[
+  Si algo de esto falta, no intentes resolverlo en silencio durante el bloque 1: levanta
+  la mano en el bloque 0. Hay 30 minutos reservados justo para eso.
+]
+```

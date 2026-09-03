@@ -1,0 +1,81 @@
+# Bloque 2 · Asta {#sec-asta}
+
+Asta es el ecosistema del Allen Institute for AI para investigación asistida. Cinco
+herramientas, 65 minutos, y una regla operativa que cambia todo el bloque.
+
+```{=typst}
+#ojo[
+  *Theorizer y AutoDiscovery se lanzan en la pausa anterior*, no cuando llegas a su
+  sección. Tardan minutos, a veces más. Si los lanzas cuando toca, se te acaba el bloque
+  mirando una barra de progreso.
+]
+```
+
+## Academic researcher
+
+```{=typst}
+#prompt("academic_researcher")[
+  ¿Qué evidencia publicada existe sobre «la pregunta de mi temática»? Dame cinco fuentes
+  y, por cada una, una frase explicando por qué importa para mi pregunta concreta.
+]
+
+#ojo[
+  Comprueba que las cinco fuentes existen. Abre dos. Un título plausible con autores
+  plausibles y un año plausible sigue siendo una cita que hay que verificar.
+]
+```
+
+## PDF librarian
+
+Los PDFs ya están descargados en tu carpeta. No dependas de una descarga en vivo.
+
+```{=typst}
+#prompt("pdf_librarian")[
+  Indexa los PDFs de la carpeta y encuentra los pasajes que hablen de «mecanismo». Cita
+  página y párrafo, y transcribe la frase exacta en la que te apoyas.
+]
+```
+
+## Theorizer
+
+```{=typst}
+#prompt("hypothesis_generator")[
+  Genera mecanismos e hipótesis comprobables sobre por qué «fenómeno de mi temática».
+  Para cada hipótesis dime qué dato haría falta para refutarla.
+]
+
+#nota[
+  "Qué dato la refutaría" es la pregunta que separa una hipótesis de una opinión bien
+  redactada. Si una hipótesis no se puede refutar con ningún dato, no sirve.
+]
+```
+
+## DataVoyager
+
+```{=typst}
+#prompt("data_voyager")[
+  Evalúa si la asociación entre «A» y «B» está mediada o modificada por «C». Reporta
+  supuestos, incertidumbre, visualizaciones y el código que ejecutaste.
+]
+```
+
+## AutoDiscovery
+
+Presupuesto: de 3 a 5 experimentos. Cada experimento consume un crédito.
+
+Lo que tienes que inspeccionar —esto es la lección, no el resultado:
+
+1. La hipótesis que se probó.
+2. El *prior* y el *posterior*.
+3. El valor firmado de `surprise`.
+4. El código que se ejecutó.
+5. El método estadístico elegido.
+6. Las limitaciones declaradas.
+7. Si el resultado merece validación independiente.
+
+```{=typst}
+#nota[
+  AutoDiscovery propone direcciones de investigación. No convierte una relación encontrada
+  en una conclusión científica: eso sigue siendo trabajo tuyo.
+]
+```

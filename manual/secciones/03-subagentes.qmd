@@ -1,0 +1,62 @@
+# Los subagentes {#sec-subagentes}
+
+Mini-Me coordina doce subagentes. No los vas a usar todos, y no deberías: en el bloque 3
+el límite son **tres por equipo**. Gana quien construye el argumento más verificable, no
+quien toca más botones.
+
+| Subagente | Para qué |
+|---|---|
+| `academic_researcher` | Busca literatura con las herramientas de Asta |
+| `dataverse_explorer` | Busca y recomienda datasets del Dataverse de CIP |
+| `data_cleaning` | Valida y limpia, con pointblank, AGROVOC y Crop Ontology |
+| `exploratory_data_analysis` | Perfila y resume: ¿qué pasó? |
+| `diagnostic_analytics` | Inferencia: ¿por qué pasó? |
+| `predictive_analytics` | Modelos de ML: ¿qué va a pasar? |
+| `report_writer` | Convierte hallazgos en un informe presentable |
+| `hypothesis_generator` | Teorías e hipótesis ancladas en literatura (Theorizer) |
+| `pdf_librarian` | Indexa y consulta tus propios PDFs |
+| `data_voyager` | Pipeline DataVoyager de Asta sobre datos tabulares |
+| `autodiscovery` | Prepara una corrida de AutoDiscovery sobre tu dataset |
+| `research_planner` | Redacta un plan de investigación de 3 a 7 pasos |
+
+## Cómo se lee la ficha de un subagente
+
+Cada subagente se juzga por tres cosas: qué le tienes que dar, qué te devuelve, y **cómo
+compruebas que lo que devolvió es real**. Esa tercera columna es la que casi nadie mira.
+
+### `data_cleaning`
+
+| | |
+|---|---|
+| **Le das** | El CSV sucio y el diccionario de la temática |
+| **Te devuelve** | Un CSV corregido y un registro de decisiones |
+| **Compruebas** | Que el archivo existe en el panel de outputs; corre `score_recovery.py` |
+
+### `diagnostic_analytics`
+
+| | |
+|---|---|
+| **Le das** | El formulario de contexto completo, nunca vacío |
+| **Te devuelve** | Efectos estimados, su incertidumbre y supuestos |
+| **Compruebas** | Que nombró los confusores y que no dijo "causa" sin justificarlo |
+
+### `autodiscovery`
+
+| | |
+|---|---|
+| **Le das** | El dataset limpio y un presupuesto de 3 a 5 experimentos |
+| **Te devuelve** | Hipótesis con prior, posterior, `surprise`, código y método |
+| **Compruebas** | Las siete cosas de la lista de @sec-asta |
+
+```{=typst}
+#ojo[
+  Una herramienta puede fallar y aun así dejarte un artefacto con aspecto de éxito. Antes
+  de creerle a cualquier subagente: mira el `status`, el identificador de la tarea, y que
+  el archivo exista de verdad en el panel de outputs. Si no hay archivo, no hubo resultado.
+]
+
+#nota[
+  `research_planner` todavía no incluye `autodiscovery` entre sus acciones permitidas. Si
+  le pides que arme el flujo del bloque 2, va a omitirlo sin avisar.
+]
+```

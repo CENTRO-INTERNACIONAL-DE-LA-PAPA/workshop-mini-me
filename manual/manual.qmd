@@ -1,0 +1,50 @@
+---
+title: "Mini-Me · Manual del workshop"
+subtitle: "De datos crudos a un Data-Driven Document en un día"
+date: "2026-10-22"
+author: "Centro Internacional de la Papa"
+lang: es
+format:
+  typst:
+    papersize: a4
+    margin:
+      top: 2.2cm
+      bottom: 2cm
+      left: 2.3cm
+      right: 2.3cm
+    mainfont: "Segoe UI"
+    monofont: "Cascadia Mono"
+    fontsize: 10pt
+    keep-typ: true
+    toc: true
+    toc-title: Contenido
+    toc-depth: 2
+    section-numbering: "1.1"
+    include-in-header:
+      - file: _brand.typ
+---
+
+```{=typst}
+#v(6pt)
+#block(width: 100%, fill: cip-suave, stroke: (left: 3pt + cip-azul), inset: 12pt, radius: (right: 4pt))[
+  #text(size: 11pt)[
+    Este manual se lee *mientras* la laptop trabaja. Los agentes tardan: en vez de
+    mirar la barra de progreso, lee la página que corresponde a lo que acabas de lanzar.
+  ]
+]
+#v(4pt)
+```
+
+{{< include secciones/01-como-usar.qmd >}}
+
+{{< include secciones/02-ciclo-de-vida.qmd >}}
+
+{{< include secciones/03-subagentes.qmd >}}
+
+{{< include secciones/04-asta.qmd >}}
+
+{{< include secciones/05-hands-on.qmd >}}
+
+{{< include secciones/06-datos-y-limpieza.qmd >}}
+
+{{< include secciones/07-cuando-algo-falla.qmd >}}

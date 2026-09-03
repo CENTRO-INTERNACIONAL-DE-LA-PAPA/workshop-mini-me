@@ -1,0 +1,43 @@
+# Cuando algo falla {#sec-fallas}
+
+## Lo primero, siempre
+
+```{=typst}
+#prueba[
+  Abre el panel *Setup*. Se abre solo cuando falta algo y trae un botón por cada cosa que
+  puede resolver: instalar WSL, instalar Mini-Me, instalar los paquetes de Python. Muestra
+  la salida mientras corre.
+]
+```
+
+## Fallas conocidas
+
+| Síntoma | Qué pasa | Solución |
+|---|---|---|
+| Un resultado aparece pero no hay archivo | Una herramienta falló y dejó un artefacto con aspecto de éxito | Mira el `status` y el id de la tarea; si no hay archivo, no hubo resultado |
+| El informe muestra `**asteriscos**` | El markdown todavía no se renderiza en la app | Exporta el informe a PDF con `report_writer` y léelo ahí |
+| `diagnostic_analytics` responde con contexto vacío | Acepta el formulario en blanco | Rellena siempre pregunta, resultado, causas, unidad, periodo y confusores |
+| El plan omite AutoDiscovery | `research_planner` no lo tiene entre sus acciones permitidas | Lanza AutoDiscovery a mano |
+| Un modelo predice casi perfecto | Leakage | Saca la columna marcada `leakage` del diccionario |
+| El agente tarda "demasiado" | Theorizer y AutoDiscovery tardan minutos | Lánzalos en la pausa anterior; hay corridas de respaldo en disco |
+
+## Fallas de instalación
+
+Estas son de la máquina, no del workshop. Si te topas con una, es trabajo de IT.
+
+| Síntoma | Causa | Solución |
+|---|---|---|
+| `Failed to find fxc.exe` al compilar | Falta el compilador de shaders del SDK de Windows | Instalar el Windows 11 SDK, o apuntar `GPUI_FXC_PATH` al que ya exista |
+| `git pull` pide contraseña dentro de WSL | Dentro de la distro no hay gestor de credenciales | Reutilizar el de Windows con `git config --global credential.helper` |
+| Todo va lentísimo | El entorno de Python quedó sobre `/mnt/c` | Debe vivir en el sistema de archivos de la propia distro |
+| No existe el comando `langgraph` | Se instaló sin el extra de desarrollo | Reinstalar pasando `--extra dev` |
+
+## Si nada de esto sirve
+
+```{=typst}
+#prueba[
+  Levanta la mano. Hay tres facilitadores y una persona de IT de guardia. Y todas las
+  actividades tienen un resultado de respaldo en disco: nadie se queda sin poder avanzar
+  porque una herramienta en línea no respondió.
+]
+```

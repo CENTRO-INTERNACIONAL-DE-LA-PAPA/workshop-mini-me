@@ -1,0 +1,80 @@
+# Bloque 3 · Manos a la obra {#sec-hands-on}
+
+90 minutos, equipos de 2 o 3, máximo tres subagentes por equipo. Eliges una de las dos
+rutas en los primeros diez minutos.
+
+## Ruta 1 · Research
+
+Para cuando llegas con una pregunta más que con un dataset.
+
+```
+AutoDiscovery → Report → Academic search → (PDF librarian) → Documento
+```
+
+## Ruta 2 · Data
+
+Para cuando llegas con un dataset. Tres variantes, elige una:
+
+```
+Limpieza/Validación → EDA → Report
+EDA → Diagnostics → Report
+EDA → Diagnostics → Predictive → Report
+```
+
+## El entregable
+
+```{=typst}
+#nota[
+  El Data-Driven Document es un *ejercicio del workshop*: el registro de lo que tu equipo
+  hizo, encontró y no puede afirmar con sus datos en 90 minutos. No es una nota conceptual,
+  ni una propuesta, ni un insumo para financiamiento.
+]
+```
+
+Una o dos páginas con estos diez puntos:
+
+1. Pregunta científica.
+2. Dataset y unidad de observación.
+3. Porcentaje de defectos reparados, y tres decisiones de limpieza documentadas.
+4. Una visualización principal.
+5. Un resultado cuantitativo con su incertidumbre.
+6. Dos o tres fuentes de la literatura.
+7. Una afirmación respaldada.
+8. Una afirmación que **no** puede hacerse con estos datos, y por qué.
+9. Un error, omisión o exageración que cometió la IA durante la sesión.
+10. El siguiente experimento que recomiendas.
+
+**Todos los equipos entregan.** Presentar es voluntario y solo van dos grupos, por tiempo.
+
+## Cómo se evalúa
+
+| Criterio | Peso |
+|---|---:|
+| Pregunta científica clara | 15% |
+| Calidad y trazabilidad del dato | 20% |
+| Método apropiado | 20% |
+| Evidencia y reproducibilidad | 20% |
+| Interpretación y límites | 15% |
+| Comunicación | 10% |
+
+## Data Passport
+
+Si en lugar de los datos del workshop quieres traer los tuyos, primero esto. Sin las siete
+respuestas, no se sube nada.
+
+| Campo | Tu respuesta |
+|---|---|
+| ¿De quién son los datos? | |
+| ¿Son confidenciales o tienen datos personales? | |
+| ¿Qué representa una fila? | |
+| ¿Cuál es el diseño del estudio? | |
+| ¿Cuál es la variable de resultado? | |
+| ¿Cómo se codifican los faltantes? | |
+| ¿Qué NO se puede concluir por el diseño? | |
+
+```{=typst}
+#ojo[
+  Si la segunda respuesta es "sí", no subas el archivo. Los datos personales no entran a
+  herramientas de IA, y esto no es negociable ni siquiera "solo para probar".
+]
+```

@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Salidas del manual (se regeneran con: quarto render manual.qmd)
+manual/_output/
+manual/manual.typ
+manual/manual.html
+manual/manual_files/
+manual/.quarto/

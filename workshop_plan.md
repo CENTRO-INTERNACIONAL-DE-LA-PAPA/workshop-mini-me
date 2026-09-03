@@ -466,7 +466,8 @@ Markdown y por tanto en git, junto a los scripts que documenta; y los bloques de
 generan desde el propio repositorio, así que el manual no se desactualiza respecto a lo que hacen los
 scripts.
 
-El objetivo declarado es que **no quede como un PDF más**: colores de CIP, tipografía legible, cajas de
+La paleta vive en `manual/_brand.typ` y **hoy son colores provisionales**: hay que pedir el manual de
+marca a Comunicaciones y reemplazar seis líneas. El objetivo declarado es que **no quede como un PDF más**: colores de CIP, tipografía legible, cajas de
 "prueba esto" y "ojo con esto", diagramas, y una página por subagente que se pueda leer de pie mientras la
 laptop hace lo suyo. Denso en información, ligero de leer.
 
@@ -498,7 +499,7 @@ Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
 |---|---|---|---|---|
 | **M1** | Alcance y fecha confirmados | **vie 11 sep** | Piero | Fecha, sede, duración (4/5/6 h) y lista de invitados cerradas; agenda aprobada |
 | **M2** | Datos crudos de las 4 temáticas entregados | **vie 18 sep** | Vilma | Los 4 datasets **en la estructura que ella use**, más las 6 respuestas de significado (§2.2); **anonimización de encuestas hecha y aprobada** (§2.4) |
-| **M3** | Pipeline `adapt` → `corrupt` → `score` | **vie 25 sep** | Piero | `adapt_dataset.py` y `corrupt_dataset.py` escritos y probados **contra los datasets sintéticos actuales**; `dirty.csv`, `dictionary.csv` y `FACILITATOR.md` reproducibles para las 4 temáticas; `score_cleanliness.py --all` corre limpio |
+| **M3** | Pipeline `adapt` → `corrupt` → `score` | **vie 25 sep** | Piero | ✅ Los tres scripts escritos y probados de punta a punta (Excel desordenado → adaptado → 71 defectos → 0% / 100% en los extremos). Pendiente solo aplicarlo a los datos reales cuando lleguen |
 | **M4** | Paquete didáctico v1 | **vie 2 oct** | Piero + facilitadores | Manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla del Data-Driven Document, Mentimeter PRE/POST creados |
 | **M5** | Build congelado + bundle + preflight verde | **mié 7 oct** | Piero | Commit congelado, `bundle-backend.sh` ejecutado, `--preflight` verde en 2 laptops de prueba, créditos Asta confirmados |
 | **M6** | Instalación en laptops de participantes | **vie 16 oct** | IT + Piero | ≥ 90% de laptops confirmadas con WSL2 + app + preflight verde |
@@ -578,10 +579,10 @@ Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
 ## 9. Entregables del paquete de workshop
 
 - [ ] 4 paquetes de datos (`dirty` / `clean` / `dictionary` / `README` / `FACILITATOR`) — M3
-- [ ] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — M3
+- [x] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — **hecho**
 - [x] `scripts/corrupt_dataset.py` (corrupción determinística + changelog celda a celda) — **hecho**
 - [x] `scripts/score_recovery.py` (% de defectos reparados, daño colateral, filas borradas) — **hecho**
-- [ ] Manual del workshop en Quarto + Typst con paleta CIP — M4
+- [~] Manual del workshop en Quarto + Typst — **esqueleto que compila, 11 páginas**; falta contenido de las 4 temáticas y la paleta oficial de CIP — M4
 - [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
 - [ ] Prompts exactos por actividad — M4
 - [ ] Mentimeter PRE y POST configurados — M4

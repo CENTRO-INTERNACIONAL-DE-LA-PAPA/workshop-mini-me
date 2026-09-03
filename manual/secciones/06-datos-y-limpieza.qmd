@@ -1,0 +1,78 @@
+# Tus datos, y cómo se mide la limpieza {#sec-datos}
+
+## De dónde salen estos datos
+
+Son datos reales de investigación de CIP, anonimizados, en cuatro temáticas: morfología de
+papa del banco de germoplasma, breeding, enfermedad (bactericera / punta morada) y encuestas
+a agricultores.
+
+Los ensuciamos nosotros, a propósito y con registro. Por eso podemos decirte con exactitud
+qué arreglaste y qué no.
+
+## Los tres archivos de tu carpeta
+
+| Archivo | Qué es |
+|---|---|
+| `«tema»_dirty.csv` | Tu punto de partida |
+| `«tema»_dictionary.csv` | Tipos, unidades, roles y rangos válidos |
+| `README.md` | La pregunta, la unidad de observación y la limitación causal |
+
+El `_clean.csv` y la clave de defectos los tiene el facilitador. Aparecen al final.
+
+```{=typst}
+#nota[
+  Nada se rompió al azar. La corrupción usa una semilla fija, así que se puede reproducir
+  exactamente, y cada celda modificada quedó anotada en un registro con su valor original.
+]
+```
+
+## La medición
+
+```bash
+python scripts/score_recovery.py mi_archivo_limpio.csv
+```
+
+```
+Reparacion: 21.5%  (59/274 defectos sembrados)
+
+Familia               Reparados       %   Filas borradas
+category_variant          26/26  100.0%                0
+duplicate_row               7/7  100.0%                0
+impossible_value          26/26  100.0%                0
+missing_cell              0/160    0.0%                0
+mixed_unit                 0/55    0.0%                0
+
+Dano colateral: 1 celdas que no eran defecto y ahora difieren del original.
+```
+
+Tres números importan, no uno:
+
+- **Reparación**: qué porcentaje del daño sembrado corregiste.
+- **Filas borradas**: borrar no es reparar. Debería ser cero.
+- **Daño colateral**: celdas que estaban bien y ahora no. También debería ser cero.
+
+```{=typst}
+#ojo[
+  Un 100% de reparación *no* significa que tu análisis sea correcto, insesgado o causal.
+  Significa que el archivo quedó igual al original. Limpieza y validez analítica son dos
+  preguntas distintas, y solo la primera se puede automatizar.
+]
+```
+
+## Las columnas que no son un defecto
+
+En tu diccionario hay columnas marcadas con roles especiales. Están **correctamente
+registradas**: el problema que traen es analítico, no de calidad del dato.
+
+| Rol | Qué significa | Qué hacer |
+|---|---|---|
+| `leakage` | Se calculó después de conocer el resultado | Sácala de cualquier modelo predictivo |
+| `confounded_exposure` | Parece asociada al resultado por una tercera variable | No la interpretes como causa |
+| `null` | Deliberadamente no tiene relación con nada | Si tu método la encuentra "significativa", revisa el método |
+
+```{=typst}
+#nota[
+  La columna `null` es un detector de humo. Si aparece como predictor importante, no
+  descubriste nada: encontraste un problema en tu procedimiento.
+]
+```

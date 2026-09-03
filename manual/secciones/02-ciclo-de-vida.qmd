@@ -1,0 +1,108 @@
+# El ciclo de vida del dato {#sec-ciclo}
+
+Siete etapas. Cada una tiene un subagente y una pregunta que responde. La trampa está en
+saltarse etapas: casi todo el mal análisis que verás en tu vida empieza por hacer EDA
+sobre datos sin validar, o por predecir antes de entender.
+
+| # | Etapa | Pregunta que responde | Subagente |
+|---|---|---|---|
+| 1 | Introducción | ¿Qué quiero saber? | — |
+| 2 | Limpieza | ¿Puedo confiar en cada celda? | `data_cleaning` |
+| 3 | Validación | ¿Cumple el diccionario? | `data_cleaning` |
+| 4 | EDA | ¿Qué pasó? | `exploratory_data_analysis` |
+| 5 | Diagnóstico | ¿Por qué pasó? | `diagnostic_analytics` |
+| 6 | Predicción | ¿Qué va a pasar? | `predictive_analytics` |
+| 7 | Reporte | ¿Cómo lo comunico? | `report_writer` |
+
+## 1 · Introducción: la pregunta antes que el archivo
+
+Antes de abrir nada, escribe la pregunta en una línea. Si no puedes, el problema no es
+de datos.
+
+Tu dataset trae una pregunta sugerida en su `README.md`. Puedes cambiarla, pero escríbela.
+
+## 2 y 3 · Limpieza y validación
+
+Tu archivo `_dirty.csv` está roto **a propósito**, y sabemos exactamente cómo: cada celda
+modificada quedó registrada. Al final del bloque vas a poder medir qué porcentaje del daño
+reparaste (@sec-datos).
+
+```{=typst}
+#prompt("data_cleaning")[
+  Este CSV está sucio. Usa el diccionario adjunto para validar tipos, unidades, categorías
+  y rangos. Antes de corregir nada, dime qué problemas encontraste y cuántas filas afecta
+  cada uno. Después propón las correcciones, una por una, y explica el criterio.
+]
+```
+
+Las siete familias de defectos que sembramos:
+
+| Familia | Cómo se ve |
+|---|---|
+| Duplicados | La misma fila dos veces |
+| Variantes de categoría | `Huánuco`, `HUANUCO`, `Huanuco`, ` Huánuco` |
+| Unidades mezcladas | Altitud en metros y algunas filas en pies |
+| Valores imposibles | Un pH de 14.9, un rendimiento negativo |
+| Faltantes | Celdas vacías, concentradas y no al azar |
+| Espacios y mayúsculas | ` CIP-013` con un espacio delante |
+| Fechas | `2025-03-01` conviviendo con `01/03/25` |
+
+```{=typst}
+#ojo[
+  Borrar una fila rota *no* cuenta como repararla. El medidor lo detecta y lo reporta
+  aparte. Tampoco vale "limpiar" celdas que estaban bien: eso es daño colateral y también
+  se mide.
+]
+```
+
+## 4 · EDA: ¿qué pasó?
+
+```{=typst}
+#prompt("exploratory_data_analysis")[
+  Perfila el dataset limpio: distribuciones por variable, faltantes que queden, relaciones
+  entre las numéricas y anomalías. Muéstrame las tres cosas más raras y no concluyas nada
+  todavía.
+]
+```
+
+## 5 · Diagnóstico: ¿por qué pasó?
+
+Aquí es donde aparece el **confusor**: dos variables se mueven juntas porque una tercera
+las mueve a ambas.
+
+```{=typst}
+#ojo[
+  El subagente `diagnostic_analytics` acepta el formulario de contexto vacío y responde
+  igual. No lo dejes vacío. Rellena siempre: pregunta, variable de resultado, posibles
+  causas, unidad de análisis, periodo y qué podría estar confundiendo la relación.
+]
+
+#prompt("diagnostic_analytics")[
+  Pregunta: ¿qué explica la variación de «RESULTADO»?
+  Resultado: «columna». Posibles causas: «columnas».
+  Unidad de análisis: «una fila es...». Periodo: «campaña».
+  Posibles confusores: «columnas de diseño».
+  Reporta el tamaño del efecto y su incertidumbre, y dime explícitamente qué NO se puede
+  concluir con estos datos.
+]
+```
+
+## 6 · Predicción: ¿qué va a pasar?
+
+```{=typst}
+#ojo[
+  Si tu modelo predice el rendimiento casi perfecto, no eres afortunado: tienes *leakage*.
+  Alguna columna se calculó *después* de conocer el resultado. Está marcada como `leakage`
+  en el diccionario. Sácala y vuelve a entrenar.
+]
+```
+
+## 7 · Reporte
+
+```{=typst}
+#prompt("report_writer")[
+  Escribe un informe de una página con: la pregunta, qué se limpió y por qué, un gráfico
+  principal, un resultado cuantitativo con su incertidumbre, una afirmación respaldada y
+  una afirmación que NO se puede hacer con estos datos.
+]
+```
