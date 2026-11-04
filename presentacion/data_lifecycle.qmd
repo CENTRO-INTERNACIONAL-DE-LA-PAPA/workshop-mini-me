@@ -2,7 +2,7 @@
 title: "El viaje de los datos"
 subtitle: "Cómo Mini-Me acompaña el ciclo de vida de los datos"
 author: "Digital & Data · CIP"
-date: 2026-11-25
+date: 2026-11-24
 date-format: "D [de] MMMM [de] YYYY"
 lang: es
 format:

@@ -2,7 +2,7 @@
 title: "De la pregunta al conocimiento"
 subtitle: "Cómo Allen AI acompaña a Isabel a investigar"
 author: "Digital & Data · CIP"
-date: 2026-11-25
+date: 2026-11-24
 date-format: "D [de] MMMM [de] YYYY"
 lang: es
 format:
