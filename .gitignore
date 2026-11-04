@@ -16,6 +16,9 @@ manual/manual.html
 manual/manual_files/
 manual/.quarto/
 
+# Paquetes comprimidos (p. ej. la entrega original de datos): nunca se versionan
+*.zip
+
 # Salidas de las presentaciones (se regeneran con: quarto render presentacion/<archivo>.qmd)
 presentacion/*.html
 !presentacion/boceto.html
