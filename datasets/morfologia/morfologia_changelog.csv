@@ -1,0 +1,51 @@
+change_id,family,record_id,column,original_value,new_value,detail
+C00001,impossible_value,37,distribution_of_secondary_color,1,12,above the valid maximum
+C00002,impossible_value,46,distribution_of_secondary_color,0,-1,below the valid minimum
+C00003,impossible_value,7,tuber_flesh_predominant_color,2,7,above the valid maximum
+C00004,impossible_value,23,tuber_flesh_predominant_color,3,-1,below the valid minimum
+C00005,impossible_value,30,tuber_flesh_secondary_color,0,13,above the valid maximum
+C00006,impossible_value,31,tuber_flesh_secondary_color,0,-1,below the valid minimum
+C00007,impossible_value,1,tuber_flesh_secondary_color_distribution,0,6,above the valid maximum
+C00008,impossible_value,31,tuber_flesh_secondary_color_distribution,0,-1,below the valid minimum
+C00009,impossible_value,17,tuber_shape,6,12,above the valid maximum
+C00010,impossible_value,70,tuber_shape,7,-1,below the valid minimum
+C00011,impossible_value,8,tuber_shape_depth_of_eyes,3,12,above the valid maximum
+C00012,impossible_value,26,tuber_shape_depth_of_eyes,3,-1,below the valid minimum
+C00013,impossible_value,25,tuber_shape_unusual,0,2,above the valid maximum
+C00014,impossible_value,40,tuber_shape_unusual,0,-1,below the valid minimum
+C00015,impossible_value,14,tuber_skin_predominant_color,6,15,above the valid maximum
+C00016,impossible_value,25,tuber_skin_predominant_color,2,-2,below the valid minimum
+C00017,impossible_value,20,tuber_skin_secondary_color,1,13,above the valid maximum
+C00018,impossible_value,66,tuber_skin_secondary_color,0,-1,below the valid minimum
+C00019,whitespace_case,15,accession_name,Muziranzara,muziranzara,lowercase
+C00020,whitespace_case,28,accession_name,Enfula,Enfula ,trailing space
+C00021,whitespace_case,1,accession_number,CIP279139.5,CIP279139.5 ,trailing space
+C00022,whitespace_case,15,accession_number,CIP378711.5, CIP378711.5,leading space
+C00023,whitespace_case,45,country_of_selection,Costa Rica, Costa Rica,leading space
+C00024,whitespace_case,61,country_of_selection,Peru, Peru,leading space
+C00025,missing_cell,20,accession_name,Yana,,value blanked
+C00026,missing_cell,61,accession_name,INIA 310;Chucmarina,,value blanked
+C00027,missing_cell,10,accession_number,CIP377852.1,,value blanked
+C00028,missing_cell,16,accession_number,CIP379055.1,,value blanked
+C00029,missing_cell,29,country_of_selection,Uganda,,value blanked
+C00030,missing_cell,68,country_of_selection,Kazakhstan,,value blanked
+C00031,missing_cell,44,distribution_of_secondary_color,1,,value blanked
+C00032,missing_cell,68,distribution_of_secondary_color,0,,value blanked
+C00033,missing_cell,14,tuber_flesh_predominant_color,2,,value blanked
+C00034,missing_cell,25,tuber_flesh_predominant_color,3,,value blanked
+C00035,missing_cell,56,tuber_flesh_secondary_color,0,,value blanked
+C00036,missing_cell,58,tuber_flesh_secondary_color,0,,value blanked
+C00037,missing_cell,13,tuber_flesh_secondary_color_distribution,0,,value blanked
+C00038,missing_cell,57,tuber_flesh_secondary_color_distribution,0,,value blanked
+C00039,missing_cell,6,tuber_shape,2,,value blanked
+C00040,missing_cell,60,tuber_shape,6,,value blanked
+C00041,missing_cell,18,tuber_shape_depth_of_eyes,3,,value blanked
+C00042,missing_cell,52,tuber_shape_depth_of_eyes,3,,value blanked
+C00043,missing_cell,28,tuber_shape_unusual,0,,value blanked
+C00044,missing_cell,70,tuber_shape_unusual,0,,value blanked
+C00045,missing_cell,8,tuber_skin_predominant_color,1,,value blanked
+C00046,missing_cell,10,tuber_skin_predominant_color,2,,value blanked
+C00047,missing_cell,13,tuber_skin_secondary_color,0,,value blanked
+C00048,missing_cell,49,tuber_skin_secondary_color,0,,value blanked
+C00049,duplicate_row,39,,,,whole row appended a second time
+C00050,duplicate_row,65,,,,whole row appended a second time

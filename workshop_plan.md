@@ -212,7 +212,9 @@ stack Asta procesa los datos fuera de la máquina del participante.
 
 **Estado (4 de noviembre):** la encuesta de consumidores llegó anonimizada y con visto bueno (confirmado por
 Piero). Las columnas `encuestador` y `encuestado` son códigos, no nombres, y la ubicación está a nivel de
-distrito. Los datos crudos y los paquetes viven en `datasets/`, que git ignora salvo el README.
+distrito. Los datos son públicos y tienen visto bueno, así que los paquetes completos se publican en
+`datasets/` de este repositorio, junto con los originales, y se distribuyen por GitHub. El diccionario
+de los participantes oculta el rol *leakage*; el completo queda en `<slug>_dictionary_completo.csv`.
 
 Por eso, antes de que cualquier archivo entre al workshop:
 
@@ -682,8 +684,8 @@ anonimizada y aprobada.
 
 ## 9. Entregables del paquete de workshop
 
-- [~] 4 paquetes de datos — **generados** (`clean`, `dirty`, `dictionary`, `changelog`, `defect_key`); falta el
-  `README.md` con el brief de cada temática, una vez que Vilma confirme las preguntas — M3
+- [x] 4 paquetes de datos en `datasets/`, publicados en GitHub con sus originales y el brief de cada temática
+  (`README.md`). Las preguntas siguen siendo propuestas hasta que Vilma las confirme — M3
 - [x] `scripts/configurar_taller.py` (unidades, rangos, roles y descripciones de los diccionarios de Vilma) — **hecho**
 - [x] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — **hecho**
 - [x] `scripts/corrupt_dataset.py` (corrupción determinística + changelog celda a celda) — **hecho**

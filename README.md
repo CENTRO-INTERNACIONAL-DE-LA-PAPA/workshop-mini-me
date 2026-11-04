@@ -13,7 +13,7 @@ El plan completo, con agenda, milestones y riesgos, está en
 | `scripts/` | El pipeline de preparación de datos |
 | `presentacion/` | Las presentaciones de los bloques 1 y 2, en Quarto + Reveal.js |
 | `manual/` | El manual del participante, en Quarto + Typst |
-| `datasets/` | Los paquetes por temática. **Git los ignora**: son datos reales de CIP |
+| `datasets/` | Los cuatro paquetes del taller (datos reales de CIP, públicos), con sus originales |
 
 ## El pipeline
 

@@ -7,8 +7,12 @@ the survey) and live here, so re-running the adapter never loses them.
 
     python scripts/configurar_taller.py datasets/
 
-Run it after adapt_dataset.py and before corrupt_dataset.py. Every role marked as a
-proposal in PREGUNTAS still needs the data owner's confirmation.
+Run it after adapt_dataset.py and before corrupt_dataset.py, which should read the
+full dictionary so the facilitator key lists the leakage columns:
+
+    python scripts/corrupt_dataset.py datasets/<slug>/<slug>_clean.csv --dictionary datasets/<slug>/<slug>_dictionary_completo.csv
+
+Every role marked as a proposal in PREGUNTAS still needs the data owner's confirmation.
 """
 
 from __future__ import annotations
@@ -160,12 +164,22 @@ def apply(folder: Path, slug: str) -> list[str]:
                 row.update(config[key])
                 used.add(key)
 
-    with dictionary.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
-        writer.writeheader()
-        writer.writerows(rows)
+    # The full dictionary is for facilitators and corrupt_dataset.py. The participants'
+    # copy hides the leakage role: finding those columns is part of the exercise, and
+    # the descriptions still say where each one comes from.
+    complete = folder / f"{slug}_dictionary_completo.csv"
+    hidden = [{**row, "role": "predictor"} if row.get("role") == "leakage" else row for row in rows]
+    for path, content in ((complete, rows), (dictionary, hidden)):
+        with path.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(content)
 
-    notes = [f"- {len(used)} entradas de configuración aplicadas a `{dictionary.name}`."]
+    leaks = sum(1 for row in rows if row.get("role") == "leakage")
+    notes = [
+        f"- {len(used)} entradas de configuración aplicadas. Diccionario completo en `{complete.name}`; "
+        f"en `{dictionary.name}` (participantes) las {leaks} columnas leakage aparecen como `predictor`."
+    ]
     unused = sorted(set(config) - used)
     if unused:
         notes.append(f"- Sin columna correspondiente (revisar): {', '.join(unused)}.")

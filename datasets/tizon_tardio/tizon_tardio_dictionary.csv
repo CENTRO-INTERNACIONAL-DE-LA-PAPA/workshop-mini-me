@@ -1,0 +1,13 @@
+column,data_type,unit,role,valid_values_or_range,description,cleaning_notes,source_column
+record_id,string,none,primary_key,unique,,,(sintetizado)
+plot,integer,none,design,0-12,Parcela,,PLOT
+rep,integer,none,design,0-4,Repetición (bloque),,REP
+treatment,category,none,design,Agrifos|Agrifos 110 ml|Agrifos 400|Agrifos 65 ml|Agriphite 600|Control|Oshothane +Mistress|Ridomil + Mancozeb|Ridomil+Mancozeb,Tratamiento fungicida aplicado,,TREATMENT
+class,category,none,design,Control|Conventional|Phosphonate,"Tipo de tratamiento: control, convencional o fosfonato",,CLASS
+site,category,none,design,Limuru|Njabini|UoN,Localidad del ensayo en Kenia,,SITE
+instn,category,none,design,CIP381381.13|CIP381381.20|CIP800048|Dutch Robyjn|Kenya Karibu|Kenya Mavuno|Kenya Mpya|Nyayo|Purple Gold,Genotipo evaluado,,INSTN
+accename,category,none,design,Asante|Desiree|Dutch Robyjn|Kenya Karibu|Kenya Mavuno|Kenya Mpya|Nyayo|Purple Gold|Tigoni,Nombre de la variedad,,ACCENAME
+audpc,number,none,outcome,0-6000,Área bajo la curva de progreso del tizón tardío,,AUDPC
+raudpc,number,none,predictor,0-1,AUDPC relativo. Se calcula a partir del AUDPC,,rAUDPC
+ttya,number,t/ha,context,0-100,Rendimiento ajustado (resultado secundario),,TTYA
+rlb,category,none,predictor,Moderately Resistant|Resistant|Susceptible,"Resistencia al tizón, clasificada a partir del rAUDPC",,RLB

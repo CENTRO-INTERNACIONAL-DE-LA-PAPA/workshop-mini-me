@@ -1,0 +1,22 @@
+column,data_type,unit,role,valid_values_or_range,description,cleaning_notes,source_column
+country,category,none,context,Peru,País del ensayo,,country
+adm1,category,none,context,Junin,Región,,adm1
+adm2,category,none,context,Huancayo,Provincia,,adm2
+adm3,category,none,context,San Agustin,Distrito,,adm3
+location,category,none,design,La Victoria,Localidad del ensayo (una sola en estos datos),,location
+elevation,integer,m,context,3055-3377,Altitud del campo,,elevation
+latitude,number,deg,context,-12.6277--11.4251,Latitud del campo,,latitude
+longitude,number,deg,context,-79.0071--71.4827,Longitud del campo,,longitude
+plot,integer,none,primary_key,unique,,,PLOT
+rep,integer,none,design,1-4,Repetición (bloque),,REP
+instn,string,none,design,,Genotipo evaluado (código de accesión CIP),,INSTN
+ntp,integer,tuber/plot,predictor,0-500,Número de tubérculos sembrados por parcela,,NTP
+nph,integer,plants/plot,predictor,2-11,Número de plantas cosechadas por parcela,,NPH
+pph,integer,%,predictor,0-100,Proporción de plantas cosechadas,,PPH
+tntp,integer,tuber/plot,predictor,0-536,Número de tubérculos cosechados por parcela,,TNTP
+tntpl,number,tuber/plant,predictor,0-53.4833,Número de tubérculos por planta,,TNTPL
+ttwp,number,kg,leakage,0-10.475,Peso de tubérculos por parcela (kg/parcela). El rendimiento se calcula a partir de él,,TTWP
+ttwpl,number,kg,leakage,0-1.0466,Peso de tubérculos por planta (kg/planta),,TTWPL
+ttyna,number,t/ha,leakage,0-100,Rendimiento sin ajustar. Es casi el mismo dato que el resultado,,TTYNA
+ttya,number,t/ha,outcome,0-100,Rendimiento ajustado de tubérculos,,TTYA
+atw,number,g,predictor,1.2821-86.4233,Peso medio del tubérculo,,ATW

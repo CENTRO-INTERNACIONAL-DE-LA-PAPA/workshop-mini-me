@@ -1,0 +1,497 @@
+change_id,family,record_id,column,original_value,new_value,detail
+C00001,category_variant,Encuestado37,distrito,La Molina,la molina,lowercase
+C00002,category_variant,Encuestado46,distrito,La Molina,LA MOLINA,uppercase
+C00003,category_variant,Encuestado75,distrito,San Isidro,san isidro,lowercase
+C00004,category_variant,Encuestado88,distrito,La Molina,la molina,lowercase
+C00005,category_variant,Encuestado110,distrito,Miraflores,miraflores,lowercase
+C00006,category_variant,Encuestado01,encuestador,Encuestador01,ENCUESTADOR01,uppercase
+C00007,category_variant,Encuestado17,encuestador,Encuestador03,encuestador03,lowercase
+C00008,category_variant,Encuestado70,encuestador,Encuestador01,encuestador01,lowercase
+C00009,category_variant,Encuestado92,encuestador,Encuestador03, Encuestador03,leading space
+C00010,category_variant,Encuestado106,encuestador,Encuestador03,ENCUESTADOR03,uppercase
+C00011,category_variant,Encuestado20,sexo,F,f,lowercase
+C00012,category_variant,Encuestado25,sexo,F,f,lowercase
+C00013,category_variant,Encuestado66,sexo,F,F ,trailing space
+C00014,category_variant,Encuestado95,sexo,F, F,leading space
+C00015,category_variant,Encuestado97,sexo,M,m,lowercase
+C00016,category_variant,Encuestado15,v10amigosofamiliares,1,1 ,trailing space
+C00017,category_variant,Encuestado19,v10amigosofamiliares,1,1 ,trailing space
+C00018,category_variant,Encuestado48,v10amigosofamiliares,0, 0,leading space
+C00019,category_variant,Encuestado75,v10amigosofamiliares,0, 0,leading space
+C00020,category_variant,Encuestado76,v10amigosofamiliares,0, 0,leading space
+C00021,category_variant,Encuestado09,v10diariosorevistas,0, 0,leading space
+C00022,category_variant,Encuestado14,v10diariosorevistas,0,0 ,trailing space
+C00023,category_variant,Encuestado19,v10diariosorevistas,0, 0,leading space
+C00024,category_variant,Encuestado59,v10diariosorevistas,0, 0,leading space
+C00025,category_variant,Encuestado73,v10diariosorevistas,0,0 ,trailing space
+C00026,category_variant,Encuestado12,v10muestraseneventos,0,0 ,trailing space
+C00027,category_variant,Encuestado54,v10muestraseneventos,0, 0,leading space
+C00028,category_variant,Encuestado55,v10muestraseneventos,0, 0,leading space
+C00029,category_variant,Encuestado79,v10muestraseneventos,0,0 ,trailing space
+C00030,category_variant,Encuestado98,v10muestraseneventos,0, 0,leading space
+C00031,category_variant,Encuestado08,v10otros,0, 0,leading space
+C00032,category_variant,Encuestado10,v10otros,0,0 ,trailing space
+C00033,category_variant,Encuestado48,v10otros,0, 0,leading space
+C00034,category_variant,Encuestado97,v10otros,1, 1,leading space
+C00035,category_variant,Encuestado112,v10otros,1, 1,leading space
+C00036,category_variant,Encuestado10,v10panelesafiches,0,0 ,trailing space
+C00037,category_variant,Encuestado29,v10panelesafiches,0, 0,leading space
+C00038,category_variant,Encuestado50,v10panelesafiches,0, 0,leading space
+C00039,category_variant,Encuestado63,v10panelesafiches,0,0 ,trailing space
+C00040,category_variant,Encuestado73,v10panelesafiches,0, 0,leading space
+C00041,category_variant,Encuestado01,v10radio,0,0 ,trailing space
+C00042,category_variant,Encuestado49,v10radio,0, 0,leading space
+C00043,category_variant,Encuestado76,v10radio,0, 0,leading space
+C00044,category_variant,Encuestado99,v10radio,0, 0,leading space
+C00045,category_variant,Encuestado114,v10radio,0, 0,leading space
+C00046,category_variant,Encuestado39,v10supermercadotiendas,1,1 ,trailing space
+C00047,category_variant,Encuestado65,v10supermercadotiendas,1, 1,leading space
+C00048,category_variant,Encuestado67,v10supermercadotiendas,1,1 ,trailing space
+C00049,category_variant,Encuestado95,v10supermercadotiendas,0,0 ,trailing space
+C00050,category_variant,Encuestado110,v10supermercadotiendas,1, 1,leading space
+C00051,category_variant,Encuestado04,v10television,0, 0,leading space
+C00052,category_variant,Encuestado16,v10television,0, 0,leading space
+C00053,category_variant,Encuestado38,v10television,1, 1,leading space
+C00054,category_variant,Encuestado75,v10television,0,0 ,trailing space
+C00055,category_variant,Encuestado109,v10television,1,1 ,trailing space
+C00056,category_variant,Encuestado03,v1conoceconsume,1, 1,leading space
+C00057,category_variant,Encuestado44,v1conoceconsume,1,1 ,trailing space
+C00058,category_variant,Encuestado56,v1conoceconsume,1,1 ,trailing space
+C00059,category_variant,Encuestado59,v1conoceconsume,1,1 ,trailing space
+C00060,category_variant,Encuestado94,v1conoceconsume,1,1 ,trailing space
+C00061,category_variant,Encuestado41,v1conocenoconsume,0,0 ,trailing space
+C00062,category_variant,Encuestado51,v1conocenoconsume,0,0 ,trailing space
+C00063,category_variant,Encuestado66,v1conocenoconsume,0, 0,leading space
+C00064,category_variant,Encuestado102,v1conocenoconsume,0, 0,leading space
+C00065,category_variant,Encuestado108,v1conocenoconsume,0, 0,leading space
+C00066,category_variant,Encuestado20,v2devezencuando,0, 0,leading space
+C00067,category_variant,Encuestado38,v2devezencuando,0, 0,leading space
+C00068,category_variant,Encuestado58,v2devezencuando,0,0 ,trailing space
+C00069,category_variant,Encuestado60,v2devezencuando,1,1 ,trailing space
+C00070,category_variant,Encuestado66,v2devezencuando,0, 0,leading space
+C00071,category_variant,Encuestado16,v2diario,1,1 ,trailing space
+C00072,category_variant,Encuestado91,v2diario,0,0 ,trailing space
+C00073,category_variant,Encuestado96,v2diario,0, 0,leading space
+C00074,category_variant,Encuestado102,v2diario,1, 1,leading space
+C00075,category_variant,Encuestado107,v2diario,1,1 ,trailing space
+C00076,category_variant,Encuestado03,v2masdeunavezsemanal,1,1 ,trailing space
+C00077,category_variant,Encuestado32,v2masdeunavezsemanal,1,1 ,trailing space
+C00078,category_variant,Encuestado73,v2masdeunavezsemanal,0, 0,leading space
+C00079,category_variant,Encuestado78,v2masdeunavezsemanal,0, 0,leading space
+C00080,category_variant,Encuestado94,v2masdeunavezsemanal,1,1 ,trailing space
+C00081,category_variant,Encuestado08,v2mensual,0, 0,leading space
+C00082,category_variant,Encuestado41,v2mensual,0, 0,leading space
+C00083,category_variant,Encuestado44,v2mensual,0, 0,leading space
+C00084,category_variant,Encuestado104,v2mensual,0,0 ,trailing space
+C00085,category_variant,Encuestado111,v2mensual,0,0 ,trailing space
+C00086,category_variant,Encuestado09,v2quincenal,0, 0,leading space
+C00087,category_variant,Encuestado49,v2quincenal,0, 0,leading space
+C00088,category_variant,Encuestado59,v2quincenal,0, 0,leading space
+C00089,category_variant,Encuestado69,v2quincenal,0,0 ,trailing space
+C00090,category_variant,Encuestado78,v2quincenal,0, 0,leading space
+C00091,category_variant,Encuestado09,v2unavezsemanal,0, 0,leading space
+C00092,category_variant,Encuestado13,v2unavezsemanal,0, 0,leading space
+C00093,category_variant,Encuestado27,v2unavezsemanal,0,0 ,trailing space
+C00094,category_variant,Encuestado52,v2unavezsemanal,0,0 ,trailing space
+C00095,category_variant,Encuestado61,v2unavezsemanal,1,1 ,trailing space
+C00096,category_variant,Encuestado24,v3cotidiano,1,1 ,trailing space
+C00097,category_variant,Encuestado43,v3cotidiano,1, 1,leading space
+C00098,category_variant,Encuestado50,v3cotidiano,0, 0,leading space
+C00099,category_variant,Encuestado78,v3cotidiano,1, 1,leading space
+C00100,category_variant,Encuestado95,v3cotidiano,1,1 ,trailing space
+C00101,category_variant,Encuestado08,v3otrasocasiones,0,0 ,trailing space
+C00102,category_variant,Encuestado17,v3otrasocasiones,0, 0,leading space
+C00103,category_variant,Encuestado29,v3otrasocasiones,0,0 ,trailing space
+C00104,category_variant,Encuestado61,v3otrasocasiones,0,0 ,trailing space
+C00105,category_variant,Encuestado67,v3otrasocasiones,0,0 ,trailing space
+C00106,category_variant,Encuestado08,v3reunionescotidiano,0, 0,leading space
+C00107,category_variant,Encuestado42,v3reunionescotidiano,0, 0,leading space
+C00108,category_variant,Encuestado47,v3reunionescotidiano,0, 0,leading space
+C00109,category_variant,Encuestado51,v3reunionescotidiano,0,0 ,trailing space
+C00110,category_variant,Encuestado77,v3reunionescotidiano,0,0 ,trailing space
+C00111,category_variant,Encuestado09,v3reunionessociales,1, 1,leading space
+C00112,category_variant,Encuestado52,v3reunionessociales,0, 0,leading space
+C00113,category_variant,Encuestado65,v3reunionessociales,0, 0,leading space
+C00114,category_variant,Encuestado95,v3reunionessociales,0, 0,leading space
+C00115,category_variant,Encuestado99,v3reunionessociales,0,0 ,trailing space
+C00116,category_variant,Encuestado06,v4doskg,0,0 ,trailing space
+C00117,category_variant,Encuestado30,v4doskg,0, 0,leading space
+C00118,category_variant,Encuestado72,v4doskg,1,1 ,trailing space
+C00119,category_variant,Encuestado94,v4doskg,0,0 ,trailing space
+C00120,category_variant,Encuestado99,v4doskg,0, 0,leading space
+C00121,category_variant,Encuestado36,v4masde2kg,0, 0,leading space
+C00122,category_variant,Encuestado45,v4masde2kg,0, 0,leading space
+C00123,category_variant,Encuestado67,v4masde2kg,0,0 ,trailing space
+C00124,category_variant,Encuestado75,v4masde2kg,0, 0,leading space
+C00125,category_variant,Encuestado83,v4masde2kg,0,0 ,trailing space
+C00126,category_variant,Encuestado09,v4mesos1kg,1, 1,leading space
+C00127,category_variant,Encuestado17,v4mesos1kg,0, 0,leading space
+C00128,category_variant,Encuestado37,v4mesos1kg,0,0 ,trailing space
+C00129,category_variant,Encuestado46,v4mesos1kg,0, 0,leading space
+C00130,category_variant,Encuestado85,v4mesos1kg,0,0 ,trailing space
+C00131,category_variant,Encuestado41,v4unkg,1,1 ,trailing space
+C00132,category_variant,Encuestado58,v4unkg,0, 0,leading space
+C00133,category_variant,Encuestado90,v4unkg,1, 1,leading space
+C00134,category_variant,Encuestado103,v4unkg,1, 1,leading space
+C00135,category_variant,Encuestado112,v4unkg,1, 1,leading space
+C00136,category_variant,Encuestado16,v5bocaditos,0,0 ,trailing space
+C00137,category_variant,Encuestado45,v5bocaditos,0,0 ,trailing space
+C00138,category_variant,Encuestado76,v5bocaditos,0,0 ,trailing space
+C00139,category_variant,Encuestado88,v5bocaditos,0,0 ,trailing space
+C00140,category_variant,Encuestado109,v5bocaditos,0, 0,leading space
+C00141,category_variant,Encuestado26,v5chips,0, 0,leading space
+C00142,category_variant,Encuestado33,v5chips,0,0 ,trailing space
+C00143,category_variant,Encuestado44,v5chips,0, 0,leading space
+C00144,category_variant,Encuestado62,v5chips,0,0 ,trailing space
+C00145,category_variant,Encuestado79,v5chips,0,0 ,trailing space
+C00146,category_variant,Encuestado03,v5fritos,0,0 ,trailing space
+C00147,category_variant,Encuestado16,v5fritos,1, 1,leading space
+C00148,category_variant,Encuestado38,v5fritos,1,1 ,trailing space
+C00149,category_variant,Encuestado43,v5fritos,1,1 ,trailing space
+C00150,category_variant,Encuestado102,v5fritos,1,1 ,trailing space
+C00151,category_variant,Encuestado05,v5otras,0, 0,leading space
+C00152,category_variant,Encuestado15,v5otras,0, 0,leading space
+C00153,category_variant,Encuestado19,v5otras,0, 0,leading space
+C00154,category_variant,Encuestado39,v5otras,0, 0,leading space
+C00155,category_variant,Encuestado68,v5otras,1,1 ,trailing space
+C00156,category_variant,Encuestado14,v5platoscotidianos,1, 1,leading space
+C00157,category_variant,Encuestado34,v5platoscotidianos,0, 0,leading space
+C00158,category_variant,Encuestado36,v5platoscotidianos,0,0 ,trailing space
+C00159,category_variant,Encuestado38,v5platoscotidianos,1, 1,leading space
+C00160,category_variant,Encuestado103,v5platoscotidianos,0,0 ,trailing space
+C00161,category_variant,Encuestado06,v5platosgourmet,0,0 ,trailing space
+C00162,category_variant,Encuestado14,v5platosgourmet,0,0 ,trailing space
+C00163,category_variant,Encuestado46,v5platosgourmet,0, 0,leading space
+C00164,category_variant,Encuestado96,v5platosgourmet,0,0 ,trailing space
+C00165,category_variant,Encuestado109,v5platosgourmet,0,0 ,trailing space
+C00166,category_variant,Encuestado07,v5sancochados,1,1 ,trailing space
+C00167,category_variant,Encuestado43,v5sancochados,1,1 ,trailing space
+C00168,category_variant,Encuestado48,v5sancochados,0, 0,leading space
+C00169,category_variant,Encuestado70,v5sancochados,1, 1,leading space
+C00170,category_variant,Encuestado103,v5sancochados,1,1 ,trailing space
+C00171,category_variant,Encuestado19,v6ferias,0,0 ,trailing space
+C00172,category_variant,Encuestado34,v6ferias,0, 0,leading space
+C00173,category_variant,Encuestado47,v6ferias,0,0 ,trailing space
+C00174,category_variant,Encuestado85,v6ferias,0, 0,leading space
+C00175,category_variant,Encuestado89,v6ferias,0, 0,leading space
+C00176,category_variant,Encuestado30,v6mercadodeabasto,0, 0,leading space
+C00177,category_variant,Encuestado36,v6mercadodeabasto,0, 0,leading space
+C00178,category_variant,Encuestado78,v6mercadodeabasto,1,1 ,trailing space
+C00179,category_variant,Encuestado102,v6mercadodeabasto,0, 0,leading space
+C00180,category_variant,Encuestado113,v6mercadodeabasto,0, 0,leading space
+C00181,category_variant,Encuestado08,v6otros,0, 0,leading space
+C00182,category_variant,Encuestado12,v6otros,0, 0,leading space
+C00183,category_variant,Encuestado43,v6otros,0, 0,leading space
+C00184,category_variant,Encuestado51,v6otros,0, 0,leading space
+C00185,category_variant,Encuestado110,v6otros,0,0 ,trailing space
+C00186,category_variant,Encuestado01,v6supermercados,1, 1,leading space
+C00187,category_variant,Encuestado53,v6supermercados,1, 1,leading space
+C00188,category_variant,Encuestado96,v6supermercados,1,1 ,trailing space
+C00189,category_variant,Encuestado113,v6supermercados,1,1 ,trailing space
+C00190,category_variant,Encuestado114,v6supermercados,1,1 ,trailing space
+C00191,impossible_value,Encuestado47,edad,40,112,above the valid maximum
+C00192,impossible_value,Encuestado83,edad,55,2,below the valid minimum
+C00193,impossible_value,Encuestado22,encuesta,8,64,above the valid maximum
+C00194,impossible_value,Encuestado36,encuesta,12,-8,below the valid minimum
+C00195,impossible_value,Encuestado78,v11apoyocomprandoenwong,2,7,above the valid maximum
+C00196,impossible_value,Encuestado106,v11apoyocomprandoenwong,2,0,below the valid minimum
+C00197,impossible_value,Encuestado31,v11imagenmejoradadepapasnativasporwong,2,7,above the valid maximum
+C00198,impossible_value,Encuestado38,v11imagenmejoradadepapasnativasporwong,2,0,below the valid minimum
+C00199,impossible_value,Encuestado58,v11incrementoconocimientopatrimonioczonasandinasporwong,4,7,above the valid maximum
+C00200,impossible_value,Encuestado102,v11incrementoconocimientopatrimonioczonasandinasporwong,2,0,below the valid minimum
+C00201,impossible_value,Encuestado79,v11incrementoconocimientovidaproductoresandinosporwong,3,7,above the valid maximum
+C00202,impossible_value,Encuestado80,v11incrementoconocimientovidaproductoresandinosporwong,2,0,below the valid minimum
+C00203,impossible_value,Encuestado69,v7buenoparalasalud,1,4,above the valid maximum
+C00204,impossible_value,Encuestado82,v7buenoparalasalud,2,0,below the valid minimum
+C00205,impossible_value,Encuestado56,v7contribuciondesarrollorural,3,4,above the valid maximum
+C00206,impossible_value,Encuestado89,v7contribuciondesarrollorural,3,0,below the valid minimum
+C00207,impossible_value,Encuestado40,v7nutricion,1,4,above the valid maximum
+C00208,impossible_value,Encuestado71,v7nutricion,2,0,below the valid minimum
+C00209,impossible_value,Encuestado22,v7precio,2,4,above the valid maximum
+C00210,impossible_value,Encuestado49,v7precio,2,0,below the valid minimum
+C00211,impossible_value,Encuestado35,v7producidoorganicamente,1,4,above the valid maximum
+C00212,impossible_value,Encuestado102,v7producidoorganicamente,1,0,below the valid minimum
+C00213,impossible_value,Encuestado07,v7sabor,1,4,above the valid maximum
+C00214,impossible_value,Encuestado64,v7sabor,1,0,below the valid minimum
+C00215,impossible_value,Encuestado98,v7valorcultural,3,4,above the valid maximum
+C00216,impossible_value,Encuestado114,v7valorcultural,3,0,below the valid minimum
+C00217,impossible_value,Encuestado16,v8caro,1,4,above the valid maximum
+C00218,impossible_value,Encuestado87,v8caro,2,0,below the valid minimum
+C00219,impossible_value,Encuestado01,v8comidaparacampesinos,1,4,above the valid maximum
+C00220,impossible_value,Encuestado102,v8comidaparacampesinos,2,0,below the valid minimum
+C00221,impossible_value,Encuestado108,v8nutritivo,1,4,above the valid maximum
+C00222,impossible_value,Encuestado111,v8nutritivo,1,0,below the valid minimum
+C00223,impossible_value,Encuestado09,v8sabroso,1,4,above the valid maximum
+C00224,impossible_value,Encuestado21,v8sabroso,1,0,below the valid minimum
+C00225,impossible_value,Encuestado42,v8saludable,1,4,above the valid maximum
+C00226,impossible_value,Encuestado95,v8saludable,1,0,below the valid minimum
+C00227,impossible_value,Encuestado100,v8sofisticado,3,4,above the valid maximum
+C00228,impossible_value,Encuestado112,v8sofisticado,3,0,below the valid minimum
+C00229,impossible_value,Encuestado29,v8valorcultural,2,4,above the valid maximum
+C00230,impossible_value,Encuestado112,v8valorcultural,2,0,below the valid minimum
+C00231,impossible_value,Encuestado07,v9desarrollocomunidadandina,2,7,above the valid maximum
+C00232,impossible_value,Encuestado17,v9desarrollocomunidadandina,2,0,below the valid minimum
+C00233,impossible_value,Encuestado06,v9pagarpreciojustoalagricultor,5,7,above the valid maximum
+C00234,impossible_value,Encuestado62,v9pagarpreciojustoalagricultor,5,0,below the valid minimum
+C00235,impossible_value,Encuestado04,v9proteccionbiodiversidad,2,7,above the valid maximum
+C00236,impossible_value,Encuestado41,v9proteccionbiodiversidad,2,0,below the valid minimum
+C00237,impossible_value,Encuestado38,v9respetoalmedioambiente,2,7,above the valid maximum
+C00238,impossible_value,Encuestado95,v9respetoalmedioambiente,2,0,below the valid minimum
+C00239,date_format,Encuestado04,fecha,2015-06-27,27/06/15,DD/MM/YY
+C00240,date_format,Encuestado73,fecha,2015-06-29,06-29-2015,MM-DD-YYYY
+C00241,date_format,Encuestado91,fecha,2015-06-29,06-29-2015,MM-DD-YYYY
+C00242,missing_cell,Encuestado12,distrito,San Isidro,,value blanked
+C00243,missing_cell,Encuestado84,distrito,San Isidro,,value blanked
+C00244,missing_cell,Encuestado109,distrito,San Isidro,,value blanked
+C00245,missing_cell,Encuestado114,distrito,Miraflores,,value blanked
+C00246,missing_cell,Encuestado23,edad,50,,value blanked
+C00247,missing_cell,Encuestado77,edad,70,,value blanked
+C00248,missing_cell,Encuestado91,edad,53,,value blanked
+C00249,missing_cell,Encuestado95,edad,25,,value blanked
+C00250,missing_cell,Encuestado19,encuesta,7,,value blanked
+C00251,missing_cell,Encuestado60,encuesta,20,,value blanked
+C00252,missing_cell,Encuestado61,encuesta,21,,value blanked
+C00253,missing_cell,Encuestado102,encuesta,35,,value blanked
+C00254,missing_cell,Encuestado25,encuestador,Encuestador01,,value blanked
+C00255,missing_cell,Encuestado43,encuestador,Encuestador01,,value blanked
+C00256,missing_cell,Encuestado51,encuestador,Encuestador02,,value blanked
+C00257,missing_cell,Encuestado97,encuestador,Encuestador01,,value blanked
+C00258,missing_cell,Encuestado16,fecha,2015-06-27,,value blanked
+C00259,missing_cell,Encuestado19,fecha,2015-06-27,,value blanked
+C00260,missing_cell,Encuestado25,fecha,2015-06-28,,value blanked
+C00261,missing_cell,Encuestado98,fecha,2015-06-29,,value blanked
+C00262,missing_cell,Encuestado10,sexo,F,,value blanked
+C00263,missing_cell,Encuestado21,sexo,M,,value blanked
+C00264,missing_cell,Encuestado76,sexo,F,,value blanked
+C00265,missing_cell,Encuestado84,sexo,M,,value blanked
+C00266,missing_cell,Encuestado08,v10amigosofamiliares,1,,value blanked
+C00267,missing_cell,Encuestado30,v10amigosofamiliares,0,,value blanked
+C00268,missing_cell,Encuestado54,v10amigosofamiliares,0,,value blanked
+C00269,missing_cell,Encuestado106,v10amigosofamiliares,1,,value blanked
+C00270,missing_cell,Encuestado05,v10diariosorevistas,0,,value blanked
+C00271,missing_cell,Encuestado25,v10diariosorevistas,0,,value blanked
+C00272,missing_cell,Encuestado43,v10diariosorevistas,1,,value blanked
+C00273,missing_cell,Encuestado92,v10diariosorevistas,0,,value blanked
+C00274,missing_cell,Encuestado07,v10muestraseneventos,0,,value blanked
+C00275,missing_cell,Encuestado22,v10muestraseneventos,0,,value blanked
+C00276,missing_cell,Encuestado23,v10muestraseneventos,0,,value blanked
+C00277,missing_cell,Encuestado111,v10muestraseneventos,0,,value blanked
+C00278,missing_cell,Encuestado14,v10otros,0,,value blanked
+C00279,missing_cell,Encuestado34,v10otros,1,,value blanked
+C00280,missing_cell,Encuestado50,v10otros,0,,value blanked
+C00281,missing_cell,Encuestado65,v10otros,0,,value blanked
+C00282,missing_cell,Encuestado05,v10panelesafiches,0,,value blanked
+C00283,missing_cell,Encuestado13,v10panelesafiches,0,,value blanked
+C00284,missing_cell,Encuestado22,v10panelesafiches,0,,value blanked
+C00285,missing_cell,Encuestado30,v10panelesafiches,0,,value blanked
+C00286,missing_cell,Encuestado35,v10radio,1,,value blanked
+C00287,missing_cell,Encuestado54,v10radio,0,,value blanked
+C00288,missing_cell,Encuestado81,v10radio,0,,value blanked
+C00289,missing_cell,Encuestado82,v10radio,0,,value blanked
+C00290,missing_cell,Encuestado25,v10supermercadotiendas,1,,value blanked
+C00291,missing_cell,Encuestado31,v10supermercadotiendas,0,,value blanked
+C00292,missing_cell,Encuestado52,v10supermercadotiendas,0,,value blanked
+C00293,missing_cell,Encuestado75,v10supermercadotiendas,1,,value blanked
+C00294,missing_cell,Encuestado20,v10television,1,,value blanked
+C00295,missing_cell,Encuestado30,v10television,0,,value blanked
+C00296,missing_cell,Encuestado70,v10television,0,,value blanked
+C00297,missing_cell,Encuestado77,v10television,0,,value blanked
+C00298,missing_cell,Encuestado02,v11apoyocomprandoenwong,2,,value blanked
+C00299,missing_cell,Encuestado24,v11apoyocomprandoenwong,1,,value blanked
+C00300,missing_cell,Encuestado37,v11apoyocomprandoenwong,1,,value blanked
+C00301,missing_cell,Encuestado89,v11apoyocomprandoenwong,2,,value blanked
+C00302,missing_cell,Encuestado07,v11imagenmejoradadepapasnativasporwong,2,,value blanked
+C00303,missing_cell,Encuestado57,v11imagenmejoradadepapasnativasporwong,1,,value blanked
+C00304,missing_cell,Encuestado96,v11imagenmejoradadepapasnativasporwong,1,,value blanked
+C00305,missing_cell,Encuestado98,v11imagenmejoradadepapasnativasporwong,2,,value blanked
+C00306,missing_cell,Encuestado18,v11incrementoconocimientopatrimonioczonasandinasporwong,1,,value blanked
+C00307,missing_cell,Encuestado35,v11incrementoconocimientopatrimonioczonasandinasporwong,5,,value blanked
+C00308,missing_cell,Encuestado101,v11incrementoconocimientopatrimonioczonasandinasporwong,3,,value blanked
+C00309,missing_cell,Encuestado112,v11incrementoconocimientopatrimonioczonasandinasporwong,5,,value blanked
+C00310,missing_cell,Encuestado26,v11incrementoconocimientovidaproductoresandinosporwong,5,,value blanked
+C00311,missing_cell,Encuestado59,v11incrementoconocimientovidaproductoresandinosporwong,3,,value blanked
+C00312,missing_cell,Encuestado83,v11incrementoconocimientovidaproductoresandinosporwong,3,,value blanked
+C00313,missing_cell,Encuestado108,v11incrementoconocimientovidaproductoresandinosporwong,5,,value blanked
+C00314,missing_cell,Encuestado22,v1conoceconsume,1,,value blanked
+C00315,missing_cell,Encuestado38,v1conoceconsume,1,,value blanked
+C00316,missing_cell,Encuestado42,v1conoceconsume,1,,value blanked
+C00317,missing_cell,Encuestado46,v1conoceconsume,1,,value blanked
+C00318,missing_cell,Encuestado08,v1conocenoconsume,0,,value blanked
+C00319,missing_cell,Encuestado12,v1conocenoconsume,0,,value blanked
+C00320,missing_cell,Encuestado69,v1conocenoconsume,0,,value blanked
+C00321,missing_cell,Encuestado73,v1conocenoconsume,0,,value blanked
+C00322,missing_cell,Encuestado27,v2devezencuando,0,,value blanked
+C00323,missing_cell,Encuestado35,v2devezencuando,0,,value blanked
+C00324,missing_cell,Encuestado52,v2devezencuando,0,,value blanked
+C00325,missing_cell,Encuestado73,v2devezencuando,0,,value blanked
+C00326,missing_cell,Encuestado65,v2diario,0,,value blanked
+C00327,missing_cell,Encuestado69,v2diario,0,,value blanked
+C00328,missing_cell,Encuestado76,v2diario,0,,value blanked
+C00329,missing_cell,Encuestado84,v2diario,0,,value blanked
+C00330,missing_cell,Encuestado18,v2masdeunavezsemanal,0,,value blanked
+C00331,missing_cell,Encuestado61,v2masdeunavezsemanal,0,,value blanked
+C00332,missing_cell,Encuestado85,v2masdeunavezsemanal,0,,value blanked
+C00333,missing_cell,Encuestado99,v2masdeunavezsemanal,0,,value blanked
+C00334,missing_cell,Encuestado19,v2mensual,0,,value blanked
+C00335,missing_cell,Encuestado40,v2mensual,0,,value blanked
+C00336,missing_cell,Encuestado65,v2mensual,0,,value blanked
+C00337,missing_cell,Encuestado84,v2mensual,1,,value blanked
+C00338,missing_cell,Encuestado13,v2quincenal,0,,value blanked
+C00339,missing_cell,Encuestado20,v2quincenal,0,,value blanked
+C00340,missing_cell,Encuestado66,v2quincenal,0,,value blanked
+C00341,missing_cell,Encuestado108,v2quincenal,0,,value blanked
+C00342,missing_cell,Encuestado45,v2unavezsemanal,0,,value blanked
+C00343,missing_cell,Encuestado67,v2unavezsemanal,0,,value blanked
+C00344,missing_cell,Encuestado96,v2unavezsemanal,0,,value blanked
+C00345,missing_cell,Encuestado103,v2unavezsemanal,0,,value blanked
+C00346,missing_cell,Encuestado42,v3cotidiano,1,,value blanked
+C00347,missing_cell,Encuestado49,v3cotidiano,1,,value blanked
+C00348,missing_cell,Encuestado56,v3cotidiano,1,,value blanked
+C00349,missing_cell,Encuestado100,v3cotidiano,1,,value blanked
+C00350,missing_cell,Encuestado33,v3otrasocasiones,0,,value blanked
+C00351,missing_cell,Encuestado48,v3otrasocasiones,0,,value blanked
+C00352,missing_cell,Encuestado86,v3otrasocasiones,0,,value blanked
+C00353,missing_cell,Encuestado90,v3otrasocasiones,0,,value blanked
+C00354,missing_cell,Encuestado13,v3reunionescotidiano,0,,value blanked
+C00355,missing_cell,Encuestado30,v3reunionescotidiano,0,,value blanked
+C00356,missing_cell,Encuestado46,v3reunionescotidiano,1,,value blanked
+C00357,missing_cell,Encuestado78,v3reunionescotidiano,0,,value blanked
+C00358,missing_cell,Encuestado26,v3reunionessociales,0,,value blanked
+C00359,missing_cell,Encuestado30,v3reunionessociales,0,,value blanked
+C00360,missing_cell,Encuestado74,v3reunionessociales,0,,value blanked
+C00361,missing_cell,Encuestado81,v3reunionessociales,0,,value blanked
+C00362,missing_cell,Encuestado01,v4doskg,0,,value blanked
+C00363,missing_cell,Encuestado07,v4doskg,0,,value blanked
+C00364,missing_cell,Encuestado52,v4doskg,1,,value blanked
+C00365,missing_cell,Encuestado57,v4doskg,0,,value blanked
+C00366,missing_cell,Encuestado12,v4masde2kg,1,,value blanked
+C00367,missing_cell,Encuestado16,v4masde2kg,0,,value blanked
+C00368,missing_cell,Encuestado54,v4masde2kg,1,,value blanked
+C00369,missing_cell,Encuestado95,v4masde2kg,0,,value blanked
+C00370,missing_cell,Encuestado45,v4mesos1kg,1,,value blanked
+C00371,missing_cell,Encuestado70,v4mesos1kg,0,,value blanked
+C00372,missing_cell,Encuestado71,v4mesos1kg,0,,value blanked
+C00373,missing_cell,Encuestado81,v4mesos1kg,0,,value blanked
+C00374,missing_cell,Encuestado11,v4unkg,0,,value blanked
+C00375,missing_cell,Encuestado31,v4unkg,0,,value blanked
+C00376,missing_cell,Encuestado35,v4unkg,0,,value blanked
+C00377,missing_cell,Encuestado77,v4unkg,0,,value blanked
+C00378,missing_cell,Encuestado15,v5bocaditos,0,,value blanked
+C00379,missing_cell,Encuestado20,v5bocaditos,0,,value blanked
+C00380,missing_cell,Encuestado32,v5bocaditos,0,,value blanked
+C00381,missing_cell,Encuestado79,v5bocaditos,0,,value blanked
+C00382,missing_cell,Encuestado05,v5chips,1,,value blanked
+C00383,missing_cell,Encuestado42,v5chips,0,,value blanked
+C00384,missing_cell,Encuestado77,v5chips,0,,value blanked
+C00385,missing_cell,Encuestado83,v5chips,0,,value blanked
+C00386,missing_cell,Encuestado80,v5fritos,0,,value blanked
+C00387,missing_cell,Encuestado87,v5fritos,0,,value blanked
+C00388,missing_cell,Encuestado90,v5fritos,0,,value blanked
+C00389,missing_cell,Encuestado100,v5fritos,1,,value blanked
+C00390,missing_cell,Encuestado25,v5otras,0,,value blanked
+C00391,missing_cell,Encuestado40,v5otras,1,,value blanked
+C00392,missing_cell,Encuestado42,v5otras,0,,value blanked
+C00393,missing_cell,Encuestado112,v5otras,1,,value blanked
+C00394,missing_cell,Encuestado33,v5platoscotidianos,0,,value blanked
+C00395,missing_cell,Encuestado40,v5platoscotidianos,0,,value blanked
+C00396,missing_cell,Encuestado54,v5platoscotidianos,1,,value blanked
+C00397,missing_cell,Encuestado56,v5platoscotidianos,1,,value blanked
+C00398,missing_cell,Encuestado23,v5platosgourmet,0,,value blanked
+C00399,missing_cell,Encuestado66,v5platosgourmet,0,,value blanked
+C00400,missing_cell,Encuestado71,v5platosgourmet,0,,value blanked
+C00401,missing_cell,Encuestado102,v5platosgourmet,0,,value blanked
+C00402,missing_cell,Encuestado03,v5sancochados,1,,value blanked
+C00403,missing_cell,Encuestado23,v5sancochados,1,,value blanked
+C00404,missing_cell,Encuestado80,v5sancochados,1,,value blanked
+C00405,missing_cell,Encuestado98,v5sancochados,1,,value blanked
+C00406,missing_cell,Encuestado17,v6ferias,0,,value blanked
+C00407,missing_cell,Encuestado37,v6ferias,0,,value blanked
+C00408,missing_cell,Encuestado87,v6ferias,0,,value blanked
+C00409,missing_cell,Encuestado107,v6ferias,0,,value blanked
+C00410,missing_cell,Encuestado31,v6mercadodeabasto,0,,value blanked
+C00411,missing_cell,Encuestado74,v6mercadodeabasto,0,,value blanked
+C00412,missing_cell,Encuestado87,v6mercadodeabasto,0,,value blanked
+C00413,missing_cell,Encuestado93,v6mercadodeabasto,0,,value blanked
+C00414,missing_cell,Encuestado37,v6otros,0,,value blanked
+C00415,missing_cell,Encuestado49,v6otros,0,,value blanked
+C00416,missing_cell,Encuestado82,v6otros,0,,value blanked
+C00417,missing_cell,Encuestado91,v6otros,0,,value blanked
+C00418,missing_cell,Encuestado08,v6supermercados,1,,value blanked
+C00419,missing_cell,Encuestado32,v6supermercados,1,,value blanked
+C00420,missing_cell,Encuestado33,v6supermercados,1,,value blanked
+C00421,missing_cell,Encuestado54,v6supermercados,1,,value blanked
+C00422,missing_cell,Encuestado32,v7buenoparalasalud,2,,value blanked
+C00423,missing_cell,Encuestado53,v7buenoparalasalud,2,,value blanked
+C00424,missing_cell,Encuestado63,v7buenoparalasalud,1,,value blanked
+C00425,missing_cell,Encuestado99,v7buenoparalasalud,1,,value blanked
+C00426,missing_cell,Encuestado02,v7contribuciondesarrollorural,2,,value blanked
+C00427,missing_cell,Encuestado22,v7contribuciondesarrollorural,2,,value blanked
+C00428,missing_cell,Encuestado69,v7contribuciondesarrollorural,1,,value blanked
+C00429,missing_cell,Encuestado76,v7contribuciondesarrollorural,2,,value blanked
+C00430,missing_cell,Encuestado35,v7nutricion,2,,value blanked
+C00431,missing_cell,Encuestado52,v7nutricion,1,,value blanked
+C00432,missing_cell,Encuestado57,v7nutricion,1,,value blanked
+C00433,missing_cell,Encuestado77,v7nutricion,2,,value blanked
+C00434,missing_cell,Encuestado14,v7precio,2,,value blanked
+C00435,missing_cell,Encuestado52,v7precio,3,,value blanked
+C00436,missing_cell,Encuestado78,v7precio,2,,value blanked
+C00437,missing_cell,Encuestado100,v7precio,3,,value blanked
+C00438,missing_cell,Encuestado29,v7producidoorganicamente,3,,value blanked
+C00439,missing_cell,Encuestado52,v7producidoorganicamente,1,,value blanked
+C00440,missing_cell,Encuestado53,v7producidoorganicamente,1,,value blanked
+C00441,missing_cell,Encuestado66,v7producidoorganicamente,2,,value blanked
+C00442,missing_cell,Encuestado56,v7sabor,1,,value blanked
+C00443,missing_cell,Encuestado61,v7sabor,2,,value blanked
+C00444,missing_cell,Encuestado69,v7sabor,2,,value blanked
+C00445,missing_cell,Encuestado102,v7sabor,1,,value blanked
+C00446,missing_cell,Encuestado15,v7valorcultural,1,,value blanked
+C00447,missing_cell,Encuestado29,v7valorcultural,3,,value blanked
+C00448,missing_cell,Encuestado93,v7valorcultural,1,,value blanked
+C00449,missing_cell,Encuestado112,v7valorcultural,2,,value blanked
+C00450,missing_cell,Encuestado06,v8caro,2,,value blanked
+C00451,missing_cell,Encuestado27,v8caro,2,,value blanked
+C00452,missing_cell,Encuestado59,v8caro,2,,value blanked
+C00453,missing_cell,Encuestado112,v8caro,2,,value blanked
+C00454,missing_cell,Encuestado11,v8comidaparacampesinos,2,,value blanked
+C00455,missing_cell,Encuestado49,v8comidaparacampesinos,2,,value blanked
+C00456,missing_cell,Encuestado84,v8comidaparacampesinos,2,,value blanked
+C00457,missing_cell,Encuestado110,v8comidaparacampesinos,2,,value blanked
+C00458,missing_cell,Encuestado10,v8nutritivo,1,,value blanked
+C00459,missing_cell,Encuestado26,v8nutritivo,2,,value blanked
+C00460,missing_cell,Encuestado64,v8nutritivo,1,,value blanked
+C00461,missing_cell,Encuestado70,v8nutritivo,1,,value blanked
+C00462,missing_cell,Encuestado05,v8sabroso,1,,value blanked
+C00463,missing_cell,Encuestado35,v8sabroso,1,,value blanked
+C00464,missing_cell,Encuestado60,v8sabroso,1,,value blanked
+C00465,missing_cell,Encuestado101,v8sabroso,1,,value blanked
+C00466,missing_cell,Encuestado35,v8saludable,1,,value blanked
+C00467,missing_cell,Encuestado46,v8saludable,1,,value blanked
+C00468,missing_cell,Encuestado71,v8saludable,1,,value blanked
+C00469,missing_cell,Encuestado110,v8saludable,1,,value blanked
+C00470,missing_cell,Encuestado36,v8sofisticado,3,,value blanked
+C00471,missing_cell,Encuestado48,v8sofisticado,3,,value blanked
+C00472,missing_cell,Encuestado77,v8sofisticado,3,,value blanked
+C00473,missing_cell,Encuestado111,v8sofisticado,3,,value blanked
+C00474,missing_cell,Encuestado27,v8valorcultural,1,,value blanked
+C00475,missing_cell,Encuestado69,v8valorcultural,2,,value blanked
+C00476,missing_cell,Encuestado71,v8valorcultural,2,,value blanked
+C00477,missing_cell,Encuestado109,v8valorcultural,1,,value blanked
+C00478,missing_cell,Encuestado35,v9desarrollocomunidadandina,2,,value blanked
+C00479,missing_cell,Encuestado62,v9desarrollocomunidadandina,2,,value blanked
+C00480,missing_cell,Encuestado92,v9desarrollocomunidadandina,2,,value blanked
+C00481,missing_cell,Encuestado102,v9desarrollocomunidadandina,2,,value blanked
+C00482,missing_cell,Encuestado75,v9pagarpreciojustoalagricultor,2,,value blanked
+C00483,missing_cell,Encuestado89,v9pagarpreciojustoalagricultor,5,,value blanked
+C00484,missing_cell,Encuestado110,v9pagarpreciojustoalagricultor,5,,value blanked
+C00485,missing_cell,Encuestado112,v9pagarpreciojustoalagricultor,3,,value blanked
+C00486,missing_cell,Encuestado65,v9proteccionbiodiversidad,2,,value blanked
+C00487,missing_cell,Encuestado88,v9proteccionbiodiversidad,1,,value blanked
+C00488,missing_cell,Encuestado110,v9proteccionbiodiversidad,2,,value blanked
+C00489,missing_cell,Encuestado112,v9proteccionbiodiversidad,2,,value blanked
+C00490,missing_cell,Encuestado18,v9respetoalmedioambiente,1,,value blanked
+C00491,missing_cell,Encuestado54,v9respetoalmedioambiente,2,,value blanked
+C00492,missing_cell,Encuestado89,v9respetoalmedioambiente,2,,value blanked
+C00493,missing_cell,Encuestado99,v9respetoalmedioambiente,2,,value blanked
+C00494,duplicate_row,Encuestado24,,,,whole row appended a second time
+C00495,duplicate_row,Encuestado37,,,,whole row appended a second time
+C00496,duplicate_row,Encuestado83,,,,whole row appended a second time

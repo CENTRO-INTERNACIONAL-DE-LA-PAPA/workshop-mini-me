@@ -1,0 +1,14 @@
+column,data_type,unit,role,valid_values_or_range,description,cleaning_notes,source_column
+number,integer,none,primary_key,unique,,,Number
+accession_number,string,none,design,,Número de accesión del banco de germoplasma,,Accession Number
+accession_name,string,none,design,,Nombre de la accesión,,Accession Name
+country_of_selection,string,none,context,,País donde se seleccionó la variedad,,Country of selection
+tuber_skin_predominant_color,integer,none,predictor,0-10,Color predominante de la piel (código),,Tuber Skin Predominant Color
+tuber_skin_secondary_color,integer,none,predictor,0-9,Color secundario de la piel (código),,Tuber Skin Secondary Color
+distribution_of_secondary_color,integer,none,predictor,0-8,Distribución del color secundario de la piel (código),,Distribution of Secondary Color
+tuber_flesh_predominant_color,integer,none,predictor,0-5,Color predominante de la pulpa (código),,Tuber Flesh Predominant Color
+tuber_flesh_secondary_color,integer,none,predictor,0-9,Color secundario de la pulpa (código),,Tuber Flesh Secondary Color
+tuber_flesh_secondary_color_distribution,integer,none,predictor,0-4,Distribución del color secundario de la pulpa (código),,Tuber Flesh secondary color distribution
+tuber_shape,integer,none,predictor,0-8,Forma general del tubérculo (código),,Tuber Shape
+tuber_shape_unusual,integer,none,predictor,0-1,"Forma rara del tubérculo: 0 ausente, 1 presente",,Tuber shape unusual
+tuber_shape_depth_of_eyes,integer,none,predictor,0-8,Profundidad de ojos (código),,Tuber Shape Depth of Eyes

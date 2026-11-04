@@ -1,0 +1,65 @@
+column,data_type,unit,role,valid_values_or_range,description,cleaning_notes,source_column
+encuesta,integer,none,design,0-43,Número de encuesta,,encuesta
+distrito,category,none,design,La Molina|Miraflores|San Isidro,Distrito de Lima donde se encuestó,,distrito
+fecha,date,none,design,2015-06-22..2015-06-29,Fecha de la encuesta,,fecha
+encuestador,category,none,design,Encuestador01|Encuestador02|Encuestador03,Código del encuestador (posible efecto encuestador),,encuestador
+encuestado,string,none,primary_key,unique,,,encuestado
+sexo,category,none,context,F|M,"F femenino, M masculino",,Sexo
+edad,integer,years,context,15-80,Edad de la persona encuestada,,edad
+v1conoceconsume,category,none,predictor,0|1,Conoce y consume papas nativas de color (1 = marcado),,v1conoceConsume
+v1conocenoconsume,category,none,predictor,0|1,Conoce y consume papas nativas de color (1 = marcado),,v1conoceNOconsume
+v2diario,category,none,predictor,0|1,Frecuencia de consumo (1 = marcado),,v2diario
+v2unavezsemanal,category,none,predictor,0|1,Frecuencia de consumo (1 = marcado),,v2UnaVezSemanal
+v2masdeunavezsemanal,category,none,predictor,0|1,Frecuencia de consumo (1 = marcado),,v2MasDeUnaVezSemanal
+v2quincenal,category,none,predictor,0|1,Frecuencia de consumo (1 = marcado),,v2quincenal
+v2mensual,category,none,predictor,0|1,Frecuencia de consumo (1 = marcado),,v2mensual
+v2devezencuando,category,none,predictor,0|1,Frecuencia de consumo (1 = marcado),,v2deVezEnCuando
+v3cotidiano,category,none,predictor,0|1,Ocasión de consumo (1 = marcado),,v3cotidiano
+v3reunionessociales,category,none,predictor,0|1,Ocasión de consumo (1 = marcado),,v3reunionesSociales
+v3reunionescotidiano,category,none,predictor,0|1,Ocasión de consumo (1 = marcado),,v3ReunionesCotidiano
+v3otrasocasiones,category,none,predictor,0|1,Ocasión de consumo (1 = marcado),,v3otrasOcasiones
+v4mesos1kg,category,none,predictor,0|1,Cantidad que compra (1 = marcado),,v4mesos1kg
+v4unkg,category,none,predictor,0|1,Cantidad que compra (1 = marcado),,v4unKg
+v4doskg,category,none,predictor,0|1,Cantidad que compra (1 = marcado),,v4dosKg
+v4masde2kg,category,none,predictor,0|1,Cantidad que compra (1 = marcado),,v4masDe2kg
+v5fritos,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5fritos
+v5sancochados,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5sancochados
+v5bocaditos,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5bocaditos
+v5platosgourmet,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5platosGourmet
+v5platoscotidianos,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5platosCotidianos
+v5chips,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5chips
+v5otras,category,none,predictor,0|1,Forma de preparación (1 = marcado),,v5otras
+v6mercadodeabasto,category,none,predictor,0|1,Dónde las compra (1 = marcado),,v6MercadoDeAbasto
+v6supermercados,category,none,predictor,0|1,Dónde las compra (1 = marcado),,v6Supermercados
+v6ferias,category,none,predictor,0|1,Dónde las compra (1 = marcado),,v6Ferias
+v6otros,category,none,predictor,0|1,Dónde las compra (1 = marcado),,v6Otros
+v7nutricion,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7Nutricion
+v7valorcultural,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7ValorCultural
+v7precio,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7Precio
+v7sabor,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7Sabor
+v7producidoorganicamente,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7ProducidoOrganicamente
+v7buenoparalasalud,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7BuenoParaLaSalud
+v7contribuciondesarrollorural,integer,none,predictor,1-3,"Importancia al comprar: 1 muy importante, 2 importante, 3 poco importante",,v7ContribucionDesarrolloRural
+v8nutritivo,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8Nutritivo
+v8valorcultural,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8ValorCultural
+v8caro,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8Caro
+v8sabroso,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8Sabroso
+v8comidaparacampesinos,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8ComidaParaCampesinos
+v8sofisticado,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8Sofisticado
+v8saludable,integer,none,predictor,1-3,Percepción de las papas nativas de color. Escala sin documentar: 1-3 en los datos,,v8Saludable
+v9respetoalmedioambiente,integer,none,predictor,1-5,Acuerdo: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé (no es ordinal),,v9RespetoAlMedioAmbiente
+v9proteccionbiodiversidad,integer,none,predictor,1-5,Acuerdo: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé (no es ordinal),,v9ProteccionBiodiversidad
+v9desarrollocomunidadandina,integer,none,predictor,1-5,Acuerdo: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé (no es ordinal),,v9DesarrolloComunidadAndina
+v9pagarpreciojustoalagricultor,integer,none,outcome,1-5,Pagaría un precio justo al agricultor: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé,,v9PagarPrecioJustoAlAgricultor
+v10television,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10Television
+v10supermercadotiendas,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10SupermercadoTiendas
+v10radio,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10Radio
+v10muestraseneventos,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10MuestrasEnEventos
+v10diariosorevistas,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10DiariosORevistas
+v10amigosofamiliares,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10AmigosOFamiliares
+v10panelesafiches,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10PanelesAfiches
+v10otros,category,none,predictor,0|1,Por dónde se enteró (1 = marcado),,v10Otros
+v11apoyocomprandoenwong,integer,none,predictor,1-5,Acuerdo sobre la campaña en Wong: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé,,v11ApoyoComprandoEnWong
+v11imagenmejoradadepapasnativasporwong,integer,none,predictor,1-5,Acuerdo sobre la campaña en Wong: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé,,v11ImagenMejoradaDePapasNativasPorWong
+v11incrementoconocimientopatrimonioczonasandinasporwong,integer,none,predictor,1-5,Acuerdo sobre la campaña en Wong: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé,,v11IncrementoConocimientoPatrimonioCZonasAndinasPorWong
+v11incrementoconocimientovidaproductoresandinosporwong,integer,none,predictor,1-5,Acuerdo sobre la campaña en Wong: 1 muy de acuerdo ... 4 total desacuerdo; 5 = no sé,,v11IncrementoConocimientoVidaProductoresAndinosPorWong
