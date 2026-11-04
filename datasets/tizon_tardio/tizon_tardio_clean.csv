@@ -1,0 +1,190 @@
+record_id,plot,rep,treatment,class,site,instn,accename,audpc,raudpc,ttya,rlb
+TIZ-0001,1,1,Control,Control,Njabini,CIP381381.20,Asante,2290,0.4872,19.8,Moderately Resistant
+TIZ-0002,2,1,Agrifos,Phosphonate,Njabini,CIP381381.20,Asante,864,0.1838,38.3,Moderately Resistant
+TIZ-0003,3,1,Ridomil+Mancozeb,Conventional,Njabini,CIP381381.20,Asante,829,0.1764,36.9,Moderately Resistant
+TIZ-0004,4,1,Ridomil+Mancozeb,Conventional,Njabini,Kenya Mpya,Kenya Mpya,70,0.0149,39.3,Resistant
+TIZ-0005,5,1,Agrifos,Phosphonate,Njabini,Kenya Mpya,Kenya Mpya,28,0.006,42.3,Resistant
+TIZ-0006,6,1,Control,Control,Njabini,Kenya Mpya,Kenya Mpya,280,0.0596,37.9,Resistant
+TIZ-0007,7,1,Agrifos,Phosphonate,Njabini,CIP381381.13,Tigoni,1039,0.2211,37.1,Moderately Resistant
+TIZ-0008,8,1,Ridomil+Mancozeb,Conventional,Njabini,CIP381381.13,Tigoni,1424,0.303,34.7,Moderately Resistant
+TIZ-0009,9,1,Control,Control,Njabini,CIP381381.13,Tigoni,1599,0.3402,27.7,Moderately Resistant
+TIZ-0010,1,2,Ridomil+Mancozeb,Conventional,Njabini,Kenya Mpya,Kenya Mpya,30.1,0.0064,41.4,Resistant
+TIZ-0011,2,2,Agrifos,Phosphonate,Njabini,Kenya Mpya,Kenya Mpya,30.1,0.0064,39.1,Resistant
+TIZ-0012,3,2,Control,Control,Njabini,Kenya Mpya,Kenya Mpya,187,0.0398,35.3,Resistant
+TIZ-0013,4,1,Agrifos,Phosphonate,Njabini,Kenya Mavuno,Kenya Mavuno,829,0.1764,35.6,Moderately Resistant
+TIZ-0014,5,1,Control,Control,Njabini,Kenya Mavuno,Kenya Mavuno,1144,0.2434,28.6,Moderately Resistant
+TIZ-0015,6,1,Ridomil+Mancozeb,Conventional,Njabini,Kenya Mavuno,Kenya Mavuno,829,0.1764,37.3,Moderately Resistant
+TIZ-0016,7,1,Ridomil+Mancozeb,Conventional,Njabini,Kenya Karibu,Kenya Karibu,301,0.064,38.3,Resistant
+TIZ-0017,8,1,Control,Control,Njabini,Kenya Karibu,Kenya Karibu,462,0.0983,32.1,Resistant
+TIZ-0018,9,1,Agrifos,Phosphonate,Njabini,Kenya Karibu,Kenya Karibu,91,0.0194,40.3,Resistant
+TIZ-0019,1,2,Control,Control,Njabini,Kenya Karibu,Kenya Karibu,245,0.0521,33.9,Resistant
+TIZ-0020,2,2,Ridomil+Mancozeb,Conventional,Njabini,Kenya Karibu,Kenya Karibu,112,0.0238,37.9,Resistant
+TIZ-0021,3,2,Agrifos,Phosphonate,Njabini,Kenya Karibu,Kenya Karibu,140,0.0298,39.8,Resistant
+TIZ-0022,4,2,Control,Control,Njabini,CIP381381.20,Asante,1809,0.3849,22.5,Moderately Resistant
+TIZ-0023,5,2,Ridomil+Mancozeb,Conventional,Njabini,CIP381381.20,Asante,1209,0.2572,37.2,Moderately Resistant
+TIZ-0024,6,2,Agrifos,Phosphonate,Njabini,CIP381381.20,Asante,1237,0.2632,35.9,Moderately Resistant
+TIZ-0025,7,3,Control,Control,Njabini,Kenya Mpya,Kenya Mpya,455,0.0968,31.8,Resistant
+TIZ-0026,8,3,Agrifos,Phosphonate,Njabini,Kenya Mpya,Kenya Mpya,49,0.0104,40.5,Resistant
+TIZ-0027,9,3,Ridomil+Mancozeb,Conventional,Njabini,Kenya Mpya,Kenya Mpya,49,0.0104,41.3,Resistant
+TIZ-0028,1,2,Ridomil+Mancozeb,Conventional,Njabini,Kenya Mavuno,Kenya Mavuno,829,0.1764,34.6,Moderately Resistant
+TIZ-0029,2,2,Agrifos,Phosphonate,Njabini,Kenya Mavuno,Kenya Mavuno,900,0.1915,38.7,Moderately Resistant
+TIZ-0030,3,2,Control,Control,Njabini,Kenya Mavuno,Kenya Mavuno,1180,0.2511,32.1,Moderately Resistant
+TIZ-0031,4,2,Ridomil+Mancozeb,Conventional,Njabini,CIP381381.13,Tigoni,1237,0.2632,39.5,Moderately Resistant
+TIZ-0032,5,2,Agrifos,Phosphonate,Njabini,CIP381381.13,Tigoni,1314,0.2796,37.9,Moderately Resistant
+TIZ-0033,6,2,Control,Control,Njabini,CIP381381.13,Tigoni,1972,0.4196,27.9,Moderately Resistant
+TIZ-0034,7,3,Ridomil+Mancozeb,Conventional,Njabini,CIP381381.20,Asante,1005,0.2138,40,Moderately Resistant
+TIZ-0035,8,3,Control,Control,Njabini,CIP381381.20,Asante,2160,0.4596,22,Moderately Resistant
+TIZ-0036,9,3,Agrifos,Phosphonate,Njabini,CIP381381.20,Asante,970,0.2064,39.3,Moderately Resistant
+TIZ-0037,1,3,Ridomil+Mancozeb,Conventional,Njabini,CIP381381.13,Tigoni,1319,0.2806,36.2,Moderately Resistant
+TIZ-0038,2,3,Agrifos,Phosphonate,Njabini,CIP381381.13,Tigoni,1179,0.2509,38.5,Moderately Resistant
+TIZ-0039,3,3,Control,Control,Njabini,CIP381381.13,Tigoni,1739,0.37,26.1,Moderately Resistant
+TIZ-0040,4,3,Agrifos,Phosphonate,Njabini,Kenya Karibu,Kenya Karibu,490,0.1043,36.9,Resistant
+TIZ-0041,5,3,Control,Control,Njabini,Kenya Karibu,Kenya Karibu,672,0.143,29.9,Resistant
+TIZ-0042,6,3,Ridomil+Mancozeb,Conventional,Njabini,Kenya Karibu,Kenya Karibu,420,0.0894,39,Resistant
+TIZ-0043,7,3,Agrifos,Phosphonate,Njabini,Kenya Mavuno,Kenya Mavuno,663,0.1411,39.3,Moderately Resistant
+TIZ-0044,8,3,Ridomil+Mancozeb,Conventional,Njabini,Kenya Mavuno,Kenya Mavuno,607,0.1291,38.3,Moderately Resistant
+TIZ-0045,9,3,Control,Control,Njabini,Kenya Mavuno,Kenya Mavuno,1342,0.2855,30.1,Moderately Resistant
+TIZ-0046,1,1,Agrifos 400,Phosphonate,UoN,CIP800048,Desiree,262.5,0.375,8.8,Susceptible
+TIZ-0047,1,1,Agrifos 400,Phosphonate,UoN,Purple Gold,Purple Gold,182,0.26,7.4,Moderately Resistant
+TIZ-0048,2,1,Oshothane +Mistress,Conventional,UoN,CIP800048,Desiree,175,0.25,10.6,Susceptible
+TIZ-0049,2,1,Oshothane +Mistress,Conventional,UoN,Purple Gold,Purple Gold,0,0,10.5,Moderately Resistant
+TIZ-0050,3,1,Control,Control,UoN,CIP800048,Desiree,525,0.75,11.6,Susceptible
+TIZ-0051,3,1,Control,Control,UoN,Purple Gold,Purple Gold,350,0.5,10.9,Moderately Resistant
+TIZ-0052,4,1,Agriphite 600,Phosphonate,UoN,CIP800048,Desiree,525,0.75,13.2,Susceptible
+TIZ-0053,4,1,Agriphite 600,Phosphonate,UoN,Purple Gold,Purple Gold,175,0.25,17.4,Moderately Resistant
+TIZ-0054,1,1,Oshothane +Mistress,Conventional,UoN,CIP381381.20,Asante,297.5,0.425,23.8,Moderately Resistant
+TIZ-0055,2,1,Agrifos 400,Phosphonate,UoN,CIP381381.20,Asante,157.5,0.225,34.5,Moderately Resistant
+TIZ-0056,3,1,Agriphite 600,Phosphonate,UoN,CIP381381.20,Asante,38.5,0.055,20.8,Moderately Resistant
+TIZ-0057,4,1,Control,Control,UoN,CIP381381.20,Asante,175,0.25,17.4,Moderately Resistant
+TIZ-0058,1,1,Agriphite 600,Phosphonate,UoN,Dutch Robyjn,Dutch Robyjn,350,0.5,10,Moderately Resistant
+TIZ-0059,2,1,Control,Control,UoN,Dutch Robyjn,Dutch Robyjn,227.5,0.325,8.7,Moderately Resistant
+TIZ-0060,3,1,Agrifos 400,Phosphonate,UoN,Dutch Robyjn,Dutch Robyjn,227.5,0.325,4.1,Moderately Resistant
+TIZ-0061,4,1,Oshothane +Mistress,Conventional,UoN,Dutch Robyjn,Dutch Robyjn,87.5,0.125,15.7,Moderately Resistant
+TIZ-0062,1,1,Agrifos 400,Phosphonate,UoN,Kenya Mpya,Kenya Mpya,0,0,10.9,Resistant
+TIZ-0063,2,1,Oshothane +Mistress,Conventional,UoN,Kenya Mpya,Kenya Mpya,0,0,7.8,Resistant
+TIZ-0064,3,1,Control,Control,UoN,Kenya Mpya,Kenya Mpya,0,0,19.1,Resistant
+TIZ-0065,4,1,Agriphite 600,Phosphonate,UoN,Kenya Mpya,Kenya Mpya,7,0.01,10.6,Resistant
+TIZ-0066,1,2,Oshothane +Mistress,Conventional,UoN,CIP800048,Desiree,245,0.35,5.5,Susceptible
+TIZ-0067,1,2,Oshothane +Mistress,Conventional,UoN,Purple Gold,Purple Gold,52.5,0.075,8.2,Moderately Resistant
+TIZ-0068,2,2,Agrifos 400,Phosphonate,UoN,CIP800048,Desiree,402.5,0.575,3.8,Susceptible
+TIZ-0069,2,2,Agrifos 400,Phosphonate,UoN,Purple Gold,Purple Gold,280,0.4,6.7,Moderately Resistant
+TIZ-0070,3,2,Agriphite 600,Phosphonate,UoN,CIP800048,Desiree,402.5,0.575,8.1,Susceptible
+TIZ-0071,3,2,Agriphite 600,Phosphonate,UoN,Purple Gold,Purple Gold,280,0.4,9.3,Moderately Resistant
+TIZ-0072,4,2,Control,Control,UoN,CIP800048,Desiree,665,0.95,8.2,Susceptible
+TIZ-0073,4,2,Control,Control,UoN,Purple Gold,Purple Gold,525,0.75,8.7,Moderately Resistant
+TIZ-0074,1,2,Control,Control,UoN,CIP381381.20,Asante,490,0.7,27.9,Moderately Resistant
+TIZ-0075,2,2,Agriphite 600,Phosphonate,UoN,CIP381381.20,Asante,87.5,0.125,28.4,Moderately Resistant
+TIZ-0076,3,2,Oshothane +Mistress,Conventional,UoN,CIP381381.20,Asante,0,0,23.8,Moderately Resistant
+TIZ-0077,4,2,Agrifos 400,Phosphonate,UoN,CIP381381.20,Asante,87.5,0.125,14.5,Moderately Resistant
+TIZ-0078,1,2,Agriphite 600,Phosphonate,UoN,Dutch Robyjn,Dutch Robyjn,437.5,0.625,13.5,Moderately Resistant
+TIZ-0079,2,2,Control,Control,UoN,Dutch Robyjn,Dutch Robyjn,560,0.8,10.3,Moderately Resistant
+TIZ-0080,3,2,Agrifos 400,Phosphonate,UoN,Dutch Robyjn,Dutch Robyjn,315,0.45,9.9,Moderately Resistant
+TIZ-0081,4,2,Oshothane +Mistress,Conventional,UoN,Dutch Robyjn,Dutch Robyjn,122.5,0.175,9.1,Moderately Resistant
+TIZ-0082,1,2,Agrifos 400,Phosphonate,UoN,Kenya Mpya,Kenya Mpya,0,0,21.4,Resistant
+TIZ-0083,2,2,Oshothane +Mistress,Conventional,UoN,Kenya Mpya,Kenya Mpya,0,0,21.5,Resistant
+TIZ-0084,3,2,Control,Control,UoN,Kenya Mpya,Kenya Mpya,24.5,0.035,10.3,Resistant
+TIZ-0085,4,2,Agrifos 400,Phosphonate,UoN,Kenya Mpya,Kenya Mpya,0,0,11.2,Resistant
+TIZ-0086,1,3,Control,Control,UoN,CIP800048,Desiree,455,0.65,4,Susceptible
+TIZ-0087,1,3,Control,Control,UoN,Purple Gold,Purple Gold,385,0.55,6,Moderately Resistant
+TIZ-0088,2,3,Agrifos 400,Phosphonate,UoN,CIP800048,Desiree,280,0.4,4.5,Susceptible
+TIZ-0089,2,3,Agrifos 400,Phosphonate,UoN,Purple Gold,Purple Gold,297.5,0.425,5,Moderately Resistant
+TIZ-0090,3,3,Control,Control,UoN,CIP800048,Desiree,287,0.41,6.5,Susceptible
+TIZ-0091,3,3,Control,Control,UoN,Purple Gold,Purple Gold,35,0.05,6.4,Moderately Resistant
+TIZ-0092,4,3,Agriphite 600,Phosphonate,UoN,CIP800048,Desiree,350,0.5,4.4,Susceptible
+TIZ-0093,4,3,Agriphite 600,Phosphonate,UoN,Purple Gold,Purple Gold,192.5,0.275,4.5,Moderately Resistant
+TIZ-0094,1,3,Agriphite 600,Phosphonate,UoN,CIP381381.20,Asante,280,0.4,23.1,Moderately Resistant
+TIZ-0095,2,3,Oshothane +Mistress,Conventional,UoN,CIP381381.20,Asante,17.5,0.025,26.7,Moderately Resistant
+TIZ-0096,3,3,Agriphite 600,Phosphonate,UoN,CIP381381.20,Asante,455,0.65,20.3,Moderately Resistant
+TIZ-0097,4,3,Agrifos 400,Phosphonate,UoN,CIP381381.20,Asante,280,0.4,24.9,Moderately Resistant
+TIZ-0098,1,3,Agrifos 400,Phosphonate,UoN,Dutch Robyjn,Dutch Robyjn,280,0.4,7,Moderately Resistant
+TIZ-0099,2,3,Control,Control,UoN,Dutch Robyjn,Dutch Robyjn,297.5,0.425,0.8,Moderately Resistant
+TIZ-0100,3,3,Oshothane +Mistress,Conventional,UoN,Dutch Robyjn,Dutch Robyjn,147,0.21,8.8,Moderately Resistant
+TIZ-0101,4,3,Control,Control,UoN,Dutch Robyjn,Dutch Robyjn,297.5,0.425,10.5,Moderately Resistant
+TIZ-0102,1,3,Oshothane +Mistress,Conventional,UoN,Kenya Mpya,Kenya Mpya,0,0,14.1,Resistant
+TIZ-0103,2,3,Agriphite 600,Phosphonate,UoN,Kenya Mpya,Kenya Mpya,0,0,11.8,Resistant
+TIZ-0104,3,3,Agrifos 400,Phosphonate,UoN,Kenya Mpya,Kenya Mpya,0,0,13.6,Resistant
+TIZ-0105,4,3,Oshothane +Mistress,Conventional,UoN,Kenya Mpya,Kenya Mpya,38.5,0.055,14.8,Resistant
+TIZ-0106,1,1,Ridomil + Mancozeb,Conventional,Limuru,Nyayo,Nyayo,820,0.2412,18.3,Moderately Resistant
+TIZ-0107,4,1,Agrifos 65 ml,Phosphonate,Limuru,Kenya Mavuno,Kenya Mavuno,1570,0.4618,25.9,Moderately Resistant
+TIZ-0108,5,1,Ridomil + Mancozeb,Conventional,Limuru,CIP800048,Desiree,170,0.05,10.2,Susceptible
+TIZ-0109,7,1,Ridomil + Mancozeb,Conventional,Limuru,Kenya Mpya,Kenya Mpya,0,0,33.5,Resistant
+TIZ-0110,8,1,Agrifos 65 ml,Phosphonate,Limuru,CIP381381.13,Tigoni,1740,0.5118,25.9,Moderately Resistant
+TIZ-0111,9,1,Control,Control,Limuru,Kenya Mavuno,Kenya Mavuno,2790,0.8206,12.9,Moderately Resistant
+TIZ-0112,2,1,Agrifos 65 ml,Phosphonate,Limuru,CIP381381.20,Asante,1940,0.5706,26.9,Moderately Resistant
+TIZ-0113,3,1,Agrifos 110 ml,Phosphonate,Limuru,CIP381381.13,Tigoni,1090,0.3206,35.1,Moderately Resistant
+TIZ-0114,4,1,Agrifos 65 ml,Phosphonate,Limuru,CIP800048,Desiree,1670,0.4912,9.3,Susceptible
+TIZ-0115,5,1,Agrifos 110 ml,Phosphonate,Limuru,Nyayo,Nyayo,1330,0.3912,31.9,Moderately Resistant
+TIZ-0116,8,1,Ridomil + Mancozeb,Conventional,Limuru,Kenya Mavuno,Kenya Mavuno,170,0.05,29.4,Moderately Resistant
+TIZ-0117,9,1,Control,Control,Limuru,CIP800048,Desiree,3030,0.8912,4.1,Susceptible
+TIZ-0118,10,1,Ridomil + Mancozeb,Conventional,Limuru,CIP381381.20,Asante,580,0.1706,35.4,Moderately Resistant
+TIZ-0119,1,1,Agrifos 65 ml,Phosphonate,Limuru,Nyayo,Nyayo,1670,0.4912,27.9,Moderately Resistant
+TIZ-0120,3,1,Agrifos 110 ml,Phosphonate,Limuru,CIP800048,Desiree,580,0.1706,17.3,Susceptible
+TIZ-0121,4,1,Ridomil + Mancozeb,Conventional,Limuru,Dutch Robyjn,Dutch Robyjn,750,0.2206,25.6,Moderately Resistant
+TIZ-0122,7,1,Control,Control,Limuru,Nyayo,Nyayo,2620,0.7706,10.7,Moderately Resistant
+TIZ-0123,9,1,Agrifos 110 ml,Phosphonate,Limuru,Kenya Mavuno,Kenya Mavuno,1230,0.3618,29.1,Moderately Resistant
+TIZ-0124,10,1,Control,Control,Limuru,Dutch Robyjn,Dutch Robyjn,2620,0.7706,12.7,Moderately Resistant
+TIZ-0125,9,1,Agrifos 110 ml,Phosphonate,Limuru,CIP381381.20,Asante,650,0.1912,43.7,Moderately Resistant
+TIZ-0126,10,1,Agrifos 110 ml,Phosphonate,Limuru,Kenya Mpya,Kenya Mpya,0,0,40.7,Resistant
+TIZ-0127,3,1,Control,Control,Limuru,Kenya Mpya,Kenya Mpya,0,0,39.3,Resistant
+TIZ-0128,4,1,Control,Control,Limuru,CIP381381.20,Asante,2690,0.7912,17.1,Moderately Resistant
+TIZ-0129,8,1,Agrifos 65 ml,Phosphonate,Limuru,Kenya Mpya,Kenya Mpya,0,0,31.4,Resistant
+TIZ-0130,9,1,Agrifos 110 ml,Phosphonate,Limuru,Dutch Robyjn,Dutch Robyjn,890,0.2618,26.8,Moderately Resistant
+TIZ-0131,9,1,Ridomil + Mancozeb,Conventional,Limuru,CIP381381.13,Tigoni,580,0.1706,31.4,Moderately Resistant
+TIZ-0132,7,1,Agrifos 65 ml,Phosphonate,Limuru,Dutch Robyjn,Dutch Robyjn,1670,0.4912,20.4,Moderately Resistant
+TIZ-0133,1,2,Control,Control,Limuru,Kenya Mavuno,Kenya Mavuno,2690,0.7912,13.8,Moderately Resistant
+TIZ-0134,6,2,Control,Control,Limuru,Kenya Mpya,Kenya Mpya,0,0,24.2,Resistant
+TIZ-0135,7,2,Agrifos 110 ml,Phosphonate,Limuru,CIP381381.13,Tigoni,1160,0.3412,24.1,Moderately Resistant
+TIZ-0136,11,2,Ridomil + Mancozeb,Conventional,Limuru,Kenya Mpya,Kenya Mpya,0,0,27.9,Resistant
+TIZ-0137,5,2,Control,Control,Limuru,CIP381381.13,Tigoni,2690,0.7912,19.4,Moderately Resistant
+TIZ-0138,6,2,Agrifos 65 ml,Phosphonate,Limuru,CIP381381.20,Asante,1670,0.4912,22.9,Moderately Resistant
+TIZ-0139,1,2,Control,Control,Limuru,Dutch Robyjn,Dutch Robyjn,2860,0.8412,12,Moderately Resistant
+TIZ-0140,2,2,Ridomil + Mancozeb,Conventional,Limuru,CIP381381.20,Asante,440,0.1294,34.2,Moderately Resistant
+TIZ-0141,3,2,Agrifos 65 ml,Phosphonate,Limuru,CIP800048,Desiree,1500,0.4412,12.4,Susceptible
+TIZ-0142,6,2,Agrifos 110 ml,Phosphonate,Limuru,CIP800048,Desiree,1330,0.3912,17.1,Susceptible
+TIZ-0143,7,2,Agrifos 65 ml,Phosphonate,Limuru,CIP381381.13,Tigoni,1670,0.4912,35.8,Moderately Resistant
+TIZ-0144,8,2,Agrifos 65 ml,Phosphonate,Limuru,Nyayo,Nyayo,1260,0.3706,37.1,Moderately Resistant
+TIZ-0145,11,2,Ridomil + Mancozeb,Conventional,Limuru,Dutch Robyjn,Dutch Robyjn,750,0.2206,30.1,Moderately Resistant
+TIZ-0146,1,2,Control,Control,Limuru,CIP381381.13,Tigoni,2960,0.8706,26.6,Moderately Resistant
+TIZ-0147,2,2,Agrifos 110 ml,Phosphonate,Limuru,Nyayo,Nyayo,820,0.2412,24.9,Moderately Resistant
+TIZ-0148,5,2,Ridomil + Mancozeb,Conventional,Limuru,Kenya Mavuno,Kenya Mavuno,410,0.1206,39.4,Moderately Resistant
+TIZ-0149,10,2,Ridomil + Mancozeb,Conventional,Limuru,Nyayo,Nyayo,750,0.2206,24.1,Moderately Resistant
+TIZ-0150,1,2,Ridomil + Mancozeb,Conventional,Limuru,CIP800048,Desiree,170,0.05,15.6,Susceptible
+TIZ-0151,5,2,Agrifos 110 ml,Phosphonate,Limuru,Dutch Robyjn,Dutch Robyjn,990,0.2912,18.4,Moderately Resistant
+TIZ-0152,6,2,Agrifos 65 ml,Phosphonate,Limuru,Kenya Mavuno,Kenya Mavuno,1670,0.4912,21.1,Moderately Resistant
+TIZ-0153,7,2,Agrifos 110 ml,Phosphonate,Limuru,Kenya Mpya,Kenya Mpya,0,0,35.7,Resistant
+TIZ-0154,8,2,Agrifos 110 ml,Phosphonate,Limuru,CIP381381.20,Asante,990,0.2912,36.5,Moderately Resistant
+TIZ-0155,3,2,Agrifos 110 ml,Phosphonate,Limuru,Kenya Mavuno,Kenya Mavuno,1500,0.4412,30,Moderately Resistant
+TIZ-0156,6,2,Control,Control,Limuru,Nyayo,Nyayo,2790,0.8206,9.9,Moderately Resistant
+TIZ-0157,10,2,Control,Control,Limuru,CIP381381.20,Asante,2960,0.8706,23.3,Moderately Resistant
+TIZ-0158,2,2,Control,Control,Limuru,CIP800048,Desiree,2690,0.7912,3,Susceptible
+TIZ-0159,4,2,Agrifos 65 ml,Phosphonate,Limuru,Kenya Mpya,Kenya Mpya,0,0,34,Resistant
+TIZ-0160,5,2,Ridomil + Mancozeb,Conventional,Limuru,CIP381381.13,Tigoni,750,0.2206,27.8,Moderately Resistant
+TIZ-0161,6,2,Agrifos 65 ml,Phosphonate,Limuru,Dutch Robyjn,Dutch Robyjn,1430,0.4206,25.5,Moderately Resistant
+TIZ-0162,2,3,Control,Control,Limuru,Kenya Mavuno,Kenya Mavuno,2960,0.8706,20.3,Moderately Resistant
+TIZ-0163,8,3,Ridomil + Mancozeb,Conventional,Limuru,Kenya Mpya,Kenya Mpya,0,0,40.7,Resistant
+TIZ-0164,4,3,Control,Control,Limuru,Kenya Mpya,Kenya Mpya,0,0,33.8,Resistant
+TIZ-0165,6,3,Agrifos 110 ml,Phosphonate,Limuru,CIP381381.13,Tigoni,820,0.2412,37.3,Moderately Resistant
+TIZ-0166,11,3,Control,Control,Limuru,CIP381381.13,Tigoni,2690,0.7912,25.5,Moderately Resistant
+TIZ-0167,3,3,Agrifos 65 ml,Phosphonate,Limuru,CIP381381.13,Tigoni,1570,0.4618,39.1,Moderately Resistant
+TIZ-0168,4,3,Ridomil + Mancozeb,Conventional,Limuru,Nyayo,Nyayo,850,0.25,31.2,Moderately Resistant
+TIZ-0169,10,3,Control,Control,Limuru,Dutch Robyjn,Dutch Robyjn,2790,0.8206,14.1,Moderately Resistant
+TIZ-0170,1,3,Agrifos 110 ml,Phosphonate,Limuru,Nyayo,Nyayo,990,0.2912,35.1,Moderately Resistant
+TIZ-0171,2,3,Ridomil + Mancozeb,Conventional,Limuru,Dutch Robyjn,Dutch Robyjn,580,0.1706,33.7,Moderately Resistant
+TIZ-0172,4,3,Agrifos 110 ml,Phosphonate,Limuru,CIP381381.20,Asante,990,0.2912,33,Moderately Resistant
+TIZ-0173,5,3,Ridomil + Mancozeb,Conventional,Limuru,CIP800048,Desiree,170,0.05,15.8,Susceptible
+TIZ-0174,8,3,Agrifos 65 ml,Phosphonate,Limuru,Kenya Mpya,Kenya Mpya,0,0,37.4,Resistant
+TIZ-0175,9,3,Agrifos 110 ml,Phosphonate,Limuru,CIP800048,Desiree,850,0.25,14.8,Susceptible
+TIZ-0176,1,3,Agrifos 65 ml,Phosphonate,Limuru,CIP381381.20,Asante,1670,0.4912,35.5,Moderately Resistant
+TIZ-0177,3,3,Agrifos 110 ml,Phosphonate,Limuru,Kenya Mavuno,Kenya Mavuno,1600,0.4706,31.2,Moderately Resistant
+TIZ-0178,10,3,Agrifos 110 ml,Phosphonate,Limuru,Dutch Robyjn,Dutch Robyjn,1130,0.3324,32.5,Moderately Resistant
+TIZ-0179,11,3,Control,Control,Limuru,CIP800048,Desiree,2960,0.8706,3.4,Susceptible
+TIZ-0180,1,3,Control,Control,Limuru,Nyayo,Nyayo,2590,0.7618,10.3,Moderately Resistant
+TIZ-0181,2,3,Agrifos 65 ml,Phosphonate,Limuru,Dutch Robyjn,Dutch Robyjn,1570,0.4618,24.4,Moderately Resistant
+TIZ-0182,3,3,Ridomil + Mancozeb,Conventional,Limuru,CIP381381.13,Tigoni,580,0.1706,27.5,Moderately Resistant
+TIZ-0183,4,3,Ridomil + Mancozeb,Conventional,Limuru,CIP381381.20,Asante,750,0.2206,31.1,Moderately Resistant
+TIZ-0184,6,3,Agrifos 65 ml,Phosphonate,Limuru,CIP800048,Desiree,1670,0.4912,7.8,Susceptible
+TIZ-0185,7,3,Agrifos 65 ml,Phosphonate,Limuru,Kenya Mavuno,Kenya Mavuno,1160,0.3412,25.9,Moderately Resistant
+TIZ-0186,8,3,Agrifos 65 ml,Phosphonate,Limuru,Nyayo,Nyayo,1600,0.4706,37.7,Moderately Resistant
+TIZ-0187,9,3,Agrifos 110 ml,Phosphonate,Limuru,Kenya Mpya,Kenya Mpya,0,0,32.8,Resistant
+TIZ-0188,1,3,Control,Control,Limuru,CIP381381.20,Asante,2825,0.8309,20.2,Moderately Resistant
+TIZ-0189,4,3,Ridomil + Mancozeb,Conventional,Limuru,Kenya Mavuno,Kenya Mavuno,290,0.0853,34.4,Moderately Resistant

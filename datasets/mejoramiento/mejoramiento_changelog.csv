@@ -1,0 +1,248 @@
+change_id,family,record_id,column,original_value,new_value,detail
+C00001,mixed_unit,45,elevation,3216,10551,m -> ft
+C00002,mixed_unit,73,elevation,3216,10551,m -> ft
+C00003,mixed_unit,91,elevation,3216,10551,m -> ft
+C00004,mixed_unit,149,elevation,3216,10551,m -> ft
+C00005,mixed_unit,175,elevation,3216,10551,m -> ft
+C00006,mixed_unit,219,elevation,3216,10551,m -> ft
+C00007,mixed_unit,13,pph,100,1,% -> fraction 0-1
+C00008,mixed_unit,59,pph,80,1,% -> fraction 0-1
+C00009,mixed_unit,61,pph,70,1,% -> fraction 0-1
+C00010,mixed_unit,62,pph,100,1,% -> fraction 0-1
+C00011,mixed_unit,211,pph,100,1,% -> fraction 0-1
+C00012,mixed_unit,242,pph,90,1,% -> fraction 0-1
+C00013,mixed_unit,1,ttwp,7.76,17.108,kg -> lb
+C00014,mixed_unit,16,ttwp,5.54,12.214,kg -> lb
+C00015,mixed_unit,34,ttwp,3.26,7.187,kg -> lb
+C00016,mixed_unit,140,ttwp,4.64,10.229,kg -> lb
+C00017,mixed_unit,183,ttwp,5.18,11.42,kg -> lb
+C00018,mixed_unit,212,ttwp,3.36,7.408,kg -> lb
+C00019,mixed_unit,50,ttwpl,0.5156,1.137,kg -> lb
+C00020,mixed_unit,51,ttwpl,0.32,0.705,kg -> lb
+C00021,mixed_unit,79,ttwpl,0.2975,0.656,kg -> lb
+C00022,mixed_unit,164,ttwpl,0.198,0.437,kg -> lb
+C00023,mixed_unit,180,ttwpl,0.1978,0.436,kg -> lb
+C00024,mixed_unit,213,ttwpl,0.51,1.124,kg -> lb
+C00025,mixed_unit,50,ttya,19.0947,19094.7,t/ha -> kg/ha
+C00026,mixed_unit,160,ttya,7.9835,7983.5,t/ha -> kg/ha
+C00027,mixed_unit,169,ttya,16.9444,16944.4,t/ha -> kg/ha
+C00028,mixed_unit,190,ttya,5.4321,5432.1,t/ha -> kg/ha
+C00029,mixed_unit,194,ttya,13.9095,13909.5,t/ha -> kg/ha
+C00030,mixed_unit,30,ttyna,9.4815,9481.5,t/ha -> kg/ha
+C00031,mixed_unit,39,ttyna,8.0741,8074.1,t/ha -> kg/ha
+C00032,mixed_unit,56,ttyna,3.1852,3185.2,t/ha -> kg/ha
+C00033,mixed_unit,131,ttyna,20.2222,20222.2,t/ha -> kg/ha
+C00034,mixed_unit,152,ttyna,24.1481,24148.1,t/ha -> kg/ha
+C00035,impossible_value,2,atw,53.0851,128.994,above the valid maximum
+C00036,impossible_value,158,atw,16.1468,-15.746,below the valid minimum
+C00037,impossible_value,30,elevation,3216,3538,above the valid maximum
+C00038,impossible_value,98,elevation,3216,2991,below the valid minimum
+C00039,impossible_value,37,latitude,-12.0264,-10.824,above the valid maximum
+C00040,impossible_value,150,latitude,-12.0264,-12.868,below the valid minimum
+C00041,impossible_value,90,longitude,-75.2449,-67.72,above the valid maximum
+C00042,impossible_value,122,longitude,-75.2449,-80.512,below the valid minimum
+C00043,impossible_value,17,nph,8,15,above the valid maximum
+C00044,impossible_value,18,nph,8,1,below the valid minimum
+C00045,impossible_value,40,ntp,10,750,above the valid maximum
+C00046,impossible_value,221,ntp,10,-100,below the valid minimum
+C00047,impossible_value,42,pph,100,150,above the valid maximum
+C00048,impossible_value,129,pph,90,-20,below the valid minimum
+C00049,impossible_value,17,rep,1,5,above the valid maximum
+C00050,impossible_value,235,rep,3,0,below the valid minimum
+C00051,impossible_value,31,tntp,100,804,above the valid maximum
+C00052,impossible_value,152,tntp,372,-107,below the valid minimum
+C00053,impossible_value,62,tntpl,31.4,80.225,above the valid maximum
+C00054,impossible_value,139,tntpl,20,-10.697,below the valid minimum
+C00055,impossible_value,94,ttwp,3.04,15.712,above the valid maximum
+C00056,impossible_value,143,ttwp,2,-2.095,below the valid minimum
+C00057,impossible_value,27,ttwpl,0.3556,1.57,above the valid maximum
+C00058,impossible_value,235,ttwpl,0.3833,-0.209,below the valid minimum
+C00059,impossible_value,49,ttya,11.1852,150,above the valid maximum
+C00060,impossible_value,120,ttya,21.3333,-20,below the valid minimum
+C00061,impossible_value,170,ttyna,13.8519,150,above the valid maximum
+C00062,impossible_value,207,ttyna,13.4815,-20,below the valid minimum
+C00063,whitespace_case,23,instn,CIP306087.132, CIP306087.132,leading space
+C00064,whitespace_case,107,instn,CIP311103.30, CIP311103.30,leading space
+C00065,whitespace_case,110,instn,CIP311166.10,CIP311166.10 ,trailing space
+C00066,whitespace_case,117,instn,CIP311209.16,cip311209.16,lowercase
+C00067,whitespace_case,182,instn,CIP700313, CIP700313,leading space
+C00068,missing_cell,15,adm1,Junin,,value blanked
+C00069,missing_cell,19,adm1,Junin,,value blanked
+C00070,missing_cell,25,adm1,Junin,,value blanked
+C00071,missing_cell,50,adm1,Junin,,value blanked
+C00072,missing_cell,77,adm1,Junin,,value blanked
+C00073,missing_cell,95,adm1,Junin,,value blanked
+C00074,missing_cell,130,adm1,Junin,,value blanked
+C00075,missing_cell,194,adm1,Junin,,value blanked
+C00076,missing_cell,223,adm1,Junin,,value blanked
+C00077,missing_cell,2,adm2,Huancayo,,value blanked
+C00078,missing_cell,20,adm2,Huancayo,,value blanked
+C00079,missing_cell,26,adm2,Huancayo,,value blanked
+C00080,missing_cell,57,adm2,Huancayo,,value blanked
+C00081,missing_cell,100,adm2,Huancayo,,value blanked
+C00082,missing_cell,123,adm2,Huancayo,,value blanked
+C00083,missing_cell,125,adm2,Huancayo,,value blanked
+C00084,missing_cell,146,adm2,Huancayo,,value blanked
+C00085,missing_cell,161,adm2,Huancayo,,value blanked
+C00086,missing_cell,11,adm3,San Agustin,,value blanked
+C00087,missing_cell,16,adm3,San Agustin,,value blanked
+C00088,missing_cell,20,adm3,San Agustin,,value blanked
+C00089,missing_cell,94,adm3,San Agustin,,value blanked
+C00090,missing_cell,137,adm3,San Agustin,,value blanked
+C00091,missing_cell,190,adm3,San Agustin,,value blanked
+C00092,missing_cell,195,adm3,San Agustin,,value blanked
+C00093,missing_cell,198,adm3,San Agustin,,value blanked
+C00094,missing_cell,220,adm3,San Agustin,,value blanked
+C00095,missing_cell,3,atw,78.189,,value blanked
+C00096,missing_cell,11,atw,21.7778,,value blanked
+C00097,missing_cell,62,atw,7.1338,,value blanked
+C00098,missing_cell,98,atw,9.7674,,value blanked
+C00099,missing_cell,124,atw,14.8,,value blanked
+C00100,missing_cell,153,atw,19.0805,,value blanked
+C00101,missing_cell,189,atw,30.303,,value blanked
+C00102,missing_cell,229,atw,26.7442,,value blanked
+C00103,missing_cell,230,atw,28.5965,,value blanked
+C00104,missing_cell,8,country,Peru,,value blanked
+C00105,missing_cell,42,country,Peru,,value blanked
+C00106,missing_cell,78,country,Peru,,value blanked
+C00107,missing_cell,129,country,Peru,,value blanked
+C00108,missing_cell,133,country,Peru,,value blanked
+C00109,missing_cell,182,country,Peru,,value blanked
+C00110,missing_cell,189,country,Peru,,value blanked
+C00111,missing_cell,194,country,Peru,,value blanked
+C00112,missing_cell,220,country,Peru,,value blanked
+C00113,missing_cell,4,elevation,3216,,value blanked
+C00114,missing_cell,11,elevation,3216,,value blanked
+C00115,missing_cell,82,elevation,3216,,value blanked
+C00116,missing_cell,100,elevation,3216,,value blanked
+C00117,missing_cell,125,elevation,3216,,value blanked
+C00118,missing_cell,138,elevation,3216,,value blanked
+C00119,missing_cell,178,elevation,3216,,value blanked
+C00120,missing_cell,195,elevation,3216,,value blanked
+C00121,missing_cell,228,elevation,3216,,value blanked
+C00122,missing_cell,8,instn,CIP303887.51,,value blanked
+C00123,missing_cell,13,instn,CIP306018.66,,value blanked
+C00124,missing_cell,32,instn,CIP306087.72,,value blanked
+C00125,missing_cell,76,instn,CIP306418.1,,value blanked
+C00126,missing_cell,153,instn,CIP311575.103,,value blanked
+C00127,missing_cell,156,instn,CIP311575.103,,value blanked
+C00128,missing_cell,222,instn,CIP703421,,value blanked
+C00129,missing_cell,236,instn,CIP704218,,value blanked
+C00130,missing_cell,238,instn,CIP704393,,value blanked
+C00131,missing_cell,4,latitude,-12.0264,,value blanked
+C00132,missing_cell,12,latitude,-12.0264,,value blanked
+C00133,missing_cell,73,latitude,-12.0264,,value blanked
+C00134,missing_cell,100,latitude,-12.0264,,value blanked
+C00135,missing_cell,112,latitude,-12.0264,,value blanked
+C00136,missing_cell,131,latitude,-12.0264,,value blanked
+C00137,missing_cell,133,latitude,-12.0264,,value blanked
+C00138,missing_cell,189,latitude,-12.0264,,value blanked
+C00139,missing_cell,201,latitude,-12.0264,,value blanked
+C00140,missing_cell,6,location,La Victoria,,value blanked
+C00141,missing_cell,52,location,La Victoria,,value blanked
+C00142,missing_cell,81,location,La Victoria,,value blanked
+C00143,missing_cell,87,location,La Victoria,,value blanked
+C00144,missing_cell,118,location,La Victoria,,value blanked
+C00145,missing_cell,165,location,La Victoria,,value blanked
+C00146,missing_cell,171,location,La Victoria,,value blanked
+C00147,missing_cell,177,location,La Victoria,,value blanked
+C00148,missing_cell,187,location,La Victoria,,value blanked
+C00149,missing_cell,133,longitude,-75.2449,,value blanked
+C00150,missing_cell,138,longitude,-75.2449,,value blanked
+C00151,missing_cell,145,longitude,-75.2449,,value blanked
+C00152,missing_cell,157,longitude,-75.2449,,value blanked
+C00153,missing_cell,174,longitude,-75.2449,,value blanked
+C00154,missing_cell,179,longitude,-75.2449,,value blanked
+C00155,missing_cell,188,longitude,-75.2449,,value blanked
+C00156,missing_cell,229,longitude,-75.2449,,value blanked
+C00157,missing_cell,231,longitude,-75.2449,,value blanked
+C00158,missing_cell,68,nph,10,,value blanked
+C00159,missing_cell,74,nph,9,,value blanked
+C00160,missing_cell,83,nph,10,,value blanked
+C00161,missing_cell,127,nph,10,,value blanked
+C00162,missing_cell,134,nph,10,,value blanked
+C00163,missing_cell,172,nph,10,,value blanked
+C00164,missing_cell,194,nph,9,,value blanked
+C00165,missing_cell,221,nph,10,,value blanked
+C00166,missing_cell,239,nph,8,,value blanked
+C00167,missing_cell,92,ntp,10,,value blanked
+C00168,missing_cell,103,ntp,10,,value blanked
+C00169,missing_cell,144,ntp,10,,value blanked
+C00170,missing_cell,147,ntp,10,,value blanked
+C00171,missing_cell,185,ntp,10,,value blanked
+C00172,missing_cell,190,ntp,10,,value blanked
+C00173,missing_cell,205,ntp,10,,value blanked
+C00174,missing_cell,211,ntp,10,,value blanked
+C00175,missing_cell,216,ntp,10,,value blanked
+C00176,missing_cell,40,pph,100,,value blanked
+C00177,missing_cell,48,pph,80,,value blanked
+C00178,missing_cell,80,pph,90,,value blanked
+C00179,missing_cell,97,pph,100,,value blanked
+C00180,missing_cell,125,pph,100,,value blanked
+C00181,missing_cell,135,pph,90,,value blanked
+C00182,missing_cell,138,pph,90,,value blanked
+C00183,missing_cell,212,pph,100,,value blanked
+C00184,missing_cell,222,pph,70,,value blanked
+C00185,missing_cell,3,rep,3,,value blanked
+C00186,missing_cell,10,rep,2,,value blanked
+C00187,missing_cell,40,rep,4,,value blanked
+C00188,missing_cell,117,rep,1,,value blanked
+C00189,missing_cell,165,rep,1,,value blanked
+C00190,missing_cell,167,rep,3,,value blanked
+C00191,missing_cell,204,rep,4,,value blanked
+C00192,missing_cell,213,rep,1,,value blanked
+C00193,missing_cell,241,rep,1,,value blanked
+C00194,missing_cell,70,tntp,170,,value blanked
+C00195,missing_cell,119,tntp,114,,value blanked
+C00196,missing_cell,139,tntp,160,,value blanked
+C00197,missing_cell,151,tntp,288,,value blanked
+C00198,missing_cell,175,tntp,426,,value blanked
+C00199,missing_cell,180,tntp,280,,value blanked
+C00200,missing_cell,197,tntp,53,,value blanked
+C00201,missing_cell,221,tntp,147,,value blanked
+C00202,missing_cell,32,tntpl,10.5714,,value blanked
+C00203,missing_cell,59,tntpl,12.5,,value blanked
+C00204,missing_cell,126,tntpl,12.1,,value blanked
+C00205,missing_cell,132,tntpl,28.3333,,value blanked
+C00206,missing_cell,183,tntpl,24.1111,,value blanked
+C00207,missing_cell,194,tntpl,13.3333,,value blanked
+C00208,missing_cell,206,tntpl,19,,value blanked
+C00209,missing_cell,216,tntpl,8,,value blanked
+C00210,missing_cell,41,ttwp,3.68,,value blanked
+C00211,missing_cell,42,ttwp,4.24,,value blanked
+C00212,missing_cell,66,ttwp,2.8,,value blanked
+C00213,missing_cell,128,ttwp,2.86,,value blanked
+C00214,missing_cell,150,ttwp,5.96,,value blanked
+C00215,missing_cell,152,ttwp,6.52,,value blanked
+C00216,missing_cell,182,ttwp,5.68,,value blanked
+C00217,missing_cell,5,ttwpl,0.2657,,value blanked
+C00218,missing_cell,23,ttwpl,0.2933,,value blanked
+C00219,missing_cell,49,ttwpl,0.302,,value blanked
+C00220,missing_cell,100,ttwpl,0.128,,value blanked
+C00221,missing_cell,133,ttwpl,0.584,,value blanked
+C00222,missing_cell,152,ttwpl,0.652,,value blanked
+C00223,missing_cell,160,ttwpl,0.2156,,value blanked
+C00224,missing_cell,194,ttwpl,0.3756,,value blanked
+C00225,missing_cell,15,ttya,19.8519,,value blanked
+C00226,missing_cell,83,ttya,12.1481,,value blanked
+C00227,missing_cell,89,ttya,7.037,,value blanked
+C00228,missing_cell,106,ttya,5.9259,,value blanked
+C00229,missing_cell,159,ttya,9.7119,,value blanked
+C00230,missing_cell,214,ttya,11.1852,,value blanked
+C00231,missing_cell,229,ttya,9.465,,value blanked
+C00232,missing_cell,232,ttya,12.2634,,value blanked
+C00233,missing_cell,3,ttyna,36.7778,,value blanked
+C00234,missing_cell,53,ttyna,6.2222,,value blanked
+C00235,missing_cell,73,ttyna,16.4444,,value blanked
+C00236,missing_cell,95,ttyna,13.8889,,value blanked
+C00237,missing_cell,101,ttyna,9.4074,,value blanked
+C00238,missing_cell,160,ttyna,7.1852,,value blanked
+C00239,missing_cell,182,ttyna,21.037,,value blanked
+C00240,missing_cell,191,ttyna,10.2222,,value blanked
+C00241,missing_cell,194,ttyna,12.5185,,value blanked
+C00242,duplicate_row,6,,,,whole row appended a second time
+C00243,duplicate_row,17,,,,whole row appended a second time
+C00244,duplicate_row,118,,,,whole row appended a second time
+C00245,duplicate_row,137,,,,whole row appended a second time
+C00246,duplicate_row,156,,,,whole row appended a second time
+C00247,duplicate_row,160,,,,whole row appended a second time

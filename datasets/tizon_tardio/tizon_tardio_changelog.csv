@@ -1,0 +1,152 @@
+change_id,family,record_id,column,original_value,new_value,detail
+C00001,category_variant,TIZ-0013,accename,Kenya Mavuno,KENYA MAVUNO,uppercase
+C00002,category_variant,TIZ-0045,accename,Kenya Mavuno,Kenya  Mavuno,double inner space
+C00003,category_variant,TIZ-0059,accename,Dutch Robyjn,dutch robyjn,lowercase
+C00004,category_variant,TIZ-0061,accename,Dutch Robyjn,DUTCH ROBYJN,uppercase
+C00005,category_variant,TIZ-0062,accename,Kenya Mpya,kenya mpya,lowercase
+C00006,category_variant,TIZ-0073,accename,Purple Gold,purple gold,lowercase
+C00007,category_variant,TIZ-0091,accename,Purple Gold, Purple Gold,leading space
+C00008,category_variant,TIZ-0149,accename,Nyayo,NYAYO,uppercase
+C00009,category_variant,TIZ-0175,accename,Desiree,desiree,lowercase
+C00010,category_variant,TIZ-0002,class,Phosphonate,phosphonate,lowercase
+C00011,category_variant,TIZ-0030,class,Control, Control,leading space
+C00012,category_variant,TIZ-0039,class,Control,Control ,trailing space
+C00013,category_variant,TIZ-0056,class,Phosphonate,PHOSPHONATE,uppercase
+C00014,category_variant,TIZ-0095,class,Conventional,CONVENTIONAL,uppercase
+C00015,category_variant,TIZ-0116,class,Conventional,conventional,lowercase
+C00016,category_variant,TIZ-0131,class,Conventional,conventional,lowercase
+C00017,category_variant,TIZ-0151,class,Phosphonate,Phosphonate ,trailing space
+C00018,category_variant,TIZ-0152,class,Phosphonate,PHOSPHONATE,uppercase
+C00019,category_variant,TIZ-0025,instn,Kenya Mpya,Kenya Mpya ,trailing space
+C00020,category_variant,TIZ-0028,instn,Kenya Mavuno,KENYA MAVUNO,uppercase
+C00021,category_variant,TIZ-0046,instn,CIP800048, CIP800048,leading space
+C00022,category_variant,TIZ-0058,instn,Dutch Robyjn,Dutch Robyjn ,trailing space
+C00023,category_variant,TIZ-0086,instn,CIP800048,CIP800048 ,trailing space
+C00024,category_variant,TIZ-0112,instn,CIP381381.20,cip381381.20,lowercase
+C00025,category_variant,TIZ-0132,instn,Dutch Robyjn,dutch robyjn,lowercase
+C00026,category_variant,TIZ-0145,instn,Dutch Robyjn,Dutch Robyjn ,trailing space
+C00027,category_variant,TIZ-0158,instn,CIP800048,CIP800048 ,trailing space
+C00028,category_variant,TIZ-0002,rlb,Moderately Resistant,MODERATELY RESISTANT,uppercase
+C00029,category_variant,TIZ-0015,rlb,Moderately Resistant,MODERATELY RESISTANT,uppercase
+C00030,category_variant,TIZ-0019,rlb,Resistant,Resistant ,trailing space
+C00031,category_variant,TIZ-0025,rlb,Resistant,resistant,lowercase
+C00032,category_variant,TIZ-0050,rlb,Susceptible,Susceptible ,trailing space
+C00033,category_variant,TIZ-0054,rlb,Moderately Resistant,Moderately Resistant ,trailing space
+C00034,category_variant,TIZ-0077,rlb,Moderately Resistant,MODERATELY RESISTANT,uppercase
+C00035,category_variant,TIZ-0095,rlb,Moderately Resistant,Moderately  Resistant,double inner space
+C00036,category_variant,TIZ-0130,rlb,Moderately Resistant,MODERATELY RESISTANT,uppercase
+C00037,category_variant,TIZ-0002,site,Njabini,NJABINI,uppercase
+C00038,category_variant,TIZ-0010,site,Njabini,njabini,lowercase
+C00039,category_variant,TIZ-0011,site,Njabini, Njabini,leading space
+C00040,category_variant,TIZ-0061,site,UoN, UoN,leading space
+C00041,category_variant,TIZ-0094,site,UoN,UON,uppercase
+C00042,category_variant,TIZ-0097,site,UoN, UoN,leading space
+C00043,category_variant,TIZ-0123,site,Limuru,Limuru ,trailing space
+C00044,category_variant,TIZ-0152,site,Limuru,LIMURU,uppercase
+C00045,category_variant,TIZ-0187,site,Limuru,LIMURU,uppercase
+C00046,category_variant,TIZ-0004,treatment,Ridomil+Mancozeb,Ridomil+Mancozeb ,trailing space
+C00047,category_variant,TIZ-0008,treatment,Ridomil+Mancozeb, Ridomil+Mancozeb,leading space
+C00048,category_variant,TIZ-0012,treatment,Control,Control ,trailing space
+C00049,category_variant,TIZ-0013,treatment,Agrifos,AGRIFOS,uppercase
+C00050,category_variant,TIZ-0075,treatment,Agriphite 600,Agriphite 600 ,trailing space
+C00051,category_variant,TIZ-0130,treatment,Agrifos 110 ml, Agrifos 110 ml,leading space
+C00052,category_variant,TIZ-0149,treatment,Ridomil + Mancozeb,ridomil + mancozeb,lowercase
+C00053,category_variant,TIZ-0152,treatment,Agrifos 65 ml, Agrifos 65 ml,leading space
+C00054,category_variant,TIZ-0187,treatment,Agrifos 110 ml,Agrifos  110  ml,double inner space
+C00055,mixed_unit,TIZ-0131,ttya,31.4,31400,t/ha -> kg/ha
+C00056,mixed_unit,TIZ-0143,ttya,35.8,35800,t/ha -> kg/ha
+C00057,mixed_unit,TIZ-0172,ttya,33,33000,t/ha -> kg/ha
+C00058,mixed_unit,TIZ-0177,ttya,31.2,31200,t/ha -> kg/ha
+C00059,mixed_unit,TIZ-0186,ttya,37.7,37700,t/ha -> kg/ha
+C00060,impossible_value,TIZ-0125,audpc,650,9000,above the valid maximum
+C00061,impossible_value,TIZ-0136,audpc,0,-1200,below the valid minimum
+C00062,impossible_value,TIZ-0072,plot,4,18,above the valid maximum
+C00063,impossible_value,TIZ-0170,plot,1,-2,below the valid minimum
+C00064,impossible_value,TIZ-0066,raudpc,0.35,1.5,above the valid maximum
+C00065,impossible_value,TIZ-0081,raudpc,0.175,-0.2,below the valid minimum
+C00066,impossible_value,TIZ-0102,rep,3,6,above the valid maximum
+C00067,impossible_value,TIZ-0132,rep,1,-1,below the valid minimum
+C00068,impossible_value,TIZ-0145,ttya,30.1,150,above the valid maximum
+C00069,impossible_value,TIZ-0148,ttya,39.4,-20,below the valid minimum
+C00070,missing_cell,TIZ-0040,accename,Kenya Karibu,,value blanked
+C00071,missing_cell,TIZ-0048,accename,Desiree,,value blanked
+C00072,missing_cell,TIZ-0098,accename,Dutch Robyjn,,value blanked
+C00073,missing_cell,TIZ-0099,accename,Dutch Robyjn,,value blanked
+C00074,missing_cell,TIZ-0127,accename,Kenya Mpya,,value blanked
+C00075,missing_cell,TIZ-0136,accename,Kenya Mpya,,value blanked
+C00076,missing_cell,TIZ-0139,accename,Dutch Robyjn,,value blanked
+C00077,missing_cell,TIZ-0003,audpc,829,,value blanked
+C00078,missing_cell,TIZ-0010,audpc,30.1,,value blanked
+C00079,missing_cell,TIZ-0039,audpc,1739,,value blanked
+C00080,missing_cell,TIZ-0075,audpc,87.5,,value blanked
+C00081,missing_cell,TIZ-0116,audpc,170,,value blanked
+C00082,missing_cell,TIZ-0166,audpc,2690,,value blanked
+C00083,missing_cell,TIZ-0168,audpc,850,,value blanked
+C00084,missing_cell,TIZ-0073,class,Control,,value blanked
+C00085,missing_cell,TIZ-0124,class,Control,,value blanked
+C00086,missing_cell,TIZ-0138,class,Phosphonate,,value blanked
+C00087,missing_cell,TIZ-0145,class,Conventional,,value blanked
+C00088,missing_cell,TIZ-0159,class,Phosphonate,,value blanked
+C00089,missing_cell,TIZ-0182,class,Conventional,,value blanked
+C00090,missing_cell,TIZ-0187,class,Phosphonate,,value blanked
+C00091,missing_cell,TIZ-0034,instn,CIP381381.20,,value blanked
+C00092,missing_cell,TIZ-0040,instn,Kenya Karibu,,value blanked
+C00093,missing_cell,TIZ-0063,instn,Kenya Mpya,,value blanked
+C00094,missing_cell,TIZ-0117,instn,CIP800048,,value blanked
+C00095,missing_cell,TIZ-0131,instn,CIP381381.13,,value blanked
+C00096,missing_cell,TIZ-0152,instn,Kenya Mavuno,,value blanked
+C00097,missing_cell,TIZ-0185,instn,Kenya Mavuno,,value blanked
+C00098,missing_cell,TIZ-0005,plot,5,,value blanked
+C00099,missing_cell,TIZ-0039,plot,3,,value blanked
+C00100,missing_cell,TIZ-0063,plot,2,,value blanked
+C00101,missing_cell,TIZ-0112,plot,2,,value blanked
+C00102,missing_cell,TIZ-0125,plot,9,,value blanked
+C00103,missing_cell,TIZ-0147,plot,2,,value blanked
+C00104,missing_cell,TIZ-0157,plot,10,,value blanked
+C00105,missing_cell,TIZ-0023,raudpc,0.2572,,value blanked
+C00106,missing_cell,TIZ-0048,raudpc,0.25,,value blanked
+C00107,missing_cell,TIZ-0089,raudpc,0.425,,value blanked
+C00108,missing_cell,TIZ-0098,raudpc,0.4,,value blanked
+C00109,missing_cell,TIZ-0106,raudpc,0.2412,,value blanked
+C00110,missing_cell,TIZ-0131,raudpc,0.1706,,value blanked
+C00111,missing_cell,TIZ-0150,raudpc,0.05,,value blanked
+C00112,missing_cell,TIZ-0003,rep,1,,value blanked
+C00113,missing_cell,TIZ-0015,rep,1,,value blanked
+C00114,missing_cell,TIZ-0028,rep,2,,value blanked
+C00115,missing_cell,TIZ-0051,rep,1,,value blanked
+C00116,missing_cell,TIZ-0081,rep,2,,value blanked
+C00117,missing_cell,TIZ-0158,rep,2,,value blanked
+C00118,missing_cell,TIZ-0178,rep,3,,value blanked
+C00119,missing_cell,TIZ-0020,rlb,Resistant,,value blanked
+C00120,missing_cell,TIZ-0076,rlb,Moderately Resistant,,value blanked
+C00121,missing_cell,TIZ-0100,rlb,Moderately Resistant,,value blanked
+C00122,missing_cell,TIZ-0106,rlb,Moderately Resistant,,value blanked
+C00123,missing_cell,TIZ-0126,rlb,Resistant,,value blanked
+C00124,missing_cell,TIZ-0146,rlb,Moderately Resistant,,value blanked
+C00125,missing_cell,TIZ-0164,rlb,Resistant,,value blanked
+C00126,missing_cell,TIZ-0007,site,Njabini,,value blanked
+C00127,missing_cell,TIZ-0043,site,Njabini,,value blanked
+C00128,missing_cell,TIZ-0055,site,UoN,,value blanked
+C00129,missing_cell,TIZ-0060,site,UoN,,value blanked
+C00130,missing_cell,TIZ-0133,site,Limuru,,value blanked
+C00131,missing_cell,TIZ-0164,site,Limuru,,value blanked
+C00132,missing_cell,TIZ-0168,site,Limuru,,value blanked
+C00133,missing_cell,TIZ-0021,treatment,Agrifos,,value blanked
+C00134,missing_cell,TIZ-0030,treatment,Control,,value blanked
+C00135,missing_cell,TIZ-0042,treatment,Ridomil+Mancozeb,,value blanked
+C00136,missing_cell,TIZ-0057,treatment,Control,,value blanked
+C00137,missing_cell,TIZ-0065,treatment,Agriphite 600,,value blanked
+C00138,missing_cell,TIZ-0109,treatment,Ridomil + Mancozeb,,value blanked
+C00139,missing_cell,TIZ-0127,treatment,Control,,value blanked
+C00140,missing_cell,TIZ-0048,ttya,10.6,,value blanked
+C00141,missing_cell,TIZ-0086,ttya,4,,value blanked
+C00142,missing_cell,TIZ-0095,ttya,26.7,,value blanked
+C00143,missing_cell,TIZ-0100,ttya,8.8,,value blanked
+C00144,missing_cell,TIZ-0104,ttya,13.6,,value blanked
+C00145,missing_cell,TIZ-0109,ttya,33.5,,value blanked
+C00146,missing_cell,TIZ-0160,ttya,27.8,,value blanked
+C00147,duplicate_row,TIZ-0013,,,,whole row appended a second time
+C00148,duplicate_row,TIZ-0014,,,,whole row appended a second time
+C00149,duplicate_row,TIZ-0025,,,,whole row appended a second time
+C00150,duplicate_row,TIZ-0079,,,,whole row appended a second time
+C00151,duplicate_row,TIZ-0168,,,,whole row appended a second time
