@@ -1,0 +1,173 @@
+# Las cuatro temáticas {#sec-tematicas}
+
+Cada equipo trabaja con una. Las cuatro son datos reales de CIP y traen la misma estructura de
+carpeta (@sec-datos). Esta página resume cada una; el `README.md` de su carpeta la cuenta
+completa.
+
+| Temática | Carpeta | Una fila es | Resultado |
+|---|---|---|---|
+| Mejoramiento | `datasets/mejoramiento/` | Una parcela | `ttya`, rendimiento ajustado (t/ha) |
+| Morfología | `datasets/morfologia/` | Una variedad | No hay: se buscan grupos |
+| Tizón tardío | `datasets/tizon_tardio/` | Una parcela | `audpc`, avance de la enfermedad |
+| Consumidores | `datasets/consumidores/` | Una persona encuestada | Disposición a pagar un precio justo (`v9…`) |
+
+```{=typst}
+#pagebreak()
+```
+
+## Mejoramiento: ¿qué genotipos rinden más?
+
+**61 genotipos** sembrados en 2016 en La Victoria (Huancayo, Junín), con **4 repeticiones**
+cada uno: 244 parcelas. Al cosechar se contaron y pesaron los tubérculos.
+
+| | |
+|---|---|
+| **Pregunta** | ¿Qué genotipos rinden más, y sus diferencias se distinguen de la variación entre repeticiones? |
+| **Una fila es** | Una parcela (`plot`): un genotipo (`instn`) en una repetición (`rep`) |
+| **Resultado** | `ttya`, rendimiento ajustado en t/ha |
+| **Errores que trae** | Filas repetidas, celdas vacías, valores imposibles y unidades mezcladas (altitud en pies, rendimiento en kg/ha, peso en libras, porcentaje como fracción) |
+
+: {tbl-colwidths="[22,78]"}
+
+```{=typst}
+#prompt("diagnostic_analytics")[
+  Pregunta: ¿qué genotipos rinden más? Resultado: ttya (t/ha).
+  Unidad de análisis: una parcela. Diseño: 61 genotipos (instn) en 4 repeticiones (rep),
+  una sola localidad. Compara genotipos teniendo en cuenta la repetición, reporta las
+  diferencias con su incertidumbre y dime qué NO se puede concluir con una sola localidad.
+]
+
+#ojo[
+  Algunas columnas de peso y rendimiento se calculan a partir del resultado. Si las usas
+  para predecir `ttya`, el modelo parecerá perfecto. Encuéntralas antes de modelar.
+]
+
+#nota[
+  Una sola localidad y un solo año: puedes decir qué genotipo rindió más en La Victoria
+  en 2016, pero no cuál es más estable entre ambientes.
+]
+```
+
+```{=typst}
+#pagebreak()
+```
+
+## Morfología: ¿qué hace parecidas a dos variedades?
+
+**70 variedades de 22 países**, descritas en 2014 por el banco de germoplasma: color de piel
+y de pulpa, distribución del color secundario, forma del tubérculo y profundidad de ojos.
+
+| | |
+|---|---|
+| **Pregunta** | ¿Qué descriptores agrupan a las variedades, y cuáles son redundantes? |
+| **Una fila es** | Una variedad (`number`, `accession_number`) |
+| **Resultado** | No hay: el ejercicio es encontrar grupos |
+| **Errores que trae** | Filas repetidas, celdas vacías, códigos fuera de rango y nombres con espacios o mayúsculas de más |
+
+: {tbl-colwidths="[22,78]"}
+
+```{=typst}
+#prompt("exploratory_data_analysis")[
+  Los descriptores de color y forma son códigos categóricos, no cantidades. Describe cómo
+  se reparten, qué pares de descriptores van casi siempre juntos y qué grupos de variedades
+  aparecen. No promedies códigos.
+]
+
+#ojo[
+  El color 6 no es "el doble" del color 3. Si la IA calcula medias o correlaciones de
+  Pearson sobre los códigos, ahí tienes un error que anotar.
+]
+
+#nota[
+  Parecerse no es estar emparentado. Y 26 de las 70 variedades son de Perú: la muestra no
+  sirve para comparar la diversidad entre países.
+]
+```
+
+```{=typst}
+#pagebreak()
+```
+
+## Tizón tardío: ¿funcionan los fosfonatos?
+
+Un ensayo en **tres localidades de Kenia** (Limuru, Njabini y la Universidad de Nairobi)
+comparó varias variedades bajo tres manejos: **control** sin fungicida, **fungicida
+convencional** y **fosfonatos** en distintas dosis.
+
+| | |
+|---|---|
+| **Pregunta** | ¿Los fosfonatos reducen el tizón frente al control, y el efecto depende de la variedad o de la localidad? |
+| **Una fila es** | Una parcela (`record_id`): una variedad, un tratamiento, una repetición y una localidad |
+| **Resultado** | `audpc`: área bajo la curva de progreso del tizón. Más AUDPC, más enfermedad |
+| **Errores que trae** | Filas repetidas, celdas vacías, valores imposibles, rendimiento en kg/ha y categorías escritas de varias formas |
+
+: {tbl-colwidths="[22,78]"}
+
+```{=typst}
+#prompt("diagnostic_analytics")[
+  Pregunta: ¿los fosfonatos reducen el tizón tardío frente al control? Resultado: audpc.
+  Tratamiento: class (Control, Conventional, Phosphonate). Diseño: site, rep, variedad
+  (accename). Estima el efecto del tratamiento dentro de cada localidad, revisa si cambia
+  según la variedad y reporta la incertidumbre.
+]
+
+#ojo[
+  Hay columnas de enfermedad que se derivan del AUDPC. Usarlas para explicar el AUDPC es
+  explicar algo consigo mismo.
+]
+
+#nota[
+  Es un experimento: aquí sí se puede hablar del *efecto* del tratamiento, pero solo para
+  estas variedades y estas localidades. No todas las combinaciones tienen el mismo número
+  de parcelas.
+]
+```
+
+```{=typst}
+#pagebreak()
+```
+
+## Consumidores: ¿quién pagaría un precio justo?
+
+Una encuesta de junio de 2015 a **114 personas en La Molina, Miraflores y San Isidro** sobre
+las papas nativas de color: si las conocen, cuánto y cómo las comen, dónde las compran, qué
+valoran y qué opinan de una campaña en supermercados. Está **anonimizada**: personas y
+encuestadores aparecen solo con códigos.
+
+| | |
+|---|---|
+| **Pregunta** | ¿Qué valoran los consumidores, y cómo se relaciona con su disposición a pagar un precio justo al agricultor? |
+| **Una fila es** | Una persona encuestada (`encuestado`) |
+| **Resultado** | `v9pagarpreciojustoalagricultor`: 1 muy de acuerdo … 4 total desacuerdo, 5 = no sé |
+| **Errores que trae** | Filas repetidas, celdas vacías, respuestas fuera de escala, fechas en varios formatos y casillas escritas de varias formas |
+
+: {tbl-colwidths="[22,78]"}
+
+| Bloque | Columnas | Respuesta |
+|---|---|---|
+| Consumo, compra y cómo se enteró | `v1…`–`v6…`, `v10…` | Casilla: 1 marcada, 0 no |
+| Qué valora al comprar | `v7…` | 1 muy importante … 3 poco importante |
+| Qué opina de ellas | `v8…` | 1 a 3 |
+| Acuerdo con afirmaciones | `v9…`, `v11…` | 1 a 4, y **5 = no sé** |
+
+```{=typst}
+#prompt("exploratory_data_analysis")[
+  Describe cómo se reparten las respuestas de v9pagarpreciojustoalagricultor y cómo se
+  relacionan con lo que las personas valoran (v7) y opinan (v8), con su edad y su distrito.
+  Trata el 5 ("no sé") como una categoría aparte, no como el extremo de la escala.
+]
+
+#ojo[
+  Si la IA promedia la escala de `v9` con el 5 incluido, está tratando "no sé" como "más
+  en desacuerdo que en total desacuerdo". Es un error típico, y vale la pena anotarlo.
+]
+
+#nota[
+  Son 114 personas de tres distritos: no representan a Lima. Y es una encuesta, no un
+  experimento: lo que encuentres son asociaciones, y decir que pagarías no es pagar.
+]
+```
+
+```{=typst}
+#pagebreak()
+```

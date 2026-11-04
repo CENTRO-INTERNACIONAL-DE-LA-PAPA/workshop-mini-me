@@ -1,7 +1,9 @@
-# Bloque 2 · Asta {#sec-asta}
+# Bloque 2 · Allen AI {#sec-asta}
 
-Asta es el ecosistema del Allen Institute for AI para investigación asistida. Cinco
-herramientas, 65 minutos, y una regla operativa que cambia todo el bloque.
+Todas las herramientas de este bloque son del Allen Institute for AI (Ai2). La literatura se
+trabaja con **Asta** (Paper Finder y PDF librarian), las hipótesis con **Theorizer** y el
+análisis automatizado con **AutoDiscovery**. 65 minutos, y una regla operativa que cambia
+todo el bloque.
 
 ```{=typst}
 #ojo[
@@ -11,7 +13,7 @@ herramientas, 65 minutos, y una regla operativa que cambia todo el bloque.
 ]
 ```
 
-## Academic researcher
+## Asta · Paper Finder
 
 ```{=typst}
 #prompt("academic_researcher")[
@@ -25,7 +27,7 @@ herramientas, 65 minutos, y una regla operativa que cambia todo el bloque.
 ]
 ```
 
-## PDF librarian
+## Asta · PDF librarian
 
 Los PDFs ya están descargados en tu carpeta. No dependas de una descarga en vivo.
 
@@ -36,7 +38,10 @@ Los PDFs ya están descargados en tu carpeta. No dependas de una descarga en viv
 ]
 ```
 
-## Theorizer
+## Theorizer (demostración)
+
+El facilitador muestra un run lanzado en la pausa. No es un ejercicio: es para ver cómo se
+proponen hipótesis a partir de la literatura y hasta dónde llega la herramienta.
 
 ```{=typst}
 #prompt("hypothesis_generator")[
@@ -50,18 +55,10 @@ Los PDFs ya están descargados en tu carpeta. No dependas de una descarga en viv
 ]
 ```
 
-## DataVoyager
-
-```{=typst}
-#prompt("data_voyager")[
-  Evalúa si la asociación entre «A» y «B» está mediada o modificada por «C». Reporta
-  supuestos, incertidumbre, visualizaciones y el código que ejecutaste.
-]
-```
-
 ## AutoDiscovery
 
-Presupuesto: de 3 a 5 experimentos. Cada experimento consume un crédito.
+Para cuando tienes datos pero no sabes por dónde empezar a analizarlos: explora por su cuenta
+y propone qué vale la pena mirar. Presupuesto: de 3 a 5 experimentos. Cada experimento consume un crédito.
 
 Lo que tienes que inspeccionar —esto es la lección, no el resultado:
 

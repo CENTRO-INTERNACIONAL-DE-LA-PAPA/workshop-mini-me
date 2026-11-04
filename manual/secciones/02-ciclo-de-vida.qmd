@@ -92,8 +92,8 @@ las mueve a ambas.
 ```{=typst}
 #ojo[
   Si tu modelo predice el rendimiento casi perfecto, no eres afortunado: tienes *leakage*.
-  Alguna columna se calculó *después* de conocer el resultado. Está marcada como `leakage`
-  en el diccionario. Sácala y vuelve a entrenar.
+  Alguna columna se calculó *después* de conocer el resultado. El diccionario no te dice
+  cuál: encontrarla es parte del ejercicio. Sácala y vuelve a entrenar.
 ]
 ```
 

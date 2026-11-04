@@ -1,7 +1,7 @@
 ---
 title: "Mini-Me · Manual del workshop"
 subtitle: "De datos crudos a un Data-Driven Document en un día"
-date: "2026-10-22"
+date: "2026-11-24"
 author: "Centro Internacional de la Papa"
 lang: es
 format:
@@ -47,4 +47,6 @@ format:
 
 {{< include secciones/06-datos-y-limpieza.qmd >}}
 
-{{< include secciones/07-cuando-algo-falla.qmd >}}
+{{< include secciones/07-tematicas.qmd >}}
+
+{{< include secciones/08-cuando-algo-falla.qmd >}}

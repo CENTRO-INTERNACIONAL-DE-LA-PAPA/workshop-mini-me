@@ -8,8 +8,11 @@ rutas en los primeros diez minutos.
 Para cuando llegas con una pregunta más que con un dataset.
 
 ```
-AutoDiscovery → Report → Academic search → (PDF librarian) → Documento
+Pregunta → Paper Finder → PDF librarian → Analizar datos → Report → Documento
 ```
+
+Para analizar datos: el ciclo de Mini-Me si sabes qué quieres probar, o AutoDiscovery si no
+sabes por dónde empezar.
 
 ## Ruta 2 · Data
 

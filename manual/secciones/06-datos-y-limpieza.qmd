@@ -2,22 +2,28 @@
 
 ## De dónde salen estos datos
 
-Son datos reales de investigación de CIP, anonimizados, en cuatro temáticas: morfología de
-papa del banco de germoplasma, breeding, enfermedad (bactericera / punta morada) y encuestas
-a agricultores.
+Son datos reales de investigación de CIP, en cuatro temáticas: un ensayo de rendimiento de
+**mejoramiento**, la **morfología** de variedades del banco de germoplasma, un ensayo de
+fungicidas contra el **tizón tardío** y una encuesta de percepción de **consumidores** sobre
+papas nativas de color, anonimizada. Cada una tiene su página en @sec-tematicas.
 
 Los ensuciamos nosotros, a propósito y con registro. Por eso podemos decirte con exactitud
 qué arreglaste y qué no.
 
-## Los tres archivos de tu carpeta
+## Los archivos de tu carpeta
+
+Todo está en `datasets/«tema»/` del repositorio del taller.
 
 | Archivo | Qué es |
 |---|---|
-| `«tema»_dirty.csv` | Tu punto de partida |
+| `README.md` | La historia, la pregunta, la unidad de observación y lo que no se puede afirmar |
+| `«tema»_dirty.csv` | **Tu punto de partida** |
 | `«tema»_dictionary.csv` | Tipos, unidades, roles y rangos válidos |
-| `README.md` | La pregunta, la unidad de observación y la limitación causal |
+| `«tema»_clean.csv` | La referencia contra la que se mide. **No la abras hasta terminar** |
+| `originales/` | Los archivos tal como los entregó el equipo que produjo los datos |
 
-El `_clean.csv` y la clave de defectos los tiene el facilitador. Aparecen al final.
+Los demás (`changelog`, `defect_key`, `ADAPTATION` y `dictionary_completo`) son del
+facilitador: dicen exactamente qué se rompió y dónde.
 
 ```{=typst}
 #nota[
@@ -28,9 +34,13 @@ El `_clean.csv` y la clave de defectos los tiene el facilitador. Aparecen al fin
 
 ## La medición
 
+Al terminar entregas tu archivo limpio, y el facilitador lo mide contra la referencia:
+
 ```bash
-python scripts/score_recovery.py mi_archivo_limpio.csv
+python scripts/score_recovery.py archivo_limpio.csv --reference datasets/«tema»/«tema»_clean.csv --dictionary datasets/«tema»/«tema»_dictionary.csv
 ```
+
+Un ejemplo de lo que devuelve:
 
 ```
 Reparacion: 21.5%  (59/274 defectos sembrados)
@@ -59,20 +69,28 @@ Tres números importan, no uno:
 ]
 ```
 
-## Las columnas que no son un defecto
+## Los roles del diccionario
 
-En tu diccionario hay columnas marcadas con roles especiales. Están **correctamente
-registradas**: el problema que traen es analítico, no de calidad del dato.
+La columna `role` del diccionario dice qué papel tiene cada variable en el análisis.
 
-| Rol | Qué significa | Qué hacer |
-|---|---|---|
-| `leakage` | Se calculó después de conocer el resultado | Sácala de cualquier modelo predictivo |
-| `confounded_exposure` | Parece asociada al resultado por una tercera variable | No la interpretes como causa |
-| `null` | Deliberadamente no tiene relación con nada | Si tu método la encuentra "significativa", revisa el método |
+| Rol | Qué significa |
+|---|---|
+| `outcome` | La variable de resultado: lo que la pregunta quiere explicar |
+| `design` | Describe el diseño del estudio: localidad, repetición, tratamiento, genotipo |
+| `predictor` | Una medición que puede ayudar a explicar el resultado |
+| `context` | Información de contexto: lugar, características de la persona |
+| `primary_key` | Identifica cada fila |
 
 ```{=typst}
+#ojo[
+  En algunas temáticas hay columnas que se calcularon *a partir del resultado* (*leakage*).
+  El diccionario no las marca: aparecen como `predictor`. Encontrarlas es parte del
+  ejercicio, y la descripción de cada columna te da pistas sobre de dónde sale.
+]
+
 #nota[
-  La columna `null` es un detector de humo. Si aparece como predictor importante, no
-  descubriste nada: encontraste un problema en tu procedimiento.
+  Una columna con *leakage* no es un error del dato: está bien registrada. El problema es
+  analítico. Si la usas para predecir el resultado, el modelo se ve perfecto sin haber
+  aprendido nada.
 ]
 ```

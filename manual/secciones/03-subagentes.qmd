@@ -15,7 +15,7 @@ quien toca más botones.
 | `report_writer` | Convierte hallazgos en un informe presentable |
 | `hypothesis_generator` | Teorías e hipótesis ancladas en literatura (Theorizer) |
 | `pdf_librarian` | Indexa y consulta tus propios PDFs |
-| `data_voyager` | Pipeline DataVoyager de Asta sobre datos tabulares |
+| `data_voyager` | Pipeline DataVoyager de Asta sobre datos tabulares (no se usa en este taller) |
 | `autodiscovery` | Prepara una corrida de AutoDiscovery sobre tu dataset |
 | `research_planner` | Redacta un plan de investigación de 3 a 7 pasos |
 
