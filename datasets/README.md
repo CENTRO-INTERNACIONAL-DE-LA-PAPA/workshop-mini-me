@@ -1,7 +1,8 @@
 # datasets
 
-Vacío a propósito. Aquí van los cuatro paquetes del workshop, uno por temática, cuando
-lleguen los datos reales:
+Aquí van los cuatro paquetes del workshop (`morfologia`, `mejoramiento`, `tizon_tardio` y
+`consumidores`), uno por temática, más los archivos originales en `_crudos/`. **Git ignora todo
+salvo este README**: son datos reales de CIP.
 
 ```
 datasets/<tematica>/
@@ -14,9 +15,16 @@ datasets/<tematica>/
   README.md                   brief del participante
 ```
 
-Los tres primeros archivos los produce el pipeline; ver el
-[README del repositorio](../README.md).
+Para regenerarlos desde los originales (los `.xls` se convierten antes a `.xlsx`):
 
-Nada de esto se versiona hasta que los datos estén anonimizados y con visto bueno escrito
-(§2.4 del plan). Los paquetes sintéticos de prueba se regeneran con
+```bash
+python scripts/adapt_dataset.py "datasets/_crudos/<archivo>.xlsx" --slug <slug> --key-prefix <PRE> --output-dir datasets/<slug>
+python scripts/configurar_taller.py datasets/
+python scripts/corrupt_dataset.py datasets/<slug>/<slug>_clean.csv
+```
+
+Detalles en el [README del repositorio](../README.md).
+
+Aunque los datos estén anonimizados y con visto bueno escrito (§2.4 del plan), no se
+versionan: se comparten con los participantes por fuera del repositorio. Los paquetes sintéticos de prueba se regeneran con
 `python scripts/generate_datasets.py --output-dir .`.

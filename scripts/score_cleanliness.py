@@ -73,6 +73,9 @@ def values_equal(candidate: str | None, reference: str | None, data_type: str) -
     left = "" if candidate is None else candidate
     right = "" if reference is None else reference
     if data_type in {"number", "integer"}:
+        # A cell that was empty in the original and is still empty is not a difference.
+        if not left.strip() and not right.strip():
+            return True
         return numeric_equal(left, right, data_type == "integer")
     # Whitespace and capitalization are data in categorical/string columns.  A
     # trim here would give full credit to exactly the inconsistencies being taught.

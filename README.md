@@ -1,7 +1,7 @@
 # Workshop Mini-Me — CIP
 
-Materiales del workshop de un día **De datos crudos a un Data-Driven Document**, el
-**jueves 22 de octubre de 2026**.
+Materiales del workshop de un día **CIP Mini-Me: IA aplicada a la ciencia de datos**, el
+**martes 24 de noviembre de 2026**.
 
 El plan completo, con agenda, milestones y riesgos, está en
 [`workshop_plan.md`](workshop_plan.md).
@@ -11,17 +11,19 @@ El plan completo, con agenda, milestones y riesgos, está en
 | Carpeta | Qué es |
 |---|---|
 | `scripts/` | El pipeline de preparación de datos |
+| `presentacion/` | Las presentaciones de los bloques 1 y 2, en Quarto + Reveal.js |
 | `manual/` | El manual del participante, en Quarto + Typst |
-| `datasets/` | Los paquetes por temática. **Vacío hasta que lleguen los datos** |
+| `datasets/` | Los paquetes por temática. **Git los ignora**: son datos reales de CIP |
 
 ## El pipeline
 
-Tres pasos. El primero normaliza, el segundo rompe con registro, el tercero mide.
+Cuatro pasos. El primero normaliza, el segundo fija el significado, el tercero rompe con
+registro y el cuarto mide.
 
 ```
-archivo real  ──adapt──▶  clean.csv     ──corrupt──▶  dirty.csv    ──score──▶  % reparado
-   (de quien                dictionary.csv             changelog.csv
-    lo produjo)             ADAPTATION.md              defect_key.md
+archivo real  ──adapt──▶  clean.csv     ──configurar──▶  dictionary.csv  ──corrupt──▶  dirty.csv    ──score──▶  % reparado
+   (de quien                dictionary.csv                (unidades, rangos,             changelog.csv
+    lo produjo)             ADAPTATION.md                  roles)                        defect_key.md
 ```
 
 ### 1 · `adapt_dataset.py` — normalizar
@@ -41,6 +43,19 @@ preguntas abiertas en `<slug>_ADAPTATION.md`, para responder con quien conoce lo
 
 **Ese paso intermedio es manual a propósito.** Sin saber cuál es el outcome no se puede
 sembrar un *leakage* con sentido.
+
+### 1b · `configurar_taller.py` — fijar el significado
+
+Las respuestas a esas preguntas, para los cuatro datasets del taller, viven en este script:
+unidades, rangos válidos y descripciones tomadas de los diccionarios de quien produjo los
+datos, y el rol propuesto de cada columna (`outcome`, `leakage`, `design`...). Se corre después
+del adaptador, así que volver a adaptar no las borra.
+
+```bash
+python scripts/configurar_taller.py datasets/
+```
+
+Agrega al final de cada `<slug>_ADAPTATION.md` las preguntas que siguen abiertas.
 
 ### 2 · `corrupt_dataset.py` — ensuciar con registro
 
@@ -92,13 +107,13 @@ python scripts/score_cleanliness.py datasets/breeding/breeding_dirty.csv
 
 ## Sobre los datos
 
-Los cuatro paquetes del workshop salen de datos reales de investigación de CIP —morfología
-de papa del banco de germoplasma, breeding, enfermedad y encuestas a agricultores—
-anonimizados antes de entrar aquí.
+Los cuatro paquetes del workshop salen de datos reales de investigación de CIP:
+morfología del banco de germoplasma (`morfologia`), un ensayo de rendimiento
+(`mejoramiento`), un ensayo de fungicidas contra el tizón tardío (`tizon_tardio`) y una
+encuesta de percepción de consumidores sobre papas nativas de color (`consumidores`).
 
-> **Las encuestas a agricultores contienen datos personales.** No entran a ninguna
-> herramienta de IA sin anonimización y visto bueno escrito del responsable del dato. Ver
-> §2.4 del plan.
+> **Las encuestas contienen datos de personas.** No entran a ninguna herramienta de IA sin
+> anonimización y visto bueno escrito del responsable del dato. Ver §2.4 del plan.
 
 ### Datos sintéticos
 
