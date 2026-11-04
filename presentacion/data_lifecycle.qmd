@@ -1,0 +1,390 @@
+---
+title: "El viaje de los datos"
+subtitle: "Cómo Mini-Me acompaña el ciclo de vida de los datos"
+author: "Digital & Data · CIP"
+date: 2026-11-25
+date-format: "D [de] MMMM [de] YYYY"
+lang: es
+format:
+  revealjs:
+    theme: [default, estilo.scss]
+    width: 1600
+    height: 900
+    margin: 0.03
+    center: false
+    transition: fade
+    background-transition: fade
+    slide-number: c/t
+    controls: false
+    progress: true
+    hash: true
+    embed-resources: true
+    include-after-body: boceto.html
+---
+
+## Esta es Ana
+
+::: {.ana}
+::: {.fragment}
+Ana es mejoradora de papa en el CIP.
+:::
+
+::: {.fragment}
+Vuelve del campo con los datos de un ensayo:<br>
+[30 genotipos · 3 localidades · 3 bloques]{.cifras}
+:::
+
+::: {.fragment .pregunta}
+¿Qué genotipos rinden más… y lo hacen **en todas partes**?
+:::
+:::
+
+::: notes
+(~1 min) Presentar a Ana como alguien que podría ser cualquiera de ustedes. Tiene una pregunta
+clara y un archivo recién llegado del campo. Toda la historia de hoy es el camino entre ese
+archivo y una respuesta que pueda defender.
+:::
+
+## Pero antes de responder…
+
+```{=html}
+<div class="sucio-wrap">
+<table class="sucio">
+  <thead>
+    <tr><th>parcela</th><th>genotipo</th><th>localidad</th><th>altitud_m</th><th>rendimiento_t_ha</th><th>fecha_siembra</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>P-001</td><td>GEN-014</td><td>Huancayo</td><td>3250</td><td>28.4</td><td>2025-11-03</td></tr>
+    <tr><td>P-002</td><td>GEN-014</td><td class="fragment custom marca" data-fragment-index="1">HUANUCO</td><td>1950</td><td>31.2</td><td>2025-11-05</td></tr>
+    <tr><td>P-003</td><td>GEN-021</td><td class="fragment custom marca" data-fragment-index="1">Huánuco</td><td class="fragment custom marca" data-fragment-index="2">6398</td><td>24.9</td><td>2025-11-05</td></tr>
+    <tr><td>P-004</td><td>GEN-033</td><td>La Molina</td><td>240</td><td class="fragment custom marca" data-fragment-index="3">-12.4</td><td class="fragment custom marca" data-fragment-index="5">05/11/25</td></tr>
+    <tr class="fragment custom marca" data-fragment-index="4"><td>P-004</td><td>GEN-033</td><td>La Molina</td><td>240</td><td>-12.4</td><td>05/11/25</td></tr>
+    <tr><td>P-005</td><td>GEN-041</td><td>Huancayo</td><td>3250</td><td class="fragment custom marca" data-fragment-index="6">&nbsp;</td><td>2025-11-03</td></tr>
+  </tbody>
+</table>
+<ul class="notas-sucio">
+  <li class="fragment" data-fragment-index="1">el mismo lugar, escrito de dos formas</li>
+  <li class="fragment" data-fragment-index="2">¿metros… o pies?</li>
+  <li class="fragment" data-fragment-index="3">un rendimiento negativo</li>
+  <li class="fragment" data-fragment-index="4">la misma fila, dos veces</li>
+  <li class="fragment" data-fragment-index="5">fechas en dos formatos</li>
+  <li class="fragment" data-fragment-index="6">un dato que falta</li>
+</ul>
+</div>
+<p class="remate fragment" data-fragment-index="7">Antes de responder su pregunta, Ana necesita poder <strong>confiar</strong> en sus datos.</p>
+<p class="chico">Datos de ejemplo.</p>
+```
+
+::: notes
+(~1,5 min) Ir clic por clic, preguntando a la sala qué ven antes de marcarlo. Son exactamente
+los tipos de problema que tendrán sus datasets en el hands-on. Cerrar con la frase de la
+confianza: es el puente al ciclo.
+:::
+
+## {.diagrama}
+
+```{=html}
+<svg class="ciclo" viewBox="0 0 1700 960" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Ciclo de vida de los datos: preparar (exploración, validación, limpieza), analizar (descriptivo, diagnóstico, predictivo), reporte y comunicar">
+  <defs>
+    <filter id="aspero" filterUnits="userSpaceOnUse" x="-1700" y="-960" width="3400" height="1920">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <path id="bucle" d="M 228 215 Q 270 188 312 215 L 448 215 Q 490 188 532 215 L 575 302 Q 380 440 185 302 Z"/>
+    <path id="eje-arriba" d="M 820 576 L 1640 346"/>
+    <path id="eje-abajo" d="M 832 620 L 1640 393"/>
+  </defs>
+
+  <!-- ====================== PREPARAR ====================== -->
+
+  <!-- 1 · Exploración -->
+  <g class="fragment" data-fragment-index="1">
+    <g class="nodo prep" transform="translate(160 240)">
+      <circle r="70" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="72" ry="67" transform="rotate(-14)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Exploración</text>
+      <g class="etiqueta" transform="translate(0 -102)"><rect/><text y="6">Mini-Me · exploración</text></g>
+    </g>
+  </g>
+
+  <!-- 2 · Validación -->
+  <g class="fragment" data-fragment-index="2">
+    <path class="flecha" pathLength="1" d="M 228 215 Q 270 188 312 215" filter="url(#aspero)"/>
+    <g class="nodo prep" transform="translate(380 240)">
+      <circle r="70" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="71" ry="68" transform="rotate(10)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Validación</text>
+      <g class="etiqueta" transform="translate(0 -102)"><rect/><text y="6">Mini-Me · diccionario</text></g>
+    </g>
+  </g>
+
+  <!-- 3 · Limpieza -->
+  <g class="fragment" data-fragment-index="3">
+    <path class="flecha" pathLength="1" d="M 448 215 Q 490 188 532 215" filter="url(#aspero)"/>
+    <g class="nodo prep" transform="translate(600 240)">
+      <circle r="70" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="72" ry="66" transform="rotate(-6)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Limpieza</text>
+      <g class="etiqueta" transform="translate(0 -102)"><rect/><text y="6">Mini-Me · limpieza</text></g>
+    </g>
+  </g>
+
+  <!-- 4 · de vuelta a validar -->
+  <g class="fragment" data-fragment-index="4">
+    <path class="flecha vuelta" pathLength="1" d="M 532 268 Q 490 295 448 268" filter="url(#aspero)"/>
+  </g>
+
+  <!-- 5 · de vuelta a explorar, y el ciclo empieza a girar -->
+  <g class="fragment" data-fragment-index="5">
+    <path class="flecha vuelta" pathLength="1" d="M 575 302 Q 380 440 185 302" filter="url(#aspero)"/>
+    <g class="fragment fade-out" data-fragment-index="8">
+      <circle r="8" class="viajero">
+        <animateMotion dur="5s" repeatCount="indefinite"><mpath href="#bucle"/></animateMotion>
+      </circle>
+    </g>
+  </g>
+
+  <!-- 6 · es un ciclo -->
+  <g class="prep fragment" data-fragment-index="6">
+    <rect class="caja" x="40" y="100" width="680" height="290" rx="24" filter="url(#aspero)"/>
+    <text class="rotulo-caja" x="58" y="84">Preparar los datos</text>
+  </g>
+
+  <!-- 7 · primer reporte: calidad de datos -->
+  <g class="fragment" data-fragment-index="7">
+    <path class="flecha" pathLength="1" d="M 585 396 Q 640 570 698 684" filter="url(#aspero)"/>
+    <g class="nodo salida" transform="translate(740 730)">
+      <circle r="60" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="62" ry="57" transform="rotate(-12)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Reporte</text>
+      <g class="etiqueta" transform="translate(165 0)"><rect/><text y="6">Mini-Me · reporte</text></g>
+    </g>
+  </g>
+
+  <!-- ====================== ANALIZAR ====================== -->
+
+  <!-- 8 · Descriptivo -->
+  <g class="anal fragment" data-fragment-index="8">
+    <path class="flecha doble" pathLength="1" d="M 726 260 L 774 260" filter="url(#aspero)"/>
+    <rect class="caja" x="780" y="20" width="900" height="620" rx="24" filter="url(#aspero)"/>
+    <text class="rotulo-caja" x="805" y="62">Analizar los datos</text>
+    <text class="pregunta" x="900" y="280">¿Qué pasó?</text>
+    <g class="nodo anal" transform="translate(900 380)">
+      <circle r="70" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="72" ry="67" transform="rotate(8)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Descriptivo</text>
+      <g class="etiqueta" transform="translate(0 98)"><rect/><text y="6">Mini-Me · análisis exploratorio</text></g>
+    </g>
+  </g>
+
+  <!-- 9 · Diagnóstico -->
+  <g class="fragment" data-fragment-index="9">
+    <path class="flecha" pathLength="1" d="M 969 359 Q 1005 340 1041 336" filter="url(#aspero)"/>
+    <text class="pregunta" x="1110" y="215">¿Por qué pasó?</text>
+    <g class="nodo anal" transform="translate(1110 315)">
+      <circle r="70" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="71" ry="67" transform="rotate(-10)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Diagnóstico</text>
+      <g class="etiqueta" transform="translate(0 98)"><rect/><text y="6">Mini-Me · diagnóstico</text></g>
+    </g>
+  </g>
+
+  <!-- 10 · Predictivo -->
+  <g class="fragment" data-fragment-index="10">
+    <path class="flecha" pathLength="1" d="M 1179 294 Q 1215 275 1251 271" filter="url(#aspero)"/>
+    <text class="pregunta" x="1320" y="150">¿Qué pasará?</text>
+    <g class="nodo anal" transform="translate(1320 250)">
+      <circle r="70" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="72" ry="66" transform="rotate(14)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Predictivo</text>
+      <g class="etiqueta" transform="translate(0 98)"><rect/><text y="6">Mini-Me · predicción</text></g>
+    </g>
+  </g>
+
+  <!-- 11 · Prescriptivo (estalla en el 16) -->
+  <g class="fragment" data-fragment-index="11">
+    <g class="fragment custom apaga" data-fragment-index="16">
+      <path class="flecha" pathLength="1" d="M 1389 229 Q 1425 210 1461 206" filter="url(#aspero)"/>
+    </g>
+    <g class="fragment custom estalla" data-fragment-index="16">
+      <text class="pregunta" x="1530" y="85">¿Cómo hacemos que pase?</text>
+      <g class="nodo" transform="translate(1530 185)">
+        <circle r="70" class="trazo" filter="url(#aspero)"/>
+        <ellipse rx="72" ry="67" transform="rotate(-8)" class="trazo2" filter="url(#aspero)"/>
+        <text class="nombre" y="8">Prescriptivo</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 12 · de la información a la optimización -->
+  <g class="valor fragment" data-fragment-index="12">
+    <path class="flecha" pathLength="1" d="M 820 590 L 1640 360" filter="url(#aspero)"/>
+    <text class="eje"><textPath href="#eje-arriba" startOffset="0%">Información</textPath></text>
+    <g class="fragment custom apaga" data-fragment-index="16">
+      <text class="eje eje-fin" text-anchor="end"><textPath href="#eje-arriba" startOffset="100%">Optimización</textPath></text>
+    </g>
+  </g>
+
+  <!-- 13–15 · retrospectiva, comprensión, prospectiva -->
+  <g class="fragment" data-fragment-index="13">
+    <text class="eje"><textPath href="#eje-abajo" startOffset="3%">Retrospectiva <tspan class="eje-en">· hindsight</tspan></textPath></text>
+  </g>
+  <g class="fragment" data-fragment-index="14">
+    <text class="eje"><textPath href="#eje-abajo" startOffset="34%">Comprensión <tspan class="eje-en">· insight</tspan></textPath></text>
+  </g>
+  <g class="fragment" data-fragment-index="15">
+    <text class="eje"><textPath href="#eje-abajo" startOffset="61%">Prospectiva <tspan class="eje-en">· foresight</tspan></textPath></text>
+  </g>
+
+  <!-- 16 · el prescriptivo explota y queda su sombra -->
+  <g class="fragment custom chispas" data-fragment-index="16">
+    <line x1="1614" y1="185" x2="1642" y2="185"/>
+    <line x1="1589" y1="244" x2="1609" y2="264"/>
+    <line x1="1530" y1="269" x2="1530" y2="297"/>
+    <line x1="1471" y1="244" x2="1451" y2="264"/>
+    <line x1="1446" y1="185" x2="1418" y2="185"/>
+    <line x1="1471" y1="126" x2="1451" y2="106"/>
+    <line x1="1530" y1="101" x2="1530" y2="73"/>
+    <line x1="1589" y1="126" x2="1609" y2="106"/>
+  </g>
+  <g class="fragment fantasma" data-fragment-index="16">
+    <circle cx="1530" cy="185" r="70"/>
+    <text x="1530" y="180">fuera de</text>
+    <text x="1530" y="202">alcance</text>
+  </g>
+
+  <!-- 17 · el análisis también termina en reporte -->
+  <g class="fragment" data-fragment-index="17">
+    <path class="flecha" pathLength="1" d="M 860 646 Q 822 666 794 692" filter="url(#aspero)"/>
+  </g>
+
+  <!-- 18 · comunicar -->
+  <g class="fragment" data-fragment-index="18">
+    <path class="flecha" pathLength="1" d="M 740 792 L 740 828" filter="url(#aspero)"/>
+    <g class="nodo salida" transform="translate(740 892)">
+      <circle r="58" class="trazo" filter="url(#aspero)"/>
+      <ellipse rx="60" ry="55" transform="rotate(9)" class="trazo2" filter="url(#aspero)"/>
+      <text class="nombre" y="8">Comunicar</text>
+      <g class="etiqueta humano" transform="translate(150 0)"><rect/><text y="6">esto lo haces tú</text></g>
+    </g>
+  </g>
+</svg>
+
+<div class="relato r-stack">
+  <div class="paso fragment fade-out" data-fragment-index="1">
+    <span class="kicker k-prep">El archivo</span>
+    Sigamos a Ana. Todo empieza con el archivo que trajo del campo.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="1">
+    <span class="kicker k-prep">Explorar</span>
+    Ana abre el archivo y, antes de tocar nada, mira: ¿qué columnas hay?, ¿cuántas filas?, ¿qué se ve raro?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="2">
+    <span class="kicker k-prep">Validar</span>
+    Luego lo compara con lo que <em>debería</em> ser: el diccionario de datos. ¿Las unidades son correctas? ¿Los valores son posibles?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="3">
+    <span class="kicker k-prep">Limpiar</span>
+    Y corrige: une los nombres de localidad, quita la fila repetida, convierte los pies a metros. Cada decisión queda anotada.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="4">
+    <span class="kicker k-prep">Validar otra vez</span>
+    ¿Funcionó? Vuelve a validar. Limpiar sin revisar es cambiar un problema por otro.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="5">
+    <span class="kicker k-prep">Volver a mirar</span>
+    A veces, al limpiar, aparece algo nuevo… y toca volver a explorar.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="6">
+    <span class="kicker k-prep">Un ciclo</span>
+    No es una línea recta: es un ciclo. Ana da vueltas hasta que puede <strong>confiar</strong> en sus datos.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="7">
+    <span class="kicker k-sal">Primer reporte</span>
+    Y ya aquí hay algo que contar: un reporte de calidad. Qué se encontró y qué se corrigió.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="8">
+    <span class="kicker k-anal">Describir</span>
+    Con datos confiables, Ana empieza a analizar. Primero describe: ¿qué genotipos rindieron más?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="9">
+    <span class="kicker k-anal">Diagnosticar</span>
+    Luego se pregunta por qué. ¿Es el genotipo… o es la localidad donde se sembró?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="10">
+    <span class="kicker k-anal">Predecir</span>
+    Después mira hacia adelante: ¿cómo le irá a ese genotipo en una localidad nueva?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="11">
+    <span class="kicker k-anal">Prescribir</span>
+    Y el último paso sería decidir: ¿qué hacemos para que eso pase?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="12">
+    <span class="kicker k-anal">Cada paso vale más</span>
+    Mientras más avanzamos, más valor le sacamos a los datos: vamos de la <strong>información</strong> a la <strong>optimización</strong>.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="13">
+    <span class="kicker k-anal">Mirar atrás</span>
+    Describir es mirar hacia atrás: entender lo que ya pasó.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="14">
+    <span class="kicker k-anal">Entender</span>
+    Diagnosticar y predecir nos da comprensión: cómo funcionan las cosas, no solo qué pasó.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="15">
+    <span class="kicker k-anal">Mirar adelante</span>
+    Y con la predicción empezamos a anticipar lo que viene.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="16">
+    <span class="kicker k-anal">Hasta aquí llegamos</span>
+    Mini-Me no entra al análisis prescriptivo. Hoy nos quedamos en describir, entender y anticipar.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="17">
+    <span class="kicker k-sal">Reportar</span>
+    Desde cualquier etapa del análisis, el camino termina en un reporte.
+  </div>
+  <div class="paso fragment" data-fragment-index="18">
+    <span class="kicker k-sal">Comunicar</span>
+    Y un reporte existe para contarse: al equipo, a los socios, a quien decide. Esa parte es de Ana.
+  </div>
+</div>
+```
+
+::: notes
+(~4,5 min) Un clic por paso. El texto del recuadro es el guion; aquí van los énfasis.
+
+1. **Exploración.** Primera mirada, sin cambiar nada.
+2. **Validación.** El diccionario dice qué es posible: unidades, rangos, categorías.
+3. **Limpieza.** Corregir y anotar. Sin registro, no hay forma de defender la decisión.
+4. **Vuelta a validar.** Toda limpieza se valida.
+5. **Vuelta a explorar.** El punto verde muestra que esto gira; no es lineal.
+6. **Caja "Preparar".** Señalar la caja completa: aquí se va la mayor parte del tiempo, y aquí Mini-Me ahorra más.
+7. **Primer reporte.** Ya desde la limpieza se puede reportar la calidad de los datos.
+8. **Descriptivo.** ¿Qué pasó?
+9. **Diagnóstico.** ¿Por qué pasó? Aquí aparece el confusor: genotipo vs. localidad.
+10. **Predictivo.** ¿Qué pasará?
+11. **Prescriptivo.** ¿Cómo hacemos que pase? Dejarlo un segundo en pantalla.
+12. **Flecha de valor.** De información a optimización.
+13. **Retrospectiva** (hindsight): mirar atrás.
+14. **Comprensión** (insight): entender el mecanismo.
+15. **Prospectiva** (foresight): anticipar.
+16. **¡Pum!** Mini-Me no hace análisis prescriptivo. Decirlo con naturalidad: es una decisión de alcance, no una carencia.
+17. **Reporte.** Todo el análisis desemboca en el reporte.
+18. **Comunicar.** La etiqueta dice "esto lo haces tú": la IA acelera el camino, la historia la cuenta el científico.
+:::
+
+## {.final}
+
+::: {.cierre}
+La IA acelera el recorrido.<br>
+[Ana le da dirección.]{.segunda}
+:::
+
+::: {.fragment .envivo}
+Ahora, en vivo: hagamos este viaje con Mini-Me →
+:::
+
+::: notes
+(~30 s) Frase de cierre y pasar directo a la demo en vivo de Mini-Me con el dataset de Ana.
+:::
