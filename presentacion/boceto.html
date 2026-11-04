@@ -50,10 +50,29 @@
     document.fonts.ready.then(() => preparar(Reveal.getCurrentSlide()));
   }
 
+  // Las cifras .contador suben desde cero cuando aparece su fragmento.
+  // El HTML ya trae el número final, así que sin JavaScript (o al imprimir) se ve igual.
+  function contar(el) {
+    const hasta = Number(el.dataset.hasta);
+    const formato = new Intl.NumberFormat("es-PE");
+    const inicio = performance.now();
+    const DURACION = 1400;
+    function paso(t) {
+      const avance = Math.min((t - inicio) / DURACION, 1);
+      const suave = 1 - Math.pow(1 - avance, 3);
+      el.textContent = formato.format(Math.round(hasta * suave));
+      if (avance < 1) requestAnimationFrame(paso);
+    }
+    requestAnimationFrame(paso);
+  }
+
   window.addEventListener("load", () => {
     if (Reveal.isReady()) alMostrar();
     Reveal.on("ready", alMostrar);
     Reveal.on("slidechanged", alMostrar);
+    Reveal.on("fragmentshown", (e) => {
+      e.fragments.forEach((f) => f.querySelectorAll(".contador").forEach(contar));
+    });
   });
 })();
 </script>

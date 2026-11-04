@@ -22,11 +22,80 @@ format:
     include-after-body: boceto.html
 ---
 
-## Esta es Ana
+## {.gancho}
 
-::: {.ana}
+::: {.pregunta-grande}
+¿Qué parte de tu tiempo se va en **preparar** datos antes de poder analizarlos?
+:::
+
+::: {.opciones}
+[✋ Menos de la mitad]{.op .fragment}
+[✋ Más o menos la mitad]{.op .fragment}
+[✋ Casi todo]{.op .fragment}
+:::
+
+::: {.fragment .remate-gancho}
+Ese tiempo es el que hoy queremos devolverte.
+:::
+
+::: notes
+**Apertura (de memoria):** "Antes de mostrarles nada, una pregunta. Levanten la mano…"
+
+(~1 min) Leer cada opción y pedir manos. No dar cifras: que la sala vea su propia respuesta.
+Cerrar con la frase en pantalla y pasar directo a la siguiente slide.
+:::
+
+## En una frase
+
+::: {.bluf}
+Mini-Me te acompaña desde los datos crudos hasta un reporte que puedes defender, **y tú mantienes el control**.
+:::
+
+```{=html}
+<svg class="ciclo mapa" viewBox="0 0 1000 230" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Tres paradas: preparar, analizar y comunicar">
+  <defs>
+    <filter id="aspero-m" filterUnits="userSpaceOnUse" x="-1000" y="-230" width="2000" height="460">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g class="fragment">
+    <g class="nodo prep" transform="translate(150 115)">
+      <circle r="82" class="trazo" filter="url(#aspero-m)"/>
+      <ellipse rx="84" ry="78" transform="rotate(-10)" class="trazo2" filter="url(#aspero-m)"/>
+      <text class="nombre" y="-8"><tspan class="num">1</tspan><tspan x="0" dy="38">Preparar</tspan></text>
+    </g>
+  </g>
+  <g class="fragment">
+    <path class="flecha" pathLength="1" d="M 245 115 L 405 115" filter="url(#aspero-m)"/>
+    <g class="nodo anal" transform="translate(500 115)">
+      <circle r="82" class="trazo" filter="url(#aspero-m)"/>
+      <ellipse rx="84" ry="79" transform="rotate(8)" class="trazo2" filter="url(#aspero-m)"/>
+      <text class="nombre" y="-8"><tspan class="num">2</tspan><tspan x="0" dy="38">Analizar</tspan></text>
+    </g>
+  </g>
+  <g class="fragment">
+    <path class="flecha" pathLength="1" d="M 595 115 L 755 115" filter="url(#aspero-m)"/>
+    <g class="nodo salida" transform="translate(850 115)">
+      <circle r="82" class="trazo" filter="url(#aspero-m)"/>
+      <ellipse rx="84" ry="78" transform="rotate(-6)" class="trazo2" filter="url(#aspero-m)"/>
+      <text class="nombre" y="-8"><tspan class="num">3</tspan><tspan x="0" dy="38">Comunicar</tspan></text>
+    </g>
+  </g>
+</svg>
+```
+
+::: notes
+(~30 s) El mensaje completo, de entrada. Luego las tres paradas del recorrido: son los tres
+mensajes que se repetirán en el cierre. "Vamos a seguir a una investigadora en ese viaje."
+:::
+
+## Esta es Isabel
+
+::: {.isabel}
 ::: {.fragment}
-Ana es mejoradora de papa en el CIP.
+Isabel es mejoradora de papa en el CIP.
 :::
 
 ::: {.fragment}
@@ -40,7 +109,7 @@ Vuelve del campo con los datos de un ensayo:<br>
 :::
 
 ::: notes
-(~1 min) Presentar a Ana como alguien que podría ser cualquiera de ustedes. Tiene una pregunta
+(~1 min) Presentar a Isabel como alguien que podría ser cualquiera de ustedes. Tiene una pregunta
 clara y un archivo recién llegado del campo. Toda la historia de hoy es el camino entre ese
 archivo y una respuesta que pueda defender.
 :::
@@ -71,7 +140,7 @@ archivo y una respuesta que pueda defender.
   <li class="fragment" data-fragment-index="6">un dato que falta</li>
 </ul>
 </div>
-<p class="remate fragment" data-fragment-index="7">Antes de responder su pregunta, Ana necesita poder <strong>confiar</strong> en sus datos.</p>
+<p class="remate fragment" data-fragment-index="7">Antes de responder su pregunta, Isabel necesita poder <strong>confiar</strong> en sus datos.</p>
 <p class="chico">Datos de ejemplo.</p>
 ```
 
@@ -274,11 +343,11 @@ confianza: es el puente al ciclo.
 <div class="relato r-stack">
   <div class="paso fragment fade-out" data-fragment-index="1">
     <span class="kicker k-prep">El archivo</span>
-    Sigamos a Ana. Todo empieza con el archivo que trajo del campo.
+    Sigamos a Isabel. Todo empieza con el archivo que trajo del campo.
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="1">
     <span class="kicker k-prep">Explorar</span>
-    Ana abre el archivo y, antes de tocar nada, mira: ¿qué columnas hay?, ¿cuántas filas?, ¿qué se ve raro?
+    Isabel abre el archivo y, antes de tocar nada, mira: ¿qué columnas hay?, ¿cuántas filas?, ¿qué se ve raro?
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="2">
     <span class="kicker k-prep">Validar</span>
@@ -298,7 +367,7 @@ confianza: es el puente al ciclo.
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="6">
     <span class="kicker k-prep">Un ciclo</span>
-    No es una línea recta: es un ciclo. Ana da vueltas hasta que puede <strong>confiar</strong> en sus datos.
+    No es una línea recta: es un ciclo. Isabel da vueltas hasta que puede <strong>confiar</strong> en sus datos.
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="7">
     <span class="kicker k-sal">Primer reporte</span>
@@ -306,11 +375,11 @@ confianza: es el puente al ciclo.
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="8">
     <span class="kicker k-anal">Describir</span>
-    Con datos confiables, Ana empieza a analizar. Primero describe: ¿qué genotipos rindieron más?
+    Con datos confiables, Isabel empieza a analizar. Primero describe: ¿qué genotipos rindieron más?
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="9">
-    <span class="kicker k-anal">Diagnosticar</span>
-    Luego se pregunta por qué. ¿Es el genotipo… o es la localidad donde se sembró?
+    <span class="kicker k-sal">✋ Pregunta a la sala</span>
+    Luego se pregunta por qué. ¿Qué pesa más en el rendimiento: el genotipo… o la localidad donde se sembró?
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="10">
     <span class="kicker k-anal">Predecir</span>
@@ -346,7 +415,7 @@ confianza: es el puente al ciclo.
   </div>
   <div class="paso fragment" data-fragment-index="18">
     <span class="kicker k-sal">Comunicar</span>
-    Y un reporte existe para contarse: al equipo, a los socios, a quien decide. Esa parte es de Ana.
+    Y un reporte existe para contarse: al equipo, a los socios, a quien decide. Esa parte es de Isabel.
   </div>
 </div>
 ```
@@ -362,7 +431,8 @@ confianza: es el puente al ciclo.
 6. **Caja "Preparar".** Señalar la caja completa: aquí se va la mayor parte del tiempo, y aquí Mini-Me ahorra más.
 7. **Primer reporte.** Ya desde la limpieza se puede reportar la calidad de los datos.
 8. **Descriptivo.** ¿Qué pasó?
-9. **Diagnóstico.** ¿Por qué pasó? Aquí aparece el confusor: genotipo vs. localidad.
+9. **Diagnóstico.** Pausa y votación a mano alzada: ¿genotipo o localidad? Es el pico de atención
+   de la mitad del bloque. Respuesta: las dos pesan, y confundirlas es el confusor clásico.
 10. **Predictivo.** ¿Qué pasará?
 11. **Prescriptivo.** ¿Cómo hacemos que pase? Dejarlo un segundo en pantalla.
 12. **Flecha de valor.** De información a optimización.
@@ -376,15 +446,41 @@ confianza: es el puente al ciclo.
 
 ## {.final}
 
-::: {.cierre}
-La IA acelera el recorrido.<br>
-[Ana le da dirección.]{.segunda}
+::: {.recap}
+Hoy viste el viaje completo:
+
+1. **Preparar**, hasta poder confiar en tus datos.
+2. **Analizar**, del *qué pasó* al *qué pasará*.
+3. **Comunicar**, la parte que es tuya.
+:::
+
+::: {.cierre .chico-cierre}
+La IA acelera el recorrido.
+[Isabel le da dirección.]{.segunda}
 :::
 
 ::: {.fragment .envivo}
 Ahora, en vivo: hagamos este viaje con Mini-Me →
 :::
 
+::: {.fragment .regalo}
+Te llevas: el manual, los prompts de cada etapa y la plantilla del Data-Driven Document.
+:::
+
 ::: notes
-(~30 s) Frase de cierre y pasar directo a la demo en vivo de Mini-Me con el dataset de Ana.
+(~1 min) Repetir las tres paradas en voz alta: es lo que más se recuerda. Frase de cierre, luego
+la llamada a la acción (demo en vivo) y lo que se llevan.
+
+**Preguntas probables**
+
+- *¿Mis datos salen de mi computadora?* Parte del procesamiento ocurre en servicios de IA
+  externos. Por eso hoy usamos datos anonimizados, y la política del CIP no permite subir datos
+  personales ni confidenciales.
+- *¿Y si la IA se equivoca?* Cada resultado trae el código, los archivos y las decisiones, para
+  que se puedan revisar. Verificar es parte del método.
+- *¿Reemplaza al estadístico?* No. Acelera las tareas repetitivas; el método y la
+  interpretación siguen siendo del equipo.
+- *¿Funciona con mis datos?* Trabaja con CSV y Excel. Un diccionario de datos (unidades, rangos,
+  categorías) mejora mucho el resultado.
+- *¿Cómo accedo después del taller?* [Completar: cómo se solicita acceso a Mini-Me en Digital & Data.]
 :::

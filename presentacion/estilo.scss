@@ -7,6 +7,7 @@ $cip-tierra: #C4622D;
 $cip-gris:   #3F464C;
 $tinta:      #2E3439;
 $papel:      #FBFAF6;
+$ocre:       #A9740F;
 
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
@@ -60,8 +61,8 @@ $link-color: $cip-azul;
   }
 }
 
-// ---------------------------------------------------------------- Ana
-.ana {
+// ---------------------------------------------------------------- Isabel
+.isabel {
   font-size: 1.25em;
   line-height: 1.55;
 
@@ -334,7 +335,61 @@ svg.ciclo {
   opacity: 0.25;
 }
 
-// ---------------------------------------------------------------- relato de Ana
+// ---------------------------------------------------------------- ciclo ya dibujado (Bloque 2)
+// Copia fija del ciclo: todo visible, sin clics.
+.reveal svg.ciclo.estatico .flecha { stroke-dashoffset: 0; }
+.reveal svg.ciclo.estatico .punta { opacity: 1; }
+
+// Versión pequeña arriba a la derecha; auto-animate la encoge desde la slide anterior.
+.reveal svg.ciclo.mini {
+  inset: auto;
+  left: 740px;
+  top: 20px;
+  width: 850px;
+  height: 480px;
+
+  .trazo, .flecha, .punta { stroke-width: 4; }
+  .caja { stroke-width: 3; }
+}
+
+svg.ciclo {
+  .foco {
+    fill: none;
+    stroke: $cip-tierra;
+    stroke-width: 4;
+    stroke-dasharray: 10 8;
+    animation: girar 1.6s linear infinite;
+  }
+  .foco-caja {
+    fill: rgba(11, 90, 138, 0.07);
+    stroke: $cip-azul;
+    stroke-width: 4;
+    stroke-dasharray: 12 8;
+  }
+  .nota-flecha {
+    font-size: 22px;
+    font-weight: 700;
+    fill: $cip-azul;
+  }
+
+  .inv .rotulo-caja { fill: $ocre; }
+  .nodo.inv circle.trazo { fill: #FBF3DF; }
+  .nodo.demo circle.trazo {
+    fill: #fff;
+    stroke-dasharray: 9 7;
+  }
+  .nodo.final circle.trazo {
+    fill: #FAEDE4;
+    stroke-width: 3.5;
+  }
+  .nombre.chica { font-size: 21px; }
+  .etiqueta.asta rect { fill: #3F7A2A; }
+}
+@keyframes girar {
+  to { stroke-dashoffset: -36; }
+}
+
+// ---------------------------------------------------------------- relato de Isabel
 .relato {
   position: absolute;
   left: 40px;
@@ -362,6 +417,12 @@ svg.ciclo {
   .k-prep { color: $cip-verde; }
   .k-anal { color: $cip-azul; }
   .k-sal  { color: $cip-tierra; }
+  .k-inv  { color: $ocre; }
+
+  &.arriba {
+    top: 40px;
+    width: 640px;
+  }
 }
 
 // ---------------------------------------------------------------- cierre
@@ -379,7 +440,121 @@ svg.ciclo {
   .segunda { color: $cip-tierra; }
 }
 .envivo {
-  margin-top: 1.4em;
+  margin-top: 1em;
   font-size: 1.1em;
   color: $cip-verde;
+}
+
+// ---------------------------------------------------------------- gancho
+.reveal .slides section.gancho h2 {
+  display: none;
+}
+.pregunta-grande {
+  margin-top: 110px;
+  font-size: 1.75em;
+  line-height: 1.3;
+  color: $cip-azul;
+  font-weight: 700;
+
+  strong { color: $cip-tierra; }
+}
+.opciones {
+  display: flex;
+  gap: 36px;
+  margin-top: 1.1em;
+
+  .op {
+    background: #fff;
+    border: 2px solid $tinta;
+    border-radius: 14px 18px 12px 20px;
+    box-shadow: 5px 6px 0 rgba(46, 52, 57, 0.12);
+    padding: 14px 28px;
+    font-size: 0.95em;
+    color: $tinta;
+  }
+}
+.pregunta-grande.compacta {
+  margin-top: 30px;
+  font-size: 1.4em;
+}
+.remate-gancho {
+  margin-top: 1.3em;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: $cip-verde;
+}
+
+// Cifra grande que cuenta hacia arriba (boceto.html la anima).
+.cifras-gancho {
+  display: flex;
+  gap: 70px;
+  margin-top: 0.6em;
+}
+.cifra-bloque {
+  .cifra {
+    display: block;
+    font-size: 2.6em;
+    font-weight: 700;
+    line-height: 1;
+    color: $cip-tierra;
+  }
+  .cifra-label {
+    display: block;
+    font-size: 0.7em;
+    color: $cip-gris;
+    max-width: 420px;
+  }
+}
+.lectura {
+  margin-top: 1em;
+  font-size: 0.95em;
+  color: $tinta;
+
+  strong { color: $cip-tierra; }
+}
+.fuente {
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  font-size: 0.45em;
+  color: #8A949B;
+}
+
+// ---------------------------------------------------------------- en una frase
+.bluf {
+  font-size: 1.45em;
+  line-height: 1.35;
+  color: $tinta;
+  max-width: 1350px;
+
+  strong { color: $cip-azul; }
+}
+.reveal svg.ciclo.mapa {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 1100px;
+  height: 253px;
+  margin: 70px auto 0;
+
+  .nombre { font-size: 28px; font-weight: 700; }
+  .num { font-size: 24px; fill: #8A949B; }
+}
+
+// ---------------------------------------------------------------- cierre fuerte
+.recap {
+  font-size: 1.05em;
+  color: $tinta;
+
+  ol { margin-top: 0.3em; }
+  li { margin-bottom: 0.25em; }
+}
+.cierre.chico-cierre {
+  margin-top: 0.9em;
+  font-size: 1.3em;
+}
+.regalo {
+  margin-top: 0.8em;
+  font-size: 0.85em;
+  color: $cip-tierra;
 }
