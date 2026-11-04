@@ -693,7 +693,7 @@ anonimizada y aprobada.
 - [x] Presentaciones de los bloques 1 y 2 en Quarto + Reveal.js (§5.7) — **hecho**
 - [x] Nota de concepto — **redactada**; falta actualizar la fecha a 24/11
 - [ ] Formulario de registro en Microsoft Forms (§5.8) — preguntas definidas, falta publicarlo
-- [~] Manual del workshop en Quarto + Typst — **esqueleto que compila, 11 páginas**; falta contenido de las 4 temáticas y la paleta oficial de CIP — M4
+- [~] Manual del workshop en Quarto + Typst — **compila, 15 páginas, con una página por temática real** (§7 del manual) y el Bloque 2 de Allen AI; falta la paleta oficial de CIP — M4
 - [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
 - [ ] Prompts exactos por actividad — M4
 - [ ] Mentimeter PRE y POST configurados — M4

@@ -6,8 +6,10 @@ en la página del bloque en el que estás.
 | Bloque | Qué haces | Página |
 |---|---|---|
 | 1 · Data Lifecycle | Arreglas un dataset y lo llevas hasta un informe | @sec-ciclo |
-| 2 · Asta | Buscas evidencia, generas hipótesis, exploras | @sec-asta |
+| 2 · Allen AI | Buscas y lees literatura, y ves cómo se proponen hipótesis | @sec-asta |
 | 3 · Hands-on | Produces tu Data-Driven Document | @sec-hands-on |
+
+Tu temática tiene su propia página en @sec-tematicas.
 
 ## Las tres cajas que vas a ver
 
@@ -56,7 +58,7 @@ está arriba.
 - WSL2 con Ubuntu instalado (se hizo dos semanas antes, con IT).
 - Mini-Me Desktop abierto y con el panel **Setup** en verde.
 - Tu clave de modelo pegada en **Settings**.
-- La carpeta de tu temática descargada.
+- El repositorio del taller clonado, con la carpeta de tu temática en `datasets/` (@sec-tematicas).
 
 ```{=typst}
 #ojo[
