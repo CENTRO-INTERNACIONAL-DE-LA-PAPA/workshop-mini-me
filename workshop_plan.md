@@ -68,14 +68,19 @@ Al terminar, cada participante debe poder:
 
 ## 2. Datos — las 4 temáticas de Vilma
 
-Responsable de la entrega: **Vilma**. Cuatro paquetes, uno por temática:
+Responsable de la entrega: **Vilma**. Los datos llegaron el **4 de noviembre** (un `.zip` con 8 archivos:
+datos y diccionario por temática). Dos temáticas cambiaron respecto a lo planeado: la enfermedad es **tizón
+tardío** (no Bactericera) y la encuesta es de **percepción de consumidores** (no de adopción en agricultores).
 
-| # | Temática | Fuente | Unidad de observación | Preguntas de investigación (1–2 por dataset) |
+| # | Temática (slug) | Fuente | Unidad de observación | Pregunta de investigación propuesta |
 |---|---|---|---|---|
-| 1 | **Morfología de papa** | Banco de germoplasma | Accesión × descriptor | ¿Qué descriptores morfológicos agrupan accesiones y cuáles son redundantes? |
-| 2 | **Breeding** | Ensayos de rendimiento | Genotipo × sitio × bloque | ¿Qué genotipos combinan rendimiento alto y estabilidad entre ambientes? |
-| 3 | **Disease** | Bactericera / punta morada | Parcela o planta × evaluación | ¿Qué variables ambientales y de manejo se asocian con la incidencia? |
-| 4 | **Encuestas a agricultores** | Encuesta socioeconómica | Hogar o productor | ¿Qué factores se asocian con la adopción de una práctica o variedad? |
+| 1 | **Morfología** (`morfologia`) | Banco de germoplasma, 2014: 70 variedades de 22 países | Accesión | ¿Qué descriptores de color y forma agrupan las variedades y cuáles son redundantes? |
+| 2 | **Mejoramiento** (`mejoramiento`) | Ensayo de rendimiento 2016 en La Victoria (Huancayo): 61 genotipos × 4 repeticiones | Parcela | ¿Qué genotipos rinden más? *(Hay una sola localidad: la pregunta de estabilidad entre ambientes ya no aplica)* |
+| 3 | **Tizón tardío** (`tizon_tardio`) | Ensayo de fungicidas en 3 localidades de Kenia: control, convencional y fosfonatos | Parcela | ¿Los fosfonatos reducen el tizón (AUDPC) frente al control, y depende de la variedad o la localidad? |
+| 4 | **Consumidores** (`consumidores`) | Encuesta 2015 en La Molina, Miraflores y San Isidro: 114 personas | Persona encuestada | ¿Qué valoran los consumidores de papas nativas de color y cómo se asocia con su disposición a pagar un precio justo al agricultor? |
+
+Las preguntas, los resultados y los *leakage* son **propuestas** tomadas de los diccionarios de Vilma.
+Confirmarlos con ella (las preguntas abiertas están al final de cada `<slug>_ADAPTATION.md`).
 
 ### 2.1 Cada paquete entregado al participante contiene
 
@@ -108,6 +113,13 @@ paquete canónico de §2.1:
 | Sin identificador único de fila | **Sintetiza `record_id` correlativo** — así desaparece la dependencia dura |
 | Diccionario de Vilma en su propio formato | Mapea sus campos a `column, data_type, unit, role, valid_values_or_range, description` |
 | Sin roles analíticos declarados | **Propone** roles (`primary_key`, `design`, `predictor`, `outcome`) para que nosotros los confirmemos |
+
+**Lo que el adaptador no puede deducir lo fija `scripts/configurar_taller.py`.** Toma de los diccionarios
+de Vilma (plantillas de Crop Ontology para los ensayos y la lista de variables de la encuesta) las unidades,
+los rangos válidos y las descripciones, y propone el resultado y los *leakage* de cada temática. Se corre
+entre el adaptador y `corrupt_dataset.py`, y vive en el repositorio para que volver a adaptar no borre esas
+decisiones. En la encuesta, además, convierte en 0 las casillas vacías ("no marcado"), para que un faltante
+sembrado se distinga de un "no".
 
 Esto importa por una razón concreta: `score_cleanliness.py:50` exige exactamente una columna con
 `role=primary_key` y falla si no la encuentra. Sintetizar el identificador en el adaptador resuelve ese
@@ -198,6 +210,10 @@ Los datos de Vilma son datos reales de CIP y las **encuestas a agricultores cont
 La política institucional prohíbe introducir datos confidenciales o personales en herramientas de IA, y el
 stack Asta procesa los datos fuera de la máquina del participante.
 
+**Estado (4 de noviembre):** la encuesta de consumidores llegó anonimizada y con visto bueno (confirmado por
+Piero). Las columnas `encuestador` y `encuestado` son códigos, no nombres, y la ubicación está a nivel de
+distrito. Los datos crudos y los paquetes viven en `datasets/`, que git ignora salvo el README.
+
 Por eso, antes de que cualquier archivo entre al workshop:
 
 1. **Anonimización obligatoria** de las encuestas: eliminar nombres, DNI, teléfonos, coordenadas exactas
@@ -207,8 +223,8 @@ Por eso, antes de que cualquier archivo entre al workshop:
    por escrito, para las cuatro temáticas.
 3. Si una temática no obtiene visto bueno a tiempo, se sustituye por su equivalente sintético, que se
    regenera en un comando (`python scripts/generate_datasets.py --output-dir .`): `value_chain_adoption`
-   para encuestas, `potato_breeding_trials` para breeding, `native_potato_biodiversity` para morfología,
-   `seed_system_quality` o `climate_smart_agronomy` para disease. **El workshop no se detiene por un
+   para la encuesta, `potato_breeding_trials` para mejoramiento, `native_potato_biodiversity` para morfología,
+   `climate_smart_agronomy` para tizón tardío. **El workshop no se detiene por un
    dataset.**
 4. Investigación no publicada / propiedad intelectual de terceros: no se incluye nada inédito que no esté
    autorizado a salir.
@@ -580,8 +596,8 @@ Hoy es **4 de noviembre de 2026**. Al martes 24 de noviembre quedan **20 días**
 | ID | Milestone | Fecha límite | Responsable | Definición de "hecho" |
 |---|---|---|---|---|
 | **M1** | Alcance y fecha confirmados | — | Piero | ✅ Fecha (24 nov), hora (8:00–13:30), sede (Auditorio) y duración (5 h). **Falta la lista de participantes**, que sale del formulario de registro |
-| **M2** | Datos crudos de las 4 temáticas entregados | **vie 6 nov** | Vilma | Los 4 datasets **en la estructura que ella use**, más las 6 respuestas de significado (§2.2); **anonimización de encuestas hecha y aprobada** (§2.4). *Estado por confirmar* |
-| **M3** | Pipeline `adapt` → `corrupt` → `score` | — | Piero | ✅ Los tres scripts escritos y probados de punta a punta (Excel desordenado → adaptado → 71 defectos → 0% / 100% en los extremos). Pendiente solo aplicarlo a los datos reales cuando lleguen |
+| **M2** | Datos crudos de las 4 temáticas entregados | **vie 6 nov** | Vilma | ✅ Datos y diccionarios recibidos el 4 nov; encuesta anonimizada y aprobada. **Falta** confirmar las preguntas de significado (§2.2), que quedaron como propuestas |
+| **M3** | Pipeline `adapt` → `configurar` → `corrupt` → `score` | — | Piero | ✅ Aplicado a los 4 datasets reales el 4 nov: 247, 50, 151 y 496 defectos; 0% / 100% en los extremos y sin daño colateral |
 | **M4** | Paquete didáctico v1 | **vie 13 nov** | Piero + facilitadores | ✅ Presentaciones B1 y B2 (§5.7) y nota de concepto. Pendiente: manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla del Data-Driven Document, Mentimeter PRE/POST |
 | **M5** | Build congelado + bundle + preflight verde | **vie 6 nov** | Piero | Commit congelado, `bundle-backend.sh` ejecutado, `--preflight` verde en 2 laptops de prueba, créditos Asta confirmados |
 | **M6** | Instalación en laptops de participantes | **jue 19 nov** | IT + Piero | ≥ 90% de laptops confirmadas con WSL2 + app + preflight verde (sesión 9–13 nov, recuperación 16–19 nov) |
@@ -594,7 +610,7 @@ Hoy es **4 de noviembre de 2026**. Al martes 24 de noviembre quedan **20 días**
 | Semana | Fechas | Foco | Entregable |
 |---|---|---|---|
 | Antes | sep–oct | Pipeline de ensuciado y scorers; esqueleto del manual | M3 ✅ |
-| **T-3** | 2–6 nov | ✅ Presentaciones B1/B2 y nota de concepto. Publicar el formulario de registro; recibir y revisar los datos de Vilma; congelar build; bundle del backend; confirmar créditos | M2, M5 |
+| **T-3** | 2–6 nov | ✅ Presentaciones B1/B2 y nota de concepto. Publicar el formulario de registro; ✅ datos de Vilma recibidos y procesados; congelar build; bundle del backend; confirmar créditos | M2, M5 |
 | **T-2** | 9–13 nov | **Sesión de instalación con IT**; runs pre-cocinados y respaldos offline; manual, tarjetas y Mentimeter | M4, M6 (inicio) |
 | **T-1** | 16–20 nov | Ventana de recuperación (16–19); **ensayo general** (vie 20); impresión de materiales | M6, M7 |
 | **T-0** | 23–24 nov | Gate final (lun 23) y workshop (mar 24) | M8 |
@@ -646,8 +662,8 @@ Para cerrar antes de la sesión de instalación (lunes 9 de noviembre):
 
 1. **API keys:** ¿una por participante o una compartida del taller? Afecta presupuesto y trazabilidad.
 2. **Presupuesto de créditos Asta** disponible y confirmado.
-3. **Encuestas a agricultores:** ¿existe ya una versión anonimizada o hay que producirla? ¿Quién firma el
-   visto bueno de uso?
+3. **Significado de los datos con Vilma:** confirmar resultado, *leakage* y pregunta de cada temática (las
+   preguntas abiertas están en cada `<slug>_ADAPTATION.md`).
 4. **Equipamiento del Auditorio:** mesas, tomas de corriente para 30 laptops, proyector y red probada para 30
    conexiones simultáneas.
 5. **Lista de participantes confirmados**, a partir del formulario de registro. La instalación con IT depende
@@ -659,13 +675,16 @@ Para cerrar antes de la sesión de instalación (lunes 9 de noviembre):
 
 **Ya cerrado:** fecha **martes 24 de noviembre de 2026**, de 8:00 a 13:30, en el **Auditorio**; duración
 canónica de **5 h**; galería **voluntaria, máximo 2 grupos** presentando; B2 con Asta (Paper Finder, PDF
-librarian), Theorizer **solo como demo** y AutoDiscovery, **sin DataVoyager**.
+librarian), Theorizer **solo como demo** y AutoDiscovery, **sin DataVoyager**; encuesta de consumidores
+anonimizada y aprobada.
 
 ---
 
 ## 9. Entregables del paquete de workshop
 
-- [ ] 4 paquetes de datos (`dirty` / `clean` / `dictionary` / `README` / `FACILITATOR`) — M3
+- [~] 4 paquetes de datos — **generados** (`clean`, `dirty`, `dictionary`, `changelog`, `defect_key`); falta el
+  `README.md` con el brief de cada temática, una vez que Vilma confirme las preguntas — M3
+- [x] `scripts/configurar_taller.py` (unidades, rangos, roles y descripciones de los diccionarios de Vilma) — **hecho**
 - [x] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — **hecho**
 - [x] `scripts/corrupt_dataset.py` (corrupción determinística + changelog celda a celda) — **hecho**
 - [x] `scripts/score_recovery.py` (% de defectos reparados, daño colateral, filas borradas) — **hecho**

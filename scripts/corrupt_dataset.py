@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import math
 import random
 import sys
 import unicodedata
@@ -252,8 +253,12 @@ class Corruptor:
     def _count(self, rate: float, minimum: int = 2) -> int:
         return max(minimum, round(len(self.rows) * rate))
 
-    def _pick_rows(self, column: str, count: int) -> list[int]:
-        free = [i for i in range(len(self.rows)) if (i, column) not in self.touched]
+    def _pick_rows(self, column: str, count: int, filled: bool = False) -> list[int]:
+        free = [
+            i
+            for i in range(len(self.rows))
+            if (i, column) not in self.touched and (not filled or self.rows[i][column].strip())
+        ]
         return sorted(self.rng.sample(free, min(count, len(free))))
 
     def _record(self, family: str, index: int, column: str, original: str, new: str, detail: str) -> None:
@@ -316,11 +321,18 @@ class Corruptor:
             spec = self.specs[column]
             low, high = spec.bounds()  # type: ignore[misc]
             span = (high - low) or 1.0
+            above, below = high + span * 0.5, low - span * 0.2
+            if spec.integer:
+                # On a short integer scale (1-3) rounding can pull the value back inside
+                # the range, which would plant a defect nobody can detect.
+                above = max(math.floor(above), math.floor(high) + 1)
+                below = min(math.ceil(below), math.ceil(low) - 1)
             candidates = [
-                (high + span * 0.5, "above the valid maximum"),
-                (low - span * 0.2, "below the valid minimum"),
+                (above, "above the valid maximum"),
+                (below, "below the valid minimum"),
             ]
-            for (value, detail), index in zip(candidates, self._pick_rows(column, 2)):
+            # Only on cells that hold a value: "repairing" an empty cell back to empty teaches nothing.
+            for (value, detail), index in zip(candidates, self._pick_rows(column, 2, filled=True)):
                 original = self.rows[index][column]
                 self._record(
                     "impossible_value",

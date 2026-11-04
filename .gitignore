@@ -21,3 +21,7 @@ presentacion/*.html
 !presentacion/boceto.html
 presentacion/*_files/
 presentacion/.quarto/
+
+# Datos reales del taller: nunca se versionan (ver §2.4 del plan)
+datasets/*
+!datasets/README.md
