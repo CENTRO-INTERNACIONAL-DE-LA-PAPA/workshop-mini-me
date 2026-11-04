@@ -1,6 +1,6 @@
 ---
 title: "De la pregunta al conocimiento"
-subtitle: "Cómo Asta acompaña a Isabel a investigar"
+subtitle: "Cómo Allen AI acompaña a Isabel a investigar"
 author: "Digital & Data · CIP"
 date: 2026-11-25
 date-format: "D [de] MMMM [de] YYYY"
@@ -75,7 +75,7 @@ Consultas exactas (API de búsqueda masiva de Semantic Scholar):
 ## En una frase
 
 ::: {.bluf}
-Asta lee contigo miles de artículos para que **tú decidas cuáles importan**.
+Las herramientas de Allen AI leen contigo miles de artículos para que **tú decidas cuáles importan**.
 :::
 
 ```{=html}
@@ -503,7 +503,7 @@ marcado: Isabel encontró algo que sus datos solos no le explican. Esa duda abre
     <g class="nodo inv demo" transform="translate(1080 655)">
       <circle r="64" class="trazo" filter="url(#aspero-c)"/>
       <text class="nombre" y="8">Hipótesis</text>
-      <g class="etiqueta asta" transform="translate(0 -94)"><rect/><text y="6">Asta · Theorizer (demo)</text></g>
+      <g class="etiqueta asta" transform="translate(0 -94)"><rect/><text y="6">Theorizer (demo)</text></g>
     </g>
   </g>
 
@@ -522,9 +522,14 @@ marcado: Isabel encontró algo que sus datos solos no le explican. Esa duda abre
     </g>
   </g>
 
-  <!-- 7 · los dos viajes se encuentran -->
+  <!-- 7 · si no sabe por dónde empezar: AutoDiscovery -->
   <g class="fragment" data-fragment-index="7">
-    <g class="fragment fade-out" data-fragment-index="9">
+    <g class="etiqueta asta" transform="translate(1400 750)"><rect/><text y="6">AutoDiscovery</text></g>
+  </g>
+
+  <!-- 7 · los dos viajes se encuentran -->
+  <g class="fragment" data-fragment-index="8">
+    <g class="fragment fade-out" data-fragment-index="10">
       <rect class="foco-caja" x="1122" y="22" width="466" height="326" rx="16"/>
     </g>
     <path class="flecha" pathLength="1" d="M 1400 589 L 1400 352" filter="url(#aspero-c)"/>
@@ -532,23 +537,23 @@ marcado: Isabel encontró algo que sus datos solos no le explican. Esa duda abre
   </g>
 
   <!-- 8 · los datos pueden obligar a replantear -->
-  <g class="fragment" data-fragment-index="8">
+  <g class="fragment" data-fragment-index="9">
     <path class="flecha vuelta" pathLength="1" d="M 1352 700 Q 1231 765 1110 712" filter="url(#aspero-c)"/>
   </g>
 
   <!-- 9 · es otro ciclo -->
-  <g class="inv fragment" data-fragment-index="9">
+  <g class="inv fragment" data-fragment-index="10">
     <rect class="caja" x="30" y="520" width="1540" height="290" rx="24" filter="url(#aspero-c)"/>
     <text class="rotulo-caja" x="48" y="506">Investigar</text>
   </g>
 
   <!-- 10 · la investigación también se reporta -->
-  <g class="fragment" data-fragment-index="10">
+  <g class="fragment" data-fragment-index="11">
     <path class="flecha" pathLength="1" d="M 1010 518 Q 1020 420 1079 392" filter="url(#aspero-c)"/>
   </g>
 
   <!-- 11 · generación de conocimiento -->
-  <g class="fragment" data-fragment-index="11">
+  <g class="fragment" data-fragment-index="12">
     <path class="flecha" pathLength="1" d="M 1141 461 L 1182 448" filter="url(#aspero-c)"/>
     <g class="nodo final" transform="translate(1250 430)">
       <circle r="66" class="trazo" filter="url(#aspero-c)"/>
@@ -588,22 +593,26 @@ marcado: Isabel encontró algo que sus datos solos no le explican. Esa duda abre
     Una buena hipótesis se pone a prueba con datos.
   </div>
   <div class="paso fragment fade-in-then-out" data-fragment-index="7">
+    <span class="kicker k-inv">¿Por dónde empiezo?</span>
+    ¿Y si Isabel no sabe por dónde empezar a analizar? AutoDiscovery explora los datos por su cuenta y le propone qué vale la pena mirar.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="8">
     <span class="kicker k-anal">Los viajes se encuentran</span>
     Y aquí los dos caminos se unen: probar una hipótesis es volver al ciclo de datos que ya conocemos, con Mini-Me.
   </div>
-  <div class="paso fragment fade-in-then-out" data-fragment-index="8">
+  <div class="paso fragment fade-in-then-out" data-fragment-index="9">
     <span class="kicker k-inv">Replantear</span>
     Los datos pueden confirmar la hipótesis… o pedir que se replantee.
   </div>
-  <div class="paso fragment fade-in-then-out" data-fragment-index="9">
+  <div class="paso fragment fade-in-then-out" data-fragment-index="10">
     <span class="kicker k-inv">Otro ciclo</span>
     Preguntar, leer, proponer y probar: Isabel da vueltas hasta tener una respuesta sólida.
   </div>
-  <div class="paso fragment fade-in-then-out" data-fragment-index="10">
+  <div class="paso fragment fade-in-then-out" data-fragment-index="11">
     <span class="kicker k-sal">Reportar</span>
     Lo que aprende de la literatura también va al reporte, con citas que cualquiera puede verificar.
   </div>
-  <div class="paso fragment" data-fragment-index="11">
+  <div class="paso fragment" data-fragment-index="12">
     <span class="kicker k-sal">Conocimiento</span>
     Cuando los datos y la literatura cuentan la misma historia, y esa historia se comunica, se genera conocimiento.
   </div>
@@ -614,16 +623,18 @@ marcado: Isabel encontró algo que sus datos solos no le explican. Esa duda abre
 (~4 min) El ciclo de datos se encoge y queda arriba como mapa. Un clic por paso:
 
 1. **Pregunta.** La pone Isabel, no la IA.
-2. **Buscar literatura.** Primer ejercicio del bloque: Paper Finder. Volver a las 224: aquí se vuelven un puñado.
-3. **Leer a fondo.** Segundo ejercicio: PDF librarian con PDFs abiertos, ya descargados.
+2. **Buscar literatura.** Primer ejercicio del bloque: Paper Finder, de Asta. Volver a las 224: aquí se vuelven un puñado.
+3. **Leer a fondo.** Segundo ejercicio: PDF librarian, de Asta, con PDFs abiertos, ya descargados.
 4. **Hipótesis.** Theorizer, solo demostración. Son propuestas para probar, no conclusiones.
 5. **Vuelta a la literatura.** Sin sustento, se vuelve a buscar.
 6. **Analizar datos.**
-7. **Los viajes se encuentran.** Señalar la caja iluminada: el análisis lo hace el ciclo de datos de Mini-Me.
-8. **Vuelta a la hipótesis.** Los datos también corrigen.
-9. **Caja "Investigar".** Es un ciclo, igual que preparar los datos.
-10. **Reporte.** La literatura entra al mismo reporte, con citas.
-11. **Generación de conocimiento.** Es el destino de los dos viajes, y es lo que entregarán en el hands-on: el Data-Driven Document.
+7. **AutoDiscovery.** Para cuando no sabes por dónde empezar: explora los datos y propone qué mirar.
+   Lo que encuentre también hay que verificarlo.
+8. **Los viajes se encuentran.** Señalar la caja iluminada: el análisis lo hace el ciclo de datos de Mini-Me.
+9. **Vuelta a la hipótesis.** Los datos también corrigen.
+10. **Caja "Investigar".** Es un ciclo, igual que preparar los datos.
+11. **Reporte.** La literatura entra al mismo reporte, con citas.
+12. **Generación de conocimiento.** Es el destino de los dos viajes, y es lo que entregarán en el hands-on: el Data-Driven Document.
 :::
 
 ## {.final}
@@ -633,7 +644,7 @@ Hoy viste cómo investigar con IA:
 
 1. **Buscar**: de miles de artículos a los pocos que importan.
 2. **Leer** a fondo, con la evidencia a la vista.
-3. **Proponer y probar**, con datos, en el ciclo de Mini-Me.
+3. **Proponer y probar** con datos: con Mini-Me o, si no sabes por dónde empezar, con AutoDiscovery.
 :::
 
 ::: {.cierre .chico-cierre}
