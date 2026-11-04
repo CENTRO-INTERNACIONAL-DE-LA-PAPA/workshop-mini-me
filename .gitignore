@@ -15,3 +15,9 @@ manual/manual.typ
 manual/manual.html
 manual/manual_files/
 manual/.quarto/
+
+# Salidas de las presentaciones (se regeneran con: quarto render presentacion/<archivo>.qmd)
+presentacion/*.html
+!presentacion/boceto.html
+presentacion/*_files/
+presentacion/.quarto/

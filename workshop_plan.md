@@ -1,21 +1,30 @@
-# Workshop Mini-Me — Plan de ejecución (v2, un día)
+# Workshop Mini-Me — Plan de ejecución (v3, un día)
 
-**De datos crudos a un Data-Driven Document en un solo día.**
+**CIP Mini-Me: IA aplicada a la ciencia de datos.** De datos crudos a un Data-Driven Document en un solo día.
 
 | Campo | Valor |
 |---|---|
-| Fecha | **jueves 22 de octubre de 2026** (confirmada) |
-| Duración | **5 h efectivas** (rango acordado 4–6 h; ver §3.3 para recortes y extensiones) |
+| Fecha | **martes 24 de noviembre de 2026** (confirmada) |
+| Hora | **8:00 a.m. a 1:30 p.m.** |
+| Sede | **Auditorio** del CIP |
+| Organiza | **Unidad Digital & Data del CIP** (desarrolladora de Mini-Me) |
+| Duración | **5 h efectivas** + 30 min de setup (ver §3.3 para recortes y extensiones) |
 | Participantes | 20–30 personas, en equipos de 2–3 |
 | Modalidad | Presencial, laptops propias con WSL2 preinstalado |
-| Herramienta | **Mini-Me Desktop** (`mini-me-desktop`) + backend Mini-Me en WSL |
+| Herramientas | **Mini-Me Desktop** (`mini-me-desktop`) + backend en WSL; herramientas de **Allen AI**: Asta (Paper Finder, PDF librarian), Theorizer y AutoDiscovery |
 | Entregable del participante | **Data-Driven Document** (1–2 páginas, con evidencia trazable) |
 | Medición | Mentimeter **pre** y **post** + score de limpieza automatizado |
-| Fecha de este plan | 3 de septiembre de 2026 (T-7 semanas) |
+| Fecha de este plan | 4 de noviembre de 2026 (T-20 días) |
 
-> **Cambio respecto a la v1.** La versión anterior (3 días, dataset sintético único) queda archivada en
-> `workshop_plan_v1_3dias.bak.md`. Esta v2 comprime todo a **un día con tres bloques**, cambia el dataset
-> sintético por **datos reales de CIP ensuciados de forma controlada** (4 temáticas), y añade el eje de
+> **Cambios de la v3 (4 de noviembre).** La fecha pasa del 22 de octubre al **24 de noviembre**, con inicio
+> a las 8:00. El Bloque 2 deja fuera **DataVoyager**: la literatura se trabaja con Asta, Theorizer queda
+> como demostración y AutoDiscovery entra cuando no se sabe por dónde empezar a analizar. Los bloques 1 y
+> 2 abren con **presentaciones narrativas** en Quarto + Reveal.js (§5.7). Se agregan la nota de concepto
+> y el formulario de registro (§5.8). El cronograma se rehízo para la nueva fecha (§6).
+>
+> **Cambios de la v2.** La v1 (3 días, dataset sintético único) queda archivada en
+> `workshop_plan_v1_3dias.bak.md`. La v2 comprimió todo a **un día con tres bloques**, cambió el dataset
+> sintético por **datos reales de CIP ensuciados de forma controlada** (4 temáticas) y añadió el eje de
 > **medición antes/después**.
 
 ---
@@ -26,7 +35,7 @@ Un solo hilo narrativo, tres bloques, un entregable:
 
 ```
 Bloque 1  Data Lifecycle      ->  el científico entiende y arregla sus datos
-Bloque 2  Asta / Allen AI     ->  el científico busca, teoriza y explora evidencia
+Bloque 2  Allen AI            ->  el científico busca, lee y contrasta evidencia
 Bloque 3  Hands-on            ->  el científico produce un documento defendible
                                    |
                                    v
@@ -38,6 +47,10 @@ El mensaje central del día, que debe repetirse en cada bloque:
 > **La IA acelera tareas; el científico mantiene la responsabilidad sobre la pregunta, los datos, la
 > evidencia y la interpretación.**
 
+El mensaje se cuenta **en positivo**: la IA es una fortaleza cuando se usa con criterio, no algo de lo
+que desconfiar. Las presentaciones lo dicen con dos frases de cierre: *"La IA acelera el recorrido; Isabel
+le da dirección"* (Bloque 1) y *"La IA busca, lee y propone; Isabel decide qué es evidencia"* (Bloque 2).
+
 ### 1.1 Resultados esperados
 
 Al terminar, cada participante debe poder:
@@ -45,7 +58,8 @@ Al terminar, cada participante debe poder:
 1. Nombrar las 7 etapas del ciclo de vida del dato y el subagente que corresponde a cada una.
 2. Detectar y **documentar** problemas de calidad en un dataset real de su área.
 3. Distinguir exploración, diagnóstico, predicción y causalidad.
-4. Usar al menos tres herramientas Asta (búsqueda académica, PDF librarian, Theorizer, DataVoyager, AutoDiscovery).
+4. Buscar y leer literatura con Asta (Paper Finder y PDF librarian), y reconocer cuándo usar Theorizer
+   (hipótesis) y AutoDiscovery (cuando no se sabe por dónde empezar a analizar).
 5. Verificar un resultado de IA: fuentes, código, archivos, estado de ejecución.
 6. Identificar al menos **un error o límite** de la IA durante el día.
 7. Entregar un Data-Driven Document con una afirmación respaldada y una afirmación que **no** puede hacerse.
@@ -207,15 +221,15 @@ Por eso, antes de que cualquier archivo entre al workshop:
 
 | Hora | Min | Bloque | Contenido |
 |---|---:|---|---|
-| 08:30–09:00 | 30 | **B0 Setup** | Registro, verificación de laptops, login, API key, dataset descargado |
-| 09:00–09:20 | 20 | **Apertura** | Encuadre + **Mentimeter PRE** + reglas del día |
-| 09:20–10:20 | 60 | **B1 Data Lifecycle** | Intro → Limpieza → Validación → EDA → Diagnostics → Predictive → Reporting |
-| 10:20–10:35 | 15 | Pausa | Café. *Se lanzan Theorizer y AutoDiscovery en background.* |
-| 10:35–11:40 | 65 | **B2 Asta / Allen AI** | Academic research → PDF librarian → Theorizer → DataVoyager → AutoDiscovery |
-| 11:40–11:50 | 10 | Pausa | |
-| 11:50–13:20 | 90 | **B3 Hands-on** | Dos rutas (Research / Data) sobre el dataset de su temática |
-| 13:20–13:45 | 25 | **Galería** | Mural con todos los Data-Driven Documents + **2 presentaciones voluntarias** + síntesis |
-| 13:45–14:00 | 15 | **Cierre** | **Mentimeter POST** + próximos pasos + entrega de materiales |
+| 08:00–08:30 | 30 | **B0 Setup** | Registro, verificación de laptops, login, API key, dataset descargado |
+| 08:30–08:50 | 20 | **Apertura** | Encuadre + **Mentimeter PRE** + reglas del día |
+| 08:50–09:50 | 60 | **B1 Data Lifecycle** | Presentación *El viaje de los datos* → demo en vivo: limpieza → validación → EDA → diagnóstico → predicción → reporte |
+| 09:50–10:05 | 15 | Pausa | Café. *Se lanzan Theorizer y AutoDiscovery en background.* |
+| 10:05–11:10 | 65 | **B2 Allen AI** | Presentación *De la pregunta al conocimiento* → Asta Paper Finder → PDF librarian → Theorizer (demo) → AutoDiscovery |
+| 11:10–11:20 | 10 | Pausa | |
+| 11:20–12:50 | 90 | **B3 Hands-on** | Dos rutas (Research / Data) sobre el dataset de su temática |
+| 12:50–13:15 | 25 | **Galería** | Mural con todos los Data-Driven Documents + **2 presentaciones voluntarias** + síntesis |
+| 13:15–13:30 | 15 | **Cierre** | **Mentimeter POST** + próximos pasos + entrega de materiales |
 
 **B0 no es opcional.** Es el bloque que salva el día: 30 minutos de colchón para el 10–20% de laptops que
 llegarán con algo roto pese a la instalación previa.
@@ -229,7 +243,7 @@ dataset de su temática.
 
 | Min | Etapa | Subagente | Producto visible |
 |---:|---|---|---|
-| 0–8 | Introducción | — | El ciclo de vida dibujado + la pregunta científica del dataset |
+| 0–8 | Introducción | — | Presentación *El viaje de los datos* (§5.7): el ciclo dibujado paso a paso con la historia de Isabel |
 | 8–20 | **Limpieza** | `data_cleaning` | `dirty` → `clean`, con log de decisiones |
 | 20–28 | **Validación** | `data_cleaning` + diccionario | Score de limpieza antes/después |
 | 28–40 | **EDA** | `exploratory_data_analysis` | Distribuciones, faltantes, relaciones, anomalías |
@@ -245,19 +259,22 @@ Dos trampas que el facilitador debe provocar a propósito:
 > Nota de la auditoría vigente: `diagnostic_analytics` acepta el formulario de contexto vacío. Entregar
 > plantilla obligatoria (pregunta, outcome, drivers, unidad de análisis, periodo, confusores) en la tarjeta.
 
-#### B2 — Asta / Allen AI (65 min) — el bloque más intensivo
+#### B2 — Allen AI (65 min) — el bloque más intensivo
 
-**Regla de oro operativa:** Theorizer y AutoDiscovery se **lanzan en la pausa anterior** (10:20) para que sus
+Todas las herramientas del bloque son de **Allen AI (Ai2)**. La literatura se trabaja con **Asta** (Paper
+Finder y PDF librarian), las hipótesis con **Theorizer** y el análisis automatizado con **AutoDiscovery**.
+**DataVoyager queda fuera del taller.**
+
+**Regla de oro operativa:** Theorizer y AutoDiscovery se **lanzan en la pausa anterior** (09:50) para que sus
 resultados lleguen dentro del bloque. Además, cada uno tiene un **run terminado de respaldo** en disco.
 
 | Min | Herramienta | Subagente | Prompt / acción |
 |---:|---|---|---|
-| 0–5 | Encuadre | — | Qué es Asta, qué resuelve y qué **no** |
-| 5–17 | **Academic research** | `academic_researcher` | "¿Qué evidencia existe sobre \<pregunta de la temática\>?" → 5 fuentes, una frase de por qué importa cada una |
-| 17–28 | **PDF librarian** | `pdf_librarian` | Indexar 2–3 PDFs **abiertos, pre-descargados** y localizar pasajes |
-| 28–40 | **Theorizer** | `hypothesis_generator` | Mecanismos e hipótesis comprobables; inspeccionar el run lanzado en la pausa |
-| 40–52 | **DataVoyager** | `data_voyager` | Pregunta dirigida sobre el dataset ya limpio; exigir supuestos, incertidumbre, código |
-| 52–65 | **AutoDiscovery** | `autodiscovery` | Run pre-cocinado + presupuesto vivo de 3–5 experimentos |
+| 0–7 | Encuadre | — | Presentación *De la pregunta al conocimiento* (§5.7): el gancho de las cifras y el bucle de investigación |
+| 7–20 | **Asta · Paper Finder** | `academic_researcher` | "¿Qué evidencia existe sobre \<pregunta de la temática\>?" → 5 fuentes, una frase de por qué importa cada una |
+| 20–32 | **Asta · PDF librarian** | `pdf_librarian` | Indexar 2–3 PDFs **abiertos, pre-descargados** y localizar pasajes |
+| 32–42 | **Theorizer** (solo demo) | `hypothesis_generator` | El facilitador muestra el run lanzado en la pausa: hipótesis como propuestas para probar, no conclusiones |
+| 42–65 | **AutoDiscovery** | `autodiscovery` | Para cuando no se sabe por dónde empezar: run pre-cocinado + presupuesto vivo de 3–5 experimentos (formato por confirmar, ver §8) |
 
 Lo que los participantes **deben inspeccionar** en AutoDiscovery (esto es la lección, no el resultado):
 hipótesis · prior y posterior · valor firmado de `surprise` · código ejecutado · método estadístico ·
@@ -276,10 +293,13 @@ Precauciones ya conocidas:
 Equipos de 2–3, cada equipo con **una** temática. Máximo tres subagentes por equipo: no gana quien usa más
 herramientas, gana quien construye el argumento más verificable.
 
-**Ruta 1 — Research** (para quien viene con una pregunta, no con datos):
+**Ruta 1 — Research** (para quien viene con una pregunta, no con datos). Sigue el bucle de la presentación
+del Bloque 2:
 
 ```
-AutoDiscovery -> Report -> Academic search -> (PDF librarian) -> Data-Driven Document
+Pregunta -> Paper Finder -> PDF librarian -> Analizar datos -> Report -> Data-Driven Document
+                                             (AutoDiscovery si no sabes por dónde empezar;
+                                              si no, el ciclo de datos de Mini-Me)
 ```
 
 **Ruta 2 — Data** (para quien viene con un dataset):
@@ -359,7 +379,7 @@ evidencia y reproducibilidad 20% · interpretación y límites 15% · comunicaci
 
 Mismo instrumento antes y después, para poder graficar el delta en vivo en el cierre.
 
-### 4.1 Encuesta PRE (09:00, 5 min, 6 preguntas)
+### 4.1 Encuesta PRE (08:30, 5 min, 6 preguntas)
 
 | # | Tipo | Pregunta |
 |---|---|---|
@@ -367,10 +387,10 @@ Mismo instrumento antes y después, para poder graficar el delta en vivo en el c
 | 2 | Escala 1–5 | ¿Qué tan cómodo/a te sientes distinguiendo correlación de causalidad en tu propio análisis? |
 | 3 | Opción múltiple | ¿Cuánto tiempo te toma hoy pasar de datos crudos a un primer informe? (<1 día / 1–3 días / 1–2 semanas / >2 semanas) |
 | 4 | Escala 1–5 | ¿Qué tanto confías hoy en un resultado producido por una IA sin verificarlo? |
-| 5 | Multi-selección | ¿Cuáles de estas herramientas has usado? (Academic search / PDF librarian / Theorizer / DataVoyager / AutoDiscovery / ninguna) |
+| 5 | Multi-selección | ¿Cuáles de estas herramientas has usado? (Paper Finder / PDF librarian / Theorizer / AutoDiscovery / ninguna) |
 | 6 | Nube de palabras | En una palabra: ¿qué esperas llevarte de hoy? |
 
-### 4.2 Encuesta POST (13:45, 8 min)
+### 4.2 Encuesta POST (13:15, 8 min)
 
 Preguntas 1–5 **idénticas** (ese es el delta medible), más:
 
@@ -410,10 +430,10 @@ con la laptop bloqueada por políticas de TI; la segunda semana es la ventana de
 
 | Cuándo | Qué | Quién |
 |---|---|---|
-| T-2 sem (8–14 oct) | Sesión con IT: instalación de WSL2 + Ubuntu en laptops de participantes confirmados | IT + Piero |
-| T-2 sem | Instalación de Mini-Me Desktop y provisión del backend desde `vendor/` (sin GitHub) | IT |
-| T-1 sem (15–21 oct) | **Ventana de recuperación** para rezagados + verificación 1:1 | IT |
-| T-1 sem | Cada laptop corre `--preflight` y entrega captura verde | Participante |
+| 9–13 nov | Sesión con IT: instalación de WSL2 + Ubuntu en laptops de participantes confirmados | IT + Piero |
+| 9–13 nov | Instalación de Mini-Me Desktop y provisión del backend desde `vendor/` (sin GitHub) | IT |
+| 16–19 nov | **Ventana de recuperación** para rezagados + verificación 1:1 | IT |
+| hasta 19 nov | Cada laptop corre `--preflight` y entrega captura verde | Participante |
 
 Comando de verificación que se pide a cada participante (una línea, sin ventana gráfica):
 
@@ -433,7 +453,7 @@ Nada se escribe en una terminal y nada se edita a mano.
   tarjeta por participante — nunca proyectada en pantalla.
 - **Pendiente de decisión (ver §8):** ¿una clave por participante o una clave compartida de taller? Afecta al
   presupuesto de créditos y a la trazabilidad de consumo.
-- Confirmar créditos de Asta disponibles **antes** de T-2 sem. No asumir que una promoción anterior sigue
+- Confirmar créditos de Asta disponibles **antes** del 9 de noviembre. No asumir que una promoción anterior sigue
   activa. AutoDiscovery consume un crédito por experimento; con 10 equipos × 5 experimentos son ~50 créditos
   solo en el Bloque 3, más el uso en B2.
 
@@ -451,7 +471,7 @@ volver a contactar GitHub. **Esto tiene que estar hecho antes de la sesión con 
 
 ### 5.4 Congelar la versión
 
-Se congela un commit de `mini-me-desktop` en **T-3 semanas** y todo lo demás (manual PDF, capturas, tarjetas,
+Se congela un commit de `mini-me-desktop` el **viernes 6 de noviembre** y todo lo demás (manual PDF, capturas, tarjetas,
 runs pre-cocinados) se produce contra ese commit. Cualquier cambio posterior obliga a repetir el ensayo.
 
 Estado actual conocido: la app renderiza nativa en Windows/DirectX, lanza el sidecar Python y transmite turnos
@@ -485,58 +505,116 @@ Contenido:
 ### 5.6 Plan de respaldo — cada actividad en línea necesita
 
 Captura o JSON de un resultado real · archivos producidos previamente · informe de ejemplo · código generado ·
-una tarjeta que permita continuar el análisis **sin conexión**. Sin excepciones para Theorizer, DataVoyager y
-AutoDiscovery.
+una tarjeta que permita continuar el análisis **sin conexión**. Sin excepciones para Theorizer y AutoDiscovery.
+
+### 5.7 Presentaciones de los bloques 1 y 2 — Quarto + Reveal.js
+
+Los bloques 1 y 2 abren con una presentación narrativa corta en lugar de diapositivas de viñetas. Viven en
+`presentacion/` y comparten estilo (trazo de pizarra, letra Kalam, paleta provisional de `manual/_brand.typ`):
+
+| Bloque | Archivo | Título | Duración |
+|---|---|---|---|
+| B1 | `data_lifecycle.qmd` | *El viaje de los datos* | ~9 min |
+| B2 | `investigacion.qmd` | *De la pregunta al conocimiento* | ~7 min |
+
+Archivos comunes: `estilo.scss` (estilos) y `boceto.html` (puntas de flecha, etiquetas y contadores). Los
+HTML se generan con `quarto render presentacion/<archivo>.qmd`, no se versionan, y llevan todo incrustado:
+funcionan **sin internet** con doble clic. Se avanza con flecha o barra espaciadora; la tecla **S** abre las
+notas del orador, que traen el guion de cada clic.
+
+**Hilo narrativo.** Una investigadora ficticia, **Isabel**, mejoradora de papa, vuelve del campo con un
+ensayo (30 genotipos × 3 localidades × 3 bloques) y una pregunta: ¿qué genotipos rinden más y lo hacen en
+todas partes? En el B1 limpia y analiza sus datos, y en el diagnóstico descubre que la localidad pesa
+tanto como el genotipo. Esa duda abre el B2. La tabla desordenada de la slide 4 del B1 son **datos de
+ejemplo**; conviene cambiarla por filas reales cuando lleguen los datos de Vilma.
+
+**Estructura** (según las notas de presentación de Simone, MIT Global Teaching Labs):
+
+| Momento | B1 · El viaje de los datos | B2 · De la pregunta al conocimiento |
+|---|---|---|
+| Gancho | Pregunta a la sala: ¿qué parte de tu tiempo se va en preparar datos? | Pregunta a la sala: ¿cuántos artículos leíste el mes pasado? Luego, las cifras reales |
+| Mensaje en una frase + mapa | Mini-Me te acompaña de los datos crudos a un reporte defendible. Preparar → Analizar → Comunicar | Las herramientas de Allen AI leen contigo miles de artículos. Buscar → Leer → Proponer y probar |
+| Cuerpo | Isabel, sus datos desordenados y el ciclo dibujado en 18 clics: el prescriptivo aparece y estalla (fuera de alcance) y Comunicar queda en manos de las personas | El ciclo de datos se encoge y aparece el bucle Pregunta → Paper Finder → PDF librarian → Theorizer (demo) → Analizar datos (AutoDiscovery si no se sabe por dónde empezar), que sube al ciclo de Mini-Me y termina en Generación de conocimiento |
+| Pico de atención a mitad | Votación a mano alzada en el Diagnóstico: ¿genotipo o localidad? | El momento en que los dos viajes se encuentran |
+| Cierre | Repaso de las 3 paradas + llamada a la acción (demo en vivo) + lo que se llevan | Igual |
+| Notas del orador | Frase de apertura de memoria y preguntas probables con respuesta corta | Igual |
+
+**Cifras del gancho del B2.** Son conteos reales de la API de búsqueda masiva de Semantic Scholar (título y
+resumen), consultados el **4 de noviembre de 2026**:
+
+| Consulta | Artículos | Leyendo uno por hora, 8 h al día |
+|---|---:|---|
+| `("genotype by environment" \| "genotype x environment" \| "genotype-by-environment") + potato` | 224 | casi 6 semanas |
+| `potato + yield` | 35,419 | casi 18 años |
+| `potato + yield`, año 2025 | 1,836 | casi un año laboral |
+
+Repetir las consultas la semana del ensayo y actualizar la slide si cambian (la slide muestra la fecha).
+
+**Mantenimiento.** La primera slide del bucle del B2 usa una **copia fija** del diagrama del B1. Si se
+cambia el ciclo en `data_lifecycle.qmd`, hay que actualizar también la copia en `investigacion.qmd`.
+
+**Pendientes en las notas del orador:** cómo se accede a Mini-Me después del taller, y si Semantic Scholar
+cubre bien la literatura en español (ver §8).
+
+### 5.8 Nota de concepto y registro
+
+- **Nota de concepto** redactada con la plantilla institucional (antecedentes, justificación, objetivos,
+  organizadores, actividades, público, resultados, presupuesto y comunicación), en tono narrativo y con la
+  IA presentada como fortaleza. **Actualizar la fecha a martes 24/11/2026.**
+- **Formulario de registro en Microsoft Forms** (~3 min). Pide lo mínimo necesario para organizar el taller:
+  nombre, correo institucional, programa o unidad y cargo; datos de la laptop (propia o institucional,
+  sistema operativo, fecha disponible para la instalación con IT); temática preferida, comodidad analizando
+  datos (1–5) y uso previo de IA, para armar equipos mixtos; restricciones alimentarias, accesibilidad y
+  consentimiento de fotos. **No** pide DNI, teléfono ni fecha de nacimiento, y el encabezado aclara que los
+  datos se eliminan después del evento. A quien responda Mac o Linux se le contacta antes, porque la
+  instalación solo contempla Windows.
 
 ---
 
 ## 6. Cronograma y milestones
 
-Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
+Hoy es **4 de noviembre de 2026**. Al martes 24 de noviembre quedan **20 días**.
 
 ### 6.1 Milestones
 
 | ID | Milestone | Fecha límite | Responsable | Definición de "hecho" |
 |---|---|---|---|---|
-| **M1** | Alcance y fecha confirmados | **vie 11 sep** | Piero | Fecha, sede, duración (4/5/6 h) y lista de invitados cerradas; agenda aprobada |
-| **M2** | Datos crudos de las 4 temáticas entregados | **vie 18 sep** | Vilma | Los 4 datasets **en la estructura que ella use**, más las 6 respuestas de significado (§2.2); **anonimización de encuestas hecha y aprobada** (§2.4) |
-| **M3** | Pipeline `adapt` → `corrupt` → `score` | **vie 25 sep** | Piero | ✅ Los tres scripts escritos y probados de punta a punta (Excel desordenado → adaptado → 71 defectos → 0% / 100% en los extremos). Pendiente solo aplicarlo a los datos reales cuando lleguen |
-| **M4** | Paquete didáctico v1 | **vie 2 oct** | Piero + facilitadores | Manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla del Data-Driven Document, Mentimeter PRE/POST creados |
-| **M5** | Build congelado + bundle + preflight verde | **mié 7 oct** | Piero | Commit congelado, `bundle-backend.sh` ejecutado, `--preflight` verde en 2 laptops de prueba, créditos Asta confirmados |
-| **M6** | Instalación en laptops de participantes | **vie 16 oct** | IT + Piero | ≥ 90% de laptops confirmadas con WSL2 + app + preflight verde |
-| **M7** | Ensayo general completo | **mar 20 oct** | Equipo completo | Los 3 bloques corridos de punta a punta con los datos reales, cronometrados; runs pre-cocinados guardados; respaldos offline listos |
-| **M8** | **Workshop** | **jue 22 oct** | Todos | Ejecutado |
-| **M9** | Cierre y reporte | **vie 30 oct** | Piero | Deltas de Mentimeter, métricas objetivas, Data-Driven Documents recopilados, lecciones y decisión de repetición |
+| **M1** | Alcance y fecha confirmados | — | Piero | ✅ Fecha (24 nov), hora (8:00–13:30), sede (Auditorio) y duración (5 h). **Falta la lista de participantes**, que sale del formulario de registro |
+| **M2** | Datos crudos de las 4 temáticas entregados | **vie 6 nov** | Vilma | Los 4 datasets **en la estructura que ella use**, más las 6 respuestas de significado (§2.2); **anonimización de encuestas hecha y aprobada** (§2.4). *Estado por confirmar* |
+| **M3** | Pipeline `adapt` → `corrupt` → `score` | — | Piero | ✅ Los tres scripts escritos y probados de punta a punta (Excel desordenado → adaptado → 71 defectos → 0% / 100% en los extremos). Pendiente solo aplicarlo a los datos reales cuando lleguen |
+| **M4** | Paquete didáctico v1 | **vie 13 nov** | Piero + facilitadores | ✅ Presentaciones B1 y B2 (§5.7) y nota de concepto. Pendiente: manual PDF v1, tarjetas de las 2 rutas, prompts exactos, plantilla del Data-Driven Document, Mentimeter PRE/POST |
+| **M5** | Build congelado + bundle + preflight verde | **vie 6 nov** | Piero | Commit congelado, `bundle-backend.sh` ejecutado, `--preflight` verde en 2 laptops de prueba, créditos Asta confirmados |
+| **M6** | Instalación en laptops de participantes | **jue 19 nov** | IT + Piero | ≥ 90% de laptops confirmadas con WSL2 + app + preflight verde (sesión 9–13 nov, recuperación 16–19 nov) |
+| **M7** | Ensayo general completo | **vie 20 nov** | Equipo completo | Los 3 bloques corridos de punta a punta con los datos reales, cronometrados, incluidas las presentaciones; runs pre-cocinados guardados; respaldos offline listos |
+| **M8** | **Workshop** | **mar 24 nov** | Todos | Ejecutado |
+| **M9** | Cierre y reporte | **vie 4 dic** | Piero | Deltas de Mentimeter, métricas objetivas, Data-Driven Documents recopilados, lecciones y decisión de repetición |
 
 ### 6.2 Semana a semana
 
 | Semana | Fechas | Foco | Entregable |
 |---|---|---|---|
-| **T-7** | 3–9 sep | Decisiones de alcance; pedido formal de datos a Vilma; reserva de sala | M1 |
-| **T-6** | 10–16 sep | Recepción y revisión de datos; anonimización; visto bueno de protección de datos | M2 |
-| **T-5** | 17–23 sep | Pipeline de ensuciado; diccionarios; claves de facilitador | M3 (inicio) |
-| **T-4** | 24–30 sep | Cierre del pipeline; redacción del manual; diseño de Mentimeter | M3, M4 (inicio) |
-| **T-3** | 1–7 oct | Congelar build; bundle del backend; confirmar créditos; **dry-run técnico interno** | M4, M5 |
-| **T-2** | 8–14 oct | **Sesión de instalación con IT**; producción de runs pre-cocinados y respaldos offline | M6 (inicio) |
-| **T-1** | 15–21 oct | Ventana de recuperación de instalaciones; **ensayo general**; impresión de materiales | M6, M7 |
-| **T-0** | 22 oct | Workshop | M8 |
-| **T+1** | 23–30 oct | Análisis de resultados y reporte | M9 |
+| Antes | sep–oct | Pipeline de ensuciado y scorers; esqueleto del manual | M3 ✅ |
+| **T-3** | 2–6 nov | ✅ Presentaciones B1/B2 y nota de concepto. Publicar el formulario de registro; recibir y revisar los datos de Vilma; congelar build; bundle del backend; confirmar créditos | M2, M5 |
+| **T-2** | 9–13 nov | **Sesión de instalación con IT**; runs pre-cocinados y respaldos offline; manual, tarjetas y Mentimeter | M4, M6 (inicio) |
+| **T-1** | 16–20 nov | Ventana de recuperación (16–19); **ensayo general** (vie 20); impresión de materiales | M6, M7 |
+| **T-0** | 23–24 nov | Gate final (lun 23) y workshop (mar 24) | M8 |
+| **T+1** | 25 nov – 4 dic | Análisis de resultados y reporte | M9 |
 
 ### 6.3 Puntos de Go / No-Go
 
 | Gate | Fecha | Criterio | Si no se cumple |
 |---|---|---|---|
-| **G1** | 30 sep | Datos reales listos y aprobados para las 4 temáticas | Regenerar el equivalente sintético con `generate_datasets.py` y sustituir solo la(s) temática(s) faltante(s) |
-| **G2** | 7 oct | Build congelado con preflight verde + créditos confirmados | Bloque 2 pasa a modo demostración proyectada con runs pre-cocinados |
-| **G3** | 16 oct | ≥ 90% de laptops instaladas | 70–90%: trabajo en parejas obligatorio. < 70%: **posponer al 29 de octubre** o mover a laboratorio con máquinas preparadas |
-| **G4** | 21 oct | Ensayo general completo, respaldos offline en disco | Recortar a la versión de 4 h y eliminar AutoDiscovery en vivo |
+| **G1** | mié 11 nov | Datos reales listos y aprobados para las 4 temáticas | Regenerar el equivalente sintético con `generate_datasets.py` y sustituir solo la(s) temática(s) faltante(s) |
+| **G2** | vie 6 nov | Build congelado con preflight verde + créditos confirmados | Bloque 2 pasa a modo demostración proyectada con runs pre-cocinados |
+| **G3** | jue 19 nov | ≥ 90% de laptops instaladas | 70–90%: trabajo en parejas obligatorio. < 70%: **posponer una semana** (fecha por acordar) o mover a laboratorio con máquinas preparadas |
+| **G4** | lun 23 nov | Ensayo general completo, respaldos offline en disco | Recortar a la versión de 4 h y eliminar AutoDiscovery en vivo |
 
 ### 6.4 Tracking
 
 - Revisión semanal de 30 min, **jueves**, contra esta tabla de milestones.
 - Cada milestone tiene un único responsable nombrado. Sin responsable, no hay milestone.
 - Un milestone atrasado más de 3 días escala inmediatamente al gate siguiente para decidir recorte, no para
-  negociar la fecha.
+  negociar la fecha. Con 20 días por delante, cualquier atraso en M2 o M5 se decide en el gate, no se espera.
 
 ---
 
@@ -554,6 +632,8 @@ Hoy es **3 de septiembre de 2026**. Al 22 de octubre quedan **7 semanas**.
 | R7 | Un fallo de herramienta produce un artefacto con apariencia exitosa | Media | Alto | Enseñarlo como contenido: verificar `status`, task id y archivos reales |
 | R8 | Red del venue insuficiente para 30 clientes concurrentes | Media | Alto | Prueba de carga en el ensayo; hotspot de respaldo; respaldos offline |
 | R9 | Heterogeneidad de nivel entre 20–30 participantes | Alta | Medio | Equipos mixtos de 2–3; facilitador de apoyo por cada 8–10 personas |
+| R10 | Las cifras del gancho del B2 cambian o la API de Semantic Scholar limita las consultas | Media | Bajo | Repetir las consultas la semana del ensayo (§5.7); la slide muestra la fecha de consulta |
+| R11 | Calendario comprimido: 20 días entre esta versión y el taller | Alta | Alto | Gates G1–G4 sin negociación de fechas; materiales ya listos (presentaciones, pipeline) liberan tiempo para datos e instalación |
 
 **Equipo mínimo el día del workshop:** 1 facilitador principal + 2 facilitadores de apoyo + 1 persona de IT
 de guardia. Con 30 participantes, 3 facilitadores es el piso, no el ideal.
@@ -562,18 +642,24 @@ de guardia. Con 30 participantes, 3 facilitadores es el piso, no el ideal.
 
 ## 8. Decisiones pendientes
 
-Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
+Para cerrar antes de la sesión de instalación (lunes 9 de noviembre):
 
-1. **Duración final:** ¿4, 5 o 6 horas? Recomiendo 5 h; con 4 h el hands-on queda apretado para producir un
-   Data-Driven Document decente.
-2. **API keys:** ¿una por participante o una compartida del taller? Afecta presupuesto y trazabilidad.
-3. **Presupuesto de créditos Asta** disponible y confirmado.
-4. **Encuestas a agricultores:** ¿existe ya una versión anonimizada o hay que producirla? ¿Quién firma el
+1. **API keys:** ¿una por participante o una compartida del taller? Afecta presupuesto y trazabilidad.
+2. **Presupuesto de créditos Asta** disponible y confirmado.
+3. **Encuestas a agricultores:** ¿existe ya una versión anonimizada o hay que producirla? ¿Quién firma el
    visto bueno de uso?
-5. **Sede y equipamiento:** ¿sala con proyector, tomas de corriente para 30 laptops y red probada?
-6. **Lista de participantes confirmados** — la instalación con IT depende de tener nombres, no estimados.
+4. **Equipamiento del Auditorio:** mesas, tomas de corriente para 30 laptops, proyector y red probada para 30
+   conexiones simultáneas.
+5. **Lista de participantes confirmados**, a partir del formulario de registro. La instalación con IT depende
+   de tener nombres, no estimados.
+6. **AutoDiscovery:** ¿ejercicio en vivo con presupuesto de experimentos, o demostración con el run
+   pre-cocinado?
+7. **Acceso a Mini-Me después del taller:** definir la respuesta para el Q&A de las presentaciones.
+8. **Literatura en español:** verificar la cobertura de Semantic Scholar para el Q&A del B2.
 
-**Ya cerrado:** fecha **jueves 22 de octubre de 2026**; galería **voluntaria, máximo 2 grupos** presentando.
+**Ya cerrado:** fecha **martes 24 de noviembre de 2026**, de 8:00 a 13:30, en el **Auditorio**; duración
+canónica de **5 h**; galería **voluntaria, máximo 2 grupos** presentando; B2 con Asta (Paper Finder, PDF
+librarian), Theorizer **solo como demo** y AutoDiscovery, **sin DataVoyager**.
 
 ---
 
@@ -583,11 +669,14 @@ Necesito confirmación en estos puntos para cerrar M1 (11 de septiembre):
 - [x] `scripts/adapt_dataset.py` (normaliza la estructura de Vilma a la nuestra) — **hecho**
 - [x] `scripts/corrupt_dataset.py` (corrupción determinística + changelog celda a celda) — **hecho**
 - [x] `scripts/score_recovery.py` (% de defectos reparados, daño colateral, filas borradas) — **hecho**
+- [x] Presentaciones de los bloques 1 y 2 en Quarto + Reveal.js (§5.7) — **hecho**
+- [x] Nota de concepto — **redactada**; falta actualizar la fecha a 24/11
+- [ ] Formulario de registro en Microsoft Forms (§5.8) — preguntas definidas, falta publicarlo
 - [~] Manual del workshop en Quarto + Typst — **esqueleto que compila, 11 páginas**; falta contenido de las 4 temáticas y la paleta oficial de CIP — M4
 - [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
 - [ ] Prompts exactos por actividad — M4
 - [ ] Mentimeter PRE y POST configurados — M4
-- [ ] Runs pre-cocinados de Theorizer, DataVoyager y AutoDiscovery (4 temáticas) — M7
+- [ ] Runs pre-cocinados de Theorizer y AutoDiscovery (4 temáticas) — M7
 - [ ] PDFs abiertos pre-descargados para `pdf_librarian` (2–3 por temática) — M7
 - [ ] Respuestas esperadas y claves de defectos para facilitadores — M3/M7
 - [ ] Rúbrica de la galería — M4

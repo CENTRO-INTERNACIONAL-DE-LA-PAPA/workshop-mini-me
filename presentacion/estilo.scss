@@ -1,0 +1,560 @@
+/*-- scss:defaults --*/
+
+// Paleta tomada de manual/_brand.typ (provisional hasta tener el manual de marca de CIP).
+$cip-azul:   #0B5A8A;
+$cip-verde:  #5C9A3C;
+$cip-tierra: #C4622D;
+$cip-gris:   #3F464C;
+$tinta:      #2E3439;
+$papel:      #FBFAF6;
+$ocre:       #A9740F;
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+$font-family-sans-serif: "Kalam", "Comic Neue", cursive;
+$presentation-heading-font: "Kalam", cursive;
+$presentation-heading-color: $cip-azul;
+$presentation-heading-font-weight: 700;
+$presentation-font-size-root: 38px;
+$body-bg: $papel;
+$body-color: $cip-gris;
+$link-color: $cip-azul;
+
+/*-- scss:rules --*/
+
+.reveal h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+// Subrayado de plumón bajo los títulos.
+.reveal h2::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 10px;
+  margin-top: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 10'%3E%3Cpath d='M2 6 C 40 2, 80 9, 120 5 S 170 3, 178 6' fill='none' stroke='%235C9A3C' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+}
+
+// ---------------------------------------------------------------- portada
+#title-slide {
+  text-align: left;
+  padding-top: 170px;
+
+  .title {
+    font-size: 2.6em;
+    color: $cip-azul;
+  }
+  .subtitle {
+    font-size: 1.2em;
+    color: $cip-gris;
+    font-weight: 300;
+  }
+  .quarto-title-authors {
+    justify-content: flex-start;
+  }
+  .quarto-title-author-name, .date {
+    font-size: 0.75em;
+    color: $cip-verde;
+    margin: 0;
+  }
+}
+
+// ---------------------------------------------------------------- Isabel
+.isabel {
+  font-size: 1.25em;
+  line-height: 1.55;
+
+  > div {
+    margin-bottom: 0.7em;
+  }
+
+  .cifras {
+    color: $cip-azul;
+    font-weight: 700;
+  }
+  .pregunta {
+    margin-top: 1.2em;
+    padding: 0.5em 0.9em;
+    border-left: 6px solid $cip-tierra;
+    background: rgba(196, 98, 45, 0.07);
+    font-size: 1.1em;
+  }
+}
+
+// ---------------------------------------------------------------- datos sucios
+.sucio-wrap {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+table.sucio {
+  border-collapse: collapse;
+  font-family: "DejaVu Sans Mono", Consolas, monospace;
+  font-size: 0.66em;
+  background: #fff;
+  box-shadow: 4px 5px 0 rgba(46, 52, 57, 0.12);
+
+  th {
+    font-family: "Kalam", cursive;
+    font-size: 1.15em;
+    background: #E6EDF2;
+    color: $tinta;
+    padding: 6px 14px;
+    border: 1px solid #CBD9E3;
+  }
+  td {
+    white-space: nowrap;
+    padding: 6px 14px;
+    border: 1px solid #DCE4EA;
+    color: $tinta;
+  }
+}
+
+// Resaltador: la celda se "pinta" al llegar su fragmento.
+.reveal table.sucio .fragment.marca,
+.reveal table.sucio .fragment.marca td {
+  transition: background-color 0.35s ease;
+}
+.reveal table.sucio td.fragment.marca.visible,
+.reveal table.sucio tr.fragment.marca.visible td {
+  background-color: rgba(255, 210, 0, 0.5);
+}
+
+.reveal ul.notas-sucio {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  color: $cip-tierra;
+
+  li {
+    list-style: none;
+    margin-bottom: 0.4em;
+  }
+  // Cuadrito de resaltador: la nota aparece junto con su celda pintada.
+  li::before {
+    content: "";
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 0.45em;
+    background: rgba(255, 210, 0, 0.75);
+    border-radius: 2px;
+  }
+}
+
+.remate {
+  margin-top: 1.4em;
+  font-size: 1.2em;
+}
+.chico {
+  font-size: 0.5em;
+  color: #8A949B;
+}
+
+// ---------------------------------------------------------------- ciclo de vida
+.reveal .slides section.diagrama {
+  height: 900px;
+  padding: 0;
+
+  h2 {
+    display: none;
+  }
+}
+
+svg.ciclo {
+  position: absolute;
+  inset: 0;
+  width: 1600px;
+  height: 900px;
+  font-family: "Kalam", cursive;
+
+  .trazo {
+    fill: none;
+    stroke: $tinta;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .trazo2 {
+    fill: none;
+    stroke: $tinta;
+    stroke-width: 1.2;
+    opacity: 0.55;
+  }
+  .caja {
+    fill: none;
+    stroke: $tinta;
+    stroke-width: 2;
+    stroke-dasharray: 10 9;
+  }
+  .rotulo-caja {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  .prep .rotulo-caja { fill: $cip-verde; }
+  .anal .rotulo-caja { fill: $cip-azul; }
+
+  .nodo circle.trazo { fill: #fff; }
+  .nodo.prep circle.trazo { fill: #EEF5E9; }
+  .nodo.anal circle.trazo { fill: #E8F1F7; }
+  .nodo.salida circle.trazo { fill: #FAEDE4; }
+
+  .nombre {
+    font-size: 25px;
+    fill: $tinta;
+    text-anchor: middle;
+  }
+  .pregunta {
+    font-size: 23px;
+    fill: $cip-gris;
+    text-anchor: middle;
+  }
+
+  // Etiqueta "Mini-Me · ...". El ancho del fondo lo ajusta boceto.html.
+  .etiqueta rect {
+    fill: $cip-azul;
+    rx: 15;
+  }
+  .etiqueta text {
+    font-size: 17px;
+    font-weight: 700;
+    fill: #fff;
+    text-anchor: middle;
+  }
+  .etiqueta.humano rect { fill: $cip-tierra; }
+
+  // Flechas que se dibujan solas: pathLength="1" en el SVG.
+  .flecha {
+    fill: none;
+    stroke: $tinta;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-dasharray: 1 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.6s ease;
+  }
+  .punta {
+    fill: none;
+    stroke: $tinta;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0;
+    transition: opacity 0.15s ease 0.5s;
+  }
+  .vuelta, .vuelta + .punta { stroke: $cip-verde; }
+
+  .valor .flecha {
+    stroke: $cip-gris;
+    stroke-width: 3.2;
+    transition-duration: 1.2s;
+  }
+  .valor .punta { stroke: $cip-gris; stroke-width: 3.2; transition-delay: 1.1s; }
+
+  .eje {
+    font-size: 24px;
+    fill: $cip-gris;
+  }
+  .eje-en {
+    font-size: 16px;
+    fill: #8A949B;
+    font-style: italic;
+  }
+  .eje-fin { font-weight: 700; fill: $cip-azul; }
+
+  .viajero {
+    fill: $cip-verde;
+  }
+
+  .fantasma circle {
+    fill: none;
+    stroke: #A9B2B8;
+    stroke-width: 2;
+    stroke-dasharray: 4 7;
+  }
+  .fantasma text {
+    font-size: 18px;
+    fill: #8A949B;
+    text-anchor: middle;
+  }
+  .chispas line {
+    stroke: $cip-tierra;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+}
+
+// Al aparecer un fragmento: la flecha se traza y luego asoma la punta y la etiqueta.
+.reveal svg.ciclo .fragment.visible .flecha { stroke-dashoffset: 0; }
+.reveal svg.ciclo .fragment.visible .punta { opacity: 1; }
+.reveal svg.ciclo .fragment .etiqueta {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.35s;
+}
+.reveal svg.ciclo .fragment.visible .etiqueta { opacity: 1; }
+
+// ------------------------------------------------ el prescriptivo explota
+.reveal svg.ciclo .fragment.estalla {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.reveal svg.ciclo .fragment.estalla.visible {
+  animation: estallar 0.65s ease-in forwards;
+}
+@keyframes estallar {
+  0%   { transform: scale(1);    opacity: 1; }
+  35%  { transform: scale(1.18); opacity: 1; }
+  100% { transform: scale(1.7);  opacity: 0; }
+}
+
+.reveal svg.ciclo .fragment.chispas {
+  opacity: 0;
+  transform-box: view-box;
+}
+.reveal svg.ciclo .fragment.chispas.visible {
+  animation: chispear 0.7s ease-out forwards;
+}
+@keyframes chispear {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.reveal svg.ciclo .fragment.fantasma {
+  transition: opacity 0.4s ease 0.55s;
+}
+
+.reveal svg.ciclo .fragment.apaga {
+  transition: opacity 0.5s ease 0.3s;
+}
+.reveal svg.ciclo .fragment.apaga.visible {
+  opacity: 0.25;
+}
+
+// ---------------------------------------------------------------- ciclo ya dibujado (Bloque 2)
+// Copia fija del ciclo: todo visible, sin clics.
+.reveal svg.ciclo.estatico .flecha { stroke-dashoffset: 0; }
+.reveal svg.ciclo.estatico .punta { opacity: 1; }
+
+// Versión pequeña arriba a la derecha; auto-animate la encoge desde la slide anterior.
+.reveal svg.ciclo.mini {
+  inset: auto;
+  left: 740px;
+  top: 20px;
+  width: 850px;
+  height: 480px;
+
+  .trazo, .flecha, .punta { stroke-width: 4; }
+  .caja { stroke-width: 3; }
+}
+
+svg.ciclo {
+  .foco {
+    fill: none;
+    stroke: $cip-tierra;
+    stroke-width: 4;
+    stroke-dasharray: 10 8;
+    animation: girar 1.6s linear infinite;
+  }
+  .foco-caja {
+    fill: rgba(11, 90, 138, 0.07);
+    stroke: $cip-azul;
+    stroke-width: 4;
+    stroke-dasharray: 12 8;
+  }
+  .nota-flecha {
+    font-size: 22px;
+    font-weight: 700;
+    fill: $cip-azul;
+  }
+
+  .inv .rotulo-caja { fill: $ocre; }
+  .nodo.inv circle.trazo { fill: #FBF3DF; }
+  .nodo.demo circle.trazo {
+    fill: #fff;
+    stroke-dasharray: 9 7;
+  }
+  .nodo.final circle.trazo {
+    fill: #FAEDE4;
+    stroke-width: 3.5;
+  }
+  .nombre.chica { font-size: 21px; }
+  .etiqueta.asta rect { fill: #3F7A2A; }
+}
+@keyframes girar {
+  to { stroke-dashoffset: -36; }
+}
+
+// ---------------------------------------------------------------- relato de Isabel
+.relato {
+  position: absolute;
+  left: 40px;
+  top: 420px;
+  width: 500px;
+
+  .paso {
+    background: #fff;
+    border: 2px solid $tinta;
+    border-radius: 14px 18px 12px 20px;
+    box-shadow: 5px 6px 0 rgba(46, 52, 57, 0.12);
+    padding: 18px 24px 20px;
+    font-size: 27px;
+    line-height: 1.4;
+    color: $tinta;
+  }
+  .kicker {
+    display: block;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .k-prep { color: $cip-verde; }
+  .k-anal { color: $cip-azul; }
+  .k-sal  { color: $cip-tierra; }
+  .k-inv  { color: $ocre; }
+
+  &.arriba {
+    top: 40px;
+    width: 640px;
+  }
+}
+
+// ---------------------------------------------------------------- cierre
+.reveal .slides section.final h2 {
+  display: none;
+}
+
+.cierre {
+  margin-top: 140px;
+  font-size: 1.9em;
+  line-height: 1.3;
+  color: $cip-azul;
+  font-weight: 700;
+
+  .segunda { color: $cip-tierra; }
+}
+.envivo {
+  margin-top: 1em;
+  font-size: 1.1em;
+  color: $cip-verde;
+}
+
+// ---------------------------------------------------------------- gancho
+.reveal .slides section.gancho h2 {
+  display: none;
+}
+.pregunta-grande {
+  margin-top: 110px;
+  font-size: 1.75em;
+  line-height: 1.3;
+  color: $cip-azul;
+  font-weight: 700;
+
+  strong { color: $cip-tierra; }
+}
+.opciones {
+  display: flex;
+  gap: 36px;
+  margin-top: 1.1em;
+
+  .op {
+    background: #fff;
+    border: 2px solid $tinta;
+    border-radius: 14px 18px 12px 20px;
+    box-shadow: 5px 6px 0 rgba(46, 52, 57, 0.12);
+    padding: 14px 28px;
+    font-size: 0.95em;
+    color: $tinta;
+  }
+}
+.pregunta-grande.compacta {
+  margin-top: 30px;
+  font-size: 1.4em;
+}
+.remate-gancho {
+  margin-top: 1.3em;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: $cip-verde;
+}
+
+// Cifra grande que cuenta hacia arriba (boceto.html la anima).
+.cifras-gancho {
+  display: flex;
+  gap: 70px;
+  margin-top: 0.6em;
+}
+.cifra-bloque {
+  .cifra {
+    display: block;
+    font-size: 2.6em;
+    font-weight: 700;
+    line-height: 1;
+    color: $cip-tierra;
+  }
+  .cifra-label {
+    display: block;
+    font-size: 0.7em;
+    color: $cip-gris;
+    max-width: 420px;
+  }
+}
+.lectura {
+  margin-top: 1em;
+  font-size: 0.95em;
+  color: $tinta;
+
+  strong { color: $cip-tierra; }
+}
+.fuente {
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  font-size: 0.45em;
+  color: #8A949B;
+}
+
+// ---------------------------------------------------------------- en una frase
+.bluf {
+  font-size: 1.45em;
+  line-height: 1.35;
+  color: $tinta;
+  max-width: 1350px;
+
+  strong { color: $cip-azul; }
+}
+.reveal svg.ciclo.mapa {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 1100px;
+  height: 253px;
+  margin: 70px auto 0;
+
+  .nombre { font-size: 28px; font-weight: 700; }
+  .num { font-size: 24px; fill: #8A949B; }
+}
+
+// ---------------------------------------------------------------- cierre fuerte
+.recap {
+  font-size: 1.05em;
+  color: $tinta;
+
+  ol { margin-top: 0.3em; }
+  li { margin-bottom: 0.25em; }
+}
+.cierre.chico-cierre {
+  margin-top: 0.9em;
+  font-size: 1.3em;
+}
+.regalo {
+  margin-top: 0.8em;
+  font-size: 0.85em;
+  color: $cip-tierra;
+}

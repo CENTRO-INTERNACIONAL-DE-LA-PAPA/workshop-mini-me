@@ -1,0 +1,678 @@
+---
+title: "De la pregunta al conocimiento"
+subtitle: "Cómo Allen AI acompaña a Isabel a investigar"
+author: "Digital & Data · CIP"
+date: 2026-11-24
+date-format: "D [de] MMMM [de] YYYY"
+lang: es
+format:
+  revealjs:
+    theme: [default, estilo.scss]
+    width: 1600
+    height: 900
+    margin: 0.03
+    center: false
+    transition: fade
+    background-transition: fade
+    slide-number: c/t
+    controls: false
+    progress: true
+    hash: true
+    embed-resources: true
+    include-after-body: boceto.html
+---
+
+## {.gancho}
+
+::: {.pregunta-grande .compacta}
+✋ ¿Cuántos artículos científicos leíste completos el mes pasado?
+:::
+
+::: {.fragment .lectura}
+Tomemos un solo tema: la interacción genotipo × ambiente en papa.
+:::
+
+::: {.cifras-gancho}
+::: {.cifra-bloque .fragment}
+[224]{.cifra .contador data-hasta="224"}
+[artículos sobre interacción genotipo × ambiente en papa]{.cifra-label}
+:::
+
+::: {.cifra-bloque .fragment}
+[35,419]{.cifra .contador data-hasta="35419"}
+[artículos sobre rendimiento de papa]{.cifra-label}
+:::
+
+::: {.cifra-bloque .fragment}
+[1,836]{.cifra .contador data-hasta="1836"}
+[publicados solo en 2025]{.cifra-label}
+:::
+:::
+
+::: {.fragment .lectura}
+Leyendo uno por hora, 8 horas al día: **casi 6 semanas** para un solo tema, **casi un año**
+para lo publicado en 2025 y **casi 18 años** para todo.
+:::
+
+::: {.fragment .remate-gancho}
+Ningún humano puede leer todo esto. Pero sí puede decidir qué importa.
+:::
+
+[Fuente: Semantic Scholar, búsqueda booleana en título y resumen, consultada el 4 de noviembre de 2026.]{.fuente}
+
+::: notes
+**Apertura (de memoria):** "Una pregunta antes de empezar. Levanten la mano…"
+
+(~1,5 min) Pedir manos: ¿uno?, ¿cinco?, ¿diez? Luego las cifras, una por clic, dejando que el
+contador termine. Las cuentas: 224 ÷ 8 = 28 días hábiles; 1 836 ÷ 8 ≈ 230 días hábiles;
+35 419 ÷ 8 ≈ 4 430 días hábiles, unos 18 años de 250 días.
+
+Consultas exactas (API de búsqueda masiva de Semantic Scholar):
+`("genotype by environment" | "genotype x environment" | "genotype-by-environment") + potato`,
+`potato + yield` y `potato + yield` con año 2025. Si cambian antes del taller, actualizar.
+:::
+
+## En una frase
+
+::: {.bluf}
+Las herramientas de Allen AI leen contigo miles de artículos para que **tú decidas cuáles importan**.
+:::
+
+```{=html}
+<svg class="ciclo mapa" viewBox="0 0 1000 230" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Tres paradas: buscar, leer, proponer y probar">
+  <defs>
+    <filter id="aspero-m" filterUnits="userSpaceOnUse" x="-1000" y="-230" width="2000" height="460">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g class="fragment">
+    <g class="nodo inv" transform="translate(150 115)">
+      <circle r="82" class="trazo" filter="url(#aspero-m)"/>
+      <ellipse rx="84" ry="78" transform="rotate(-10)" class="trazo2" filter="url(#aspero-m)"/>
+      <text class="nombre" y="-8"><tspan class="num">1</tspan><tspan x="0" dy="38">Buscar</tspan></text>
+    </g>
+  </g>
+  <g class="fragment">
+    <path class="flecha" pathLength="1" d="M 245 115 L 405 115" filter="url(#aspero-m)"/>
+    <g class="nodo inv" transform="translate(500 115)">
+      <circle r="82" class="trazo" filter="url(#aspero-m)"/>
+      <ellipse rx="84" ry="79" transform="rotate(8)" class="trazo2" filter="url(#aspero-m)"/>
+      <text class="nombre" y="-8"><tspan class="num">2</tspan><tspan x="0" dy="38">Leer</tspan></text>
+    </g>
+  </g>
+  <g class="fragment">
+    <path class="flecha" pathLength="1" d="M 595 115 L 755 115" filter="url(#aspero-m)"/>
+    <g class="nodo inv" transform="translate(850 115)">
+      <circle r="82" class="trazo" filter="url(#aspero-m)"/>
+      <ellipse rx="84" ry="78" transform="rotate(-6)" class="trazo2" filter="url(#aspero-m)"/>
+      <text class="nombre" y="-24"><tspan class="num">3</tspan><tspan x="0" dy="36">Proponer</tspan><tspan x="0" dy="32">y probar</tspan></text>
+    </g>
+  </g>
+</svg>
+```
+
+::: notes
+(~30 s) El mensaje completo, de entrada, y las tres paradas: son los tres mensajes del cierre.
+"Para verlo, volvamos con Isabel."
+:::
+
+## {.diagrama auto-animate=true}
+
+```{=html}
+<svg class="ciclo estatico completo" data-id="ciclo" viewBox="0 0 1700 960" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Ciclo de vida de los datos: preparar (exploración, validación, limpieza), analizar (descriptivo, diagnóstico, predictivo), reporte y comunicar">
+  <defs>
+    <filter id="aspero-a" filterUnits="userSpaceOnUse" x="-1700" y="-960" width="3400" height="1920">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <path id="eje-arriba-a" d="M 820 576 L 1640 346"/>
+    <path id="eje-abajo-a" d="M 832 620 L 1640 393"/>
+  </defs>
+
+
+  <!-- 1 · Exploración -->
+  <g>
+    <g class="nodo prep" transform="translate(160 240)">
+      <circle r="70" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="72" ry="67" transform="rotate(-14)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Exploración</text>
+      <g class="etiqueta" transform="translate(0 -102)"><rect/><text y="6">Mini-Me · exploración</text></g>
+    </g>
+  </g>
+
+  <!-- 2 · Validación -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 228 215 Q 270 188 312 215" filter="url(#aspero-a)"/>
+    <g class="nodo prep" transform="translate(380 240)">
+      <circle r="70" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="71" ry="68" transform="rotate(10)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Validación</text>
+      <g class="etiqueta" transform="translate(0 -102)"><rect/><text y="6">Mini-Me · diccionario</text></g>
+    </g>
+  </g>
+
+  <!-- 3 · Limpieza -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 448 215 Q 490 188 532 215" filter="url(#aspero-a)"/>
+    <g class="nodo prep" transform="translate(600 240)">
+      <circle r="70" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="72" ry="66" transform="rotate(-6)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Limpieza</text>
+      <g class="etiqueta" transform="translate(0 -102)"><rect/><text y="6">Mini-Me · limpieza</text></g>
+    </g>
+  </g>
+
+  <!-- 4 · de vuelta a validar -->
+  <g>
+    <path class="flecha vuelta" pathLength="1" d="M 532 268 Q 490 295 448 268" filter="url(#aspero-a)"/>
+  </g>
+
+  <!-- 5 · de vuelta a explorar, y el ciclo empieza a girar -->
+  <g>
+    <path class="flecha vuelta" pathLength="1" d="M 575 302 Q 380 440 185 302" filter="url(#aspero-a)"/>
+  </g>
+
+  <!-- 6 · es un ciclo -->
+  <g class="prep">
+    <rect class="caja" x="40" y="100" width="680" height="290" rx="24" filter="url(#aspero-a)"/>
+    <text class="rotulo-caja" x="58" y="84">Preparar los datos</text>
+  </g>
+
+  <!-- 7 · primer reporte: calidad de datos -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 585 396 Q 640 570 698 684" filter="url(#aspero-a)"/>
+    <g class="nodo salida" transform="translate(740 730)">
+      <circle r="60" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="62" ry="57" transform="rotate(-12)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Reporte</text>
+      <g class="etiqueta" transform="translate(165 0)"><rect/><text y="6">Mini-Me · reporte</text></g>
+    </g>
+  </g>
+
+  <!-- ====================== ANALIZAR ====================== -->
+
+  <!-- 8 · Descriptivo -->
+  <g class="anal">
+    <path class="flecha doble" pathLength="1" d="M 726 260 L 774 260" filter="url(#aspero-a)"/>
+    <rect class="caja" x="780" y="20" width="900" height="620" rx="24" filter="url(#aspero-a)"/>
+    <text class="rotulo-caja" x="805" y="62">Analizar los datos</text>
+    <text class="pregunta" x="900" y="280">¿Qué pasó?</text>
+    <g class="nodo anal" transform="translate(900 380)">
+      <circle r="70" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="72" ry="67" transform="rotate(8)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Descriptivo</text>
+      <g class="etiqueta" transform="translate(0 98)"><rect/><text y="6">Mini-Me · análisis exploratorio</text></g>
+    </g>
+  </g>
+
+  <!-- 9 · Diagnóstico -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 969 359 Q 1005 340 1041 336" filter="url(#aspero-a)"/>
+    <text class="pregunta" x="1110" y="215">¿Por qué pasó?</text>
+    <g class="nodo anal" transform="translate(1110 315)">
+      <circle r="70" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="71" ry="67" transform="rotate(-10)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Diagnóstico</text>
+      <g class="etiqueta" transform="translate(0 98)"><rect/><text y="6">Mini-Me · diagnóstico</text></g>
+    </g>
+  </g>
+
+  <!-- 10 · Predictivo -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 1179 294 Q 1215 275 1251 271" filter="url(#aspero-a)"/>
+    <text class="pregunta" x="1320" y="150">¿Qué pasará?</text>
+    <g class="nodo anal" transform="translate(1320 250)">
+      <circle r="70" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="72" ry="66" transform="rotate(14)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Predictivo</text>
+      <g class="etiqueta" transform="translate(0 98)"><rect/><text y="6">Mini-Me · predicción</text></g>
+    </g>
+  </g>
+
+  <!-- 11 · Prescriptivo (estalla en el 16) -->
+  <g>
+    <g opacity="0.25">
+      <path class="flecha" pathLength="1" d="M 1389 229 Q 1425 210 1461 206" filter="url(#aspero-a)"/>
+    </g>
+  </g>
+
+  <!-- 12 · de la información a la optimización -->
+  <g class="valor">
+    <path class="flecha" pathLength="1" d="M 820 590 L 1640 360" filter="url(#aspero-a)"/>
+    <text class="eje"><textPath href="#eje-arriba-a" startOffset="0%">Información</textPath></text>
+    <g opacity="0.25">
+      <text class="eje eje-fin" text-anchor="end"><textPath href="#eje-arriba-a" startOffset="100%">Optimización</textPath></text>
+    </g>
+  </g>
+
+  <!-- 13–15 · retrospectiva, comprensión, prospectiva -->
+  <g>
+    <text class="eje"><textPath href="#eje-abajo-a" startOffset="3%">Retrospectiva <tspan class="eje-en">· hindsight</tspan></textPath></text>
+  </g>
+  <g>
+    <text class="eje"><textPath href="#eje-abajo-a" startOffset="34%">Comprensión <tspan class="eje-en">· insight</tspan></textPath></text>
+  </g>
+  <g>
+    <text class="eje"><textPath href="#eje-abajo-a" startOffset="61%">Prospectiva <tspan class="eje-en">· foresight</tspan></textPath></text>
+  </g>
+
+  <!-- 16 · el prescriptivo explota y queda su sombra -->
+  <g class="fantasma">
+    <circle cx="1530" cy="185" r="70"/>
+    <text x="1530" y="180">fuera de</text>
+    <text x="1530" y="202">alcance</text>
+  </g>
+
+  <!-- 17 · el análisis también termina en reporte -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 860 646 Q 822 666 794 692" filter="url(#aspero-a)"/>
+  </g>
+
+  <!-- 18 · comunicar -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 740 792 L 740 828" filter="url(#aspero-a)"/>
+    <g class="nodo salida" transform="translate(740 892)">
+      <circle r="58" class="trazo" filter="url(#aspero-a)"/>
+      <ellipse rx="60" ry="55" transform="rotate(9)" class="trazo2" filter="url(#aspero-a)"/>
+      <text class="nombre" y="8">Comunicar</text>
+      <g class="etiqueta humano" transform="translate(150 0)"><rect/><text y="6">esto lo haces tú</text></g>
+    </g>
+  </g>
+  <!-- Lo que Isabel encontró en el diagnóstico -->
+  <circle class="foco" cx="1110" cy="315" r="90"/>
+</svg>
+
+<div class="relato">
+  <div class="paso">
+    <span class="kicker k-anal">Dónde quedamos</span>
+    Isabel limpió sus datos y, en el diagnóstico, encontró algo: la localidad pesa tanto como el genotipo. ¿Es normal? ¿Qué dice la ciencia? Recuerden: solo sobre su tema hay 224 artículos.
+  </div>
+</div>
+```
+
+::: notes
+(~30 s) Conectar con el gancho: el tema de las 224 publicaciones es justo la duda de Isabel.
+Recordatorio del bloque anterior: el ciclo completo ya dibujado. Señalar el diagnóstico
+marcado: Isabel encontró algo que sus datos solos no le explican. Esa duda abre este bloque.
+:::
+
+## {.diagrama auto-animate=true}
+
+```{=html}
+<svg class="ciclo estatico mini" data-id="ciclo" viewBox="0 0 1700 960" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Ciclo de vida de los datos: preparar (exploración, validación, limpieza), analizar (descriptivo, diagnóstico, predictivo), reporte y comunicar">
+  <defs>
+    <filter id="aspero-b" filterUnits="userSpaceOnUse" x="-1700" y="-960" width="3400" height="1920">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <path id="eje-arriba-b" d="M 820 576 L 1640 346"/>
+    <path id="eje-abajo-b" d="M 832 620 L 1640 393"/>
+  </defs>
+
+
+  <!-- 1 · Exploración -->
+  <g>
+    <g class="nodo prep" transform="translate(160 240)">
+      <circle r="70" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="72" ry="67" transform="rotate(-14)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Exploración</text>
+    </g>
+  </g>
+
+  <!-- 2 · Validación -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 228 215 Q 270 188 312 215" filter="url(#aspero-b)"/>
+    <g class="nodo prep" transform="translate(380 240)">
+      <circle r="70" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="71" ry="68" transform="rotate(10)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Validación</text>
+    </g>
+  </g>
+
+  <!-- 3 · Limpieza -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 448 215 Q 490 188 532 215" filter="url(#aspero-b)"/>
+    <g class="nodo prep" transform="translate(600 240)">
+      <circle r="70" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="72" ry="66" transform="rotate(-6)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Limpieza</text>
+    </g>
+  </g>
+
+  <!-- 4 · de vuelta a validar -->
+  <g>
+    <path class="flecha vuelta" pathLength="1" d="M 532 268 Q 490 295 448 268" filter="url(#aspero-b)"/>
+  </g>
+
+  <!-- 5 · de vuelta a explorar, y el ciclo empieza a girar -->
+  <g>
+    <path class="flecha vuelta" pathLength="1" d="M 575 302 Q 380 440 185 302" filter="url(#aspero-b)"/>
+  </g>
+
+  <!-- 6 · es un ciclo -->
+  <g class="prep">
+    <rect class="caja" x="40" y="100" width="680" height="290" rx="24" filter="url(#aspero-b)"/>
+    <text class="rotulo-caja" x="58" y="84">Preparar los datos</text>
+  </g>
+
+  <!-- 7 · primer reporte: calidad de datos -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 585 396 Q 640 570 698 684" filter="url(#aspero-b)"/>
+    <g class="nodo salida" transform="translate(740 730)">
+      <circle r="60" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="62" ry="57" transform="rotate(-12)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Reporte</text>
+    </g>
+  </g>
+
+  <!-- ====================== ANALIZAR ====================== -->
+
+  <!-- 8 · Descriptivo -->
+  <g class="anal">
+    <path class="flecha doble" pathLength="1" d="M 726 260 L 774 260" filter="url(#aspero-b)"/>
+    <rect class="caja" x="780" y="20" width="900" height="620" rx="24" filter="url(#aspero-b)"/>
+    <text class="rotulo-caja" x="805" y="62">Analizar los datos</text>
+    <text class="pregunta" x="900" y="280">¿Qué pasó?</text>
+    <g class="nodo anal" transform="translate(900 380)">
+      <circle r="70" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="72" ry="67" transform="rotate(8)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Descriptivo</text>
+    </g>
+  </g>
+
+  <!-- 9 · Diagnóstico -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 969 359 Q 1005 340 1041 336" filter="url(#aspero-b)"/>
+    <text class="pregunta" x="1110" y="215">¿Por qué pasó?</text>
+    <g class="nodo anal" transform="translate(1110 315)">
+      <circle r="70" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="71" ry="67" transform="rotate(-10)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Diagnóstico</text>
+    </g>
+  </g>
+
+  <!-- 10 · Predictivo -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 1179 294 Q 1215 275 1251 271" filter="url(#aspero-b)"/>
+    <text class="pregunta" x="1320" y="150">¿Qué pasará?</text>
+    <g class="nodo anal" transform="translate(1320 250)">
+      <circle r="70" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="72" ry="66" transform="rotate(14)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Predictivo</text>
+    </g>
+  </g>
+
+  <!-- 11 · Prescriptivo (estalla en el 16) -->
+  <g>
+    <g opacity="0.25">
+      <path class="flecha" pathLength="1" d="M 1389 229 Q 1425 210 1461 206" filter="url(#aspero-b)"/>
+    </g>
+  </g>
+
+  <!-- 12 · de la información a la optimización -->
+  <g class="valor">
+    <path class="flecha" pathLength="1" d="M 820 590 L 1640 360" filter="url(#aspero-b)"/>
+    <text class="eje"><textPath href="#eje-arriba-b" startOffset="0%">Información</textPath></text>
+    <g opacity="0.25">
+      <text class="eje eje-fin" text-anchor="end"><textPath href="#eje-arriba-b" startOffset="100%">Optimización</textPath></text>
+    </g>
+  </g>
+
+  <!-- 13–15 · retrospectiva, comprensión, prospectiva -->
+  <g>
+    <text class="eje"><textPath href="#eje-abajo-b" startOffset="3%">Retrospectiva <tspan class="eje-en">· hindsight</tspan></textPath></text>
+  </g>
+  <g>
+    <text class="eje"><textPath href="#eje-abajo-b" startOffset="34%">Comprensión <tspan class="eje-en">· insight</tspan></textPath></text>
+  </g>
+  <g>
+    <text class="eje"><textPath href="#eje-abajo-b" startOffset="61%">Prospectiva <tspan class="eje-en">· foresight</tspan></textPath></text>
+  </g>
+
+  <!-- 16 · el prescriptivo explota y queda su sombra -->
+  <g class="fantasma">
+    <circle cx="1530" cy="185" r="70"/>
+    <text x="1530" y="180">fuera de</text>
+    <text x="1530" y="202">alcance</text>
+  </g>
+
+  <!-- 17 · el análisis también termina en reporte -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 860 646 Q 822 666 794 692" filter="url(#aspero-b)"/>
+  </g>
+
+  <!-- 18 · comunicar -->
+  <g>
+    <path class="flecha" pathLength="1" d="M 740 792 L 740 828" filter="url(#aspero-b)"/>
+    <g class="nodo salida" transform="translate(740 892)">
+      <circle r="58" class="trazo" filter="url(#aspero-b)"/>
+      <ellipse rx="60" ry="55" transform="rotate(9)" class="trazo2" filter="url(#aspero-b)"/>
+      <text class="nombre" y="8">Comunicar</text>
+    </g>
+  </g>
+</svg>
+
+<svg class="ciclo capa" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Ciclo de investigación: pregunta, buscar literatura, leer a fondo, hipótesis y analizar datos, conectado al ciclo de datos">
+  <defs>
+    <filter id="aspero-c" filterUnits="userSpaceOnUse" x="-1600" y="-900" width="3200" height="1800">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- 1 · Pregunta -->
+  <g class="fragment" data-fragment-index="1">
+    <g class="nodo inv" transform="translate(150 655)">
+      <circle r="64" class="trazo" filter="url(#aspero-c)"/>
+      <ellipse rx="66" ry="61" transform="rotate(-12)" class="trazo2" filter="url(#aspero-c)"/>
+      <text class="nombre" y="8">Pregunta</text>
+      <g class="etiqueta humano" transform="translate(0 -94)"><rect/><text y="6">esto lo pones tú</text></g>
+    </g>
+  </g>
+
+  <!-- 2 · Buscar literatura -->
+  <g class="fragment" data-fragment-index="2">
+    <path class="flecha" pathLength="1" d="M 218 655 L 392 655" filter="url(#aspero-c)"/>
+    <g class="nodo inv" transform="translate(460 655)">
+      <circle r="64" class="trazo" filter="url(#aspero-c)"/>
+      <ellipse rx="66" ry="62" transform="rotate(9)" class="trazo2" filter="url(#aspero-c)"/>
+      <text class="nombre" y="-4">Buscar<tspan x="0" dy="28">literatura</tspan></text>
+      <g class="etiqueta asta" transform="translate(0 -94)"><rect/><text y="6">Asta · Paper Finder</text></g>
+    </g>
+  </g>
+
+  <!-- 3 · Leer a fondo -->
+  <g class="fragment" data-fragment-index="3">
+    <path class="flecha" pathLength="1" d="M 518 622 Q 615 590 712 622" filter="url(#aspero-c)"/>
+    <g class="nodo inv" transform="translate(770 655)">
+      <circle r="64" class="trazo" filter="url(#aspero-c)"/>
+      <ellipse rx="66" ry="61" transform="rotate(-7)" class="trazo2" filter="url(#aspero-c)"/>
+      <text class="nombre" y="-4">Leer<tspan x="0" dy="28">a fondo</tspan></text>
+      <g class="etiqueta asta" transform="translate(0 -94)"><rect/><text y="6">Asta · PDF librarian</text></g>
+    </g>
+  </g>
+
+  <!-- 4 · Hipótesis (solo demostración) -->
+  <g class="fragment" data-fragment-index="4">
+    <path class="flecha" pathLength="1" d="M 828 622 Q 925 590 1022 622" filter="url(#aspero-c)"/>
+    <g class="nodo inv demo" transform="translate(1080 655)">
+      <circle r="64" class="trazo" filter="url(#aspero-c)"/>
+      <text class="nombre" y="8">Hipótesis</text>
+      <g class="etiqueta asta" transform="translate(0 -94)"><rect/><text y="6">Theorizer (demo)</text></g>
+    </g>
+  </g>
+
+  <!-- 5 · si no hay sustento, de vuelta a la literatura -->
+  <g class="fragment" data-fragment-index="5">
+    <path class="flecha vuelta" pathLength="1" d="M 1050 712 Q 770 800 490 712" filter="url(#aspero-c)"/>
+  </g>
+
+  <!-- 6 · Analizar datos -->
+  <g class="fragment" data-fragment-index="6">
+    <path class="flecha" pathLength="1" d="M 1138 622 Q 1270 570 1342 622" filter="url(#aspero-c)"/>
+    <g class="nodo inv" transform="translate(1400 655)">
+      <circle r="64" class="trazo" filter="url(#aspero-c)"/>
+      <ellipse rx="66" ry="62" transform="rotate(11)" class="trazo2" filter="url(#aspero-c)"/>
+      <text class="nombre" y="-4">Analizar<tspan x="0" dy="28">datos</tspan></text>
+    </g>
+  </g>
+
+  <!-- 7 · si no sabe por dónde empezar: AutoDiscovery -->
+  <g class="fragment" data-fragment-index="7">
+    <g class="etiqueta asta" transform="translate(1400 750)"><rect/><text y="6">AutoDiscovery</text></g>
+  </g>
+
+  <!-- 7 · los dos viajes se encuentran -->
+  <g class="fragment" data-fragment-index="8">
+    <g class="fragment fade-out" data-fragment-index="10">
+      <rect class="foco-caja" x="1122" y="22" width="466" height="326" rx="16"/>
+    </g>
+    <path class="flecha" pathLength="1" d="M 1400 589 L 1400 352" filter="url(#aspero-c)"/>
+    <text class="nota-flecha" x="1414" y="480">con Mini-Me</text>
+  </g>
+
+  <!-- 8 · los datos pueden obligar a replantear -->
+  <g class="fragment" data-fragment-index="9">
+    <path class="flecha vuelta" pathLength="1" d="M 1352 700 Q 1231 765 1110 712" filter="url(#aspero-c)"/>
+  </g>
+
+  <!-- 9 · es otro ciclo -->
+  <g class="inv fragment" data-fragment-index="10">
+    <rect class="caja" x="30" y="520" width="1540" height="290" rx="24" filter="url(#aspero-c)"/>
+    <text class="rotulo-caja" x="48" y="506">Investigar</text>
+  </g>
+
+  <!-- 10 · la investigación también se reporta -->
+  <g class="fragment" data-fragment-index="11">
+    <path class="flecha" pathLength="1" d="M 1010 518 Q 1020 420 1079 392" filter="url(#aspero-c)"/>
+  </g>
+
+  <!-- 11 · generación de conocimiento -->
+  <g class="fragment" data-fragment-index="12">
+    <path class="flecha" pathLength="1" d="M 1141 461 L 1182 448" filter="url(#aspero-c)"/>
+    <g class="nodo final" transform="translate(1250 430)">
+      <circle r="66" class="trazo" filter="url(#aspero-c)"/>
+      <ellipse rx="68" ry="63" transform="rotate(-9)" class="trazo2" filter="url(#aspero-c)"/>
+      <text class="nombre chica" y="-4">Generación de<tspan x="0" dy="26">conocimiento</tspan></text>
+    </g>
+  </g>
+</svg>
+
+<div class="relato arriba r-stack">
+  <div class="paso fragment fade-out" data-fragment-index="1">
+    <span class="kicker k-inv">Un nuevo viaje</span>
+    Para responder, Isabel tiene que salir de su archivo y entrar a lo que ya se sabe: la literatura.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="1">
+    <span class="kicker k-inv">Preguntar</span>
+    Todo empieza con una pregunta clara: ¿por qué el rendimiento cambia tanto de una localidad a otra?
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="2">
+    <span class="kicker k-inv">Buscar</span>
+    Paper Finder busca entre millones de artículos los que responden su pregunta, y le explica por qué importa cada uno.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="3">
+    <span class="kicker k-inv">Leer a fondo</span>
+    Isabel elige los más relevantes. PDF librarian los lee con ella y encuentra los pasajes que responden su pregunta.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="4">
+    <span class="kicker k-inv">Proponer</span>
+    Con esa evidencia, Theorizer propone hipótesis: explicaciones que se pueden poner a prueba.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="5">
+    <span class="kicker k-inv">Volver a leer</span>
+    ¿Una hipótesis no tiene sustento? Se vuelve a la literatura.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="6">
+    <span class="kicker k-inv">Probar</span>
+    Una buena hipótesis se pone a prueba con datos.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="7">
+    <span class="kicker k-inv">¿Por dónde empiezo?</span>
+    ¿Y si Isabel no sabe por dónde empezar a analizar? AutoDiscovery explora los datos por su cuenta y le propone qué vale la pena mirar.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="8">
+    <span class="kicker k-anal">Los viajes se encuentran</span>
+    Y aquí los dos caminos se unen: probar una hipótesis es volver al ciclo de datos que ya conocemos, con Mini-Me.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="9">
+    <span class="kicker k-inv">Replantear</span>
+    Los datos pueden confirmar la hipótesis… o pedir que se replantee.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="10">
+    <span class="kicker k-inv">Otro ciclo</span>
+    Preguntar, leer, proponer y probar: Isabel da vueltas hasta tener una respuesta sólida.
+  </div>
+  <div class="paso fragment fade-in-then-out" data-fragment-index="11">
+    <span class="kicker k-sal">Reportar</span>
+    Lo que aprende de la literatura también va al reporte, con citas que cualquiera puede verificar.
+  </div>
+  <div class="paso fragment" data-fragment-index="12">
+    <span class="kicker k-sal">Conocimiento</span>
+    Cuando los datos y la literatura cuentan la misma historia, y esa historia se comunica, se genera conocimiento.
+  </div>
+</div>
+```
+
+::: notes
+(~4 min) El ciclo de datos se encoge y queda arriba como mapa. Un clic por paso:
+
+1. **Pregunta.** La pone Isabel, no la IA.
+2. **Buscar literatura.** Primer ejercicio del bloque: Paper Finder, de Asta. Volver a las 224: aquí se vuelven un puñado.
+3. **Leer a fondo.** Segundo ejercicio: PDF librarian, de Asta, con PDFs abiertos, ya descargados.
+4. **Hipótesis.** Theorizer, solo demostración. Son propuestas para probar, no conclusiones.
+5. **Vuelta a la literatura.** Sin sustento, se vuelve a buscar.
+6. **Analizar datos.**
+7. **AutoDiscovery.** Para cuando no sabes por dónde empezar: explora los datos y propone qué mirar.
+   Lo que encuentre también hay que verificarlo.
+8. **Los viajes se encuentran.** Señalar la caja iluminada: el análisis lo hace el ciclo de datos de Mini-Me.
+9. **Vuelta a la hipótesis.** Los datos también corrigen.
+10. **Caja "Investigar".** Es un ciclo, igual que preparar los datos.
+11. **Reporte.** La literatura entra al mismo reporte, con citas.
+12. **Generación de conocimiento.** Es el destino de los dos viajes, y es lo que entregarán en el hands-on: el Data-Driven Document.
+:::
+
+## {.final}
+
+::: {.recap}
+Hoy viste cómo investigar con IA:
+
+1. **Buscar**: de miles de artículos a los pocos que importan.
+2. **Leer** a fondo, con la evidencia a la vista.
+3. **Proponer y probar** con datos: con Mini-Me o, si no sabes por dónde empezar, con AutoDiscovery.
+:::
+
+::: {.cierre .chico-cierre}
+La IA busca, lee y propone.
+[Isabel decide qué es evidencia.]{.segunda}
+:::
+
+::: {.fragment .envivo}
+Ahora, en vivo: busquemos literatura con Asta →
+:::
+
+::: {.fragment .regalo}
+Te llevas: los prompts de búsqueda y lectura, y los PDFs abiertos del taller para seguir practicando.
+:::
+
+::: notes
+(~1 min) Repetir las tres paradas, frase de cierre, llamada a la acción y lo que se llevan.
+
+**Preguntas probables**
+
+- *¿Inventa citas?* Paper Finder devuelve artículos reales indexados en Semantic Scholar, con
+  enlace. Aun así, hay que abrir y leer lo que se cita.
+- *¿Lee artículos de pago?* Busca en todo el índice, pero solo lee a fondo los PDFs que le das
+  o los de acceso abierto.
+- *¿Son confiables las hipótesis de Theorizer?* Son propuestas para poner a prueba, no
+  conclusiones. Por eso el siguiente paso es probarlas con datos.
+- *¿Puedo subir mis PDFs?* Sí, si tienes derecho a usarlos. No subas documentos confidenciales
+  ni investigación inédita.
+- *¿Cubre literatura en español?* [Verificar antes del taller: cobertura de revistas en español
+  en Semantic Scholar.]
+:::
