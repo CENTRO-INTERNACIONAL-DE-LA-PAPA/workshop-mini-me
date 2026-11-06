@@ -534,6 +534,7 @@ Los bloques 1 y 2 abren con una presentación narrativa corta en lugar de diapos
 |---|---|---|---|
 | B1 | `data_lifecycle.qmd` | *El viaje de los datos* | ~9 min |
 | B2 | `investigacion.qmd` | *De la pregunta al conocimiento* | ~7 min |
+| B3 | `taller.qmd` | *Taller Mini-Me*: guía paso a paso del ejercicio con `mejoramiento_dirty.csv` (proyecto, carga, diagnóstico, limpieza, ANOVA y bibliografía) | Acompaña el hands-on |
 
 Archivos comunes: `estilo.scss` (estilos) y `boceto.html` (puntas de flecha, etiquetas y contadores). Los
 HTML se generan con `quarto render presentacion/<archivo>.qmd`, no se versionan, y llevan todo incrustado:
