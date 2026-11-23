@@ -14,12 +14,12 @@ format:
     center: false
     transition: fade
     background-transition: fade
-    slide-number: c/t
+    slide-number: false
     controls: false
     progress: true
     hash: true
     embed-resources: true
-    include-after-body: boceto.html
+    include-after-body: [boceto.html, alianza.html]
 ---
 
 ## {.gancho}
@@ -675,4 +675,9 @@ Te llevas: los prompts de búsqueda y lectura, y los PDFs abiertos del taller pa
   ni investigación inédita.
 - *¿Cubre literatura en español?* [Verificar antes del taller: cobertura de revistas en español
   en Semantic Scholar.]
+:::
+
+## {.logos}
+
+::: {.alianza}
 :::

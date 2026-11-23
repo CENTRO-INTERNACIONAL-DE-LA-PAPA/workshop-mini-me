@@ -1,0 +1,31 @@
+<!-- Logo conjunto CIP × Ai2.
+     Pequeño en el pie derecho de todas las slides, y grande en cada div .alianza vacío
+     (la última slide, .logos), donde se oculta el del pie.
+     Las imágenes se escriben aquí, en HTML, para que embed-resources las incruste. -->
+<template id="alianza-logos">
+  <img class="logo-cip" src="img/logos/cip-logo.png" alt="">
+  <span class="por" aria-hidden="true">×</span>
+  <img class="logo-ai2" src="img/logos/ai2-logo.png" alt="">
+</template>
+<script>
+(function () {
+  const plantilla = document.getElementById("alianza-logos");
+  const pie = document.createElement("div");
+  pie.className = "alianza pie";
+  document.querySelector(".reveal").appendChild(pie);
+
+  document.querySelectorAll(".reveal .alianza").forEach((el) => {
+    el.appendChild(plantilla.content.cloneNode(true));
+    el.setAttribute("role", "img");
+    el.setAttribute("aria-label", "CIP en alianza con Ai2");
+  });
+
+  function actualizar() {
+    const actual = Reveal.getCurrentSlide();
+    pie.classList.toggle("oculto", !!actual && actual.classList.contains("logos"));
+  }
+  Reveal.on("ready", actualizar);
+  Reveal.on("slidechanged", actualizar);
+  actualizar();
+})();
+</script>

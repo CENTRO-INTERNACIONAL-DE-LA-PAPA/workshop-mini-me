@@ -14,12 +14,12 @@ format:
     center: false
     transition: fade
     background-transition: fade
-    slide-number: c/t
+    slide-number: false
     controls: false
     progress: true
     hash: true
     embed-resources: true
-    include-after-body: boceto.html
+    include-after-body: [boceto.html, alianza.html, mini-mes.html]
 ---
 
 ## Qué vamos a lograr hoy
@@ -478,3 +478,5 @@ científica recopilada.
 :::
 
 ![](img/taller/reporte-bibliografia.png){.captura .centrada fig-alt="Portada del reporte de bibliografía generado"}
+
+## {.logos .mini-me-final}

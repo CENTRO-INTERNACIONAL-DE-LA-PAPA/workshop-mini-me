@@ -14,12 +14,12 @@ format:
     center: false
     transition: fade
     background-transition: fade
-    slide-number: c/t
+    slide-number: false
     controls: false
     progress: true
     hash: true
     embed-resources: true
-    include-after-body: boceto.html
+    include-after-body: [boceto.html, alianza.html]
 ---
 
 ## {.gancho}
@@ -483,4 +483,9 @@ la llamada a la acción (demo en vivo) y lo que se llevan.
 - *¿Funciona con mis datos?* Trabaja con CSV y Excel. Un diccionario de datos (unidades, rangos,
   categorías) mejora mucho el resultado.
 - *¿Cómo accedo después del taller?* [Completar: cómo se solicita acceso a Mini-Me en Digital & Data.]
+:::
+
+## {.logos}
+
+::: {.alianza}
 :::

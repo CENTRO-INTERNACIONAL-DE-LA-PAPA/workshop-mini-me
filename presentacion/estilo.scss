@@ -61,6 +61,138 @@ $link-color: $cip-azul;
   }
 }
 
+// ---------------------------------------------------------------- alianza CIP × Ai2
+// Lo llena alianza.html: en el pie derecho de cada slide y, grande, en la última slide (.logos).
+// El PNG de CIP trae aire alrededor y el de Ai2 no, por eso las alturas distintas.
+.reveal .alianza {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+
+  img { margin: 0; max-height: none; }
+  .logo-cip { height: 112px; }
+  .logo-ai2 { height: 54px; }
+  .por {
+    font-size: 54px;
+    line-height: 1;
+    color: $cip-gris;
+    opacity: 0.55;
+  }
+}
+
+// Pie: fuera de las slides, a la izquierda del número de slide. Se oculta en la última slide.
+.reveal > .alianza.pie {
+  position: absolute;
+  right: 24px;
+  bottom: 4px;
+  z-index: 30;
+  gap: 10px;
+  opacity: 0.85;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  .logo-cip { height: 52px; }
+  .logo-ai2 { height: 25px; }
+  .por { font-size: 21px; opacity: 0.6; }
+
+  &.oculto { opacity: 0; }
+}
+
+// Última slide: solo los dos logos, grandes y al centro.
+.reveal .slides section.logos h2 {
+  display: none;
+}
+.reveal .slides section.logos .alianza {
+  justify-content: center;
+  margin-top: 300px;
+  gap: 48px;
+
+  .logo-cip { height: 240px; }
+  .logo-ai2 { height: 116px; }
+  .por { font-size: 96px; }
+}
+
+// ---------------------------------------------------------------- final del taller (mini-mes.html)
+// Solo el logo mini-me, grande, y los mini-mes cayendo hasta el piso (sin la alianza CIP × Ai2).
+.reveal .slides section.mini-me-final {
+  height: 100%;
+
+  .logo-mini-me {
+    display: block;
+    height: 190px;
+    max-height: none;
+    margin: 220px auto 0;
+  }
+}
+
+.lluvia-mini-mes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2px;
+
+  img {
+    width: 152px;
+    height: 152px;
+    max-height: none;
+    margin: 0 0 -18px; // el PNG trae aire bajo la cara
+    transform-origin: 50% 85%;
+    opacity: 0;
+  }
+
+  &.cayendo img {
+    animation: mini-me-cae 1.7s var(--retraso, 0s) both;
+  }
+}
+
+// Caída con gravedad (ease-in), aplastón al tocar el piso y rebotes cada vez más bajos.
+@keyframes mini-me-cae {
+  0% {
+    opacity: 1;
+    transform: translateY(-1000px) rotate(var(--giro));
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  38% {
+    transform: translateY(0) rotate(0deg) scale(1.18, 0.8);
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  }
+  54% {
+    transform: translateY(calc(-150px * var(--alto))) rotate(var(--giro-final)) scale(0.95, 1.06);
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  68% {
+    transform: translateY(0) rotate(0deg) scale(1.1, 0.9);
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  }
+  79% {
+    transform: translateY(calc(-55px * var(--alto))) rotate(calc(var(--giro-final) * -0.5));
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  88% {
+    transform: translateY(0) scale(1.04, 0.96);
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  }
+  94% {
+    transform: translateY(calc(-14px * var(--alto)));
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--giro-final));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lluvia-mini-mes.cayendo img {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 // ---------------------------------------------------------------- Isabel
 .isabel {
   font-size: 1.25em;
@@ -514,7 +646,7 @@ svg.ciclo {
 }
 .fuente {
   position: absolute;
-  bottom: 10px;
+  bottom: 4px;
   left: 70px;
   font-size: 0.45em;
   color: #8A949B;
