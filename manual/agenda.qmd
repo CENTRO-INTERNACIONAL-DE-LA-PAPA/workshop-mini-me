@@ -1,0 +1,104 @@
+---
+title: "Taller Mini-Me · Agenda"
+subtitle: "IA aplicada a la ciencia de datos"
+date: 2026-11-24
+date-format: "dddd D [de] MMMM [de] YYYY"
+author: "Digital & Data · Centro Internacional de la Papa"
+lang: es
+format:
+  typst:
+    papersize: a4
+    margin:
+      top: 1.8cm
+      bottom: 1.6cm
+      left: 2.2cm
+      right: 2.2cm
+    mainfont: "Segoe UI"
+    fontsize: 10pt
+    keep-typ: true
+    include-in-header:
+      - file: _brand.typ
+---
+
+```{=typst}
+// Una fila de la agenda: hora, bloque y qué pasa. Las pausas van en gris y sin descripción.
+#let fila(hora, titulo, detalle, tipo: "bloque") = {
+  let es-pausa = tipo == "pausa"
+  let acento = if tipo == "reto" { cip-verde } else if es-pausa { cip-borde } else { cip-azul }
+  block(
+    width: 100%,
+    breakable: false,
+    spacing: 5pt,
+    fill: if es-pausa { white } else { cip-suave },
+    stroke: (left: 3pt + acento),
+    inset: (left: 10pt, rest: if es-pausa { 5pt } else { 8pt }),
+    radius: (right: 3pt),
+    grid(
+      columns: (2.6cm, 1fr),
+      column-gutter: 10pt,
+      text(weight: "bold", fill: if es-pausa { cip-gris } else { acento }, size: 10.5pt, hora),
+      {
+        text(weight: "bold", size: 10.5pt, fill: if es-pausa { cip-gris } else { cip-azul }, titulo)
+        if detalle != none {
+          v(-3pt)
+          text(size: 9.5pt, detalle)
+        }
+      },
+    ),
+  )
+}
+
+#set par(justify: false)
+#grid(
+  columns: (1fr, auto),
+  column-gutter: 16pt,
+  align: horizon,
+  [
+    #text(size: 11pt)[*Auditorio* · de 8:10 a 13:00]
+
+    #text(size: 9.5pt)[
+      Trae tu laptop con *Mini-Me Desktop* instalado y la sesión iniciada, la carpeta
+      *Taller Mini-me* en tu Escritorio y la *guía paso a paso*.
+    ]
+  ],
+  align(center)[
+    #image("img/qr-mentimeter.svg", width: 2.3cm)
+    #v(-6pt)
+    #text(size: 8pt, weight: "bold", fill: cip-azul)[Mentimeter]
+  ],
+)
+#v(2pt)
+
+#fila("8:10 – 8:20", "Apertura y Mentimeter pre-taller")[
+  Palabras de bienvenida. Responde la encuesta inicial desde tu celular o laptop: escanea el código
+  o entra a #link("https://www.menti.com/al2sww8pf7ik")[menti.com/al2sww8pf7ik].
+]
+#fila("8:20 – 8:55", "El viaje de los datos")[
+  _Presentación._ La historia de Isabel: por qué los datos se rompen en el camino y cómo la IA
+  ayuda en cada etapa de su ciclo de vida.
+]
+#fila("8:55 – 9:50", "Manos a la obra: el ciclo de datos")[
+  Con Mini-Me limpias, diagnosticas y analizas un ensayo de rendimiento de clones de papa, revisando
+  cada paso que da la IA. Pasos 1 a 8 de la guía.
+]
+#fila("9:50 – 10:05", "Break", none, tipo: "pausa")
+#fila("10:05 – 10:25", "De la pregunta al conocimiento")[
+  _Presentación._ Herramientas de Allen AI para investigar: Asta para la literatura, Theorizer para
+  las hipótesis y AutoDiscovery para cuando no sabes por dónde empezar a analizar tus datos.
+]
+#fila("10:25 – 11:10", "Mini-Me con herramientas de Allen AI")[
+  _Demostración y práctica._ Primero lo vemos en pantalla y luego lo pruebas tú: búsqueda de
+  bibliografía, generación de teorías y reporte de bibliografía.
+]
+#fila("11:10 – 11:20", "Pausa", none, tipo: "pausa")
+#fila("11:20 – 12:30", "Reto Mini-Me", tipo: "reto")[
+  En equipos de 2 o 3, eliges una de las cuatro temáticas y una pregunta, y la respondes con
+  Mini-Me combinando datos, literatura y teorías.
+]
+#fila("12:30 – 12:50", "Pitches y preguntas", tipo: "reto")[
+  Cuatro equipos voluntarios presentan su hallazgo en 5 minutos cada uno.
+]
+#fila("12:50 – 13:00", "Mentimeter post-taller y voto")[
+  Encuesta final y voto del público por el pitch más convincente. Cierre.
+]
+```

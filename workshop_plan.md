@@ -5,17 +5,24 @@
 | Campo | Valor |
 |---|---|
 | Fecha | **martes 24 de noviembre de 2026** (confirmada) |
-| Hora | **8:00 a.m. a 1:30 p.m.** |
+| Hora | **8:10 a.m. a 1:00 p.m.** (agenda del 23 de noviembre, §3.1) |
 | Sede | **Auditorio** del CIP |
 | Organiza | **Unidad Digital & Data del CIP** (desarrolladora de Mini-Me) |
 | Duración | **5 h efectivas** + 30 min de setup (ver §3.3 para recortes y extensiones) |
 | Participantes | 20–30 personas, en equipos de 2–3 |
 | Modalidad | Presencial, laptops propias con WSL2 preinstalado |
 | Herramientas | **Mini-Me Desktop** (`mini-me-desktop`) + backend en WSL; herramientas de **Allen AI**: Asta (Paper Finder, PDF librarian), Theorizer y AutoDiscovery |
-| Entregable del participante | **Data-Driven Document** (1–2 páginas, con evidencia trazable) |
+| Entregable del participante | **Reto Mini-Me** en equipos, con pitch de 5 min de 4 equipos voluntarios y voto del público (`manual/reto_mini_me.qmd`) |
 | Medición | Mentimeter **pre** y **post** + score de limpieza automatizado |
 | Fecha de este plan | 4 de noviembre de 2026 (T-20 días) |
 
+> **Cambios del 23 de noviembre.** Nueva agenda de 8:10 a 13:00 (§3.1, `manual/agenda.qmd`). El Manos a
+> la obra de la mañana queda solo con el ciclo de datos; las herramientas de Allen AI se practican en un
+> bloque propio (10:25–11:10). El hands-on y la galería se reemplazan por el **Reto Mini-Me**: equipos de 2–3,
+> las 4 temáticas, datos + literatura + teorías, 4 pitches voluntarios de 5 min y voto del público en el
+> Mentimeter post-taller, sin premio (`manual/reto_mini_me.qmd`). Las secciones §3.2 de B3 y Galería quedan
+> como referencia histórica.
+>
 > **Cambios de la v3 (4 de noviembre).** La fecha pasa del 22 de octubre al **24 de noviembre**, con inicio
 > a las 8:00. El Bloque 2 deja fuera **DataVoyager**: la literatura se trabaja con Asta, Theorizer queda
 > como demostración y AutoDiscovery entra cuando no se sabe por dónde empezar a analizar. Los bloques 1 y
@@ -235,22 +242,22 @@ Por eso, antes de que cualquier archivo entre al workshop:
 
 ## 3. Agenda del día
 
-### 3.1 Bloque a bloque (versión canónica, 5 h)
+### 3.1 Bloque a bloque (versión del 23 de noviembre)
 
 | Hora | Min | Bloque | Contenido |
 |---|---:|---|---|
-| 08:00–08:30 | 30 | **B0 Setup** | Registro, verificación de laptops, login, API key, dataset descargado |
-| 08:30–08:50 | 20 | **Apertura** | Encuadre + **Mentimeter PRE** + reglas del día |
-| 08:50–09:50 | 60 | **B1 Data Lifecycle** | Presentación *El viaje de los datos* → demo en vivo: limpieza → validación → EDA → diagnóstico → predicción → reporte |
-| 09:50–10:05 | 15 | Pausa | Café. *Se lanzan Theorizer y AutoDiscovery en background.* |
-| 10:05–11:10 | 65 | **B2 Allen AI** | Presentación *De la pregunta al conocimiento* → Asta Paper Finder → PDF librarian → Theorizer (demo) → AutoDiscovery |
+| 08:10–08:20 | 10 | **Apertura** | Palabras de apertura + **Mentimeter PRE** (menti.com/al2sww8pf7ik) |
+| 08:20–08:55 | 35 | **El viaje de los datos** | Presentación narrativa (§5.7) |
+| 08:55–09:50 | 55 | **Manos a la obra: ciclo de datos** | Pasos 1–8 de `presentacion/taller.qmd` y la guía paso a paso |
+| 09:50–10:05 | 15 | Break | |
+| 10:05–10:25 | 20 | **De la pregunta al conocimiento** | Presentación narrativa (§5.7) |
+| 10:25–11:10 | 45 | **Mini-Me con herramientas de Allen AI** | Demo y práctica solo con Allen AI: bibliografía (Asta), teorías (Theorizer), reporte de bibliografía |
 | 11:10–11:20 | 10 | Pausa | |
-| 11:20–12:50 | 90 | **B3 Hands-on** | Dos rutas (Research / Data) sobre el dataset de su temática |
-| 12:50–13:15 | 25 | **Galería** | Mural con todos los Data-Driven Documents + **2 presentaciones voluntarias** + síntesis |
-| 13:15–13:30 | 15 | **Cierre** | **Mentimeter POST** + próximos pasos + entrega de materiales |
+| 11:20–12:30 | 70 | **Reto Mini-Me** | Equipos de 2–3, una temática y una pregunta, datos + literatura + teorías (`manual/reto_mini_me.qmd`) |
+| 12:30–12:50 | 20 | **Pitches y preguntas** | 4 equipos voluntarios × 5 min |
+| 12:50–13:00 | 10 | **Mentimeter POST y voto** | Encuesta final + voto del público por el mejor pitch. Sin premio |
 
-**B0 no es opcional.** Es el bloque que salva el día: 30 minutos de colchón para el 10–20% de laptops que
-llegarán con algo roto pese a la instalación previa.
+Ya no hay bloque de setup: la verificación de laptops tiene que estar resuelta antes de las 8:10.
 
 ### 3.2 Detalle de cada bloque
 
@@ -695,6 +702,9 @@ anonimizada y aprobada.
 - [x] Nota de concepto — **redactada**; falta actualizar la fecha a 24/11
 - [ ] Formulario de registro en Microsoft Forms (§5.8) — preguntas definidas, falta publicarlo
 - [~] Manual del workshop en Quarto + Typst — **compila, 15 páginas, con una página por temática real** (§7 del manual) y el Bloque 2 de Allen AI; falta la paleta oficial de CIP — M4
+- [x] Guía paso a paso para los asistentes (`manual/guia_taller.qmd` → PDF), acorde a la presentación del taller — **hecho**
+- [x] Agenda de una página con QR del Mentimeter (`manual/agenda.qmd` → PDF) — **hecho**
+- [x] Propuesta del Reto Mini-Me con preguntas por temática, pitch, voto y hoja del reto (`manual/reto_mini_me.qmd` → PDF) — **hecho**
 - [ ] Tarjetas impresas: ruta Research, ruta Data, plantilla del Data-Driven Document, Data Passport — M4
 - [ ] Prompts exactos por actividad — M4
 - [ ] Mentimeter PRE y POST configurados — M4
