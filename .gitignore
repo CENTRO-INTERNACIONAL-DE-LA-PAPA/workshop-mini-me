@@ -9,9 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
-# Salidas del manual (se regeneran con: quarto render manual.qmd)
+# Salidas de los PDF (se regeneran con: cd manual && quarto render)
 manual/_output/
-manual/manual.typ
 manual/guia_taller.typ
 manual/agenda.typ
 manual/reto_mini_me.typ
@@ -26,6 +25,7 @@ manual/.quarto/
 presentacion/*.html
 !presentacion/boceto.html
 !presentacion/alianza.html
+!presentacion/mini-mes.html
 presentacion/*_files/
 presentacion/.quarto/
 

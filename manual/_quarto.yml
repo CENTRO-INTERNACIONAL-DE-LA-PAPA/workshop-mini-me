@@ -2,7 +2,6 @@ project:
   type: default
   output-dir: _output
   render:
-    - manual.qmd
     - guia_taller.qmd
     - agenda.qmd
     - reto_mini_me.qmd
