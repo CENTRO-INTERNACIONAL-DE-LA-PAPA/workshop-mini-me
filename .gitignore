@@ -28,3 +28,6 @@ presentacion/.quarto/
 
 # Archivos de sistema de macOS
 .DS_Store
+
+/.quarto/
+**/*.quarto_ipynb
