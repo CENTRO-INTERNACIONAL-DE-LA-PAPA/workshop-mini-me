@@ -1,0 +1,62 @@
+<!-- Última slide del taller (.mini-me-final): logo mini-me arriba y los mini-mes cayendo y
+     rebotando hasta el piso cada vez que se entra a la slide.
+     Las imágenes se escriben aquí, en HTML, para que embed-resources las incruste.
+     El logo usa una copia reducida (mini-me-v2-web.png); el original pesa ~10 MB. -->
+<template id="mini-me-logo">
+  <img class="logo-mini-me" src="img/logos/mini-me-v2.png" alt="mini-me">
+</template>
+<template id="mini-mes-lluvia">
+  <img src="img/mini-mes/avatar1.png" alt="">
+  <img src="img/mini-mes/avatar2.png" alt="">
+  <img src="img/mini-mes/avatar3.png" alt="">
+  <img src="img/mini-mes/avatar4.png" alt="">
+  <img src="img/mini-mes/avatar5.png" alt="">
+  <img src="img/mini-mes/avatar6.png" alt="">
+  <img src="img/mini-mes/avatar7.png" alt="">
+  <img src="img/mini-mes/avatar8.png" alt="">
+  <img src="img/mini-mes/avatar9.png" alt="">
+  <img src="img/mini-mes/avatar10.png" alt="">
+</template>
+<script>
+(function () {
+  const slide = document.querySelector(".reveal .slides section.mini-me-final");
+  if (!slide) return;
+
+  // Logo arriba de la alianza CIP × Ai2.
+  const logo = document.getElementById("mini-me-logo").content.cloneNode(true);
+  slide.insertBefore(logo, slide.firstChild);
+
+  // Capa a todo el alto de la slide; los mini-mes aterrizan en su borde inferior.
+  const lluvia = document.createElement("div");
+  lluvia.className = "lluvia-mini-mes";
+  lluvia.setAttribute("aria-hidden", "true");
+  lluvia.appendChild(document.getElementById("mini-mes-lluvia").content.cloneNode(true));
+  slide.appendChild(lluvia);
+
+  const minis = Array.from(lluvia.querySelectorAll("img"));
+
+  // Orden de caída, giro e intensidad distintos en cada visita, para que no parezca una fila.
+  function sortear() {
+    const orden = minis.map((_, i) => i).sort(() => Math.random() - 0.5);
+    minis.forEach((img, i) => {
+      img.style.setProperty("--retraso", (0.25 + orden[i] * 0.16).toFixed(2) + "s");
+      img.style.setProperty("--giro", (Math.random() * 50 - 25).toFixed(0) + "deg");
+      img.style.setProperty("--giro-final", (Math.random() * 12 - 6).toFixed(0) + "deg");
+      img.style.setProperty("--alto", (0.8 + Math.random() * 0.4).toFixed(2));
+    });
+  }
+
+  // Quitar y volver a poner la clase reinicia la animación en cada visita.
+  function actualizar() {
+    const aqui = Reveal.getCurrentSlide() === slide;
+    lluvia.classList.remove("cayendo");
+    if (aqui) {
+      sortear();
+      void lluvia.offsetWidth;
+      lluvia.classList.add("cayendo");
+    }
+  }
+  Reveal.on("ready", actualizar);
+  Reveal.on("slidechanged", actualizar);
+})();
+</script>
