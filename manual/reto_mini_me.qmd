@@ -286,7 +286,7 @@ tiempo cambiando de equipo.
 - **Quiénes presentan.** Los equipos se anotan con el equipo facilitador hasta las 12:05. Si hay
   más de cuatro, se prioriza que haya un equipo por temática y el resto se sortea. Si hay menos, el
   equipo facilitador invita a equipos con resultados interesantes.
-- **Cómo se vota.** En el Mentimeter post-taller (12:50) se agrega una pregunta de opción única con
+- **Cómo se vota.** En el Mentimeter post-taller (12:50, [menti.com/alhuo61h2cfn](https://www.menti.com/alhuo61h2cfn)) se agrega una pregunta de opción única con
   los cuatro equipos. Antes de votar se lee el criterio en voz alta: *¿qué equipo respaldó mejor su
   hallazgo y fue más honesto sobre sus límites?*
 - **Resultado.** Se anuncia en el cierre, a las 13:00. No hay premio.
