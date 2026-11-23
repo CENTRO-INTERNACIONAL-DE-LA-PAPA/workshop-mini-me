@@ -29,8 +29,8 @@
 > 2 abren con **presentaciones narrativas** en Quarto + Reveal.js (§5.7). Se agregan la nota de concepto
 > y el formulario de registro (§5.8). El cronograma se rehízo para la nueva fecha (§6).
 >
-> **Cambios de la v2.** La v1 (3 días, dataset sintético único) queda archivada en
-> `workshop_plan_v1_3dias.bak.md`. La v2 comprimió todo a **un día con tres bloques**, cambió el dataset
+> **Cambios de la v2.** La v1 (3 días, dataset sintético único) se archivó y se borró
+> el 23 de noviembre (sigue en el historial de git). La v2 comprimió todo a **un día con tres bloques**, cambió el dataset
 > sintético por **datos reales de CIP ensuciados de forma controlada** (4 temáticas) y añadió el eje de
 > **medición antes/después**.
 
@@ -506,6 +506,10 @@ sus `**asteriscos**`, y los informes y citas son el entregable. Ver riesgo R6.
 
 ### 5.5 Manual del workshop — Quarto + Typst
 
+> **23 de noviembre.** El manual largo (`manual/manual.qmd` y `manual/secciones/`) se borró: lo reemplazan
+> la guía paso a paso (`manual/guia_taller.qmd`), la agenda (`manual/agenda.qmd`) y el reto
+> (`manual/reto_mini_me.qmd`), que usan la misma marca (`manual/_brand.typ`). Sigue en el historial de git.
+
 **Se escribe en Quarto con motor Typst**, no en Word ni en LaTeX. Tres razones: el formato Typst permite
 definir la paleta institucional de CIP y una maqueta propia sin pelear con plantillas; el contenido vive en
 Markdown y por tanto en git, junto a los scripts que documenta; y los bloques de código y las tablas se
@@ -701,7 +705,7 @@ anonimizada y aprobada.
 - [x] Presentaciones de los bloques 1 y 2 en Quarto + Reveal.js (§5.7) — **hecho**
 - [x] Nota de concepto — **redactada**; falta actualizar la fecha a 24/11
 - [ ] Formulario de registro en Microsoft Forms (§5.8) — preguntas definidas, falta publicarlo
-- [~] Manual del workshop en Quarto + Typst — **compila, 15 páginas, con una página por temática real** (§7 del manual) y el Bloque 2 de Allen AI; falta la paleta oficial de CIP — M4
+- [x] ~~Manual del workshop en Quarto + Typst~~ — reemplazado por la guía, la agenda y el reto (23 de noviembre). Falta la paleta oficial de CIP en `manual/_brand.typ` — M4
 - [x] Guía paso a paso para los asistentes (`manual/guia_taller.qmd` → PDF), acorde a la presentación del taller — **hecho**
 - [x] Agenda de una página con QR del Mentimeter (`manual/agenda.qmd` → PDF) — **hecho**
 - [x] Propuesta del Reto Mini-Me con preguntas por temática, pitch, voto y hoja del reto (`manual/reto_mini_me.qmd` → PDF) — **hecho**

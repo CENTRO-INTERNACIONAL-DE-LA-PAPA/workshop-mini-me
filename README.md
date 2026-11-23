@@ -11,8 +11,8 @@ El plan completo, con agenda, milestones y riesgos, está en
 | Carpeta | Qué es |
 |---|---|
 | `scripts/` | El pipeline de preparación de datos |
-| `presentacion/` | Las presentaciones de los bloques 1 y 2, en Quarto + Reveal.js |
-| `manual/` | El manual del participante, en Quarto + Typst |
+| `presentacion/` | Las presentaciones del taller, en Quarto + Reveal.js |
+| `manual/` | Los PDF del taller (guía paso a paso, agenda y reto), en Quarto + Typst |
 | `datasets/` | Los cuatro paquetes del taller (datos reales de CIP, públicos), con sus originales |
 
 ## El pipeline
@@ -128,17 +128,17 @@ python scripts/generate_datasets.py --output-dir .
 
 La semilla es fija: reproduce los mismos archivos byte por byte.
 
-## El manual
+## Los documentos del taller
 
 ```bash
-cd manual && quarto render manual.qmd
+cd manual && quarto render
 ```
 
-Sale en `manual/_output/manual.pdf`. Detalles y advertencias en
-[`manual/README.md`](manual/README.md).
+Salen en `manual/_output/`: `guia_taller.pdf`, `agenda.pdf` y `reto_mini_me.pdf`. Detalles y
+advertencias en [`manual/README.md`](manual/README.md).
 
 ## Requisitos
 
 - Python 3.11+. El pipeline usa solo la biblioteca estándar, salvo `openpyxl` para leer
   Excel en `adapt_dataset.py`.
-- Quarto 1.8+ para el manual. Typst viene incluido.
+- Quarto 1.8+ para los documentos y las presentaciones. Typst viene incluido.
