@@ -1,0 +1,365 @@
+---
+title: "Reto Mini-Me · Propuesta"
+subtitle: "De la pregunta a la evidencia en 70 minutos"
+date: 2026-11-24
+date-format: "D [de] MMMM [de] YYYY"
+author: "Digital & Data · Centro Internacional de la Papa"
+lang: es
+format:
+  typst:
+    papersize: a4
+    margin:
+      top: 2.2cm
+      bottom: 2cm
+      left: 2.3cm
+      right: 2.3cm
+    mainfont: "Segoe UI"
+    monofont: "Cascadia Mono"
+    fontsize: 10pt
+    keep-typ: true
+    toc: true
+    toc-title: Contenido
+    toc-depth: 1
+    include-in-header:
+      - file: _brand.typ
+---
+
+```{=typst}
+#show table: it => block(breakable: false, it)
+
+// Tarjeta de una temática: archivo, unidad y resultado de un vistazo.
+#let ficha(archivo, unidad, resultado) = block(
+  width: 100%,
+  breakable: false,
+  fill: cip-suave,
+  inset: (x: 10pt, y: 7pt),
+  radius: 3pt,
+  spacing: 10pt,
+  grid(
+    columns: (auto, 1fr),
+    column-gutter: 10pt,
+    row-gutter: 5pt,
+    text(weight: "bold", fill: cip-azul, size: 9pt)[Archivo], text(size: 9.5pt, raw(archivo)),
+    text(weight: "bold", fill: cip-azul, size: 9pt)[Una fila es], text(size: 9.5pt, unidad),
+    text(weight: "bold", fill: cip-azul, size: 9pt)[Resultado], text(size: 9.5pt, resultado),
+  ),
+)
+
+#v(6pt)
+#block(width: 100%, fill: cip-suave, stroke: (left: 3pt + cip-verde), inset: 12pt, radius: (right: 4pt))[
+  #text(size: 11pt)[
+    En equipos de 2 o 3, elijan una temática y una pregunta. En 70 minutos respóndanla con Mini-Me
+    usando *tres fuentes de evidencia*: los datos, la literatura y las teorías. Cuatro equipos
+    voluntarios lo cuentan en un pitch de 5 minutos y el público vota por el más convincente.
+  ]
+]
+#v(4pt)
+```
+
+# El reto de un vistazo
+
+| Aspecto | Propuesta |
+|---|---|
+| **Cuándo** | 11:20–12:30 el reto · 12:30–12:50 los pitches · 12:50–13:00 el voto en el Mentimeter post-taller |
+| **Equipos** | De 2 o 3 personas, cada uno con una temática |
+| **Datos** | Las cuatro temáticas del taller: morfología, mejoramiento, tizón tardío y consumidores |
+| **Herramientas** | Todo Mini-Me: el ciclo de datos, la búsqueda de bibliografía con Asta y la generación de teorías con Theorizer. AutoDiscovery, si el equipo no sabe por dónde empezar |
+| **Entregable** | Un pitch de 5 minutos, solo para los 4 equipos voluntarios |
+| **Ganador** | El que más votos reciba del público. Sin premio |
+
+: {tbl-colwidths="[20,80]"}
+
+**Por qué este reto.** La mañana enseña dos cosas por separado: el ciclo de los datos (Manos a la
+obra) y la investigación con las herramientas de Allen AI (De la pregunta al conocimiento). El reto
+las junta en un solo problema. Gana el argumento mejor respaldado, no el equipo que usó más
+herramientas ni el que terminó primero.
+
+# Reglas
+
+```{=typst}
+#prueba[
+  - *Solo los datasets del taller.* Nada de datos propios: pueden ser sensibles y el equipo
+    facilitador no puede verificarlos.
+  - *Partan del archivo sucio* (`<temática>_dirty.csv`). Quien elija mejoramiento puede reutilizar
+    su archivo limpio de la mañana, pero con una pregunta nueva.
+  - *Revisen cada comando* antes de aprobarlo, igual que en la mañana.
+  - *Verifiquen cada fuente*: abran el enlace o el DOI. Una fuente que no existe es un error de la
+    IA, y contarlo en el pitch suma.
+  - *Las hipótesis de Theorizer son propuestas* para poner a prueba, no conclusiones.
+]
+
+#ojo[
+  No abran el archivo `_clean.csv` ni los archivos para facilitadores (`changelog`, `defect_key`,
+  `ADAPTATION`, `dictionary_completo`): dicen exactamente qué se rompió y arruinan el ejercicio.
+]
+```
+
+# Roles en el equipo
+
+| Rol | Qué hace |
+|---|---|
+| **Piloto de datos** | Carga el dataset y lleva el ciclo en Mini-Me: diagnóstico, limpieza, análisis y figura |
+| **Bibliotecario/a** | Busca la bibliografía con Asta, verifica las fuentes y lanza Theorizer |
+| **Auditor/a** | Revisa los comandos, compara con el diccionario, anota los errores de la IA, controla el tiempo y arma el guion del pitch |
+
+: {tbl-colwidths="[25,75]"}
+
+En equipos de dos, piloto y bibliotecario/a se reparten la auditoría. Si cada persona tiene su
+laptop, trabajen *en paralelo*: datos en una y literatura en la otra.
+
+# Los 70 minutos
+
+| Hora | Qué pasa |
+|---|---|
+| 11:20–11:30 | **Todo el equipo:** elegir temática, pregunta y roles, y anotarlos en la hoja del reto |
+| 11:30–11:35 | **Piloto:** cargar el dataset y pedir el diagnóstico. **Bibliotecario/a:** lanzar la búsqueda de bibliografía |
+| 11:35–12:00 | **Piloto:** limpiar y analizar. **Bibliotecario/a:** leer y verificar las fuentes, y lanzar Theorizer *a más tardar a las 11:45* |
+| 12:00–12:05 | **Todo el equipo:** ¿ya tenemos un resultado? Los voluntarios para el pitch se anotan *hasta las 12:05* |
+| 12:05–12:15 | **Todo el equipo:** cruzar el resultado con la literatura y las hipótesis. ¿Se respaldan o se contradicen? |
+| 12:15–12:30 | **Todo el equipo:** armar el pitch. Los voluntarios envían su figura a la carpeta compartida *a las 12:25* |
+
+: {tbl-colwidths="[16,84]"}
+
+```{=typst}
+#nota[
+  Theorizer necesita la bibliografía y tarda. Por eso la búsqueda se lanza en el minuto 10 y
+  Theorizer apenas llegan las fuentes. Si a las 12:15 no ha terminado, el equipo sigue sin él y lo
+  dice en el pitch: también es un hallazgo sobre la herramienta.
+]
+```
+
+# Preguntas por temática
+
+Cada temática trae tres preguntas: la **A** es la pregunta original del dataset y la **B** y la
+**C** son alternativas. El equipo elige una. Los prompts de bibliografía y teorías tienen la misma
+forma que los de la práctica de las 10:25: basta cambiar el tema.
+
+## Morfología
+
+```{=typst}
+#ficha("morfologia_dirty.csv", [Una variedad (accesión): 70 variedades de 22 países], [No hay: el ejercicio es encontrar grupos])
+```
+
+| Pregunta | Análisis sugerido |
+|---|---|
+| **A.** ¿Qué descriptores de color y forma agrupan a las variedades, y cuáles son redundantes? | Agrupamiento con variables categóricas, por ejemplo un análisis de correspondencias múltiples o un clúster jerárquico con distancia de Gower |
+| **B.** ¿El color de la pulpa va de la mano con el color de la piel? | Tabla de contingencia, prueba exacta de Fisher y V de Cramér |
+| **C.** ¿Las variedades seleccionadas en Perú se distinguen por su forma y la profundidad de sus ojos? | Comparación de proporciones entre Perú y el resto |
+
+: {tbl-colwidths="[50,50]"}
+
+```{=typst}
+#prompt("Bibliografía · ejemplo para B")[
+  Búsqueda de bibliografía sobre la herencia del color de la piel y de la pulpa en papa, de los
+  últimos 10 años.
+]
+#prompt("Teorías · ejemplo para B")[
+  Genera hipótesis y la síntesis de teorías mecanísticas a partir de la literatura científica
+  recopilada sobre por qué el color de la piel y el de la pulpa aparecen juntos.
+]
+#ojo[
+  Los colores y las formas son *códigos, no cantidades*: no se promedian. Parecerse no es estar
+  emparentado. Y la muestra está desequilibrada: 26 variedades de Perú y varios países con una sola.
+]
+```
+
+## Mejoramiento
+
+```{=typst}
+#ficha("mejoramiento_dirty.csv", [Una parcela: 61 genotipos × 4 repeticiones en La Victoria (Huancayo), 2016], [`ttya`, el rendimiento ajustado (t/ha)])
+```
+
+El ANOVA de qué genotipo rinde más ya se hizo en la mañana: aquí la pregunta es otra.
+
+| Pregunta | Análisis sugerido |
+|---|---|
+| **A.** ¿El rendimiento depende más de cuántos tubérculos da cada planta (`tntpl`) o de cuánto pesan (`atw`)? | Correlación y regresión de `ttya` con ambos componentes, sobre las medias por genotipo |
+| **B.** ¿Hay un compromiso entre número y tamaño de tubérculos? | Dispersión de `tntpl` contra `atw` por genotipo, con su correlación e intervalo |
+| **C.** ¿Qué genotipos combinan buen rendimiento con tubérculos grandes? | Gráfico de cuadrantes con las medias e intervalos de `ttya` y `atw` |
+
+: {tbl-colwidths="[50,50]"}
+
+```{=typst}
+#prompt("Bibliografía · ejemplo para A y B")[
+  Búsqueda de bibliografía sobre los componentes del rendimiento en papa (número y peso de
+  tubérculos), de los últimos 5 años.
+]
+#prompt("Teorías · ejemplo para B")[
+  Genera hipótesis y la síntesis de teorías mecanísticas a partir de la literatura científica
+  recopilada sobre por qué las plantas con más tubérculos producen tubérculos más pequeños.
+]
+#ojo[
+  `ttwp`, `ttwpl` y `ttyna` se calculan a partir del mismo rendimiento: si entran al modelo, todo
+  parece perfecto sin haber aprendido nada. Hay una sola localidad y un solo año.
+]
+```
+
+## Tizón tardío
+
+```{=typst}
+#ficha("tizon_tardio_dirty.csv", [Una parcela: variedad × tratamiento × repetición en 3 localidades de Kenia], [`audpc`, el avance del tizón (más AUDPC es más enfermedad)])
+```
+
+| Pregunta | Análisis sugerido |
+|---|---|
+| **A.** ¿Los fosfonatos reducen el tizón frente al control? ¿El efecto depende de la variedad o de la localidad? | Modelo con tratamiento × localidad y la repetición dentro de cada localidad |
+| **B.** ¿Los fosfonatos protegen tanto como el fungicida convencional? | Diferencia fosfonato − convencional por localidad, con su intervalo de confianza |
+| **C.** ¿Menos tizón significa más rendimiento? | Relación entre `audpc` y `ttya` dentro de cada localidad |
+
+: {tbl-colwidths="[50,50]"}
+
+```{=typst}
+#prompt("Bibliografía · ejemplo para A y B")[
+  Búsqueda de bibliografía sobre fosfonatos (fosfitos) para el control del tizón tardío de la papa,
+  de los últimos 5 años.
+]
+#prompt("Teorías · ejemplo para A")[
+  Genera hipótesis y la síntesis de teorías mecanísticas a partir de la literatura científica
+  recopilada sobre cómo los fosfonatos reducen el tizón tardío.
+]
+#ojo[
+  `raudpc` y `rlb` se calculan a partir del AUDPC: no sirven para explicarlo. No todas las
+  variedades están en las tres localidades, así que comparen *dentro* de cada localidad. Para decir
+  "protegen igual" no basta un valor p mayor a 0,05: hace falta el intervalo de la diferencia.
+]
+```
+
+{{< pagebreak >}}
+
+## Consumidores
+
+```{=typst}
+#ficha("consumidores_dirty.csv", [Una persona encuestada: 114 personas en La Molina, Miraflores y San Isidro, 2015], [`v9pagarpreciojustoalagricultor`: acuerdo con pagar un precio justo al agricultor])
+```
+
+| Pregunta | Análisis sugerido |
+|---|---|
+| **A.** ¿Qué valoran los consumidores de las papas nativas de color y cómo se relaciona con su disposición a pagar un precio justo? | Tablas cruzadas y correlación de Spearman con los `v7`, con el "no sé" aparte |
+| **B.** ¿Las respuestas cambian según quién hizo la encuesta? | Distribución de `v9` y proporción de "no sé" por encuestador, con chi-cuadrado |
+| **C.** ¿Por qué canales se enteran de las papas nativas de color (`v10`)? ¿Cambia con la edad? | Proporciones por canal y por grupo de edad |
+
+: {tbl-colwidths="[50,50]"}
+
+```{=typst}
+#prompt("Bibliografía · ejemplo para A")[
+  Búsqueda de bibliografía sobre la disposición a pagar por papas nativas y alimentos de la
+  biodiversidad andina, de los últimos 10 años.
+]
+#prompt("Teorías · ejemplo para A")[
+  Genera hipótesis y la síntesis de teorías mecanísticas a partir de la literatura científica
+  recopilada sobre por qué los consumidores aceptarían pagar un precio justo al agricultor.
+]
+#ojo[
+  En `v9` y `v11`, *el 5 significa "no sé"*: no es "más en desacuerdo" que el 4. Son 114 personas
+  de tres distritos, no Lima ni el Perú. Y es una encuesta: una asociación no prueba que una cosa
+  cause la otra.
+]
+```
+
+# El pitch de 5 minutos
+
+Una figura principal y, como máximo, tres diapositivas o el reporte que genera Mini-Me. El equipo
+facilitador proyecta todo desde una sola laptop, a partir de la carpeta compartida, para no perder
+tiempo cambiando de equipo.
+
+| Tiempo | Qué contar |
+|---|---|
+| 0:00–0:30 | La pregunta y por qué importa |
+| 0:30–1:30 | Los datos: qué estaba roto y una decisión de limpieza |
+| 1:30–2:45 | El resultado: la figura y un número con su incertidumbre |
+| 2:45–3:30 | Qué dice la literatura (dos fuentes verificadas) y una hipótesis de Theorizer |
+| 3:30–4:15 | Lo que *no* podemos afirmar y un error de la IA que detectamos |
+| 4:15–5:00 | El próximo experimento que haríamos |
+
+: {tbl-colwidths="[18,82]"}
+
+```{=typst}
+#nota[
+  Cuatro pitches de 5 minutos llenan exactamente los 20 minutos de 12:30 a 12:50. El tiempo se
+  corta a los 5:00. Si se quiere una pregunta del público por equipo, el turno pasa a 4 minutos de
+  pitch y 1 de pregunta.
+]
+```
+
+# Voluntarios y voto
+
+- **Quiénes presentan.** Los equipos se anotan con el equipo facilitador hasta las 12:05. Si hay
+  más de cuatro, se prioriza que haya un equipo por temática y el resto se sortea. Si hay menos, el
+  equipo facilitador invita a equipos con resultados interesantes.
+- **Cómo se vota.** En el Mentimeter post-taller (12:50) se agrega una pregunta de opción única con
+  los cuatro equipos. Antes de votar se lee el criterio en voz alta: *¿qué equipo respaldó mejor su
+  hallazgo y fue más honesto sobre sus límites?*
+- **Resultado.** Se anuncia en el cierre, a las 13:00. No hay premio.
+
+# Para el equipo facilitador
+
+## Preparación
+
+```{=typst}
+#prueba[
+  - Una *carpeta compartida* para las figuras de los pitches, probada antes con el proyector.
+  - Una *corrida de Theorizer de respaldo por temática*, lanzada antes del taller. Si la del equipo
+    no termina, usa la de respaldo y lo dice.
+  - Dos o tres *PDF abiertos ya descargados* por temática, para no depender de descargas en vivo.
+  - La *pregunta de voto* en el Mentimeter post-taller. Los nombres de los cuatro equipos se
+    escriben a las 12:30.
+  - Una *hoja del reto impresa* por equipo (última página).
+  - Un cronómetro visible y tres avisos: 11:45 (lanzar Theorizer), 12:05 (cierre de voluntarios) y
+    12:25 (enviar la figura).
+  - Repartir las temáticas para que las cuatro queden cubiertas.
+]
+```
+
+## Pistas: qué deberían encontrar
+
+Salen de los archivos limpios de referencia. Sirven para orientar a los equipos que se traben; no
+se las den como respuesta.
+
+| Temática | Qué esperar |
+|---|---|
+| **Morfología (B)** | La piel de color 1 se concentra en pulpas de color 1 y 2: hay asociación, pero con muchas celdas casi vacías. Conviene la prueba exacta o agrupar categorías |
+| **Mejoramiento (A, B)** | Número y peso de tubérculos van en direcciones opuestas entre genotipos (Spearman ≈ −0,7). Ambos se asocian moderadamente con el rendimiento (≈ 0,35–0,4) |
+| **Tizón tardío (A, B)** | El control tiene mucho más AUDPC que el convencional en las tres localidades. Los fosfonatos quedan en medio en Limuru y cerca del convencional en Njabini |
+| **Tizón tardío (C)** | Si se juntan las tres localidades, AUDPC y rendimiento parecen no relacionarse (≈ 0). Dentro de cada localidad la relación es negativa (−0,3 a −0,65): es una paradoja de Simpson |
+| **Consumidores (B)** | El Encuestador03 registra casi la mitad de "no sé" en `v9`. Pero *cada encuestador trabajó en un solo distrito*: el efecto del encuestador no se puede separar del efecto del distrito |
+| **Consumidores (todas)** | 109 de 114 personas compran en supermercados, así que comparar por lugar de compra no da para mucho |
+
+: {tbl-colwidths="[27,73]"}
+
+{{< pagebreak >}}
+
+```{=typst}
+#let campo(etiqueta, alto) = block(
+  width: 100%,
+  breakable: false,
+  spacing: 7pt,
+  stroke: 0.8pt + cip-borde,
+  radius: 3pt,
+  inset: (x: 8pt, y: 6pt),
+  height: alto,
+  text(weight: "bold", fill: cip-azul, size: 9pt, etiqueta),
+)
+
+#align(center, text(size: 16pt, weight: "bold", fill: cip-azul)[Hoja del reto Mini-Me])
+#v(2pt)
+#align(center, text(size: 9.5pt)[Llénenla mientras trabajan: es el guion de su pitch.])
+#v(6pt)
+
+#campo("Equipo e integrantes", 1.4cm)
+#grid(
+  columns: (1fr, 2fr),
+  column-gutter: 7pt,
+  campo("Temática", 1.4cm),
+  campo("Pregunta (A, B o C)", 1.4cm),
+)
+#campo("Los datos: qué estaba roto y una decisión de limpieza", 2.3cm)
+#campo("El resultado: un número con su incertidumbre", 2.3cm)
+#campo("Dos fuentes verificadas (autor, año, enlace)", 2.3cm)
+#campo("Una hipótesis de Theorizer: ¿nuestros datos la respaldan o la contradicen?", 2.3cm)
+#campo("Lo que NO podemos afirmar con estos datos", 2cm)
+#campo("Un error de la IA que detectamos y cómo lo vimos", 2cm)
+#campo("El próximo experimento", 1.6cm)
+
+#v(4pt)
+#text(size: 10pt)[#box(width: 9pt, height: 9pt, stroke: 0.8pt + cip-azul, radius: 1pt) #h(4pt) *Nos ofrecemos para el pitch* (avisar antes de las 12:05)]
+```

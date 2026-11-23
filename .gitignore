@@ -12,6 +12,9 @@ wheels/
 # Salidas del manual (se regeneran con: quarto render manual.qmd)
 manual/_output/
 manual/manual.typ
+manual/guia_taller.typ
+manual/agenda.typ
+manual/reto_mini_me.typ
 manual/manual.html
 manual/manual_files/
 manual/.quarto/

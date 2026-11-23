@@ -8,7 +8,7 @@ PDF del participante, escrito en Quarto con motor **Typst**.
 quarto render manual.qmd
 ```
 
-Sale en `_output/manual.pdf`. Typst viene incluido con Quarto: no hay que instalarlo aparte.
+Sale en `_output/manual.pdf`. La guía del taller: `quarto render guia_taller.qmd`, que sale en `_output/guia_taller.pdf`. La agenda y el reto: `quarto render agenda.qmd` y `quarto render reto_mini_me.qmd`. Typst viene incluido con Quarto: no hay que instalarlo aparte.
 
 Para revisar el diseño página por página sin abrir el PDF:
 
@@ -28,6 +28,11 @@ reemplazarlos. Todo el documento sale de ahí, así que es un cambio de seis lí
 | Archivo | Qué es |
 |---|---|
 | `manual.qmd` | Portada, configuración del formato y los `include` de las secciones |
+| `guia_taller.qmd` | Guía paso a paso del ejercicio para los asistentes, acorde a `presentacion/taller.qmd` |
+| `agenda.qmd` | Agenda de una página del 24 de noviembre, con el QR del Mentimeter |
+| `reto_mini_me.qmd` | Propuesta del Reto Mini-Me: preguntas por temática, cronograma, pitch, voto, pistas para facilitadores y hoja del reto |
+| `img/qr-mentimeter.svg` | QR de menti.com/al2sww8pf7ik (se regenera con `qrencode -t SVG`) |
+| `img-taller` | Enlace a `../presentacion/img/taller`: Typst no lee imágenes fuera de esta carpeta, y así las capturas no se duplican |
 | `_brand.typ` | Paleta, tipografía, estilos de título y tabla, y las cajas |
 | `secciones/*.qmd` | Una sección por archivo, en orden |
 
