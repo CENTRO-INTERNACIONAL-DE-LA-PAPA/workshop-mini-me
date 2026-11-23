@@ -61,11 +61,20 @@ format:
       *Taller Mini-me* en tu Escritorio y la *guía paso a paso*.
     ]
   ],
-  align(center)[
-    #image("img/qr-mentimeter.svg", width: 2.3cm)
-    #v(-6pt)
-    #text(size: 8pt, weight: "bold", fill: cip-azul)[Mentimeter]
-  ],
+  grid(
+    columns: 2,
+    column-gutter: 10pt,
+    align(center)[
+      #image("img/qr-mentimeter-pre.svg", width: 2.1cm)
+      #v(-6pt)
+      #text(size: 8pt, weight: "bold", fill: cip-azul)[Mentimeter pre]
+    ],
+    align(center)[
+      #image("img/qr-mentimeter-post.svg", width: 2.1cm)
+      #v(-6pt)
+      #text(size: 8pt, weight: "bold", fill: cip-azul)[Mentimeter post]
+    ],
+  ),
 )
 #v(2pt)
 
@@ -99,6 +108,7 @@ format:
   Cuatro equipos voluntarios presentan su hallazgo en 5 minutos cada uno.
 ]
 #fila("12:50 – 13:00", "Mentimeter post-taller y voto")[
-  Encuesta final y voto del público por el pitch más convincente. Cierre.
+  Encuesta final y voto del público por el pitch más convincente: escanea el código o entra a
+  #link("https://www.menti.com/alhuo61h2cfn")[menti.com/alhuo61h2cfn]. Cierre.
 ]
 ```

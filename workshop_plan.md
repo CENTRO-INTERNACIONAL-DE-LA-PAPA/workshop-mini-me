@@ -255,7 +255,7 @@ Por eso, antes de que cualquier archivo entre al workshop:
 | 11:10–11:20 | 10 | Pausa | |
 | 11:20–12:30 | 70 | **Reto Mini-Me** | Equipos de 2–3, una temática y una pregunta, datos + literatura + teorías (`manual/reto_mini_me.qmd`) |
 | 12:30–12:50 | 20 | **Pitches y preguntas** | 4 equipos voluntarios × 5 min |
-| 12:50–13:00 | 10 | **Mentimeter POST y voto** | Encuesta final + voto del público por el mejor pitch. Sin premio |
+| 12:50–13:00 | 10 | **Mentimeter POST y voto** | menti.com/alhuo61h2cfn: encuesta final + voto del público por el mejor pitch. Sin premio |
 
 Ya no hay bloque de setup: la verificación de laptops tiene que estar resuelta antes de las 8:10.
 

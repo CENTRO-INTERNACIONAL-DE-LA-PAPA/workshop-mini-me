@@ -31,7 +31,7 @@ reemplazarlos. Todo el documento sale de ahí, así que es un cambio de seis lí
 | `guia_taller.qmd` | Guía paso a paso del ejercicio para los asistentes, acorde a `presentacion/taller.qmd` |
 | `agenda.qmd` | Agenda de una página del 24 de noviembre, con el QR del Mentimeter |
 | `reto_mini_me.qmd` | Propuesta del Reto Mini-Me: preguntas por temática, cronograma, pitch, voto, pistas para facilitadores y hoja del reto |
-| `img/qr-mentimeter.svg` | QR de menti.com/al2sww8pf7ik (se regenera con `qrencode -t SVG`) |
+| `img/qr-mentimeter-pre.svg`, `img/qr-mentimeter-post.svg` | QR de los Mentimeter pre (menti.com/al2sww8pf7ik) y post (menti.com/alhuo61h2cfn). Se regeneran con `qrencode -t SVG` |
 | `img-taller` | Enlace a `../presentacion/img/taller`: Typst no lee imágenes fuera de esta carpeta, y así las capturas no se duplican |
 | `_brand.typ` | Paleta, tipografía, estilos de título y tabla, y las cajas |
 | `secciones/*.qmd` | Una sección por archivo, en orden |
