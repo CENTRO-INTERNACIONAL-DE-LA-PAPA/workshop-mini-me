@@ -1,248 +1,480 @@
 change_id,family,record_id,column,original_value,new_value,detail
-C00001,mixed_unit,45,elevation,3216,10551,m -> ft
-C00002,mixed_unit,73,elevation,3216,10551,m -> ft
-C00003,mixed_unit,91,elevation,3216,10551,m -> ft
-C00004,mixed_unit,149,elevation,3216,10551,m -> ft
-C00005,mixed_unit,175,elevation,3216,10551,m -> ft
-C00006,mixed_unit,219,elevation,3216,10551,m -> ft
-C00007,mixed_unit,13,pph,100,1,% -> fraction 0-1
-C00008,mixed_unit,59,pph,80,1,% -> fraction 0-1
-C00009,mixed_unit,61,pph,70,1,% -> fraction 0-1
-C00010,mixed_unit,62,pph,100,1,% -> fraction 0-1
-C00011,mixed_unit,211,pph,100,1,% -> fraction 0-1
-C00012,mixed_unit,242,pph,90,1,% -> fraction 0-1
-C00013,mixed_unit,1,ttwp,7.76,17.108,kg -> lb
-C00014,mixed_unit,16,ttwp,5.54,12.214,kg -> lb
-C00015,mixed_unit,34,ttwp,3.26,7.187,kg -> lb
-C00016,mixed_unit,140,ttwp,4.64,10.229,kg -> lb
-C00017,mixed_unit,183,ttwp,5.18,11.42,kg -> lb
-C00018,mixed_unit,212,ttwp,3.36,7.408,kg -> lb
-C00019,mixed_unit,50,ttwpl,0.5156,1.137,kg -> lb
-C00020,mixed_unit,51,ttwpl,0.32,0.705,kg -> lb
-C00021,mixed_unit,79,ttwpl,0.2975,0.656,kg -> lb
-C00022,mixed_unit,164,ttwpl,0.198,0.437,kg -> lb
-C00023,mixed_unit,180,ttwpl,0.1978,0.436,kg -> lb
-C00024,mixed_unit,213,ttwpl,0.51,1.124,kg -> lb
-C00025,mixed_unit,50,ttya,19.0947,19094.7,t/ha -> kg/ha
-C00026,mixed_unit,160,ttya,7.9835,7983.5,t/ha -> kg/ha
-C00027,mixed_unit,169,ttya,16.9444,16944.4,t/ha -> kg/ha
-C00028,mixed_unit,190,ttya,5.4321,5432.1,t/ha -> kg/ha
-C00029,mixed_unit,194,ttya,13.9095,13909.5,t/ha -> kg/ha
-C00030,mixed_unit,30,ttyna,9.4815,9481.5,t/ha -> kg/ha
-C00031,mixed_unit,39,ttyna,8.0741,8074.1,t/ha -> kg/ha
-C00032,mixed_unit,56,ttyna,3.1852,3185.2,t/ha -> kg/ha
-C00033,mixed_unit,131,ttyna,20.2222,20222.2,t/ha -> kg/ha
-C00034,mixed_unit,152,ttyna,24.1481,24148.1,t/ha -> kg/ha
-C00035,impossible_value,2,atw,53.0851,128.994,above the valid maximum
-C00036,impossible_value,158,atw,16.1468,-15.746,below the valid minimum
-C00037,impossible_value,30,elevation,3216,3538,above the valid maximum
-C00038,impossible_value,98,elevation,3216,2991,below the valid minimum
-C00039,impossible_value,37,latitude,-12.0264,-10.824,above the valid maximum
-C00040,impossible_value,150,latitude,-12.0264,-12.868,below the valid minimum
-C00041,impossible_value,90,longitude,-75.2449,-67.72,above the valid maximum
-C00042,impossible_value,122,longitude,-75.2449,-80.512,below the valid minimum
-C00043,impossible_value,17,nph,8,15,above the valid maximum
-C00044,impossible_value,18,nph,8,1,below the valid minimum
-C00045,impossible_value,40,ntp,10,750,above the valid maximum
-C00046,impossible_value,221,ntp,10,-100,below the valid minimum
-C00047,impossible_value,42,pph,100,150,above the valid maximum
-C00048,impossible_value,129,pph,90,-20,below the valid minimum
-C00049,impossible_value,17,rep,1,5,above the valid maximum
-C00050,impossible_value,235,rep,3,0,below the valid minimum
-C00051,impossible_value,31,tntp,100,804,above the valid maximum
-C00052,impossible_value,152,tntp,372,-107,below the valid minimum
-C00053,impossible_value,62,tntpl,31.4,80.225,above the valid maximum
-C00054,impossible_value,139,tntpl,20,-10.697,below the valid minimum
-C00055,impossible_value,94,ttwp,3.04,15.712,above the valid maximum
-C00056,impossible_value,143,ttwp,2,-2.095,below the valid minimum
-C00057,impossible_value,27,ttwpl,0.3556,1.57,above the valid maximum
-C00058,impossible_value,235,ttwpl,0.3833,-0.209,below the valid minimum
-C00059,impossible_value,49,ttya,11.1852,150,above the valid maximum
-C00060,impossible_value,120,ttya,21.3333,-20,below the valid minimum
-C00061,impossible_value,170,ttyna,13.8519,150,above the valid maximum
-C00062,impossible_value,207,ttyna,13.4815,-20,below the valid minimum
-C00063,whitespace_case,23,instn,CIP306087.132, CIP306087.132,leading space
-C00064,whitespace_case,107,instn,CIP311103.30, CIP311103.30,leading space
-C00065,whitespace_case,110,instn,CIP311166.10,CIP311166.10 ,trailing space
-C00066,whitespace_case,117,instn,CIP311209.16,cip311209.16,lowercase
-C00067,whitespace_case,182,instn,CIP700313, CIP700313,leading space
-C00068,missing_cell,15,adm1,Junin,,value blanked
-C00069,missing_cell,19,adm1,Junin,,value blanked
-C00070,missing_cell,25,adm1,Junin,,value blanked
-C00071,missing_cell,50,adm1,Junin,,value blanked
-C00072,missing_cell,77,adm1,Junin,,value blanked
-C00073,missing_cell,95,adm1,Junin,,value blanked
-C00074,missing_cell,130,adm1,Junin,,value blanked
-C00075,missing_cell,194,adm1,Junin,,value blanked
-C00076,missing_cell,223,adm1,Junin,,value blanked
-C00077,missing_cell,2,adm2,Huancayo,,value blanked
-C00078,missing_cell,20,adm2,Huancayo,,value blanked
-C00079,missing_cell,26,adm2,Huancayo,,value blanked
-C00080,missing_cell,57,adm2,Huancayo,,value blanked
-C00081,missing_cell,100,adm2,Huancayo,,value blanked
-C00082,missing_cell,123,adm2,Huancayo,,value blanked
-C00083,missing_cell,125,adm2,Huancayo,,value blanked
-C00084,missing_cell,146,adm2,Huancayo,,value blanked
-C00085,missing_cell,161,adm2,Huancayo,,value blanked
-C00086,missing_cell,11,adm3,San Agustin,,value blanked
-C00087,missing_cell,16,adm3,San Agustin,,value blanked
-C00088,missing_cell,20,adm3,San Agustin,,value blanked
-C00089,missing_cell,94,adm3,San Agustin,,value blanked
-C00090,missing_cell,137,adm3,San Agustin,,value blanked
-C00091,missing_cell,190,adm3,San Agustin,,value blanked
-C00092,missing_cell,195,adm3,San Agustin,,value blanked
-C00093,missing_cell,198,adm3,San Agustin,,value blanked
-C00094,missing_cell,220,adm3,San Agustin,,value blanked
-C00095,missing_cell,3,atw,78.189,,value blanked
-C00096,missing_cell,11,atw,21.7778,,value blanked
-C00097,missing_cell,62,atw,7.1338,,value blanked
-C00098,missing_cell,98,atw,9.7674,,value blanked
-C00099,missing_cell,124,atw,14.8,,value blanked
-C00100,missing_cell,153,atw,19.0805,,value blanked
-C00101,missing_cell,189,atw,30.303,,value blanked
-C00102,missing_cell,229,atw,26.7442,,value blanked
-C00103,missing_cell,230,atw,28.5965,,value blanked
-C00104,missing_cell,8,country,Peru,,value blanked
-C00105,missing_cell,42,country,Peru,,value blanked
-C00106,missing_cell,78,country,Peru,,value blanked
-C00107,missing_cell,129,country,Peru,,value blanked
-C00108,missing_cell,133,country,Peru,,value blanked
-C00109,missing_cell,182,country,Peru,,value blanked
-C00110,missing_cell,189,country,Peru,,value blanked
-C00111,missing_cell,194,country,Peru,,value blanked
-C00112,missing_cell,220,country,Peru,,value blanked
-C00113,missing_cell,4,elevation,3216,,value blanked
-C00114,missing_cell,11,elevation,3216,,value blanked
-C00115,missing_cell,82,elevation,3216,,value blanked
-C00116,missing_cell,100,elevation,3216,,value blanked
-C00117,missing_cell,125,elevation,3216,,value blanked
-C00118,missing_cell,138,elevation,3216,,value blanked
-C00119,missing_cell,178,elevation,3216,,value blanked
-C00120,missing_cell,195,elevation,3216,,value blanked
-C00121,missing_cell,228,elevation,3216,,value blanked
-C00122,missing_cell,8,instn,CIP303887.51,,value blanked
-C00123,missing_cell,13,instn,CIP306018.66,,value blanked
-C00124,missing_cell,32,instn,CIP306087.72,,value blanked
-C00125,missing_cell,76,instn,CIP306418.1,,value blanked
-C00126,missing_cell,153,instn,CIP311575.103,,value blanked
-C00127,missing_cell,156,instn,CIP311575.103,,value blanked
-C00128,missing_cell,222,instn,CIP703421,,value blanked
-C00129,missing_cell,236,instn,CIP704218,,value blanked
-C00130,missing_cell,238,instn,CIP704393,,value blanked
-C00131,missing_cell,4,latitude,-12.0264,,value blanked
-C00132,missing_cell,12,latitude,-12.0264,,value blanked
-C00133,missing_cell,73,latitude,-12.0264,,value blanked
-C00134,missing_cell,100,latitude,-12.0264,,value blanked
-C00135,missing_cell,112,latitude,-12.0264,,value blanked
-C00136,missing_cell,131,latitude,-12.0264,,value blanked
-C00137,missing_cell,133,latitude,-12.0264,,value blanked
-C00138,missing_cell,189,latitude,-12.0264,,value blanked
-C00139,missing_cell,201,latitude,-12.0264,,value blanked
-C00140,missing_cell,6,location,La Victoria,,value blanked
-C00141,missing_cell,52,location,La Victoria,,value blanked
-C00142,missing_cell,81,location,La Victoria,,value blanked
-C00143,missing_cell,87,location,La Victoria,,value blanked
-C00144,missing_cell,118,location,La Victoria,,value blanked
-C00145,missing_cell,165,location,La Victoria,,value blanked
-C00146,missing_cell,171,location,La Victoria,,value blanked
-C00147,missing_cell,177,location,La Victoria,,value blanked
-C00148,missing_cell,187,location,La Victoria,,value blanked
-C00149,missing_cell,133,longitude,-75.2449,,value blanked
-C00150,missing_cell,138,longitude,-75.2449,,value blanked
-C00151,missing_cell,145,longitude,-75.2449,,value blanked
-C00152,missing_cell,157,longitude,-75.2449,,value blanked
-C00153,missing_cell,174,longitude,-75.2449,,value blanked
-C00154,missing_cell,179,longitude,-75.2449,,value blanked
-C00155,missing_cell,188,longitude,-75.2449,,value blanked
-C00156,missing_cell,229,longitude,-75.2449,,value blanked
-C00157,missing_cell,231,longitude,-75.2449,,value blanked
-C00158,missing_cell,68,nph,10,,value blanked
-C00159,missing_cell,74,nph,9,,value blanked
-C00160,missing_cell,83,nph,10,,value blanked
-C00161,missing_cell,127,nph,10,,value blanked
-C00162,missing_cell,134,nph,10,,value blanked
-C00163,missing_cell,172,nph,10,,value blanked
-C00164,missing_cell,194,nph,9,,value blanked
-C00165,missing_cell,221,nph,10,,value blanked
-C00166,missing_cell,239,nph,8,,value blanked
-C00167,missing_cell,92,ntp,10,,value blanked
-C00168,missing_cell,103,ntp,10,,value blanked
-C00169,missing_cell,144,ntp,10,,value blanked
-C00170,missing_cell,147,ntp,10,,value blanked
-C00171,missing_cell,185,ntp,10,,value blanked
-C00172,missing_cell,190,ntp,10,,value blanked
-C00173,missing_cell,205,ntp,10,,value blanked
-C00174,missing_cell,211,ntp,10,,value blanked
-C00175,missing_cell,216,ntp,10,,value blanked
-C00176,missing_cell,40,pph,100,,value blanked
-C00177,missing_cell,48,pph,80,,value blanked
-C00178,missing_cell,80,pph,90,,value blanked
-C00179,missing_cell,97,pph,100,,value blanked
-C00180,missing_cell,125,pph,100,,value blanked
-C00181,missing_cell,135,pph,90,,value blanked
-C00182,missing_cell,138,pph,90,,value blanked
-C00183,missing_cell,212,pph,100,,value blanked
-C00184,missing_cell,222,pph,70,,value blanked
-C00185,missing_cell,3,rep,3,,value blanked
-C00186,missing_cell,10,rep,2,,value blanked
-C00187,missing_cell,40,rep,4,,value blanked
-C00188,missing_cell,117,rep,1,,value blanked
-C00189,missing_cell,165,rep,1,,value blanked
-C00190,missing_cell,167,rep,3,,value blanked
-C00191,missing_cell,204,rep,4,,value blanked
-C00192,missing_cell,213,rep,1,,value blanked
-C00193,missing_cell,241,rep,1,,value blanked
-C00194,missing_cell,70,tntp,170,,value blanked
-C00195,missing_cell,119,tntp,114,,value blanked
-C00196,missing_cell,139,tntp,160,,value blanked
-C00197,missing_cell,151,tntp,288,,value blanked
-C00198,missing_cell,175,tntp,426,,value blanked
-C00199,missing_cell,180,tntp,280,,value blanked
-C00200,missing_cell,197,tntp,53,,value blanked
-C00201,missing_cell,221,tntp,147,,value blanked
-C00202,missing_cell,32,tntpl,10.5714,,value blanked
-C00203,missing_cell,59,tntpl,12.5,,value blanked
-C00204,missing_cell,126,tntpl,12.1,,value blanked
-C00205,missing_cell,132,tntpl,28.3333,,value blanked
-C00206,missing_cell,183,tntpl,24.1111,,value blanked
-C00207,missing_cell,194,tntpl,13.3333,,value blanked
-C00208,missing_cell,206,tntpl,19,,value blanked
-C00209,missing_cell,216,tntpl,8,,value blanked
-C00210,missing_cell,41,ttwp,3.68,,value blanked
-C00211,missing_cell,42,ttwp,4.24,,value blanked
-C00212,missing_cell,66,ttwp,2.8,,value blanked
-C00213,missing_cell,128,ttwp,2.86,,value blanked
-C00214,missing_cell,150,ttwp,5.96,,value blanked
-C00215,missing_cell,152,ttwp,6.52,,value blanked
-C00216,missing_cell,182,ttwp,5.68,,value blanked
-C00217,missing_cell,5,ttwpl,0.2657,,value blanked
-C00218,missing_cell,23,ttwpl,0.2933,,value blanked
-C00219,missing_cell,49,ttwpl,0.302,,value blanked
-C00220,missing_cell,100,ttwpl,0.128,,value blanked
-C00221,missing_cell,133,ttwpl,0.584,,value blanked
-C00222,missing_cell,152,ttwpl,0.652,,value blanked
-C00223,missing_cell,160,ttwpl,0.2156,,value blanked
-C00224,missing_cell,194,ttwpl,0.3756,,value blanked
-C00225,missing_cell,15,ttya,19.8519,,value blanked
-C00226,missing_cell,83,ttya,12.1481,,value blanked
-C00227,missing_cell,89,ttya,7.037,,value blanked
-C00228,missing_cell,106,ttya,5.9259,,value blanked
-C00229,missing_cell,159,ttya,9.7119,,value blanked
-C00230,missing_cell,214,ttya,11.1852,,value blanked
-C00231,missing_cell,229,ttya,9.465,,value blanked
-C00232,missing_cell,232,ttya,12.2634,,value blanked
-C00233,missing_cell,3,ttyna,36.7778,,value blanked
-C00234,missing_cell,53,ttyna,6.2222,,value blanked
-C00235,missing_cell,73,ttyna,16.4444,,value blanked
-C00236,missing_cell,95,ttyna,13.8889,,value blanked
-C00237,missing_cell,101,ttyna,9.4074,,value blanked
-C00238,missing_cell,160,ttyna,7.1852,,value blanked
-C00239,missing_cell,182,ttyna,21.037,,value blanked
-C00240,missing_cell,191,ttyna,10.2222,,value blanked
-C00241,missing_cell,194,ttyna,12.5185,,value blanked
-C00242,duplicate_row,6,,,,whole row appended a second time
-C00243,duplicate_row,17,,,,whole row appended a second time
-C00244,duplicate_row,118,,,,whole row appended a second time
-C00245,duplicate_row,137,,,,whole row appended a second time
-C00246,duplicate_row,156,,,,whole row appended a second time
-C00247,duplicate_row,160,,,,whole row appended a second time
+C00001,category_variant,MEJ-0002,district,Paucara, Paucara,leading space
+C00002,category_variant,MEJ-0025,district,Paucara,PAUCARA,uppercase
+C00003,category_variant,MEJ-0031,district,Paucara,paucara,lowercase
+C00004,category_variant,MEJ-0068,district,Paucara,paucara,lowercase
+C00005,category_variant,MEJ-0089,district,Paucara,PAUCARA,uppercase
+C00006,category_variant,MEJ-0100,district,Paucara,paucara,lowercase
+C00007,category_variant,MEJ-0102,district,Paucara,Paucara ,trailing space
+C00008,category_variant,MEJ-0118,district,Paucara,PAUCARA,uppercase
+C00009,category_variant,MEJ-0121,district,Paucara,PAUCARA,uppercase
+C00010,category_variant,MEJ-0124,district,Paucara, Paucara,leading space
+C00011,category_variant,MEJ-0145,district,Paucara,paucara,lowercase
+C00012,category_variant,MEJ-0181,district,San agustin,San  agustin,double inner space
+C00013,category_variant,MEJ-0030,locality,Ccasapata,ccasapata,lowercase
+C00014,category_variant,MEJ-0032,locality,Ccasapata,Ccasapata ,trailing space
+C00015,category_variant,MEJ-0034,locality,Ccasapata,Ccasapata ,trailing space
+C00016,category_variant,MEJ-0049,locality,Ccasapata,CCASAPATA,uppercase
+C00017,category_variant,MEJ-0056,locality,Ccasapata,Ccasapata ,trailing space
+C00018,category_variant,MEJ-0076,locality,Ccasapata,Ccasapata ,trailing space
+C00019,category_variant,MEJ-0115,locality,Ccollpaccasa,CCOLLPACCASA,uppercase
+C00020,category_variant,MEJ-0171,locality,Ccollpaccasa,ccollpaccasa,lowercase
+C00021,category_variant,MEJ-0179,locality,La Victoria,La Victoria ,trailing space
+C00022,category_variant,MEJ-0235,locality,La Victoria,La  Victoria,double inner space
+C00023,category_variant,MEJ-0244,locality,La Victoria,la victoria,lowercase
+C00024,category_variant,MEJ-0263,locality,La Victoria,LA VICTORIA,uppercase
+C00025,category_variant,MEJ-0003,province,Acobamba,Acobamba ,trailing space
+C00026,category_variant,MEJ-0037,province,Acobamba,ACOBAMBA,uppercase
+C00027,category_variant,MEJ-0039,province,Acobamba,ACOBAMBA,uppercase
+C00028,category_variant,MEJ-0050,province,Acobamba, Acobamba,leading space
+C00029,category_variant,MEJ-0052,province,Acobamba,ACOBAMBA,uppercase
+C00030,category_variant,MEJ-0099,province,Acobamba,Acobamba ,trailing space
+C00031,category_variant,MEJ-0113,province,Acobamba,ACOBAMBA,uppercase
+C00032,category_variant,MEJ-0153,province,Acobamba,Acobamba ,trailing space
+C00033,category_variant,MEJ-0190,province,Huancayo,HUANCAYO,uppercase
+C00034,category_variant,MEJ-0200,province,Huancayo,huancayo,lowercase
+C00035,category_variant,MEJ-0250,province,Huancayo,HUANCAYO,uppercase
+C00036,category_variant,MEJ-0259,province,Huancayo,huancayo,lowercase
+C00037,category_variant,MEJ-0008,region,Huancavelica,HUANCAVELICA,uppercase
+C00038,category_variant,MEJ-0016,region,Huancavelica,HUANCAVELICA,uppercase
+C00039,category_variant,MEJ-0022,region,Huancavelica,Huancavelica ,trailing space
+C00040,category_variant,MEJ-0026,region,Huancavelica, Huancavelica,leading space
+C00041,category_variant,MEJ-0062,region,Huancavelica,Huancavelica ,trailing space
+C00042,category_variant,MEJ-0150,region,Huancavelica,HUANCAVELICA,uppercase
+C00043,category_variant,MEJ-0156,region,Huancavelica,Huancavelica ,trailing space
+C00044,category_variant,MEJ-0158,region,Huancavelica, Huancavelica,leading space
+C00045,category_variant,MEJ-0190,region,Junin,junin,lowercase
+C00046,category_variant,MEJ-0240,region,Junin, Junin,leading space
+C00047,category_variant,MEJ-0258,region,Junin,Junin ,trailing space
+C00048,category_variant,MEJ-0265,region,Junin, Junin,leading space
+C00049,category_variant,MEJ-0078,site_code,CCASAP,ccasap,lowercase
+C00050,category_variant,MEJ-0092,site_code,CCOLL,CCOLL ,trailing space
+C00051,category_variant,MEJ-0132,site_code,CCOLL,ccoll,lowercase
+C00052,category_variant,MEJ-0150,site_code,CCOLL,ccoll,lowercase
+C00053,category_variant,MEJ-0162,site_code,CCOLL,CCOLL ,trailing space
+C00054,category_variant,MEJ-0182,site_code,LAVICT, LAVICT,leading space
+C00055,category_variant,MEJ-0184,site_code,LAVICT,LAVICT ,trailing space
+C00056,category_variant,MEJ-0204,site_code,LAVICT,LAVICT ,trailing space
+C00057,category_variant,MEJ-0232,site_code,LAVICT, LAVICT,leading space
+C00058,category_variant,MEJ-0239,site_code,LAVICT,LAVICT ,trailing space
+C00059,category_variant,MEJ-0257,site_code,LAVICT,LAVICT ,trailing space
+C00060,category_variant,MEJ-0264,site_code,LAVICT,LAVICT ,trailing space
+C00061,category_variant,MEJ-0010,trial,PTYL200911_CCASAP_Stability_Field,PTYL200911_CCASAP_STABILITY_FIELD,uppercase
+C00062,category_variant,MEJ-0064,trial,PTYL200911_CCASAP_Stability_Field,ptyl200911_ccasap_stability_field,lowercase
+C00063,category_variant,MEJ-0076,trial,PTYL200911_CCASAP_Stability_Field,PTYL200911_CCASAP_Stability_Field ,trailing space
+C00064,category_variant,MEJ-0078,trial,PTYL200911_CCASAP_Stability_Field, PTYL200911_CCASAP_Stability_Field,leading space
+C00065,category_variant,MEJ-0118,trial,PTYL200911_CCOLL_Stability_Field,PTYL200911_CCOLL_STABILITY_FIELD,uppercase
+C00066,category_variant,MEJ-0126,trial,PTYL200911_CCOLL_Stability_Field, PTYL200911_CCOLL_Stability_Field,leading space
+C00067,category_variant,MEJ-0191,trial,PTYL200911_LAVICT_Stability_Field,PTYL200911_LAVICT_STABILITY_FIELD,uppercase
+C00068,category_variant,MEJ-0221,trial,PTYL200911_LAVICT_Stability_Field,ptyl200911_lavict_stability_field,lowercase
+C00069,category_variant,MEJ-0222,trial,PTYL200911_LAVICT_Stability_Field,PTYL200911_LAVICT_STABILITY_FIELD,uppercase
+C00070,category_variant,MEJ-0247,trial,PTYL200911_LAVICT_Stability_Field, PTYL200911_LAVICT_Stability_Field,leading space
+C00071,category_variant,MEJ-0250,trial,PTYL200911_LAVICT_Stability_Field, PTYL200911_LAVICT_Stability_Field,leading space
+C00072,category_variant,MEJ-0258,trial,PTYL200911_LAVICT_Stability_Field,PTYL200911_LAVICT_Stability_Field ,trailing space
+C00073,mixed_unit,MEJ-0012,elevation_m,3766,12356,m -> ft
+C00074,mixed_unit,MEJ-0033,elevation_m,3766,12356,m -> ft
+C00075,mixed_unit,MEJ-0079,elevation_m,3766,12356,m -> ft
+C00076,mixed_unit,MEJ-0104,elevation_m,4068,13346,m -> ft
+C00077,mixed_unit,MEJ-0113,elevation_m,4068,13346,m -> ft
+C00078,mixed_unit,MEJ-0236,elevation_m,3216,10551,m -> ft
+C00079,mixed_unit,MEJ-0252,elevation_m,3216,10551,m -> ft
+C00080,mixed_unit,MEJ-0033,mtwp,3.4,7.496,kg -> lb
+C00081,mixed_unit,MEJ-0051,mtwp,0.4,0.882,kg -> lb
+C00082,mixed_unit,MEJ-0076,mtwp,0.45,0.992,kg -> lb
+C00083,mixed_unit,MEJ-0122,mtwp,3.04,6.702,kg -> lb
+C00084,mixed_unit,MEJ-0207,mtwp,6.62,14.595,kg -> lb
+C00085,mixed_unit,MEJ-0243,mtwp,3.64,8.025,kg -> lb
+C00086,mixed_unit,MEJ-0096,mtwpl,0.935,2.061,kg -> lb
+C00087,mixed_unit,MEJ-0157,mtwpl,0.1667,0.368,kg -> lb
+C00088,mixed_unit,MEJ-0171,mtwpl,0.173,0.381,kg -> lb
+C00089,mixed_unit,MEJ-0190,mtwpl,0.27,0.595,kg -> lb
+C00090,mixed_unit,MEJ-0200,mtwpl,0.43,0.948,kg -> lb
+C00091,mixed_unit,MEJ-0207,mtwpl,0.662,1.459,kg -> lb
+C00092,mixed_unit,MEJ-0026,mtya,8.3333,8333.3,t/ha -> kg/ha
+C00093,mixed_unit,MEJ-0027,mtya,3.2099,3209.9,t/ha -> kg/ha
+C00094,mixed_unit,MEJ-0050,mtya,8.2305,8230.5,t/ha -> kg/ha
+C00095,mixed_unit,MEJ-0233,mtya,9.1852,9185.2,t/ha -> kg/ha
+C00096,mixed_unit,MEJ-0243,mtya,13.4815,13481.5,t/ha -> kg/ha
+C00097,mixed_unit,MEJ-0265,mtya,30.8889,30888.9,t/ha -> kg/ha
+C00098,mixed_unit,MEJ-0030,mtyna,10.6296,10629.6,t/ha -> kg/ha
+C00099,mixed_unit,MEJ-0092,mtyna,2.7037,2703.7,t/ha -> kg/ha
+C00100,mixed_unit,MEJ-0147,mtyna,10.8148,10814.8,t/ha -> kg/ha
+C00101,mixed_unit,MEJ-0188,mtyna,24.6667,24666.7,t/ha -> kg/ha
+C00102,mixed_unit,MEJ-0220,mtyna,15.9259,15925.9,t/ha -> kg/ha
+C00103,mixed_unit,MEJ-0245,mtyna,19.3333,19333.3,t/ha -> kg/ha
+C00104,mixed_unit,MEJ-0032,nomtwp,1.75,3.858,kg -> lb
+C00105,mixed_unit,MEJ-0114,nomtwp,0.49,1.08,kg -> lb
+C00106,mixed_unit,MEJ-0167,nomtwp,0.81,1.786,kg -> lb
+C00107,mixed_unit,MEJ-0200,nomtwp,1.02,2.249,kg -> lb
+C00108,mixed_unit,MEJ-0203,nomtwp,0.48,1.058,kg -> lb
+C00109,mixed_unit,MEJ-0036,pph,90,1,% -> fraction 0-1
+C00110,mixed_unit,MEJ-0045,pph,90,1,% -> fraction 0-1
+C00111,mixed_unit,MEJ-0206,pph,100,1,% -> fraction 0-1
+C00112,mixed_unit,MEJ-0236,pph,100,1,% -> fraction 0-1
+C00113,mixed_unit,MEJ-0260,pph,100,1,% -> fraction 0-1
+C00114,mixed_unit,MEJ-0262,pph,100,1,% -> fraction 0-1
+C00115,mixed_unit,MEJ-0265,pph,100,1,% -> fraction 0-1
+C00116,mixed_unit,MEJ-0021,ttwp,3.92,8.642,kg -> lb
+C00117,mixed_unit,MEJ-0039,ttwp,1.2,2.646,kg -> lb
+C00118,mixed_unit,MEJ-0047,ttwp,4.75,10.472,kg -> lb
+C00119,mixed_unit,MEJ-0095,ttwp,1.22,2.69,kg -> lb
+C00120,mixed_unit,MEJ-0119,ttwp,7.78,17.152,kg -> lb
+C00121,mixed_unit,MEJ-0160,ttwp,5.02,11.067,kg -> lb
+C00122,mixed_unit,MEJ-0237,ttwp,4.5,9.921,kg -> lb
+C00123,mixed_unit,MEJ-0084,ttwpl,0.635,1.4,kg -> lb
+C00124,mixed_unit,MEJ-0092,ttwpl,0.154,0.34,kg -> lb
+C00125,mixed_unit,MEJ-0129,ttwpl,0.0817,0.18,kg -> lb
+C00126,mixed_unit,MEJ-0141,ttwpl,0.285,0.628,kg -> lb
+C00127,mixed_unit,MEJ-0173,ttwpl,0.34,0.75,kg -> lb
+C00128,mixed_unit,MEJ-0179,ttwpl,0.741,1.634,kg -> lb
+C00129,mixed_unit,MEJ-0266,ttwpl,0.606,1.336,kg -> lb
+C00130,mixed_unit,MEJ-0021,ttya,16.1317,16131.7,t/ha -> kg/ha
+C00131,mixed_unit,MEJ-0139,ttya,19.037,19037,t/ha -> kg/ha
+C00132,mixed_unit,MEJ-0146,ttya,28.8148,28814.8,t/ha -> kg/ha
+C00133,mixed_unit,MEJ-0157,ttya,10.2881,10288.1,t/ha -> kg/ha
+C00134,mixed_unit,MEJ-0068,ttyna,5.7407,5740.7,t/ha -> kg/ha
+C00135,mixed_unit,MEJ-0080,ttyna,5.3333,5333.3,t/ha -> kg/ha
+C00136,mixed_unit,MEJ-0093,ttyna,6.4444,6444.4,t/ha -> kg/ha
+C00137,mixed_unit,MEJ-0182,ttyna,27.6296,27629.6,t/ha -> kg/ha
+C00138,mixed_unit,MEJ-0184,ttyna,16.4444,16444.4,t/ha -> kg/ha
+C00139,mixed_unit,MEJ-0220,ttyna,18.8148,18814.8,t/ha -> kg/ha
+C00140,impossible_value,MEJ-0090,atmw,63.6957,4798.465,above the valid maximum
+C00141,impossible_value,MEJ-0143,atmw,56.6071,-639.795,below the valid minimum
+C00142,impossible_value,MEJ-0237,atw,50,273.982,above the valid maximum
+C00143,impossible_value,MEJ-0255,atw,50.8197,-36.531,below the valid minimum
+C00144,impossible_value,MEJ-0168,elevation_m,4068,4580,above the valid maximum
+C00145,impossible_value,MEJ-0204,elevation_m,3216,2986,below the valid minimum
+C00146,impossible_value,MEJ-0017,latitude,-12.7742,-11.578,above the valid maximum
+C00147,impossible_value,MEJ-0103,latitude,-12.7244,-12.976,below the valid minimum
+C00148,impossible_value,MEJ-0063,longitude,-74.7643,-74.458,above the valid maximum
+C00149,impossible_value,MEJ-0103,longitude,-74.7529,-75.378,below the valid minimum
+C00150,impossible_value,MEJ-0107,mtwp,2.62,16.034,above the valid maximum
+C00151,impossible_value,MEJ-0183,mtwp,5.38,-2.138,below the valid minimum
+C00152,impossible_value,MEJ-0107,mtwpl,0.262,1.603,above the valid maximum
+C00153,impossible_value,MEJ-0118,mtwpl,0.4778,-0.214,below the valid minimum
+C00154,impossible_value,MEJ-0108,mtya,22.5556,59.383,above the valid maximum
+C00155,impossible_value,MEJ-0152,mtya,15.2263,-7.918,below the valid minimum
+C00156,impossible_value,MEJ-0210,mtyna,26.5185,59.383,above the valid maximum
+C00157,impossible_value,MEJ-0248,mtyna,13.2593,-7.918,below the valid minimum
+C00158,impossible_value,MEJ-0036,nmtp,39,373.275,above the valid maximum
+C00159,impossible_value,MEJ-0100,nmtp,60,-49.77,below the valid minimum
+C00160,impossible_value,MEJ-0056,nmtpl,3.6,37.328,above the valid maximum
+C00161,impossible_value,MEJ-0185,nmtpl,2,-4.977,below the valid minimum
+C00162,impossible_value,MEJ-0074,nnomtp,68,676,above the valid maximum
+C00163,impossible_value,MEJ-0150,nnomtp,138,-90,below the valid minimum
+C00164,impossible_value,MEJ-0024,nomtwp,1.03,16.688,above the valid maximum
+C00165,impossible_value,MEJ-0177,nomtwp,0.76,-2.225,below the valid minimum
+C00166,impossible_value,MEJ-0176,nph,10,15,above the valid maximum
+C00167,impossible_value,MEJ-0223,nph,10,1,below the valid minimum
+C00168,impossible_value,MEJ-0062,ntp,10,375,above the valid maximum
+C00169,impossible_value,MEJ-0188,ntp,10,-50,below the valid minimum
+C00170,impossible_value,MEJ-0009,plot,28,186,above the valid maximum
+C00171,impossible_value,MEJ-0253,plot,21,-24,below the valid minimum
+C00172,impossible_value,MEJ-0083,pph,90,150,above the valid maximum
+C00173,impossible_value,MEJ-0231,pph,100,-20,below the valid minimum
+C00174,impossible_value,MEJ-0062,rep,3,4,above the valid maximum
+C00175,impossible_value,MEJ-0152,rep,3,0,below the valid minimum
+C00176,impossible_value,MEJ-0098,tntp,61,911.1,above the valid maximum
+C00177,impossible_value,MEJ-0266,tntp,148,-121.48,below the valid minimum
+C00178,impossible_value,MEJ-0081,tntpl,16.625,90.84,above the valid maximum
+C00179,impossible_value,MEJ-0171,tntpl,12.5,-11.823,below the valid minimum
+C00180,impossible_value,MEJ-0002,ttwp,2.97,25.771,above the valid maximum
+C00181,impossible_value,MEJ-0143,ttwp,5.2,-3.436,below the valid minimum
+C00182,impossible_value,MEJ-0207,ttwpl,1.23,2.577,above the valid maximum
+C00183,impossible_value,MEJ-0221,ttwpl,0.972,-0.344,below the valid minimum
+C00184,impossible_value,MEJ-0079,ttya,17.037,150,above the valid maximum
+C00185,impossible_value,MEJ-0119,ttya,28.8148,-20,below the valid minimum
+C00186,impossible_value,MEJ-0010,ttyna,19.7037,150,above the valid maximum
+C00187,impossible_value,MEJ-0089,ttyna,21.8148,-20,below the valid minimum
+C00188,whitespace_case,MEJ-0032,instn,CIP700313,CIP700313 ,trailing space
+C00189,whitespace_case,MEJ-0049,instn,CIP703831,CIP703831 ,trailing space
+C00190,whitespace_case,MEJ-0059,instn,CIP706191, CIP706191,leading space
+C00191,whitespace_case,MEJ-0069,instn,CIP703168,CIP703168 ,trailing space
+C00192,whitespace_case,MEJ-0075,instn,CIP703421,CIP703421 ,trailing space
+C00193,whitespace_case,MEJ-0009,variety_name,Natin Suito, Natin Suito,leading space
+C00194,whitespace_case,MEJ-0090,variety_name,Añil Papa,añil papa,lowercase
+C00195,whitespace_case,MEJ-0107,variety_name,Murunguilla,Murunguilla ,trailing space
+C00196,whitespace_case,MEJ-0188,variety_name,SA-2563, SA-2563,leading space
+C00197,whitespace_case,MEJ-0200,variety_name,Kellu Suito,kellu suito,lowercase
+C00198,missing_cell,MEJ-0028,atmw,50.7692,,value blanked
+C00199,missing_cell,MEJ-0088,atmw,55.9091,,value blanked
+C00200,missing_cell,MEJ-0156,atmw,912.5,,value blanked
+C00201,missing_cell,MEJ-0167,atmw,28.7778,,value blanked
+C00202,missing_cell,MEJ-0173,atmw,45.4839,,value blanked
+C00203,missing_cell,MEJ-0184,atmw,74.4444,,value blanked
+C00204,missing_cell,MEJ-0188,atmw,73.1868,,value blanked
+C00205,missing_cell,MEJ-0194,atmw,56.4356,,value blanked
+C00206,missing_cell,MEJ-0235,atmw,46.7961,,value blanked
+C00207,missing_cell,MEJ-0026,atw,57.7083,,value blanked
+C00208,missing_cell,MEJ-0053,atw,18.75,,value blanked
+C00209,missing_cell,MEJ-0076,atw,27.037,,value blanked
+C00210,missing_cell,MEJ-0127,atw,39.1045,,value blanked
+C00211,missing_cell,MEJ-0133,atw,69.6154,,value blanked
+C00212,missing_cell,MEJ-0180,atw,23.5833,,value blanked
+C00213,missing_cell,MEJ-0186,atw,44.9505,,value blanked
+C00214,missing_cell,MEJ-0187,atw,37.3148,,value blanked
+C00215,missing_cell,MEJ-0246,atw,26.9388,,value blanked
+C00216,missing_cell,MEJ-0011,district,Paucara,,value blanked
+C00217,missing_cell,MEJ-0024,district,Paucara,,value blanked
+C00218,missing_cell,MEJ-0062,district,Paucara,,value blanked
+C00219,missing_cell,MEJ-0076,district,Paucara,,value blanked
+C00220,missing_cell,MEJ-0093,district,Paucara,,value blanked
+C00221,missing_cell,MEJ-0167,district,Paucara,,value blanked
+C00222,missing_cell,MEJ-0180,district,San agustin,,value blanked
+C00223,missing_cell,MEJ-0195,district,San agustin,,value blanked
+C00224,missing_cell,MEJ-0215,district,San agustin,,value blanked
+C00225,missing_cell,MEJ-0031,elevation_m,3766,,value blanked
+C00226,missing_cell,MEJ-0034,elevation_m,3766,,value blanked
+C00227,missing_cell,MEJ-0047,elevation_m,3766,,value blanked
+C00228,missing_cell,MEJ-0050,elevation_m,3766,,value blanked
+C00229,missing_cell,MEJ-0112,elevation_m,4068,,value blanked
+C00230,missing_cell,MEJ-0118,elevation_m,4068,,value blanked
+C00231,missing_cell,MEJ-0164,elevation_m,4068,,value blanked
+C00232,missing_cell,MEJ-0178,elevation_m,4068,,value blanked
+C00233,missing_cell,MEJ-0211,elevation_m,3216,,value blanked
+C00234,missing_cell,MEJ-0003,instn,CIP700787,,value blanked
+C00235,missing_cell,MEJ-0004,instn,CIP701675,,value blanked
+C00236,missing_cell,MEJ-0033,instn,CIP700787,,value blanked
+C00237,missing_cell,MEJ-0065,instn,CIP702363,,value blanked
+C00238,missing_cell,MEJ-0089,instn,CIP706191,,value blanked
+C00239,missing_cell,MEJ-0124,instn,CIP703421,,value blanked
+C00240,missing_cell,MEJ-0217,instn,CIP702464,,value blanked
+C00241,missing_cell,MEJ-0242,instn,CIP703312,,value blanked
+C00242,missing_cell,MEJ-0262,instn,CIP703488,,value blanked
+C00243,missing_cell,MEJ-0028,latitude,-12.7742,,value blanked
+C00244,missing_cell,MEJ-0088,latitude,-12.7742,,value blanked
+C00245,missing_cell,MEJ-0119,latitude,-12.7244,,value blanked
+C00246,missing_cell,MEJ-0145,latitude,-12.7244,,value blanked
+C00247,missing_cell,MEJ-0149,latitude,-12.7244,,value blanked
+C00248,missing_cell,MEJ-0164,latitude,-12.7244,,value blanked
+C00249,missing_cell,MEJ-0173,latitude,-12.7244,,value blanked
+C00250,missing_cell,MEJ-0183,latitude,-12.0264,,value blanked
+C00251,missing_cell,MEJ-0214,latitude,-12.0264,,value blanked
+C00252,missing_cell,MEJ-0122,locality,Ccollpaccasa,,value blanked
+C00253,missing_cell,MEJ-0139,locality,Ccollpaccasa,,value blanked
+C00254,missing_cell,MEJ-0163,locality,Ccollpaccasa,,value blanked
+C00255,missing_cell,MEJ-0164,locality,Ccollpaccasa,,value blanked
+C00256,missing_cell,MEJ-0165,locality,Ccollpaccasa,,value blanked
+C00257,missing_cell,MEJ-0178,locality,Ccollpaccasa,,value blanked
+C00258,missing_cell,MEJ-0212,locality,La Victoria,,value blanked
+C00259,missing_cell,MEJ-0261,locality,La Victoria,,value blanked
+C00260,missing_cell,MEJ-0265,locality,La Victoria,,value blanked
+C00261,missing_cell,MEJ-0001,longitude,-74.7643,,value blanked
+C00262,missing_cell,MEJ-0022,longitude,-74.7643,,value blanked
+C00263,missing_cell,MEJ-0062,longitude,-74.7643,,value blanked
+C00264,missing_cell,MEJ-0088,longitude,-74.7643,,value blanked
+C00265,missing_cell,MEJ-0134,longitude,-74.7529,,value blanked
+C00266,missing_cell,MEJ-0161,longitude,-74.7529,,value blanked
+C00267,missing_cell,MEJ-0196,longitude,-75.2449,,value blanked
+C00268,missing_cell,MEJ-0212,longitude,-75.2449,,value blanked
+C00269,missing_cell,MEJ-0249,longitude,-75.2449,,value blanked
+C00270,missing_cell,MEJ-0013,mtwp,1.67,,value blanked
+C00271,missing_cell,MEJ-0022,mtwp,0.17,,value blanked
+C00272,missing_cell,MEJ-0028,mtwp,0.66,,value blanked
+C00273,missing_cell,MEJ-0037,mtwp,1.4,,value blanked
+C00274,missing_cell,MEJ-0064,mtwp,0.58,,value blanked
+C00275,missing_cell,MEJ-0084,mtwp,3.97,,value blanked
+C00276,missing_cell,MEJ-0120,mtwp,3.37,,value blanked
+C00277,missing_cell,MEJ-0171,mtwp,1.73,,value blanked
+C00278,missing_cell,MEJ-0250,mtwp,4.44,,value blanked
+C00279,missing_cell,MEJ-0013,mtwpl,0.1856,,value blanked
+C00280,missing_cell,MEJ-0046,mtwpl,0.0944,,value blanked
+C00281,missing_cell,MEJ-0090,mtwpl,0.3256,,value blanked
+C00282,missing_cell,MEJ-0103,mtwpl,0.7944,,value blanked
+C00283,missing_cell,MEJ-0151,mtwpl,0.5563,,value blanked
+C00284,missing_cell,MEJ-0163,mtwpl,0.417,,value blanked
+C00285,missing_cell,MEJ-0197,mtwpl,0.326,,value blanked
+C00286,missing_cell,MEJ-0244,mtwpl,0.578,,value blanked
+C00287,missing_cell,MEJ-0063,mtya,18.5926,,value blanked
+C00288,missing_cell,MEJ-0073,mtya,4.8148,,value blanked
+C00289,missing_cell,MEJ-0077,mtya,10.1852,,value blanked
+C00290,missing_cell,MEJ-0095,mtya,3.2963,,value blanked
+C00291,missing_cell,MEJ-0098,mtya,9.963,,value blanked
+C00292,missing_cell,MEJ-0169,mtya,6.037,,value blanked
+C00293,missing_cell,MEJ-0198,mtya,13.1852,,value blanked
+C00294,missing_cell,MEJ-0238,mtya,22.5926,,value blanked
+C00295,missing_cell,MEJ-0020,mtyna,3.8148,,value blanked
+C00296,missing_cell,MEJ-0025,mtyna,11.4074,,value blanked
+C00297,missing_cell,MEJ-0031,mtyna,1.4815,,value blanked
+C00298,missing_cell,MEJ-0080,mtyna,1.4074,,value blanked
+C00299,missing_cell,MEJ-0083,mtyna,9.5185,,value blanked
+C00300,missing_cell,MEJ-0087,mtyna,11.2222,,value blanked
+C00301,missing_cell,MEJ-0114,mtyna,4.4444,,value blanked
+C00302,missing_cell,MEJ-0207,mtyna,24.5185,,value blanked
+C00303,missing_cell,MEJ-0017,nmtp,18,,value blanked
+C00304,missing_cell,MEJ-0046,nmtp,14,,value blanked
+C00305,missing_cell,MEJ-0049,nmtp,37,,value blanked
+C00306,missing_cell,MEJ-0082,nmtp,33,,value blanked
+C00307,missing_cell,MEJ-0112,nmtp,65,,value blanked
+C00308,missing_cell,MEJ-0129,nmtp,8,,value blanked
+C00309,missing_cell,MEJ-0189,nmtp,115,,value blanked
+C00310,missing_cell,MEJ-0207,nmtp,73,,value blanked
+C00311,missing_cell,MEJ-0249,nmtp,85,,value blanked
+C00312,missing_cell,MEJ-0006,nmtpl,6.5,,value blanked
+C00313,missing_cell,MEJ-0098,nmtpl,3.7,,value blanked
+C00314,missing_cell,MEJ-0122,nmtpl,6.5,,value blanked
+C00315,missing_cell,MEJ-0137,nmtpl,5.1,,value blanked
+C00316,missing_cell,MEJ-0149,nmtpl,6,,value blanked
+C00317,missing_cell,MEJ-0204,nmtpl,7.9,,value blanked
+C00318,missing_cell,MEJ-0027,nnomtp,46,,value blanked
+C00319,missing_cell,MEJ-0071,nnomtp,30,,value blanked
+C00320,missing_cell,MEJ-0139,nnomtp,140,,value blanked
+C00321,missing_cell,MEJ-0146,nnomtp,76,,value blanked
+C00322,missing_cell,MEJ-0175,nnomtp,105,,value blanked
+C00323,missing_cell,MEJ-0221,nnomtp,44,,value blanked
+C00324,missing_cell,MEJ-0235,nnomtp,36,,value blanked
+C00325,missing_cell,MEJ-0033,nomtwp,2.7,,value blanked
+C00326,missing_cell,MEJ-0049,nomtwp,1.75,,value blanked
+C00327,missing_cell,MEJ-0067,nomtwp,0.73,,value blanked
+C00328,missing_cell,MEJ-0083,nomtwp,1.99,,value blanked
+C00329,missing_cell,MEJ-0137,nomtwp,1.11,,value blanked
+C00330,missing_cell,MEJ-0205,nomtwp,1.2,,value blanked
+C00331,missing_cell,MEJ-0242,nomtwp,1.62,,value blanked
+C00332,missing_cell,MEJ-0263,nomtwp,0.86,,value blanked
+C00333,missing_cell,MEJ-0048,nph,8,,value blanked
+C00334,missing_cell,MEJ-0071,nph,9,,value blanked
+C00335,missing_cell,MEJ-0075,nph,7,,value blanked
+C00336,missing_cell,MEJ-0155,nph,9,,value blanked
+C00337,missing_cell,MEJ-0166,nph,10,,value blanked
+C00338,missing_cell,MEJ-0188,nph,10,,value blanked
+C00339,missing_cell,MEJ-0248,nph,10,,value blanked
+C00340,missing_cell,MEJ-0249,nph,10,,value blanked
+C00341,missing_cell,MEJ-0252,nph,10,,value blanked
+C00342,missing_cell,MEJ-0046,ntp,10,,value blanked
+C00343,missing_cell,MEJ-0099,ntp,10,,value blanked
+C00344,missing_cell,MEJ-0115,ntp,10,,value blanked
+C00345,missing_cell,MEJ-0117,ntp,10,,value blanked
+C00346,missing_cell,MEJ-0120,ntp,10,,value blanked
+C00347,missing_cell,MEJ-0164,ntp,10,,value blanked
+C00348,missing_cell,MEJ-0175,ntp,10,,value blanked
+C00349,missing_cell,MEJ-0178,ntp,10,,value blanked
+C00350,missing_cell,MEJ-0211,ntp,10,,value blanked
+C00351,missing_cell,MEJ-0001,plot,1,,value blanked
+C00352,missing_cell,MEJ-0024,plot,92,,value blanked
+C00353,missing_cell,MEJ-0046,plot,70,,value blanked
+C00354,missing_cell,MEJ-0063,plot,15,,value blanked
+C00355,missing_cell,MEJ-0167,plot,29,,value blanked
+C00356,missing_cell,MEJ-0200,plot,34,,value blanked
+C00357,missing_cell,MEJ-0206,plot,41,,value blanked
+C00358,missing_cell,MEJ-0218,plot,13,,value blanked
+C00359,missing_cell,MEJ-0263,plot,37,,value blanked
+C00360,missing_cell,MEJ-0020,pph,100,,value blanked
+C00361,missing_cell,MEJ-0046,pph,90,,value blanked
+C00362,missing_cell,MEJ-0060,pph,60,,value blanked
+C00363,missing_cell,MEJ-0076,pph,80,,value blanked
+C00364,missing_cell,MEJ-0126,pph,90,,value blanked
+C00365,missing_cell,MEJ-0127,pph,90,,value blanked
+C00366,missing_cell,MEJ-0141,pph,100,,value blanked
+C00367,missing_cell,MEJ-0154,pph,60,,value blanked
+C00368,missing_cell,MEJ-0161,pph,90,,value blanked
+C00369,missing_cell,MEJ-0047,province,Acobamba,,value blanked
+C00370,missing_cell,MEJ-0068,province,Acobamba,,value blanked
+C00371,missing_cell,MEJ-0076,province,Acobamba,,value blanked
+C00372,missing_cell,MEJ-0106,province,Acobamba,,value blanked
+C00373,missing_cell,MEJ-0110,province,Acobamba,,value blanked
+C00374,missing_cell,MEJ-0142,province,Acobamba,,value blanked
+C00375,missing_cell,MEJ-0223,province,Huancayo,,value blanked
+C00376,missing_cell,MEJ-0262,province,Huancayo,,value blanked
+C00377,missing_cell,MEJ-0265,province,Huancayo,,value blanked
+C00378,missing_cell,MEJ-0006,region,Huancavelica,,value blanked
+C00379,missing_cell,MEJ-0038,region,Huancavelica,,value blanked
+C00380,missing_cell,MEJ-0045,region,Huancavelica,,value blanked
+C00381,missing_cell,MEJ-0048,region,Huancavelica,,value blanked
+C00382,missing_cell,MEJ-0130,region,Huancavelica,,value blanked
+C00383,missing_cell,MEJ-0160,region,Huancavelica,,value blanked
+C00384,missing_cell,MEJ-0196,region,Junin,,value blanked
+C00385,missing_cell,MEJ-0204,region,Junin,,value blanked
+C00386,missing_cell,MEJ-0264,region,Junin,,value blanked
+C00387,missing_cell,MEJ-0028,rep,1,,value blanked
+C00388,missing_cell,MEJ-0118,rep,1,,value blanked
+C00389,missing_cell,MEJ-0125,rep,2,,value blanked
+C00390,missing_cell,MEJ-0128,rep,2,,value blanked
+C00391,missing_cell,MEJ-0138,rep,2,,value blanked
+C00392,missing_cell,MEJ-0141,rep,2,,value blanked
+C00393,missing_cell,MEJ-0184,rep,1,,value blanked
+C00394,missing_cell,MEJ-0210,rep,2,,value blanked
+C00395,missing_cell,MEJ-0212,rep,2,,value blanked
+C00396,missing_cell,MEJ-0003,site_code,CCASAP,,value blanked
+C00397,missing_cell,MEJ-0044,site_code,CCASAP,,value blanked
+C00398,missing_cell,MEJ-0064,site_code,CCASAP,,value blanked
+C00399,missing_cell,MEJ-0128,site_code,CCOLL,,value blanked
+C00400,missing_cell,MEJ-0139,site_code,CCOLL,,value blanked
+C00401,missing_cell,MEJ-0154,site_code,CCOLL,,value blanked
+C00402,missing_cell,MEJ-0238,site_code,LAVICT,,value blanked
+C00403,missing_cell,MEJ-0253,site_code,LAVICT,,value blanked
+C00404,missing_cell,MEJ-0254,site_code,LAVICT,,value blanked
+C00405,missing_cell,MEJ-0054,tntp,70,,value blanked
+C00406,missing_cell,MEJ-0140,tntp,64,,value blanked
+C00407,missing_cell,MEJ-0198,tntp,145,,value blanked
+C00408,missing_cell,MEJ-0202,tntp,173,,value blanked
+C00409,missing_cell,MEJ-0204,tntp,104,,value blanked
+C00410,missing_cell,MEJ-0209,tntp,189,,value blanked
+C00411,missing_cell,MEJ-0223,tntp,114,,value blanked
+C00412,missing_cell,MEJ-0259,tntp,135,,value blanked
+C00413,missing_cell,MEJ-0023,tntpl,12.125,,value blanked
+C00414,missing_cell,MEJ-0040,tntpl,18.6667,,value blanked
+C00415,missing_cell,MEJ-0057,tntpl,12,,value blanked
+C00416,missing_cell,MEJ-0104,tntpl,8.4,,value blanked
+C00417,missing_cell,MEJ-0194,tntpl,14.4,,value blanked
+C00418,missing_cell,MEJ-0220,tntpl,18,,value blanked
+C00419,missing_cell,MEJ-0231,tntpl,18.2,,value blanked
+C00420,missing_cell,MEJ-0242,tntpl,10.5,,value blanked
+C00421,missing_cell,MEJ-0011,trial,PTYL200911_CCASAP_Stability_Field,,value blanked
+C00422,missing_cell,MEJ-0020,trial,PTYL200911_CCASAP_Stability_Field,,value blanked
+C00423,missing_cell,MEJ-0053,trial,PTYL200911_CCASAP_Stability_Field,,value blanked
+C00424,missing_cell,MEJ-0068,trial,PTYL200911_CCASAP_Stability_Field,,value blanked
+C00425,missing_cell,MEJ-0121,trial,PTYL200911_CCOLL_Stability_Field,,value blanked
+C00426,missing_cell,MEJ-0134,trial,PTYL200911_CCOLL_Stability_Field,,value blanked
+C00427,missing_cell,MEJ-0145,trial,PTYL200911_CCOLL_Stability_Field,,value blanked
+C00428,missing_cell,MEJ-0205,trial,PTYL200911_LAVICT_Stability_Field,,value blanked
+C00429,missing_cell,MEJ-0239,trial,PTYL200911_LAVICT_Stability_Field,,value blanked
+C00430,missing_cell,MEJ-0074,ttwp,2.58,,value blanked
+C00431,missing_cell,MEJ-0113,ttwp,6.35,,value blanked
+C00432,missing_cell,MEJ-0145,ttwp,7.49,,value blanked
+C00433,missing_cell,MEJ-0150,ttwp,5.03,,value blanked
+C00434,missing_cell,MEJ-0188,ttwp,7.38,,value blanked
+C00435,missing_cell,MEJ-0199,ttwp,3.92,,value blanked
+C00436,missing_cell,MEJ-0247,ttwp,10.33,,value blanked
+C00437,missing_cell,MEJ-0261,ttwp,10.94,,value blanked
+C00438,missing_cell,MEJ-0071,ttwpl,0.13,,value blanked
+C00439,missing_cell,MEJ-0073,ttwpl,0.55,,value blanked
+C00440,missing_cell,MEJ-0086,ttwpl,0.289,,value blanked
+C00441,missing_cell,MEJ-0090,ttwpl,0.4444,,value blanked
+C00442,missing_cell,MEJ-0096,ttwpl,1.208,,value blanked
+C00443,missing_cell,MEJ-0114,ttwpl,0.2112,,value blanked
+C00444,missing_cell,MEJ-0152,ttwpl,0.52,,value blanked
+C00445,missing_cell,MEJ-0164,ttwpl,0.7175,,value blanked
+C00446,missing_cell,MEJ-0216,ttwpl,0.488,,value blanked
+C00447,missing_cell,MEJ-0050,ttya,16.8724,,value blanked
+C00448,missing_cell,MEJ-0058,ttya,10.8796,,value blanked
+C00449,missing_cell,MEJ-0064,ttya,8.3069,,value blanked
+C00450,missing_cell,MEJ-0109,ttya,22.8807,,value blanked
+C00451,missing_cell,MEJ-0147,ttya,16.6667,,value blanked
+C00452,missing_cell,MEJ-0198,ttya,14.0741,,value blanked
+C00453,missing_cell,MEJ-0205,ttya,32.2963,,value blanked
+C00454,missing_cell,MEJ-0248,ttya,18.0741,,value blanked
+C00455,missing_cell,MEJ-0006,ttyna,22.1111,,value blanked
+C00456,missing_cell,MEJ-0035,ttyna,11.6667,,value blanked
+C00457,missing_cell,MEJ-0043,ttyna,10,,value blanked
+C00458,missing_cell,MEJ-0051,ttyna,5.037,,value blanked
+C00459,missing_cell,MEJ-0056,ttyna,11.6667,,value blanked
+C00460,missing_cell,MEJ-0078,ttyna,4.3704,,value blanked
+C00461,missing_cell,MEJ-0160,ttyna,18.5926,,value blanked
+C00462,missing_cell,MEJ-0191,ttyna,12.1481,,value blanked
+C00463,missing_cell,MEJ-0263,ttyna,24.4444,,value blanked
+C00464,missing_cell,MEJ-0033,variety_name,EE-2057,,value blanked
+C00465,missing_cell,MEJ-0098,variety_name,EE-2057,,value blanked
+C00466,missing_cell,MEJ-0108,variety_name,Challina,,value blanked
+C00467,missing_cell,MEJ-0111,variety_name,Kellu Suito,,value blanked
+C00468,missing_cell,MEJ-0115,variety_name,Morada Taruna,,value blanked
+C00469,missing_cell,MEJ-0127,variety_name,Pampuna,,value blanked
+C00470,missing_cell,MEJ-0130,variety_name,Maria Cruz,,value blanked
+C00471,missing_cell,MEJ-0163,variety_name,Puca Pishgush,,value blanked
+C00472,missing_cell,MEJ-0175,variety_name,Morada Taruna,,value blanked
+C00473,duplicate_row,MEJ-0040,,,,whole row appended a second time
+C00474,duplicate_row,MEJ-0041,,,,whole row appended a second time
+C00475,duplicate_row,MEJ-0045,,,,whole row appended a second time
+C00476,duplicate_row,MEJ-0054,,,,whole row appended a second time
+C00477,duplicate_row,MEJ-0102,,,,whole row appended a second time
+C00478,duplicate_row,MEJ-0149,,,,whole row appended a second time
+C00479,duplicate_row,MEJ-0152,,,,whole row appended a second time

@@ -25,31 +25,45 @@ from pathlib import Path
 # every column with that prefix.
 CONFIG: dict[str, dict[str, dict[str, str]]] = {
     "mejoramiento": {
-        "country": {"role": "context", "description": "País del ensayo"},
-        "adm1": {"role": "context", "description": "Región"},
-        "adm2": {"role": "context", "description": "Provincia"},
-        "adm3": {"role": "context", "description": "Distrito"},
-        "location": {"role": "design", "description": "Localidad del ensayo (una sola en estos datos)"},
-        "elevation": {"unit": "m", "role": "context", "description": "Altitud del campo"},
+        "trial": {"role": "context", "description": "Código del ensayo en cada localidad"},
+        "site_code": {"role": "design", "description": "Código de la localidad"},
+        "region": {"role": "context", "description": "Región"},
+        "province": {"role": "context", "description": "Provincia"},
+        "district": {"role": "context", "description": "Distrito"},
+        "locality": {"role": "design", "description": "Localidad del ensayo (tres en estos datos)"},
+        "elevation_m": {"unit": "m", "role": "context", "description": "Altitud del campo"},
         "latitude": {"unit": "deg", "role": "context", "description": "Latitud del campo"},
         "longitude": {"unit": "deg", "role": "context", "description": "Longitud del campo"},
-        "rep": {"role": "design", "valid_values_or_range": "1-4", "description": "Repetición (bloque)"},
+        "plot": {"role": "design", "description": "Número de parcela (se repite entre localidades y, en Ccollpaccasa, entre repeticiones)"},
+        "rep": {"role": "design", "valid_values_or_range": "1-3", "description": "Repetición (bloque) dentro de cada localidad"},
         "instn": {"role": "design", "description": "Genotipo evaluado (código de accesión CIP)"},
-        "ntp": {"unit": "tuber/plot", "role": "predictor", "valid_values_or_range": "0-500",
+        "variety_name": {"role": "design", "description": "Nombre de la variedad (Unknown si no tiene nombre registrado)"},
+        "ntp": {"unit": "tuber/plot", "role": "predictor", "valid_values_or_range": "0-250",
                 "description": "Número de tubérculos sembrados por parcela"},
         "nph": {"unit": "plants/plot", "role": "predictor", "description": "Número de plantas cosechadas por parcela"},
         "pph": {"unit": "%", "role": "predictor", "valid_values_or_range": "0-100",
                 "description": "Proporción de plantas cosechadas"},
-        "tntp": {"unit": "tuber/plot", "role": "predictor", "description": "Número de tubérculos cosechados por parcela"},
+        "nnomtp": {"unit": "tuber/plot", "role": "predictor", "description": "Número de tubérculos no comerciales por parcela"},
+        "tntp": {"unit": "tuber/plot", "role": "predictor", "description": "Número total de tubérculos cosechados por parcela"},
         "tntpl": {"unit": "tuber/plant", "role": "predictor", "description": "Número de tubérculos por planta"},
+        "nmtp": {"unit": "tuber/plot", "role": "predictor", "description": "Número de tubérculos comerciales por parcela"},
+        "nmtpl": {"unit": "tuber/plant", "role": "predictor", "description": "Número de tubérculos comerciales por planta"},
+        "nomtwp": {"unit": "kg", "role": "leakage",
+                   "description": "Peso de tubérculos no comerciales por parcela (kg/parcela). Sumado al comercial da el peso total"},
         "ttwp": {"unit": "kg", "role": "leakage",
-                 "description": "Peso de tubérculos por parcela (kg/parcela). El rendimiento se calcula a partir de él"},
-        "ttwpl": {"unit": "kg", "role": "leakage", "description": "Peso de tubérculos por planta (kg/planta)"},
+                 "description": "Peso total de tubérculos por parcela (kg/parcela). El rendimiento se calcula a partir de él"},
+        "ttwpl": {"unit": "kg", "role": "leakage", "description": "Peso total de tubérculos por planta (kg/planta)"},
         "ttyna": {"unit": "t/ha", "role": "leakage", "valid_values_or_range": "0-100",
-                  "description": "Rendimiento sin ajustar. Es casi el mismo dato que el resultado"},
+                  "description": "Rendimiento total sin ajustar. Es casi el mismo dato que el resultado"},
         "ttya": {"unit": "t/ha", "role": "outcome", "valid_values_or_range": "0-100",
-                 "description": "Rendimiento ajustado de tubérculos"},
+                 "description": "Rendimiento total ajustado de tubérculos"},
+        "mtwp": {"unit": "kg", "role": "leakage",
+                 "description": "Peso de tubérculos comerciales por parcela (kg/parcela). Es parte del peso total"},
+        "mtwpl": {"unit": "kg", "role": "leakage", "description": "Peso de tubérculos comerciales por planta (kg/planta)"},
+        "mtyna": {"unit": "t/ha", "role": "leakage", "description": "Rendimiento comercial sin ajustar. Es parte del rendimiento total"},
+        "mtya": {"unit": "t/ha", "role": "leakage", "description": "Rendimiento comercial ajustado. Es parte del rendimiento total"},
         "atw": {"unit": "g", "role": "predictor", "description": "Peso medio del tubérculo"},
+        "atmw": {"unit": "g", "role": "predictor", "description": "Peso medio del tubérculo comercial"},
     },
     "morfologia": {
         "accession_number": {"role": "design", "description": "Número de accesión del banco de germoplasma"},
@@ -116,16 +130,21 @@ CONFIG: dict[str, dict[str, dict[str, str]]] = {
     },
 }
 
+# Values garbled in the delivered file, corrected in <slug>_clean.csv: slug -> column -> {wrong: right}.
+VALUE_FIXES = {"mejoramiento": {"variety_name": {"A±il Papa": "Añil Papa"}}}
+
 # Checkbox groups whose blank cells are rewritten as 0 in <slug>_clean.csv.
 BLANK_AS_ZERO = {"consumidores": ("v1", "v2", "v3", "v4", "v5", "v6", "v10")}
 
 # Open questions for the data owner, appended to <slug>_ADAPTATION.md.
 PREGUNTAS = {
     "mejoramiento": [
-        "Hay una sola localidad (La Victoria, Huancayo): la pregunta de estabilidad entre ambientes del plan no se puede responder con estos datos. ¿Se cambia por '¿qué genotipos rinden más?'",
-        "¿El resultado es `ttya` (rendimiento ajustado)? Si es así, `ttwp`, `ttwpl` y `ttyna` son leakage.",
-        "`ttya` tiene 13 celdas vacías en el original: ¿son parcelas perdidas?",
-        "El diccionario fija TNTP en 0-50, pero los datos llegan a 536 tubérculos por parcela: ¿el límite es por planta?",
+        "Ensayo de estabilidad: 30 genotipos en 3 localidades (Ccasapata, Ccollpaccasa, La Victoria) con 3 repeticiones. ¿Es de 2009 (PTYL200911)?",
+        "¿El resultado es `ttya` (rendimiento total ajustado)? Si es así, los pesos y rendimientos totales y comerciales (`ttwp`, `ttwpl`, `ttyna`, `nomtwp`, `mtwp`, `mtwpl`, `mtyna`, `mtya`) son leakage.",
+        "`ttya` tiene 31 celdas vacías en el original, casi siempre junto con `nph` vacío: ¿son parcelas perdidas?",
+        "`atmw` llega a 3047 g (La Victoria, CIP702363) y 912 g (Ccollpaccasa, CIP704327). En el primer caso `nmtp` vale 1,91, que no es un conteo: ¿error de digitación en el original?",
+        "Faltan 3 parcelas: el diseño completo serían 270 (30 × 3 × 3). ¿Se perdieron?",
+        "Dos genotipos (CIP703274 y CIP703280) figuran como `Unknown` en `variety_name`.",
     ],
     "morfologia": [
         "No hay variable de resultado: el ejercicio es agrupar accesiones por descriptores. ¿Correcto?",
@@ -183,6 +202,26 @@ def apply(folder: Path, slug: str) -> list[str]:
     unused = sorted(set(config) - used)
     if unused:
         notes.append(f"- Sin columna correspondiente (revisar): {', '.join(unused)}.")
+
+    fixes = VALUE_FIXES.get(slug)
+    if fixes:
+        clean = folder / f"{slug}_clean.csv"
+        with clean.open(encoding="utf-8-sig", newline="") as handle:
+            reader = csv.DictReader(handle)
+            header = list(reader.fieldnames or [])
+            data = [dict(row) for row in reader]
+        changed = 0
+        for record in data:
+            for column, mapping in fixes.items():
+                if record.get(column) in mapping:
+                    record[column] = mapping[record[column]]
+                    changed += 1
+        with clean.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=header)
+            writer.writeheader()
+            writer.writerows(data)
+        pairs = "; ".join(f"`{c}`: {', '.join(f'{w!r} → {r!r}' for w, r in m.items())}" for c, m in fixes.items())
+        notes.append(f"- Texto mal codificado en el original, corregido en `{clean.name}` ({changed} celdas): {pairs}.")
 
     groups = BLANK_AS_ZERO.get(slug)
     if groups:

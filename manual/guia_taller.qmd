@@ -1,6 +1,6 @@
 ---
 title: "Taller Mini-Me · Guía paso a paso"
-subtitle: "Limpieza, curación y análisis de un ensayo de rendimiento de clones de papa"
+subtitle: "Limpieza, curación y análisis de un ensayo de rendimiento de papa en tres localidades"
 date: 2026-11-24
 date-format: "D [de] MMMM [de] YYYY"
 author: "Digital & Data · Centro Internacional de la Papa"
@@ -51,7 +51,8 @@ revisando lo que hace la IA.
 | 4 · Limpiar | Y obtener un informe |
 | 5 · Analizar | Con un ANOVA de rendimiento |
 
-**Dataset de trabajo:** `mejoramiento_dirty.csv`, con 250 parcelas y 21 variables.
+**Dataset de trabajo:** `mejoramiento_dirty.csv`, un ensayo de 30 genotipos de papa en 3 localidades
+de Huancavelica y Junín, con 274 filas y 33 variables.
 
 # Antes de empezar
 
@@ -73,7 +74,7 @@ revisando lo que hace la IA.
 
 # Paso 1 · Conoce la pantalla de Mini-Me
 
-![](img-taller/pantalla-inicial.png){width=100% fig-alt="Pantalla inicial de Mini-Me Desktop"}
+![](img/taller/pantalla-inicial.png){width=100% fig-alt="Pantalla inicial de Mini-Me Desktop"}
 
 | Zona | Qué hay |
 |---|---|
@@ -94,9 +95,9 @@ Todo lo que Mini-Me produce se guarda en tu carpeta **Documentos**.
 4. Se abre una conversación nueva: **ahí haremos todo**.
 
 ::: {layout="[[62,38]]"}
-![](img-taller/pestana-projects.png){fig-alt="Pestaña Projects y botón New Project"}
+![](img/taller/pestana-projects.png){fig-alt="Pestaña Projects y botón New Project"}
 
-![](img-taller/proyecto-creado.png){fig-alt="Proyecto Taller_Mini-me creado"}
+![](img/taller/proyecto-creado.png){fig-alt="Proyecto Taller_Mini-me creado"}
 :::
 
 # Pasos 3 y 4 · Prueba y carga el archivo
@@ -107,7 +108,7 @@ Todo lo que Mini-Me produce se guarda en tu carpeta **Documentos**.
 #prompt("Escribe en Mini-Me")[hola]
 ```
 
-![](img-taller/primera-respuesta.png){width=100% fig-alt="Primera respuesta de Mini-Me"}
+![](img/taller/primera-respuesta.png){width=100% fig-alt="Primera respuesta de Mini-Me"}
 
 ## 4 · Carga el archivo
 
@@ -115,7 +116,7 @@ Todo lo que Mini-Me produce se guarda en tu carpeta **Documentos**.
 2. Abre **Escritorio › Taller Mini-me**.
 3. Elige **mejoramiento_dirty.csv** y pulsa **Open**.
 
-![](img-taller/archivo-adjunto.png){width=100% fig-alt="Archivo adjuntado en la barra de mensajes"}
+![](img/taller/archivo-adjunto.png){width=100% fig-alt="Archivo adjuntado en la barra de mensajes"}
 
 ```{=typst}
 #nota[
@@ -130,7 +131,7 @@ Todo lo que Mini-Me produce se guarda en tu carpeta **Documentos**.
 Cuando Mini-Me necesita ejecutar código en tu computadora, te muestra una tarjeta **RUN THIS ON
 YOUR MACHINE** y espera tu respuesta.
 
-![](img-taller/aprobar-comandos.png){width=100% fig-alt="Solicitud RUN THIS ON YOUR MACHINE"}
+![](img/taller/aprobar-comandos.png){width=100% fig-alt="Solicitud RUN THIS ON YOUR MACHINE"}
 
 | Botón | Qué hace |
 |---|---|
@@ -170,7 +171,7 @@ termine antes de enviar la siguiente.
 ]
 ```
 
-**Qué deberías encontrar:** 250 filas y 21 variables.
+**Qué deberías encontrar:** 274 filas y 33 variables.
 
 ## 02 · Diagnóstico
 
@@ -181,23 +182,23 @@ termine antes de enviar la siguiente.
 ]
 ```
 
-**Qué deberías encontrar:** 6 parcelas duplicadas y entre 3.6 % y 9.2 % de datos faltantes según
-la variable, además de:
+**Qué deberías encontrar:** 7 parcelas duplicadas y entre 3 % y 15 % de datos faltantes según la
+variable, además de:
 
 | Problema | Ejemplo |
 |---|---|
-| Diseño | `rep = 0`, `rep = 5` y 9 parcelas sin repetición |
-| Ubicación | Altitud de 10 551 "msnm" (en realidad pies) y coordenadas fuera de Junín |
-| Valores imposibles | Negativos (`ntp = −100`) y `ntp = 750` en una parcela de 10 golpes |
-| Escala | Rendimientos ×1000 (kg/ha registrados como t/ha) |
-| Nombres | `cip311209.16` en minúsculas crea un clon "falso" |
+| Diseño | `rep = 0`, `rep = 4` (solo hay 3 repeticiones) y 9 parcelas sin repetición |
+| Ubicación | Altitudes de 10 551 a 13 346 "msnm" (en realidad pies) y localidades escritas de varias formas |
+| Valores imposibles | Negativos (`ntp = −50`) y `ntp = 375` en una parcela de 10 tubérculos sembrados |
+| Escala | Rendimientos ×1000 (kg/ha registrados como t/ha) y pesos en libras |
+| Nombres | `añil papa` en minúsculas y códigos con espacios crean genotipos "falsos" |
 
 : {tbl-colwidths="[32,68]"}
 
 ```{=typst}
 #nota[
-  Estas cifras salen de un informe generado con Mini-Me. Las tuyas pueden variar ligeramente:
-  lo importante es que sepas de dónde sale cada una.
+  Estas cifras salen del registro de errores sembrados en el dataset. El informe de Mini-Me
+  puede contarlas de forma ligeramente distinta: lo importante es que sepas de dónde sale cada una.
 ]
 ```
 
@@ -209,7 +210,12 @@ la variable, además de:
 ]
 ```
 
-![](img-taller/recomendacion-geografica.png){width=100% fig-alt="Ejemplo de recomendación de estandarización geográfica"}
+Un ejemplo de lo que debería recomendar:
+
+- Unificar las tres localidades: **Ccasapata** (3766 msnm), **Ccollpaccasa** (4068) y **La
+  Victoria** (3216).
+- Pasar a metros las altitudes registradas en pies.
+- Volver a kg y t/ha los pesos en libras y los rendimientos en kg/ha.
 
 ## 04 · Reporte
 
@@ -219,7 +225,7 @@ la variable, además de:
 ]
 ```
 
-![](img-taller/informe-pdf.png){width=100% fig-alt="Vista previa del informe generado"}
+![](img/taller/informe-pdf.png){width=100% fig-alt="Vista previa del informe generado"}
 
 ## 05 · Limpieza
 
@@ -232,8 +238,8 @@ la variable, además de:
 #prueba[
   *Resultado esperado*
 
-  - *244* parcelas únicas, sin duplicados.
-  - Ubicación estandarizada: *La Victoria, 3216 msnm*.
+  - *267* parcelas únicas, sin duplicados.
+  - *3 localidades* estandarizadas, con su altitud en metros.
   - Unidades corregidas y variables derivadas recalculadas.
   - El archivo original *queda intacto*.
 ]
@@ -244,7 +250,7 @@ la variable, además de:
 Todo queda en **Documentos › Mini-Me › Taller_Mini-me ›** (carpeta con el código de la
 conversación).
 
-![](img-taller/carpeta-resultados.png){width=100% fig-alt="Carpeta de resultados del proyecto"}
+![](img/taller/carpeta-resultados.png){width=100% fig-alt="Carpeta de resultados del proyecto"}
 
 | Archivo | Qué es |
 |---|---|
@@ -254,16 +260,24 @@ conversación).
 
 : {tbl-colwidths="[32,68]"}
 
-# Pasos 06 y 07 · ¿Qué clon rinde más y qué análisis hacer?
+# Pasos 06 y 07 · ¿Qué genotipo rinde más y qué análisis hacer?
 
 ```{=typst}
 #prompt("Escribe en Mini-Me · 06")[
-  Con el dataset curado, propón qué análisis se pueden hacer. ¿Cuál de los clones evaluados rinde
-  más?
+  Con el dataset curado, propón qué análisis se pueden hacer. ¿Cuál de los genotipos evaluados
+  rinde más, en promedio y en cada localidad?
 ]
 ```
 
-![](img-taller/top5-clones.png){width=100% fig-alt="Top 5 clones por rendimiento ajustado"}
+**Qué deberías encontrar** (promedio de las tres localidades, calculado sobre el dataset limpio):
+
+| Puesto | Genotipo | Variedad | ttya medio (t/ha) |
+|---|---|---|---|
+| 1 | CIP701675 | Tarmeña | 31.7 |
+| 2 | CIP703168 | Puca Pishgush | 31.0 |
+| 3 | CIP705543 | Yana Warmi | 30.0 |
+| 4 | CIP704327 | Color Unckuna | 28.2 |
+| 5 | CIP702363 | Socco Huaccoto | 26.7 |
 
 ```{=typst}
 #prompt("Escribe en Mini-Me · 07")[
@@ -273,40 +287,52 @@ conversación).
 
 Los análisis que suele recomendar:
 
-1. **ANOVA y comparación de medias** (el que hacemos hoy).
-2. Modelos mixtos y BLUPs.
-3. Correlación y path analysis.
-4. PCA y clustering.
+1. **ANOVA combinado y comparación de medias** (el que hacemos hoy).
+2. Estabilidad: AMMI o GGE biplot.
+3. Modelos mixtos y BLUPs.
+4. Correlación entre caracteres.
 5. Índice de selección multicarácter.
 
 # Paso 8 · ANOVA para rendimiento ajustado (ttya)
 
 ```{=typst}
 #prompt("Escribe en Mini-Me · 08")[
-  Realiza un ANOVA para ttya con el dataset curado (DBCA): clon (instn) como tratamiento y
-  repetición (rep) como bloque. Incluye Tukey HSD y un gráfico de los clones con mayor y menor
-  rendimiento.
+  Realiza un ANOVA combinado para ttya con el dataset curado: genotipo (instn), localidad
+  (locality) y su interacción, con la repetición dentro de cada localidad como bloque. Incluye
+  Tukey HSD y un gráfico del rendimiento de cada genotipo en las tres localidades.
 ]
 ```
 
-![](img-taller/anova-boxplot.png){width=100% fig-alt="Distribución del rendimiento ajustado, 10 mejores y 10 peores clones"}
+**Qué deberías encontrar** (calculado sobre el dataset limpio):
+
+| Fuente | p | Qué dice |
+|---|---|---|
+| Localidad | < 0.001 | La Victoria rinde el doble que Ccasapata |
+| Genotipo | < 0.001 | Hay genotipos mejores que otros |
+| Genotipo × localidad | < 0.001 | El ranking cambia según la localidad |
+| Repetición (dentro de localidad) | 0.31 | Los bloques no difieren |
+
+: {tbl-colwidths="[32,14,54]"}
 
 | Resultado | Cómo leerlo |
 |---|---|
-| p (clon) < 0.05 | Hay diferencias entre clones |
-| p (bloque) | Diferencias entre bloques del campo |
+| p (genotipo) < 0.05 | Hay diferencias entre genotipos |
+| p (interacción) < 0.05 | El mejor genotipo en un sitio no es el mejor en todos |
 | Tukey | Misma letra = no difieren |
 
 : {tbl-colwidths="[32,68]"}
 
 ```{=typst}
 #ojo[
-  Una parcela de CIP306022.69 supera 100 t/ha. ¿Es real?
+  Socco Huaccoto (CIP702363) es 2.º en Ccollpaccasa y 13.º en La Victoria. ¿Lo recomendarías para
+  las tres localidades?
 ]
 
 #nota[
-  Para discutir en grupo: ¿coinciden los primeros lugares del ranking del paso 06 y del ANOVA?
-  ¿Cómo cambiaría el resultado si ese valor extremo fuera un error de digitación?
+  Para discutir en grupo: ¿coinciden los primeros lugares del ranking del paso 06 y del ANOVA? Si
+  la interacción es significativa, ¿conviene recomendar un genotipo para todas las localidades o
+  uno por localidad? Una parcela de Puca Pishgush llega a 60,7 t/ha en La Victoria, más del doble
+  de la media de esa localidad: ¿es real?
 ]
 ```
 
@@ -323,7 +349,7 @@ Los análisis que suele recomendar:
 ]
 ```
 
-![](img-taller/bibliografia.png){width=100% fig-alt="Resultado de la búsqueda de bibliografía"}
+![](img/taller/bibliografia.png){width=100% fig-alt="Resultado de la búsqueda de bibliografía"}
 
 # Generación de teorías
 
@@ -339,7 +365,7 @@ Los análisis que suele recomendar:
 ]
 ```
 
-![](img-taller/teorias.png){width=100% fig-alt="Teorías mecanísticas generadas a partir de la literatura"}
+![](img/taller/teorias.png){width=100% fig-alt="Teorías mecanísticas generadas a partir de la literatura"}
 
 # Reporte de bibliografía
 
@@ -349,7 +375,7 @@ Los análisis que suele recomendar:
 ]
 ```
 
-![](img-taller/reporte-bibliografia.png){width=80% fig-alt="Portada del reporte de bibliografía generado"}
+![](img/taller/reporte-bibliografia.png){width=80% fig-alt="Portada del reporte de bibliografía generado"}
 
 # Si algo no sale como esperabas
 
