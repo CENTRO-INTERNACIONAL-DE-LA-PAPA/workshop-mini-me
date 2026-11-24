@@ -949,3 +949,13 @@ svg.ciclo {
   color: $cip-gris;
   opacity: 0.8;
 }
+
+// Miniaturas de una presentación de ejemplo, en rejilla de 2 × 2.
+.rejilla-ppt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  p { margin: 0; }
+  img.captura { width: 100%; max-width: 100%; }
+}
