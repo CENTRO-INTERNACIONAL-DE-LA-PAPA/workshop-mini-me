@@ -16,7 +16,7 @@
 | Medición | Mentimeter **pre** y **post** + score de limpieza automatizado |
 | Fecha de este plan | 4 de noviembre de 2026 (T-20 días) |
 
-> **Cambios del 23 de noviembre.** Nueva agenda de 8:10 a 13:00 (§3.1, `manual/agenda.qmd`). El Manos a
+> **Cambios del 23 de noviembre.** El dataset de mejoramiento se reemplazó por el ensayo de estabilidad PTYL200911 (30 genotipos en 3 localidades); la guía y la presentación del taller pasan a un ANOVA combinado genotipo × localidad. Nueva agenda de 8:10 a 13:00 (§3.1, `manual/agenda.qmd`). El Manos a
 > la obra de la mañana queda solo con el ciclo de datos; las herramientas de Allen AI se practican en un
 > bloque propio (10:25–11:10). El hands-on y la galería se reemplazan por el **Reto Mini-Me**: equipos de 2–3,
 > las 4 temáticas, datos + literatura + teorías, 4 pitches voluntarios de 5 min y voto del público en el
@@ -82,7 +82,7 @@ tardío** (no Bactericera) y la encuesta es de **percepción de consumidores** (
 | # | Temática (slug) | Fuente | Unidad de observación | Pregunta de investigación propuesta |
 |---|---|---|---|---|
 | 1 | **Morfología** (`morfologia`) | Banco de germoplasma, 2014: 70 variedades de 22 países | Accesión | ¿Qué descriptores de color y forma agrupan las variedades y cuáles son redundantes? |
-| 2 | **Mejoramiento** (`mejoramiento`) | Ensayo de rendimiento 2016 en La Victoria (Huancayo): 61 genotipos × 4 repeticiones | Parcela | ¿Qué genotipos rinden más? *(Hay una sola localidad: la pregunta de estabilidad entre ambientes ya no aplica)* |
+| 2 | **Mejoramiento** (`mejoramiento`) | Ensayo de estabilidad PTYL200911: 30 genotipos × 3 repeticiones en 3 localidades (Ccasapata, Ccollpaccasa, La Victoria). *Reemplazó el 23 de noviembre al ensayo 2016 de La Victoria (61 genotipos, una sola localidad)* | Parcela | ¿Qué genotipos rinden más, y son los mismos en las tres localidades? |
 | 3 | **Tizón tardío** (`tizon_tardio`) | Ensayo de fungicidas en 3 localidades de Kenia: control, convencional y fosfonatos | Parcela | ¿Los fosfonatos reducen el tizón (AUDPC) frente al control, y depende de la variedad o la localidad? |
 | 4 | **Consumidores** (`consumidores`) | Encuesta 2015 en La Molina, Miraflores y San Isidro: 114 personas | Persona encuestada | ¿Qué valoran los consumidores de papas nativas de color y cómo se asocia con su disposición a pagar un precio justo al agricultor? |
 

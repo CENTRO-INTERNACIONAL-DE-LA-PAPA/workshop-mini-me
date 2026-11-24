@@ -34,7 +34,7 @@ reemplazarlos. Todo el documento sale de ahí, así que es un cambio de seis lí
 | `agenda.qmd` | Agenda de una página del 24 de noviembre, con el QR del Mentimeter |
 | `reto_mini_me.qmd` | Propuesta del Reto Mini-Me: preguntas por temática, cronograma, pitch, voto, pistas para facilitadores y hoja del reto |
 | `img/qr-mentimeter-pre.svg`, `img/qr-mentimeter-post.svg` | QR de los Mentimeter pre (menti.com/al2sww8pf7ik) y post (menti.com/alhuo61h2cfn). Se regeneran con `qrencode -t SVG` |
-| `img-taller` | Enlace a `../presentacion/img/taller`: Typst no lee imágenes fuera de esta carpeta, y así las capturas no se duplican |
+| `img/taller/` | Copia de las capturas de `../presentacion/img/taller` que usa la guía. Typst no lee imágenes fuera de esta carpeta, y un enlace simbólico no funciona en Windows: si cambia una captura en la presentación, hay que copiarla aquí también |
 | `_brand.typ` | Paleta, tipografía, estilos de título y tabla, y las cajas |
 
 ## Los cuatro elementos de diseño

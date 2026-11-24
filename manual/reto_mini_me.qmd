@@ -166,16 +166,16 @@ forma que los de la práctica de las 10:25: basta cambiar el tema.
 ## Mejoramiento
 
 ```{=typst}
-#ficha("mejoramiento_dirty.csv", [Una parcela: 61 genotipos × 4 repeticiones en La Victoria (Huancayo), 2016], [`ttya`, el rendimiento ajustado (t/ha)])
+#ficha("mejoramiento_dirty.csv", [Una parcela: 30 genotipos × 3 repeticiones en 3 localidades de Huancavelica y Junín], [`ttya`, el rendimiento total ajustado (t/ha)])
 ```
 
-El ANOVA de qué genotipo rinde más ya se hizo en la mañana: aquí la pregunta es otra.
+El ANOVA combinado (genotipo × localidad) ya se hizo en la mañana: aquí la pregunta va más allá.
 
 | Pregunta | Análisis sugerido |
 |---|---|
 | **A.** ¿El rendimiento depende más de cuántos tubérculos da cada planta (`tntpl`) o de cuánto pesan (`atw`)? | Correlación y regresión de `ttya` con ambos componentes, sobre las medias por genotipo |
 | **B.** ¿Hay un compromiso entre número y tamaño de tubérculos? | Dispersión de `tntpl` contra `atw` por genotipo, con su correlación e intervalo |
-| **C.** ¿Qué genotipos combinan buen rendimiento con tubérculos grandes? | Gráfico de cuadrantes con las medias e intervalos de `ttya` y `atw` |
+| **C.** ¿Qué genotipos son a la vez productivos y estables en las tres localidades? | Regresión de Finlay-Wilkinson o AMMI / GGE biplot, con el rendimiento medio de cada genotipo |
 
 : {tbl-colwidths="[50,50]"}
 
@@ -189,8 +189,9 @@ El ANOVA de qué genotipo rinde más ya se hizo en la mañana: aquí la pregunta
   recopilada sobre por qué las plantas con más tubérculos producen tubérculos más pequeños.
 ]
 #ojo[
-  `ttwp`, `ttwpl` y `ttyna` se calculan a partir del mismo rendimiento: si entran al modelo, todo
-  parece perfecto sin haber aprendido nada. Hay una sola localidad y un solo año.
+  Los pesos y rendimientos totales y comerciales (`ttwp`, `ttwpl`, `ttyna`, `nomtwp`, `mtwp`,
+  `mtwpl`, `mtyna`, `mtya`) son el rendimiento o una parte de él: si entran al modelo, todo parece
+  perfecto sin haber aprendido nada. Son tres localidades de una sola campaña.
 ]
 ```
 
@@ -318,7 +319,8 @@ se las den como respuesta.
 | Temática | Qué esperar |
 |---|---|
 | **Morfología (B)** | La piel de color 1 se concentra en pulpas de color 1 y 2: hay asociación, pero con muchas celdas casi vacías. Conviene la prueba exacta o agrupar categorías |
-| **Mejoramiento (A, B)** | Número y peso de tubérculos van en direcciones opuestas entre genotipos (Spearman ≈ −0,7). Ambos se asocian moderadamente con el rendimiento (≈ 0,35–0,4) |
+| **Mejoramiento (A, B)** | Entre genotipos, el peso medio del tubérculo se asocia más con el rendimiento (Spearman ≈ 0,6) que el número de tubérculos por planta (≈ 0,33). Número y peso van en direcciones opuestas (≈ −0,46; −0,65 dentro de La Victoria) |
+| **Mejoramiento (C)** | Socco Huaccoto (CIP702363) rinde 26,8 t/ha en promedio con una pendiente de Finlay-Wilkinson de 0,36: casi no cambia entre localidades. Yana Warmi (CIP705543) tiene pendiente 2,4: 43 t/ha en La Victoria y 14 en Ccasapata. Ojo: Tarmeña y Puca Pishgush intercambian el primer lugar según se promedien parcelas o localidades, porque faltan parcelas |
 | **Tizón tardío (A, B)** | El control tiene mucho más AUDPC que el convencional en las tres localidades. Los fosfonatos quedan en medio en Limuru y cerca del convencional en Njabini |
 | **Tizón tardío (C)** | Si se juntan las tres localidades, AUDPC y rendimiento parecen no relacionarse (≈ 0). Dentro de cada localidad la relación es negativa (−0,3 a −0,65): es una paradoja de Simpson |
 | **Consumidores (B)** | El Encuestador03 registra casi la mitad de "no sé" en `v9`. Pero *cada encuestador trabajó en un solo distrito*: el efecto del encuestador no se puede separar del efecto del distrito |

@@ -15,7 +15,7 @@ manual/guia_taller.typ
 manual/agenda.typ
 manual/reto_mini_me.typ
 manual/manual.html
-manual/manual_files/
+manual/*_files/
 manual/.quarto/
 
 # Paquetes comprimidos (p. ej. la entrega original de datos): nunca se versionan

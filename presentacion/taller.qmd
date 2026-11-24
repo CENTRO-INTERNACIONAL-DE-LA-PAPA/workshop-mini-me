@@ -1,6 +1,6 @@
 ---
 title: "Taller Mini-Me"
-subtitle: "Limpieza, curación y análisis de un ensayo de rendimiento de clones de papa"
+subtitle: "Limpieza, curación y análisis de un ensayo de rendimiento de papa en tres localidades"
 author: "Digital & Data · CIP"
 date: 2026-11-24
 date-format: "D [de] MMMM [de] YYYY"
@@ -81,7 +81,7 @@ format:
 ```
 
 ::: {.dato-base}
-Dataset de trabajo: `mejoramiento_dirty.csv` · 250 parcelas, 21 variables
+Dataset de trabajo: `mejoramiento_dirty.csv` · 30 genotipos en 3 localidades · 274 filas, 33 variables
 :::
 
 ::: notes
@@ -303,44 +303,50 @@ valores imposibles y errores de unidades.
 
 ::: {.cifras-gancho .cifras-taller}
 ::: {.cifra-bloque .fragment}
-[250]{.cifra .contador data-hasta="250"}
+[274]{.cifra .contador data-hasta="274"}
 [filas]{.cifra-label}
 :::
 
 ::: {.cifra-bloque .fragment}
-[21]{.cifra .contador data-hasta="21"}
+[33]{.cifra .contador data-hasta="33"}
 [variables]{.cifra-label}
 :::
 
 ::: {.cifra-bloque .fragment}
-[6]{.cifra .contador data-hasta="6"}
+[7]{.cifra .contador data-hasta="7"}
 [parcelas duplicadas]{.cifra-label}
 :::
 
 ::: {.cifra-bloque .fragment}
-[3.6–9.2 %]{.cifra}
+[3–15 %]{.cifra}
 [datos faltantes]{.cifra-label}
 :::
 :::
 
 ::: {.hallazgos .fragment}
-- **Diseño:** `rep = 0`, `rep = 5` y 9 parcelas sin repetición
-- **Ubicación:** altitud de 10 551 "msnm" (en realidad pies) y coordenadas fuera de Junín
-- **Valores imposibles:** negativos (`ntp = −100`) y `ntp = 750` en una parcela de 10 golpes
-- **Escala:** rendimientos ×1000 (kg/ha registrados como t/ha)
-- **Nombres:** `cip311209.16` en minúsculas crea un clon "falso"
+- **Diseño:** `rep = 0`, `rep = 4` (solo hay 3 repeticiones) y 9 parcelas sin repetición
+- **Ubicación:** altitudes de 10 551 a 13 346 "msnm" (en realidad pies) y localidades escritas de varias formas
+- **Valores imposibles:** negativos (`ntp = −50`) y `ntp = 375` en una parcela de 10 tubérculos sembrados
+- **Escala:** rendimientos ×1000 (kg/ha registrados como t/ha) y pesos en libras
+- **Nombres:** `añil papa` en minúsculas y códigos con espacios crean genotipos "falsos"
 :::
 
 ::: notes
-Cifras tomadas del informe técnico generado con Mini-Me. Los resultados de cada participante
-pueden variar ligeramente.
+Cifras de referencia, calculadas a partir del registro de errores sembrados en el dataset. El
+informe de Mini-Me de cada participante puede contarlas de forma ligeramente distinta.
 :::
 
 ## Pasos 03–05 · De las recomendaciones al dataset curado
 
 :::: {.columns}
 ::: {.column width="48%"}
-![](img/taller/recomendacion-geografica.png){.captura fig-alt="Ejemplo de recomendación de estandarización geográfica"}
+::: {.tarjeta}
+[Ejemplo de recomendación (03)]{.kicker-t}
+
+- Unificar las tres localidades: **Ccasapata** (3766 msnm), **Ccollpaccasa** (4068) y **La Victoria** (3216)
+- Pasar a metros las altitudes registradas en pies
+- Volver a kg y t/ha los pesos en libras y los rendimientos en kg/ha
+:::
 
 ![](img/taller/informe-pdf.png){.captura fig-alt="Vista previa del informe generado"}
 :::
@@ -363,8 +369,8 @@ recomendaciones. Guarda el dataset curado como un archivo nuevo y no modifiques 
 ::: {.tarjeta .bien}
 [Resultado esperado]{.kicker-t}
 
-- **244** parcelas únicas, sin duplicados
-- Ubicación estandarizada: **La Victoria, 3216 msnm**
+- **267** parcelas únicas, sin duplicados
+- **3 localidades** estandarizadas, con su altitud en metros
 - Unidades corregidas y variables derivadas recalculadas
 - El archivo original **queda intacto**
 :::
@@ -391,16 +397,26 @@ recomendaciones. Guarda el dataset curado como un archivo nuevo y no modifiques 
 :::
 ::::
 
-## Pasos 06–07 · ¿Qué clon rinde más y qué análisis hacer?
+## Pasos 06–07 · ¿Qué genotipo rinde más y qué análisis hacer?
 
 :::: {.columns}
 ::: {.column width="58%"}
 ::: {.prompt-box .numerado .chico-p}
-[06]{.num-p} Con el dataset curado, propón qué análisis se pueden hacer. ¿Cuál de los clones
-evaluados rinde más?
+[06]{.num-p} Con el dataset curado, propón qué análisis se pueden hacer. ¿Cuál de los genotipos
+evaluados rinde más, en promedio y en cada localidad?
 :::
 
-![](img/taller/top5-clones.png){.captura fig-alt="Top 5 clones por rendimiento ajustado"}
+::: {.tabla-botones}
+| Puesto | Genotipo | Variedad | ttya medio (t/ha) |
+|---|---|---|---|
+| 1 | CIP701675 | Tarmeña | 31.7 |
+| 2 | CIP703168 | Puca Pishgush | 31.0 |
+| 3 | CIP705543 | Yana Warmi | 30.0 |
+| 4 | CIP704327 | Color Unckuna | 28.2 |
+| 5 | CIP702363 | Socco Huaccoto | 26.7 |
+:::
+
+[Referencia: promedio de las tres localidades, calculado sobre el dataset limpio.]{.nota-chica}
 :::
 
 ::: {.column width="39%"}
@@ -411,10 +427,10 @@ evaluados rinde más?
 ::: {.analisis}
 [Análisis recomendados (07)]{.kicker-t}
 
-1. **ANOVA y comparación de medias** [hoy hacemos este]{.hoy}
-2. Modelos mixtos y BLUPs
-3. Correlación y path analysis
-4. PCA y clustering
+1. **ANOVA combinado y comparación de medias** [hoy hacemos este]{.hoy}
+2. Estabilidad: AMMI o GGE biplot
+3. Modelos mixtos y BLUPs
+4. Correlación entre caracteres
 5. Índice de selección multicarácter
 :::
 :::
@@ -423,34 +439,45 @@ evaluados rinde más?
 ## Paso 8 · ANOVA para rendimiento ajustado (ttya)
 
 ::: {.prompt-box .numerado .chico-p}
-[08]{.num-p} Realiza un ANOVA para ttya con el dataset curado (DBCA): clon (instn) como
-tratamiento y repetición (rep) como bloque. Incluye Tukey HSD y un gráfico de los clones con mayor
-y menor rendimiento.
+[08]{.num-p} Realiza un ANOVA combinado para ttya con el dataset curado: genotipo (instn), localidad
+(locality) y su interacción, con la repetición dentro de cada localidad como bloque. Incluye Tukey HSD
+y un gráfico del rendimiento de cada genotipo en las tres localidades.
 :::
 
 :::: {.columns}
 ::: {.column width="60%"}
-![](img/taller/anova-boxplot.png){.captura fig-alt="Distribución del rendimiento ajustado, 10 mejores y 10 peores clones"}
+::: {.tabla-botones}
+| Fuente | p | Qué dice |
+|---|---|---|
+| Localidad | < 0.001 | La Victoria rinde el doble que Ccasapata |
+| Genotipo | < 0.001 | Hay genotipos mejores que otros |
+| Genotipo × localidad | < 0.001 | **El ranking cambia según la localidad** |
+| Repetición (localidad) | 0.31 | Los bloques no difieren |
+:::
+
+[Referencia calculada sobre el dataset limpio.]{.nota-chica}
 :::
 
 ::: {.column width="37%"}
 ::: {.tarjeta}
 [Cómo leerlo]{.kicker-t}
 
-- **p (clon) < 0.05:** hay diferencias entre clones
-- **p (bloque):** diferencias entre bloques del campo
+- **p (genotipo) < 0.05:** hay diferencias entre genotipos
+- **p (interacción) < 0.05:** el mejor en un sitio no es el mejor en todos
 - **Tukey:** misma letra = no difieren
 :::
 
 ::: {.tarjeta .alerta}
-**Ojo:** una parcela de CIP306022.69 supera 100 t/ha. ¿Es real?
+**Ojo:** Socco Huaccoto es 2.º en Ccollpaccasa y 13.º en La Victoria. ¿Lo recomendarías?
 :::
 :::
 ::::
 
 ::: notes
-Discusión en grupo: ¿coinciden los primeros lugares del ranking (paso 06) y del ANOVA? ¿Cómo
-cambiaría el resultado si el valor extremo fuera un error de digitación?
+Discusión en grupo: ¿coinciden los primeros lugares del ranking (paso 06) y del ANOVA? Si la
+interacción es significativa, ¿conviene recomendar un genotipo para las tres localidades o uno por
+localidad? Una parcela de Puca Pishgush llega a 60,7 t/ha en La Victoria, más del doble de la media
+de esa localidad: ¿es real?
 :::
 
 ## Búsqueda de bibliografía
