@@ -30,11 +30,10 @@ reemplazarlos. Todo el documento sale de ahí, así que es un cambio de seis lí
 
 | Archivo | Qué es |
 |---|---|
-| `guia_taller.qmd` | Guía paso a paso del ejercicio para los asistentes, acorde a `presentacion/taller.qmd` |
+| `guia_taller.qmd` | Guía del ejercicio para los asistentes: una hoja (frente y reverso) con los siete pasos y las instrucciones 01 a 10 para copiar y pegar en Mini-Me. Sigue a `presentacion/taller.qmd`; no lleva capturas, que están en la presentación |
 | `agenda.qmd` | Agenda de una página del 24 de noviembre, con el QR del Mentimeter |
 | `reto_mini_me.qmd` | Propuesta del Reto Mini-Me: preguntas por temática, cronograma, pitch, voto, pistas para facilitadores y hoja del reto |
 | `img/qr-mentimeter-pre.svg`, `img/qr-mentimeter-post.svg` | QR de los Mentimeter pre (menti.com/al2sww8pf7ik) y post (menti.com/alhuo61h2cfn). Se regeneran con `qrencode -t SVG` |
-| `img/taller/` | Copia de las capturas de `../presentacion/img/taller` que usa la guía. Typst no lee imágenes fuera de esta carpeta, y un enlace simbólico no funciona en Windows: si cambia una captura en la presentación, hay que copiarla aquí también |
 | `_brand.typ` | Paleta, tipografía, estilos de título y tabla, y las cajas |
 
 ## Los cuatro elementos de diseño
@@ -47,6 +46,9 @@ En un bloque ` ```{=typst} `:
 #nota[ El porqué de algo. ]
 #prompt("nombre_del_subagente")[ El texto que se copia y se pega. ]
 ```
+
+La guía define además `#instr("01", "Título")[ texto ]`, la tarjeta numerada de cada instrucción.
+Si cambia una instrucción, hay que cambiarla también en `presentacion/taller.qmd`.
 
 ## Dos cosas que rompen la compilación
 

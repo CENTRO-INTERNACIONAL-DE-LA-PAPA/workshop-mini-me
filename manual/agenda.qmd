@@ -87,8 +87,8 @@ format:
   ayuda en cada etapa de su ciclo de vida.
 ]
 #fila("8:55 – 9:50", "Manos a la obra: el ciclo de datos")[
-  Con Mini-Me limpias, diagnosticas y analizas un ensayo de rendimiento de clones de papa, revisando
-  cada paso que da la IA. Pasos 1 a 8 de la guía.
+  Con Mini-Me limpias, diagnosticas y analizas un ensayo de rendimiento de papa en tres localidades,
+  revisando cada paso que da la IA. Pasos 1 a 6 de la guía (instrucciones 01 a 08).
 ]
 #fila("9:50 – 10:05", "Break", none, tipo: "pausa")
 #fila("10:05 – 10:25", "De la pregunta al conocimiento")[
@@ -97,7 +97,7 @@ format:
 ]
 #fila("10:25 – 11:10", "Mini-Me con herramientas de Allen AI")[
   _Demostración y práctica._ Primero lo vemos en pantalla y luego lo pruebas tú: búsqueda de
-  bibliografía, generación de teorías y reporte de bibliografía.
+  bibliografía y generación de teorías. Paso 7 de la guía (instrucciones 09 y 10).
 ]
 #fila("11:10 – 11:20", "Pausa", none, tipo: "pausa")
 #fila("11:20 – 12:30", "Reto Mini-Me", tipo: "reto")[

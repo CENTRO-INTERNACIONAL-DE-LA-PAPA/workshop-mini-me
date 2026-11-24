@@ -248,10 +248,10 @@ Por eso, antes de que cualquier archivo entre al workshop:
 |---|---:|---|---|
 | 08:10–08:20 | 10 | **Apertura** | Palabras de apertura + **Mentimeter PRE** (menti.com/al2sww8pf7ik) |
 | 08:20–08:55 | 35 | **El viaje de los datos** | Presentación narrativa (§5.7) |
-| 08:55–09:50 | 55 | **Manos a la obra: ciclo de datos** | Pasos 1–8 de `presentacion/taller.qmd` y la guía paso a paso |
+| 08:55–09:50 | 55 | **Manos a la obra: ciclo de datos** | Pasos 1–6 de `presentacion/taller.qmd` y la guía (instrucciones 01–08) |
 | 09:50–10:05 | 15 | Break | |
 | 10:05–10:25 | 20 | **De la pregunta al conocimiento** | Presentación narrativa (§5.7) |
-| 10:25–11:10 | 45 | **Mini-Me con herramientas de Allen AI** | Demo y práctica solo con Allen AI: bibliografía (Asta), teorías (Theorizer), reporte de bibliografía |
+| 10:25–11:10 | 45 | **Mini-Me con herramientas de Allen AI** | Demo y práctica solo con Allen AI: paso 7 de la guía, bibliografía (instrucción 09) y teorías (instrucción 10) |
 | 11:10–11:20 | 10 | Pausa | |
 | 11:20–12:30 | 70 | **Reto Mini-Me** | Equipos de 2–3, una temática y una pregunta, datos + literatura + teorías (`manual/reto_mini_me.qmd`) |
 | 12:30–12:50 | 20 | **Pitches y preguntas** | 4 equipos voluntarios × 5 min |

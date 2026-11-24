@@ -112,7 +112,7 @@ En las laptops institucionales, las carpetas en `C:\` pueden impedir que guardes
 :::
 ::::
 
-## Paso 1 · Conoce la pantalla de Mini-Me
+## Conoce la pantalla de Mini-Me
 
 :::: {.columns}
 ::: {.column width="62%"}
@@ -135,7 +135,7 @@ Mostrar en pantalla las tres zonas. Recalcar que el tercer atajo, "Clean and pro
 drop here", es el del ejercicio.
 :::
 
-## Paso 2 · Crea el proyecto Taller_Mini-me
+## Paso 1 · Crea el proyecto Taller_Mini-me
 
 :::: {.columns}
 ::: {.column width="44%"}
@@ -156,42 +156,31 @@ drop here", es el del ejercicio.
 :::
 ::::
 
-## Pasos 3 y 4 · Prueba y carga el archivo
+## Paso 2 · Carga el archivo de datos
 
 :::: {.columns}
-::: {.column width="48%"}
-::: {.subpaso}
-3 · Prueba
-:::
-
-::: {.prompt-box}
-[Escribe en Mini-Me]{.kicker-p}
-hola
-:::
-
-![](img/taller/primera-respuesta.png){.captura fig-alt="Primera respuesta de Mini-Me"}
-:::
-
-::: {.column width="48%"}
-::: {.subpaso}
-4 · Carga el archivo
-:::
-
-::: {.pasos .compacta}
-1. Clic en **+** en la barra de mensajes (o arrastra el archivo)
+::: {.column width="42%"}
+::: {.pasos}
+1. Haz clic en **+** en la barra de mensajes (o arrastra el archivo)
 2. Abre **Escritorio › Taller Mini-me**
 3. Elige **mejoramiento_dirty.csv** y pulsa **Open**
+4. El archivo aparece como una etiqueta sobre la barra de mensajes
+:::
 :::
 
+::: {.column width="56%"}
 ![](img/taller/archivo-adjunto.png){.captura fig-alt="Archivo adjuntado en la barra de mensajes"}
+
+::: {.tarjeta}
+[Dónde trabaja Mini-Me]{.kicker-t}
+
+Cada conversación guarda sus archivos en su propia carpeta, dentro de **Documentos › Mini-Me ›
+Taller_Mini-me**.
+:::
 :::
 ::::
 
-::: {.ruta}
-`C:\Users\«tu usuario»\Documents\Mini-Me\Taller_Mini-me\«código de la conversación»`
-:::
-
-## Paso 5 · Revisa y aprueba los comandos
+## Antes de seguir · Revisa y aprueba los comandos
 
 :::: {.columns}
 ::: {.column width="56%"}
@@ -215,7 +204,7 @@ hace.
 :::
 ::::
 
-## Paso 6 · Cinco instrucciones, en orden
+## Paso 3 · Revisa, limpia y estandariza los datos
 
 ```{=html}
 <svg class="ciclo mapa flujo cajas" viewBox="0 0 1400 280" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -283,7 +272,7 @@ Enviar una instrucción a la vez y esperar a que termine. Las instrucciones comp
 en la guía impresa.
 :::
 
-## Qué deberíamos encontrar (pasos 01–02)
+## Qué deberíamos encontrar (01–02)
 
 :::: {.columns}
 ::: {.column width="49%"}
@@ -336,7 +325,7 @@ Cifras de referencia, calculadas a partir del registro de errores sembrados en e
 informe de Mini-Me de cada participante puede contarlas de forma ligeramente distinta.
 :::
 
-## Pasos 03–05 · De las recomendaciones al dataset curado
+## De las recomendaciones al dataset curado (03–05)
 
 :::: {.columns}
 ::: {.column width="48%"}
@@ -358,7 +347,7 @@ encontrado.
 :::
 
 ::: {.prompt-box .numerado .chico-p}
-[04]{.num-p} Genera un reporte técnico con el diagnóstico y el plan de limpieza.
+[04]{.num-p} Genera un reporte técnico en PDF con el diagnóstico y el plan de limpieza.
 :::
 
 ::: {.prompt-box .numerado .chico-p}
@@ -377,7 +366,7 @@ recomendaciones. Guarda el dataset curado como un archivo nuevo y no modifiques 
 :::
 ::::
 
-## Dónde quedan tus archivos
+## Paso 4 · Ubica tus archivos
 
 ::: {.ruta}
 `Documentos › Mini-Me › Taller_Mini-me › (carpeta con código de la conversación)`
@@ -397,7 +386,7 @@ recomendaciones. Guarda el dataset curado como un archivo nuevo y no modifiques 
 :::
 ::::
 
-## Pasos 06–07 · ¿Qué genotipo rinde más y qué análisis hacer?
+## Paso 5 · ¿Qué análisis se pueden hacer?
 
 :::: {.columns}
 ::: {.column width="58%"}
@@ -436,12 +425,13 @@ evaluados rinde más, en promedio y en cada localidad?
 :::
 ::::
 
-## Paso 8 · ANOVA para rendimiento ajustado (ttya)
+## Paso 6 · ANOVA para rendimiento ajustado (ttya)
 
 ::: {.prompt-box .numerado .chico-p}
-[08]{.num-p} Realiza un ANOVA combinado para ttya con el dataset curado: genotipo (instn), localidad
-(locality) y su interacción, con la repetición dentro de cada localidad como bloque. Incluye Tukey HSD
-y un gráfico del rendimiento de cada genotipo en las tres localidades.
+[08]{.num-p} Realiza un ANOVA combinado para el rendimiento ajustado (ttya) con el dataset curado:
+genotipo (instn), localidad (locality) y su interacción, con la repetición dentro de cada localidad
+como bloque. Incluye la prueba de Tukey HSD y un gráfico del rendimiento de cada genotipo en las tres
+localidades.
 :::
 
 :::: {.columns}
@@ -474,36 +464,127 @@ y un gráfico del rendimiento de cada genotipo en las tres localidades.
 ::::
 
 ::: notes
-Discusión en grupo: ¿coinciden los primeros lugares del ranking (paso 06) y del ANOVA? Si la
+Discusión en grupo: ¿coinciden los primeros lugares del ranking (instrucción 06) y del ANOVA? Si la
 interacción es significativa, ¿conviene recomendar un genotipo para las tres localidades o uno por
 localidad? Una parcela de Puca Pishgush llega a 60,7 t/ha en La Victoria, más del doble de la media
 de esa localidad: ¿es real?
 :::
 
-## Búsqueda de bibliografía
+## Paso 7 · Revisión de bibliografía
 
 ::: {.prompt-box .numerado .chico-p}
-[01]{.num-p} Búsqueda de bibliografía de rendimiento de papas nativas en Perú, de los últimos 3
-años.
+[09]{.num-p} Busca información de rendimiento de papa en Junín y Huancavelica en los últimos 5 años.
 :::
 
-![](img/taller/bibliografia.png){.captura .centrada fig-alt="Resultado de la búsqueda de bibliografía"}
+:::: {.columns}
+::: {.column width="52%"}
+![](img/taller/fuentes.png){.captura fig-alt="Lista de fuentes que devuelve Mini-Me, con avisos en las citas sin identificador"}
+:::
 
-## Generación de teorías
+::: {.column width="45%"}
+::: {.tarjeta}
+[Qué te devuelve]{.kicker-t}
+
+- Un resumen con cifras de rendimiento y su fuente
+- La lista de **fuentes**, cada una con su enlace
+- Un aviso en cada cita **sin identificador** o que no aparece en Crossref
+:::
+
+::: {.tarjeta .alerta}
+[Verifica antes de citar]{.kicker-t}
+
+En esta corrida de prueba, **33 de 79 fuentes** vinieron del modelo y no de una búsqueda. Abre al
+menos dos y confirma que existen.
+:::
+:::
+::::
+
+::: notes
+Bloque de herramientas de Allen AI. La captura es de una corrida de prueba con una búsqueda sobre
+Junín: el número de fuentes y las citas cambian en cada corrida. Mostrar el aviso al pie de la
+lista ("came from the model rather than from a search") y los avisos de Crossref.
+:::
+
+## Paso 7 · Generación de teorías
 
 ::: {.prompt-box .numerado .chico-p}
-[01]{.num-p} Genera hipótesis y la síntesis de teorías mecanísticas a partir de la literatura
-científica recopilada.
+[10]{.num-p} Usa el subagente hypothesis_generator para sintetizar teorías basadas en la literatura a
+partir de las fuentes reunidas hasta ahora.
 :::
 
-![](img/taller/teorias.png){.captura .centrada fig-alt="Teorías mecanísticas generadas a partir de la literatura"}
-
-## Reportes de bibliografía
-
-::: {.prompt-box .numerado .chico-p}
-[01]{.num-p} Reporte de la bibliografía de rendimiento de papas nativas en Perú.
+:::: {.columns}
+::: {.column width="31%"}
+![](img/taller/teorias-lista.png){.captura style="max-height: 470px;" fig-alt="Lista de teorías generadas en el Pinboard"}
 :::
 
-![](img/taller/reporte-bibliografia.png){.captura .centrada fig-alt="Portada del reporte de bibliografía generado"}
+::: {.column width="27%"}
+![](img/taller/teoria-detalle.png){.captura style="max-height: 470px;" fig-alt="Detalle de una teoría: leyes, predicciones y qué la refutaría"}
+:::
+
+::: {.column width="38%"}
+::: {.tarjeta}
+[Qué trae cada teoría]{.kicker-t}
+
+- **Leyes:** el mecanismo que propone
+- **Predicciones** que todavía no se han probado
+- **Qué la refutaría**
+- Artículos que la respaldan y los que la contradicen
+:::
+
+::: {.tarjeta .alerta}
+Son **hipótesis para probar**, no resultados. ¿Qué dato las refutaría?
+:::
+
+[Capturas de una corrida de prueba con un ensayo anterior: tus teorías serán distintas.]{.nota-chica}
+:::
+::::
+
+::: notes
+Las teorías aparecen en el Pinboard, a la derecha. Abrir una con "Show details" y leer en voz alta
+una predicción y qué la refutaría. Las capturas vienen de una corrida con el ensayo anterior de La
+Victoria (clon CIP303826.21), que no está en el dataset de hoy.
+:::
+
+## Del análisis a una presentación
+
+:::: {.columns}
+::: {.column width="62%"}
+::: {.rejilla-ppt}
+![](img/taller/ppt-ejemplo-1.png){.captura fig-alt="Portada de la presentación de ejemplo"}
+
+![](img/taller/ppt-ejemplo-2.png){.captura fig-alt="Comparación del ensayo con la literatura"}
+
+![](img/taller/ppt-ejemplo-3.png){.captura fig-alt="Pregunta que da origen a las teorías"}
+
+![](img/taller/ppt-ejemplo-4.png){.captura fig-alt="Vacíos de conocimiento: qué falta medir"}
+:::
+:::
+
+::: {.column width="35%"}
+::: {.tarjeta}
+[Un ejemplo del producto final]{.kicker-t}
+
+Con el análisis, la bibliografía y las teorías, Claude armó una presentación de 11 diapositivas:
+el ensayo frente a la literatura, seis teorías y qué falta medir.
+:::
+
+::: {.tarjeta .bien}
+[Lo que hace bien]{.kicker-t}
+
+- Dice que es **preliminar** y hecha con IA
+- Marca qué cifras **no son de Junín**
+- Señala las referencias **sin verificar**
+:::
+
+[Ejemplo hecho con un ensayo anterior (La Victoria, 2016): sus cifras no son las del dataset de hoy.]{.nota-chica}
+:::
+::::
+
+::: notes
+Ejemplo de cierre de la cadena: datos, literatura, teorías y una presentación para compartir. La
+presentación se hizo con el ensayo anterior de La Victoria (61 clones, 2016), por eso el promedio
+(13,3 t/ha) y el mejor clon (33,1 t/ha) no coinciden con el dataset de tres localidades. Sirve de
+puente al Reto Mini-Me: cada equipo termina con un pitch.
+:::
 
 ## {.logos .mini-me-final}
